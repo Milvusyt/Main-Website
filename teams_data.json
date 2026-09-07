@@ -578,5 +578,76 @@
   {
     "file": "zh.png",
     "name": "ZH"
+  },
+  {
+    "file": "squadone.png",
+    "name": "Squad One",
+    "tag": "#HOST"
+  },
+  {
+    "file": "zerohour.png",
+    "name": "Zero Hour",
+    "tag": "#03"
+  },
+  {
+    "file": "orkesports.png",
+    "name": "ORK Esports",
+    "tag": "#04"
+  },
+  {
+    "file": "or.png",
+    "name": "ForgtN SoulZ"
+  },
+  {
+    "file": "unknown.png",
+    "name": "DRS"
+  },
+  {
+    "file": "unknown.png",
+    "name": "BROCODZ"
+  },
+  {
+    "file": "unknown.png",
+    "name": "NIG"
+  },
+  {
+    "file": "unknown.png",
+    "name": "MALAYALEES YODHA"
+  },
+  {
+    "file": "nxs.png",
+    "name": "NEXUS Esports"
+  },
+  {
+    "file": "hf.png",
+    "name": "HASHONE ESPORTS"
+  },
+  {
+    "file": "unknown.png",
+    "name": "SCORP"
+  },
+  {
+    "file": "marathabaad.png",
+    "name": "Maradu"
+  },
+  {
+    "file": "unknown.png",
+    "name": "Zodiac 30"
+  },
+  {
+    "file": "ctx.png",
+    "name": "CITY TIGERS X"
+  },
+  {
+    "file": "kb.png",
+    "name": "Kadayadi Boys"
+  },
+  {
+    "file": "obey.png",
+    "name": "TEAM OBEY"
+  },
+  {
+    "file": "adr.png",
+    "name": "Andheri"
   }
 ]
