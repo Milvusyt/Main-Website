@@ -2,181 +2,753 @@
   "Squad One": {
     "name": "Squad One",
     "group": "GROUP A",
+    "tag": "#HOST",
+    "seed": 1,
     "players": [
       "XAIROO",
       "SQ1_AVIYAL",
       "KL-07_TOXIC",
       "itsYoLibetrY_-"
     ],
-    "logo": "squadone.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-d811b0f4-ab4a-4da5-b307-b4d61c2255fc-0.011314392518372518.png"
+    "rosterDetails": [
+      {
+        "name": "XAIROO",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 34,
+        "damage": 4200,
+        "assists": 12
+      },
+      {
+        "name": "SQ1_AVIYAL",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 28,
+        "damage": 3600,
+        "assists": 15
+      },
+      {
+        "name": "KL-07_TOXIC",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 22,
+        "damage": 3900,
+        "assists": 8
+      },
+      {
+        "name": "itsYoLibetrY_-",
+        "role": "Support",
+        "status": "Active",
+        "kills": 18,
+        "damage": 2400,
+        "assists": 21
+      }
+    ],
+    "logo": "squadone.png"
   },
-  "Rakuzan": {
+  "RAKUZAN": {
     "name": "RAKUZAN",
     "group": "GROUP B",
+    "tag": "#01",
+    "seed": 2,
     "players": [
       "CR4ZY-XD",
       "004GlitcH",
       "AsTRO-OG",
       "DUKS-46"
     ],
-    "logo": "rakuzan.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-dfc77f7d-ebf9-4478-99ab-d8245af027cd-0.02512906539527049.png"
+    "rosterDetails": [
+      {
+        "name": "CR4ZY-XD",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 29,
+        "damage": 3800,
+        "assists": 9
+      },
+      {
+        "name": "004GlitcH",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 26,
+        "damage": 3200,
+        "assists": 11
+      },
+      {
+        "name": "AsTRO-OG",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 21,
+        "damage": 3500,
+        "assists": 6
+      },
+      {
+        "name": "DUKS-46",
+        "role": "Support",
+        "status": "Active",
+        "kills": 16,
+        "damage": 2100,
+        "assists": 14
+      }
+    ],
+    "logo": "rakuzan.png"
   },
   "HAVK": {
     "name": "HAVK",
     "group": "GROUP B",
+    "tag": "#02",
+    "seed": 3,
     "players": [
       "HAVK_Amit",
       "HAVK_Vedzz",
       "HAVK_ADIT5K",
       "HAVK_K1LLUAA"
     ],
-    "logo": "havk.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/ee8bf6f5-63a8-4791-a925-57c6d66bf52b.png"
+    "rosterDetails": [
+      {
+        "name": "HAVK_Amit",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 25,
+        "damage": 3300,
+        "assists": 10
+      },
+      {
+        "name": "HAVK_Vedzz",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 24,
+        "damage": 3100,
+        "assists": 8
+      },
+      {
+        "name": "HAVK_ADIT5K",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 19,
+        "damage": 2900,
+        "assists": 7
+      },
+      {
+        "name": "HAVK_K1LLUAA",
+        "role": "Support",
+        "status": "Active",
+        "kills": 15,
+        "damage": 1900,
+        "assists": 12
+      }
+    ],
+    "logo": "havk.png"
   },
   "Zero Hour": {
     "name": "Zero Hour",
     "group": "GROUP B",
+    "tag": "#03",
+    "seed": 4,
     "players": [
       "GULUzmbi-YT",
       "The--SherLock",
       "InZaynnn",
       "Granny_In_Bikini"
     ],
-    "logo": "zerohour.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-165c09d1-2ee7-47c3-a325-4485e935d422-0.44862113444505036.png"
+    "rosterDetails": [
+      {
+        "name": "GULUzmbi-YT",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 24,
+        "damage": 3100,
+        "assists": 7
+      },
+      {
+        "name": "The--SherLock",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 22,
+        "damage": 2800,
+        "assists": 9
+      },
+      {
+        "name": "InZaynnn",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 18,
+        "damage": 2600,
+        "assists": 5
+      },
+      {
+        "name": "Granny_In_Bikini",
+        "role": "Support",
+        "status": "Active",
+        "kills": 14,
+        "damage": 1800,
+        "assists": 13
+      }
+    ],
+    "logo": "zerohour.png"
   },
   "ORK Esports": {
     "name": "ORK Esports",
     "group": "GROUP A",
+    "tag": "#04",
+    "seed": 5,
     "players": [
       "ORK_KenpachiAjax",
       "SqwaKu",
       "ORK_Infected",
       "Sourav04"
     ],
-    "logo": "orkesports.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-e2bc1b92-e979-4e57-9078-09db8be0215c-0.9579987746660356.webp"
+    "rosterDetails": [
+      {
+        "name": "ORK_KenpachiAjax",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 22,
+        "damage": 2900,
+        "assists": 6
+      },
+      {
+        "name": "SqwaKu",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 20,
+        "damage": 2600,
+        "assists": 8
+      },
+      {
+        "name": "ORK_Infected",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 17,
+        "damage": 2400,
+        "assists": 5
+      },
+      {
+        "name": "Sourav04",
+        "role": "Support",
+        "status": "Active",
+        "kills": 13,
+        "damage": 1700,
+        "assists": 11
+      }
+    ],
+    "logo": "orkesports.png"
   },
-  "The Studs": {
-    "name": "STUDS",
+  "4GUYS": {
+    "name": "4GUYS",
+    "group": "GROUP A",
+    "tag": "#05",
+    "seed": 6,
+    "players": [
+      "4G_Sniper",
+      "4G_Alpha",
+      "4G_Apex",
+      "4G_Shadow"
+    ],
+    "rosterDetails": [
+      {
+        "name": "4G_Sniper",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 19,
+        "damage": 2700,
+        "assists": 4
+      },
+      {
+        "name": "4G_Alpha",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 18,
+        "damage": 2400,
+        "assists": 7
+      },
+      {
+        "name": "4G_Apex",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 16,
+        "damage": 2200,
+        "assists": 6
+      },
+      {
+        "name": "4G_Shadow",
+        "role": "Support",
+        "status": "Active",
+        "kills": 12,
+        "damage": 1600,
+        "assists": 10
+      }
+    ],
+    "logo": "4guys.png"
+  },
+  "IP4": {
+    "name": "IP4",
+    "group": "GROUP C",
+    "tag": "#06",
+    "seed": 7,
+    "players": [
+      "IP4_Reaper",
+      "IP4_Viper",
+      "IP4_Ghost",
+      "IP4_Ace"
+    ],
+    "rosterDetails": [
+      {
+        "name": "IP4_Reaper",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 17,
+        "damage": 2300,
+        "assists": 6
+      },
+      {
+        "name": "IP4_Viper",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 16,
+        "damage": 2100,
+        "assists": 5
+      },
+      {
+        "name": "IP4_Ghost",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 14,
+        "damage": 2000,
+        "assists": 4
+      },
+      {
+        "name": "IP4_Ace",
+        "role": "Support",
+        "status": "Active",
+        "kills": 11,
+        "damage": 1500,
+        "assists": 8
+      }
+    ],
+    "logo": "IP4.png"
+  },
+  "RD": {
+    "name": "RD",
+    "group": "GROUP C",
+    "tag": "#07",
+    "seed": 8,
+    "players": [
+      "RD_Titan",
+      "RD_Blaze",
+      "RD_Fury",
+      "RD_Storm"
+    ],
+    "rosterDetails": [
+      {
+        "name": "RD_Titan",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 16,
+        "damage": 2200,
+        "assists": 5
+      },
+      {
+        "name": "RD_Blaze",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 15,
+        "damage": 2000,
+        "assists": 6
+      },
+      {
+        "name": "RD_Fury",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 13,
+        "damage": 1800,
+        "assists": 3
+      },
+      {
+        "name": "RD_Storm",
+        "role": "Support",
+        "status": "Active",
+        "kills": 10,
+        "damage": 1400,
+        "assists": 7
+      }
+    ],
+    "logo": "RD.png"
+  },
+  "RDB": {
+    "name": "RDB",
     "group": "GROUP D",
+    "tag": "#08",
+    "seed": 9,
     "players": [
-      "1-1_1-1_1-1_1-1_",
-      "RetiredBolter",
-      "whatislive",
-      "wikirex"
+      "airbornex1",
+      "Rydermachan",
+      "JRxS3veN",
+      "HiTZ_Plays"
     ],
-    "logo": "studs.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-010dd838-bdf6-4909-91ce-414fbcef2e9c-0.6665282648721814.png"
+    "rosterDetails": [
+      {
+        "name": "airbornex1",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 15,
+        "damage": 2100,
+        "assists": 5
+      },
+      {
+        "name": "Rydermachan",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 14,
+        "damage": 1900,
+        "assists": 5
+      },
+      {
+        "name": "JRxS3veN",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 12,
+        "damage": 1700,
+        "assists": 4
+      },
+      {
+        "name": "HiTZ_Plays",
+        "role": "Support",
+        "status": "Active",
+        "kills": 9,
+        "damage": 1300,
+        "assists": 7
+      }
+    ],
+    "logo": "RDB.png"
   },
-  "Jungli Sena": {
-    "name": "JUNGLI SENA",
+  "SQ1 ORANGE": {
+    "name": "SQ1 ORANGE",
     "group": "GROUP A",
+    "tag": "#09",
+    "seed": 10,
     "players": [
-      "Jaaadoo",
-      "Shivam-_",
-      "BBELLLLAAA",
-      "CrimeM4st3r_GoGo"
+      "SQ1_Fire",
+      "SQ1_Nova",
+      "SQ1_Spike",
+      "SQ1_Echo"
     ],
-    "logo": "junglisena.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-0e558bdb-27b7-44d4-8517-34cfdf7d81cd-0.021565993644099946.png"
+    "rosterDetails": [
+      {
+        "name": "SQ1_Fire",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 14,
+        "damage": 1900,
+        "assists": 4
+      },
+      {
+        "name": "SQ1_Nova",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 13,
+        "damage": 1800,
+        "assists": 5
+      },
+      {
+        "name": "SQ1_Spike",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 11,
+        "damage": 1600,
+        "assists": 3
+      },
+      {
+        "name": "SQ1_Echo",
+        "role": "Support",
+        "status": "Active",
+        "kills": 8,
+        "damage": 1200,
+        "assists": 6
+      }
+    ],
+    "logo": "SQ1_Orange.PNG"
   },
-  "Ocean Gaming": {
-    "name": "Ocean Gaming",
-    "group": "GROUP A",
+  "SQ1 ECCL": {
+    "name": "SQ1 ECCL",
+    "group": "GROUP B",
+    "tag": "#10",
+    "seed": 11,
     "players": [
-      "X-GHASITAA",
-      "X-Cl0ne",
-      "OG_Zakrimz",
-      "X-Diablo_"
+      "ECCL_One",
+      "ECCL_Two",
+      "ECCL_Three",
+      "ECCL_Four"
     ],
-    "logo": "oceangaming.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-f4e3e44a-ba2d-4e26-8683-153c5905e4d1-0.5529728501779976.jpg"
+    "rosterDetails": [
+      {
+        "name": "ECCL_One",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 13,
+        "damage": 1800,
+        "assists": 4
+      },
+      {
+        "name": "ECCL_Two",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 12,
+        "damage": 1700,
+        "assists": 4
+      },
+      {
+        "name": "ECCL_Three",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 10,
+        "damage": 1500,
+        "assists": 3
+      },
+      {
+        "name": "ECCL_Four",
+        "role": "Support",
+        "status": "Active",
+        "kills": 8,
+        "damage": 1100,
+        "assists": 5
+      }
+    ],
+    "logo": "SQ1_eccl.png"
   },
-  "Reflex Matrix": {
-    "name": "The Reflex Matrix",
+  "SQ1 PINK": {
+    "name": "SQ1 PINK",
     "group": "GROUP C",
+    "tag": "#11",
+    "seed": 12,
     "players": [
-      "DavilsHluffy",
-      "Xplodey",
-      "Zink69",
-      "Kimsanity_"
+      "Pink_Rose",
+      "Pink_Lotus",
+      "Pink_Blossom",
+      "Pink_Orchid"
     ],
-    "logo": "thereflexmatrix.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-d3f81c3f-dd46-44dc-86d2-3c1ad8d578d6-0.47826033927978384.png"
-  },
-  "Frag Fusion": {
-    "name": "Team FragFusion",
-    "group": "GROUP C",
-    "players": [
-      "PANTH3R_-",
-      "JARUSSAL",
-      "Villain-JJB",
-      "HeaDCoacH_7"
+    "rosterDetails": [
+      {
+        "name": "Pink_Rose",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 12,
+        "damage": 1700,
+        "assists": 3
+      },
+      {
+        "name": "Pink_Lotus",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 11,
+        "damage": 1600,
+        "assists": 4
+      },
+      {
+        "name": "Pink_Blossom",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 9,
+        "damage": 1400,
+        "assists": 3
+      },
+      {
+        "name": "Pink_Orchid",
+        "role": "Support",
+        "status": "Active",
+        "kills": 7,
+        "damage": 1000,
+        "assists": 5
+      }
     ],
-    "logo": "teamfragfusion.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-3f7f0a2f-cd9d-43d8-909d-1be798ed87ca-0.7454963129224119.png"
+    "logo": "SQ1_pink.png"
   },
-  "Rat Hunters": {
-    "name": "Rat Hunters",
-    "group": "GROUP A",
-    "players": [
-      "RAXIAL-",
-      "TGS_3X1LE",
-      "GodexGG",
-      "GodexGG"
-    ],
-    "logo": "rathunters.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-e5882ff7-c0db-45cc-a7ae-2c6430e4d947-0.04091462919171518.png"
-  },
-  "Koya": {
-    "name": "Koya_IYKYK",
-    "group": "GROUP A",
-    "players": [
-      "Kidilam-Firoz",
-      "PlingedHIHI",
-      "SprayLag8K",
-      "R1pJaw"
-    ],
-    "logo": "koya_iykyk.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-4da6b63a-9e7b-41f1-99bd-3a70a1cb0c12-0.4980124797626436.jpg"
-  },
-  "4Guys": {
-    "name": "4 Guys",
-    "group": "GROUP C",
-    "players": [
-      "KOHL1_-",
-      "ILLMINDD",
-      "NINJAREX0",
-      "IND_Rupesh_-"
-    ],
-    "logo": "4guys.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/20b6f5ab-bc22-4c6f-99c5-4171acfd4312.png"
-  },
-  "Mindspark": {
-    "name": "TeamMindSpark",
+  "UE RED": {
+    "name": "UE RED",
     "group": "GROUP D",
+    "tag": "#12",
+    "seed": 13,
     "players": [
-      "GUUTTTTSSSS",
-      "TMSxLOADOUT",
-      "MalluHeck",
-      "TMSxNEMESIS_15"
+      "SMILEY_YTLive",
+      "Bull0p",
+      "SPEEDO_SIL3NT",
+      "YUMRAAAJ"
     ],
-    "logo": "teammindspark.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-3d962968-c9dd-4aed-9521-645d2df995c7-0.46714441602252554.gif"
+    "rosterDetails": [
+      {
+        "name": "SMILEY_YTLive",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 11,
+        "damage": 1600,
+        "assists": 4
+      },
+      {
+        "name": "Bull0p",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 10,
+        "damage": 1500,
+        "assists": 3
+      },
+      {
+        "name": "SPEEDO_SIL3NT",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 8,
+        "damage": 1300,
+        "assists": 2
+      },
+      {
+        "name": "YUMRAAAJ",
+        "role": "Support",
+        "status": "Active",
+        "kills": 6,
+        "damage": 900,
+        "assists": 4
+      }
+    ],
+    "logo": "UE_red.png"
   },
-  "K51": {
-    "name": "K51 Officals",
-    "group": "GROUP A",
+  "UE": {
+    "name": "UE",
+    "group": "GROUP D",
+    "tag": "#13",
+    "seed": 14,
     "players": [
-      "XtremeeBoy",
-      "Rambo_PP",
-      "igUnKNoWNdUKE",
-      "14th_Republic"
+      "UE_Alpha",
+      "UE_Bravo",
+      "UE_Charlie",
+      "UE_Delta"
     ],
-    "logo": "squadone.png",
-    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/team-f42a56d8-3ca7-4e01-a95f-6b6f11166657-0.64435534846331.png"
+    "rosterDetails": [
+      {
+        "name": "UE_Alpha",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 10,
+        "damage": 1500,
+        "assists": 3
+      },
+      {
+        "name": "UE_Bravo",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 9,
+        "damage": 1400,
+        "assists": 3
+      },
+      {
+        "name": "UE_Charlie",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 7,
+        "damage": 1200,
+        "assists": 2
+      },
+      {
+        "name": "UE_Delta",
+        "role": "Support",
+        "status": "Active",
+        "kills": 5,
+        "damage": 800,
+        "assists": 4
+      }
+    ],
+    "logo": "UE.png"
+  },
+  "VAAH": {
+    "name": "VAAH",
+    "group": "GROUP A",
+    "tag": "#14",
+    "seed": 15,
+    "players": [
+      "VAAH_1",
+      "VAAH_2",
+      "VAAH_3",
+      "VAAH_4"
+    ],
+    "rosterDetails": [
+      {
+        "name": "VAAH_1",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 9,
+        "damage": 1400,
+        "assists": 2
+      },
+      {
+        "name": "VAAH_2",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 8,
+        "damage": 1300,
+        "assists": 3
+      },
+      {
+        "name": "VAAH_3",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 6,
+        "damage": 1100,
+        "assists": 2
+      },
+      {
+        "name": "VAAH_4",
+        "role": "Support",
+        "status": "Active",
+        "kills": 4,
+        "damage": 700,
+        "assists": 3
+      }
+    ],
+    "logo": "Vaah.png"
+  },
+  "X RAY": {
+    "name": "X RAY",
+    "group": "GROUP B",
+    "tag": "#15",
+    "seed": 16,
+    "players": [
+      "XR_Scope",
+      "XR_Radar",
+      "XR_Sonar",
+      "XR_Pulse"
+    ],
+    "rosterDetails": [
+      {
+        "name": "XR_Scope",
+        "role": "Sniper / Recon",
+        "status": "Active",
+        "kills": 8,
+        "damage": 1300,
+        "assists": 2
+      },
+      {
+        "name": "XR_Radar",
+        "role": "IGL / Assault",
+        "status": "Active",
+        "kills": 7,
+        "damage": 1200,
+        "assists": 3
+      },
+      {
+        "name": "XR_Sonar",
+        "role": "Entry Fragger",
+        "status": "Active",
+        "kills": 6,
+        "damage": 1000,
+        "assists": 2
+      },
+      {
+        "name": "XR_Pulse",
+        "role": "Support",
+        "status": "Active",
+        "kills": 4,
+        "damage": 600,
+        "assists": 3
+      }
+    ],
+    "logo": "X-RAY.png"
   }
 }
