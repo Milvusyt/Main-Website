@@ -1,14 +1,21 @@
 {
+  "sections": {
+    "monthly-winners": true,
+    "scrims": true,
+    "tournaments": true,
+    "broadcast": true,
+    "news": true,
+    "store": true,
+    "journey": true
+  },
   "broadcast": {
-    "isLive": true,
+    "feedTitle": "South Asia Cross-Bay Scrims — Grand Finals Match 5",
+    "startTime": "8:00 PM IST",
+    "youtubeUrl": "https://www.youtube.com/live/PMyjkKeQPPk",
     "videoId": "PMyjkKeQPPk",
-    "streamUrl": "https://www.youtube.com/embed/PMyjkKeQPPk?autoplay=0",
-    "matchTitle": "South Asia Cross-Bay Scrims — Grand Finals Match 5",
-    "scheduleTime": "8:00 PM IST",
-    "thumbnail": "sa-cross-bay-scrims.png",
-    "alivePlayers": 42,
-    "airdropSeconds": 24,
-    "tickerMessage": "GRAND FINALS MATCH 5 IS LIVE ON ERANGEL! WATCH ON YOUTUBE @SQUADONE"
+    "infoTitle": "South Asia Cross-Bay Scrims — Grand Finals Match 5",
+    "infoDesc": "Official Squad One live broadcast stream with real-time observer feeds and player telemetry.",
+    "isLive": true
   },
   "scrims": {
     "activeDays": "Friday, Saturday & Sunday",
@@ -20,14 +27,18 @@
   },
   "monthlyWinners": {
     "fanOfMonth": {
+      "enabled": true,
       "eyebrow": "MONTHLY AWARD",
       "title": "TOP FAN OF THE MONTH",
       "name": "milvus",
       "badge": "COMMUNITY VOTE · ANNOUNCED MONTHLY",
       "desc": "The most dedicated Squad One community member — voted by the squad each month.",
-      "avatar": ""
+      "avatar": "",
+      "poster": "",
+      "usePoster": false
     },
     "topTeams": {
+      "enabled": false,
       "eyebrow": "SEASON STANDINGS",
       "title": "TOP TEAMS",
       "seasonBadge": "OFFICIAL S2 CHAMPIONS",
@@ -52,6 +63,7 @@
       }
     },
     "killChallenge": {
+      "enabled": false,
       "eyebrow": "KILL CHALLENGE",
       "title": "TOP KILLS WINNERS",
       "badge": "LEADERBOARD · ANNOUNCED MONTHLY",
@@ -77,13 +89,19 @@
       ]
     },
     "communityChallenge": {
+      "enabled": false,
       "eyebrow": "COMMUNITY CHALLENGE",
       "title": "CHALLENGE WINNERS",
       "winnerName": "TBA",
+      "name": "TBA",
       "badge": "CHALLENGES · ANNOUNCED MONTHLY",
       "desc": "Monthly community challenge — unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
+      "poster": "",
+      "usePoster": false,
       "discordUrl": "https://discord.gg/pCk89vRPq",
-      "buttonText": "JOIN CHALLENGES ON DISCORD"
+      "buttonText": "JOIN CHALLENGES ON DISCORD",
+      "btnText": "JOIN CHALLENGES ON DISCORD",
+      "btnLink": "https://discord.gg/pCk89vRPq"
     },
     "podium": [
       {
@@ -131,6 +149,8 @@
   },
   "winners": {
     "card1": {
+      "enabled": true,
+      "title": "TOP FAN OF THE MONTH",
       "name": "milvus",
       "badge": "COMMUNITY VOTE · ANNOUNCED MONTHLY",
       "desc": "The most dedicated Squad One community member — voted by the squad each month.",
@@ -138,6 +158,7 @@
       "usePoster": false
     },
     "card2": {
+      "enabled": false,
       "cName": "SQUADONE",
       "cLogo": "assets/teams/squadone.png",
       "cPts": "188 PTS",
@@ -151,6 +172,7 @@
       "badge": "OFFICIAL S2 CHAMPIONS"
     },
     "card3": {
+      "enabled": false,
       "badge": "LEADERBOARD · ANNOUNCED MONTHLY",
       "p1": "MILVUSGoD",
       "t1": "SQUADMATRIX",
@@ -163,9 +185,15 @@
       "k3": "—"
     },
     "card4": {
+      "enabled": false,
+      "title": "CHALLENGE WINNERS",
       "name": "TBA",
       "badge": "CHALLENGES · ANNOUNCED MONTHLY",
       "desc": "Monthly community challenge — unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
+      "poster": "",
+      "usePoster": false,
+      "btnText": "JOIN CHALLENGES ON DISCORD",
+      "btnLink": "https://discord.gg/pCk89vRPq",
       "link": "https://discord.gg/pCk89vRPq",
       "linkText": "JOIN CHALLENGES ON DISCORD"
     }
@@ -194,6 +222,71 @@
       "createdAt": "2026-08-28"
     }
   ],
+  "store": {
+    "enabled": true,
+    "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
+    "title": "S1VE BY SQUADONE",
+    "desc": "",
+    "products": [
+      {
+        "id": "prod-1",
+        "title": "Squad One Pro Jersey 2026",
+        "badge": "HOT DROP · OVERSIZED",
+        "price": 1499,
+        "originalPrice": 2099,
+        "currency": "₹",
+        "image": "t-shirt.png",
+        "description": "",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      },
+      {
+        "id": "prod-2",
+        "title": "Cyberpunk Clan Hoodie (Midnight Black)",
+        "badge": "HOT DROP · OVERSIZED",
+        "price": 2499,
+        "originalPrice": 3499,
+        "currency": "₹",
+        "image": "Brand_Nme_.png",
+        "description": "",
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      },
+      {
+        "id": "prod-1788722681111",
+        "title": "me",
+        "badge": "HOT DROP · OVERSIZED",
+        "price": 10,
+        "originalPrice": 14,
+        "currency": "₹",
+        "image": "t-shirt.png",
+        "description": "",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      }
+    ]
+  },
   "storeArmory": {
     "vaultLocked": false,
     "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
@@ -243,7 +336,9 @@
           "XL"
         ]
       }
-    ]
+    ],
+    "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
+    "title": "S1VE BY SQUADONE"
   },
   "siteSettings": {
     "aboutUs": "Squad One Esports is India’s premier PUBG Battlegrounds PC organization, committed to structured grassroots talent development and elite tournament production.",
