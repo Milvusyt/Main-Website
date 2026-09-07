@@ -13205,6 +13205,18 @@
     // Apply Site Config On Initialization
     const initialConfig = loadSiteConfig() || SQ1_DEFAULT_CONFIG;
     applySiteConfig(initialConfig);
+
+    // Fetch live content bundle published from Admin Panel
+    fetch('squadone_website_content.json?v=' + Date.now())
+      .then(r => r.ok ? r.json() : null)
+      .then(bundle => {
+        if (bundle) {
+          const merged = { ...SQ1_DEFAULT_CONFIG, ...bundle };
+          applySiteConfig(merged);
+        }
+      })
+      .catch(() => {});
+
     if (typeof updateCartBadge === 'function') updateCartBadge();
 
     // Stop scroll propagation so modal scrolling is 100% independent from Lenis
