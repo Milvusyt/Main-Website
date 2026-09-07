@@ -11297,8 +11297,15 @@
     }
 
     // Initialize Tournament Cards dynamically
-    renderTournamentSeasons(allTournaments, 'sq1-s3');
-    openSeason(3, false);
+    const earlyCfg = (typeof loadSiteConfig === 'function') ? loadSiteConfig() : null;
+    if (earlyCfg && earlyCfg.tournaments && Array.isArray(earlyCfg.tournaments) && earlyCfg.tournaments.length > 0) {
+      allTournaments = earlyCfg.tournaments;
+      renderTournamentSeasons(allTournaments, earlyCfg.activeSeasonId || 'sq1-s3');
+    } else {
+      renderTournamentSeasons(allTournaments, 'sq1-s3');
+    }
+    const defaultSeasonNum = (allTournaments && allTournaments[0] && allTournaments[0].seasonNumber) ? allTournaments[0].seasonNumber : 3;
+    openSeason(defaultSeasonNum, false);
 
     const closeHubBtn = document.getElementById('btn-close-tournament-hub');
     if (closeHubBtn) {
@@ -11987,9 +11994,36 @@
 
     function loadSiteConfig() {
       try {
-        const saved = localStorage.getItem('SQ1_SITE_CONFIG');
+        let parsed = null;
+        // Check Master Admin Store first (shared when on same origin/localhost)
+        const masterAdmin = localStorage.getItem('sq1_master_admin_v2');
+        if (masterAdmin) {
+          try {
+            const adminState = JSON.parse(masterAdmin);
+            if (adminState) {
+              parsed = {
+                tournaments: adminState.tournaments || [],
+                activeSeasonId: adminState.activeSeasonId || 'sq1-s3',
+                sections: adminState.sections || {},
+                broadcast: adminState.broadcast || {},
+                scrims: adminState.scrims || {},
+                monthlyWinners: adminState.monthlyWinners || {},
+                store: adminState.storeArmory || {},
+                news: adminState.news || []
+              };
+            }
+          } catch(e) {}
+        }
+
+        const saved = localStorage.getItem('SQ1_SITE_CONFIG') || localStorage.getItem('sq1_site_config');
         if (saved) {
-          const parsed = JSON.parse(saved);
+          try {
+            const loaded = JSON.parse(saved);
+            parsed = { ...(parsed || {}), ...loaded };
+          } catch(e) {}
+        }
+
+        if (parsed) {
           if (!parsed.store || !Array.isArray(parsed.store.products) || parsed.store.products.length === 0 || !parsed.store.products.some(p => p.id && p.id.startsWith('s1ve'))) {
             parsed.store = { ...SQ1_DEFAULT_CONFIG.store };
             try { localStorage.setItem('SQ1_SITE_CONFIG', JSON.stringify(parsed)); } catch(e){}
@@ -14278,7 +14312,13 @@
       .then(r => r.ok ? r.json() : null)
       .then(bundle => {
         if (bundle) {
+          const localCfg = loadSiteConfig();
           const merged = { ...SQ1_DEFAULT_CONFIG, ...bundle };
+          // If the user has saved tournament edits in localStorage, preserve them over static JSON
+          if (localCfg && localCfg.tournaments && Array.isArray(localCfg.tournaments) && localCfg.tournaments.length > 0) {
+            merged.tournaments = localCfg.tournaments;
+            if (localCfg.activeSeasonId) merged.activeSeasonId = localCfg.activeSeasonId;
+          }
           applySiteConfig(merged);
         }
       })
