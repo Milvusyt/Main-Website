@@ -6030,30 +6030,6 @@
     .product-card:hover .product-image-box:not(.is-zoomed) img {
       transform: scale(1.05);
     }
-    .product-zoom-pill {
-      position: absolute;
-      bottom: 10px;
-      right: 12px;
-      background: rgba(14, 2, 20, 0.88);
-      border: 1px solid rgba(149, 61, 223, 0.6);
-      color: #FFD700;
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-      pointer-events: none;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
-      transition: opacity 0.25s ease, transform 0.25s ease;
-      z-index: 3;
-    }
-    .product-image-box.is-zoomed .product-zoom-pill {
-      opacity: 0.15;
-      transform: scale(0.9);
-    }
 
     /* FULL RESPONSIVENESS ACROSS ALL USER MEDIUMS: PC, LAPTOP, TABLET, PHONE */
     @media (max-width: 1200px) {
@@ -12022,7 +11998,6 @@
           <div class="product-card" id="product-card-${prod.id}" data-sound="hover">
             ${prod.badge ? `<div class="product-badge">${prod.badge}</div>` : ''}
             <div class="product-image-box" data-zoom-box="true" data-image-src="${prod.image || 'images/new Products/Final_1-_White.png'}" title="Hover & drag to zoom and inspect details">
-              <span class="product-zoom-pill">🔍 DRAG TO ZOOM</span>
               <img src="${prod.image || 'images/new Products/Final_1-_White.png'}" alt="${prod.title}" onerror="this.src='assets/teams/squadone.png'">
             </div>
             <div class="product-details">
