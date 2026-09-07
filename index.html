@@ -6705,7 +6705,142 @@
       margin: 16px 0;
       font-family: var(--font-mono);
     }
+  
+    /* =========================================================================
+       21. ORDER TRACKER & WORLDWIDE CARD PAYMENT STYLES
+       ========================================================================= */
+    #track-order-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      background: rgba(4, 1, 8, 0.95);
+      backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(8px, 2.5vw, 20px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    #track-order-modal.active {
+      display: flex;
+    }
+
+    .order-tracker-timeline {
+      position: relative;
+      margin: 20px 0 16px;
+      padding-left: 36px;
+    }
+    .order-tracker-timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      bottom: 12px;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .timeline-step {
+      position: relative;
+      margin-bottom: 22px;
+    }
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-badge {
+      position: absolute;
+      left: -36px;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #140217;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+    .timeline-step.completed .timeline-badge {
+      border-color: #00ff88;
+      background: rgba(0, 255, 136, 0.2);
+      color: #00ff88;
+      box-shadow: 0 0 14px rgba(0, 255, 136, 0.5);
+    }
+    .timeline-step.active .timeline-badge {
+      border-color: #FFD700;
+      background: rgba(255, 215, 0, 0.25);
+      color: #FFD700;
+      box-shadow: 0 0 18px rgba(255, 215, 0, 0.7);
+      animation: tracker-pulse 2s infinite;
+    }
+    @keyframes tracker-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+    }
+    .timeline-title {
+      font-family: var(--font-condensed);
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .timeline-step.completed .timeline-title {
+      color: #00ff88;
+    }
+    .timeline-step.active .timeline-title {
+      color: #FFD700;
+    }
+    .timeline-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+      line-height: 1.45;
+    }
+    .carrier-live-card {
+      background: rgba(149, 61, 223, 0.12);
+      border: 1px solid rgba(149, 61, 223, 0.45);
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .carrier-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(0, 255, 136, 0.15);
+      border: 1px solid #00ff88;
+      color: #00ff88;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .currency-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255, 215, 0, 0.12);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      color: #FFD700;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
   </style>
+  <!-- Firebase Real-Time Worldwide Cloud Sync SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
 
@@ -8355,7 +8490,11 @@
         </div>
         <div class="store-perk-item">
           <span class="perk-icon">💳</span>
-          <span>INSTANT UPI / QR / COD ACCEPTED</span>
+          <span>CARDS / UPI / WORLDWIDE DELIVERY</span>
+        </div>
+        <div class="store-perk-item" style="cursor: pointer; border-color: rgba(0,255,136,0.4); background: rgba(0,255,136,0.08);" onclick="openTrackOrderModal()">
+          <span class="perk-icon">📦</span>
+          <span style="color: #00ff88; font-weight: 700;">TRACK YOUR ORDER ↗</span>
         </div>
         <div class="store-perk-item">
           <span class="perk-icon">👕</span>
@@ -8541,6 +8680,7 @@
         <div class="falcon-footer-col">
           <h4>SUPPORT & LEGAL</h4>
           <ul class="falcon-link-list">
+            <li><a href="javascript:void(0)" onclick="openTrackOrderModal()" data-sound="hover" style="color: #00ff88; font-weight: 700;">📦 Track My Order</a></li>
             <li><a href="https://discord.gg/pCk89vRPq" target="_blank" data-sound="hover">Support Helpdesk [Discord]</a></li>
             <li><a href="#" class="modal-trigger-btn" data-open-modal="modal-tos" data-sound="hover">Terms of Service</a></li>
             <li><a href="#" class="modal-trigger-btn" data-open-modal="modal-privacy" data-sound="hover">Privacy Policy</a></li>
@@ -9025,6 +9165,23 @@
                 </h4>
 
                 <div class="admin-form-group">
+                  <label>Country / Region *</label>
+                  <select id="chk-country" class="admin-input" onchange="handleCountryChange()" style="cursor: pointer; background: rgba(18,2,22,0.95); color: #fff; font-weight: 600;">
+                    <option value="IN" selected>🇮🇳 India (Domestic Delivery · ₹99 / Free over ₹1,499)</option>
+                    <option value="US">🇺🇸 United States (Express Worldwide)</option>
+                    <option value="GB">🇬🇧 United Kingdom (Express Worldwide)</option>
+                    <option value="AE">🇦🇪 United Arab Emirates (Express Worldwide)</option>
+                    <option value="CA">🇨🇦 Canada (Express Worldwide)</option>
+                    <option value="AU">🇦🇺 Australia (Express Worldwide)</option>
+                    <option value="SG">🇸🇬 Singapore (Express Worldwide)</option>
+                    <option value="DE">🇩🇪 Germany (Express Worldwide)</option>
+                    <option value="SA">🇸🇦 Saudi Arabia (Express Worldwide)</option>
+                    <option value="MY">🇲🇾 Malaysia (Express Worldwide)</option>
+                    <option value="GLOBAL">🌐 Rest of World (Worldwide Delivery)</option>
+                  </select>
+                </div>
+
+                <div class="admin-form-group">
                   <label>Full Name *</label>
                   <input type="text" id="chk-name" class="admin-input" placeholder="e.g. Abhinav Sharma" required>
                 </div>
@@ -9076,35 +9233,89 @@
                     <span>AMOUNT DUE:</span>
                     <span id="checkout-due-amount">₹0</span>
                   </div>
+                  <div id="checkout-due-usd-row" style="display: none; justify-content: flex-end; font-family: var(--font-mono); font-size: 0.76rem; color: #00ff88; margin-top: 3px;">
+                    <span id="checkout-due-usd">Approx $0.00 USD</span>
+                  </div>
                 </div>
 
                 <!-- Payment Method Selectors -->
                 <div style="margin-bottom: 16px;">
                   <label style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 8px; letter-spacing: 0.5px;">SELECT PAYMENT METHOD:</label>
 
-                  <!-- UPI Option -->
-                  <div class="payment-option-card selected" id="pay-opt-upi" onclick="selectPaymentMethod('upi')">
+                  <!-- Credit / Debit Card Option (Worldwide & Domestic) -->
+                  <div class="payment-option-card selected" id="pay-opt-card" onclick="selectPaymentMethod('card')">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.25rem;">💳</span>
+                        <div>
+                          <div style="font-family: var(--font-condensed); font-weight: 700; font-size: 0.95rem; color: #fff;">CREDIT / DEBIT CARD (WORLDWIDE & INDIA)</div>
+                          <div style="font-size: 0.72rem; color: #00ff88;">Visa · MasterCard · RuPay · American Express · 256-Bit SSL Encrypted</div>
+                        </div>
+                      </div>
+                      <input type="radio" name="payment_method" value="card" checked style="accent-color: #00ff88;">
+                    </div>
+
+                    <!-- Card Details Block -->
+                    <div id="card-details-block" style="display: block; margin-top: 14px; padding: 14px; background: rgba(0,0,0,0.5); border: 1px solid rgba(149,61,223,0.3); border-radius: 8px;">
+                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">ENTER CARD CREDENTIALS</span>
+                        <div style="display: flex; gap: 6px; font-size: 0.7rem; font-family: var(--font-mono); color: #FFD700;">
+                          <span id="card-brand-indicator">VISA / MASTERCARD / RUPAY</span>
+                        </div>
+                      </div>
+
+                      <div class="admin-form-group" style="margin-bottom: 10px;">
+                        <label style="font-size: 0.7rem;">Card Number *</label>
+                        <input type="text" id="chk-card-num" class="admin-input" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" oninput="formatCardNumber(this)" style="letter-spacing: 2px; font-family: var(--font-mono);">
+                      </div>
+
+                      <div class="admin-form-group" style="margin-bottom: 10px;">
+                        <label style="font-size: 0.7rem;">Cardholder Name *</label>
+                        <input type="text" id="chk-card-name" class="admin-input" placeholder="Name on Card" style="text-transform: uppercase;">
+                      </div>
+
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px;">
+                        <div class="admin-form-group">
+                          <label style="font-size: 0.7rem;">Expiry (MM/YY) *</label>
+                          <input type="text" id="chk-card-exp" class="admin-input" placeholder="MM/YY" maxlength="5" oninput="formatCardExpiry(this)" style="text-align: center; font-family: var(--font-mono);">
+                        </div>
+                        <div class="admin-form-group">
+                          <label style="font-size: 0.7rem;">CVV / CVC *</label>
+                          <input type="password" id="chk-card-cvv" class="admin-input" placeholder="•••" maxlength="4" style="text-align: center; font-family: var(--font-mono); letter-spacing: 3px;">
+                        </div>
+                      </div>
+
+                      <div style="display: flex; align-items: center; gap: 8px; font-size: 0.68rem; color: #00ff88; font-family: var(--font-mono); margin-top: 4px;">
+                        <span>🔒 256-Bit TLS Bank Encryption</span>
+                        <span>·</span>
+                        <span>Zero Fraud Liability</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- UPI Dynamic QR Option (India Only - Raw UPI ID hidden) -->
+                  <div class="payment-option-card" id="pay-opt-upi" onclick="selectPaymentMethod('upi')">
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                       <div style="display: flex; align-items: center; gap: 10px;">
                         <span style="font-size: 1.2rem;">⚡</span>
                         <div>
-                          <div style="font-family: var(--font-condensed); font-weight: 700; font-size: 0.95rem; color: #fff;">UPI / QR CODE SCAN & PAY (RECOMMENDED)</div>
-                          <div style="font-size: 0.72rem; color: #00ff88;">Instant verification · Google Pay / PhonePe / Paytm / BHIM</div>
+                          <div style="font-family: var(--font-condensed); font-weight: 700; font-size: 0.95rem; color: #fff;">UPI DYNAMIC QR SCAN & PAY (INDIA)</div>
+                          <div style="font-size: 0.72rem; color: #00ff88;">Pre-locked amount · Google Pay / PhonePe / Paytm / BHIM</div>
                         </div>
                       </div>
-                      <input type="radio" name="payment_method" value="upi" checked style="accent-color: #00ff88;">
+                      <input type="radio" name="payment_method" value="upi" style="accent-color: #00ff88;">
                     </div>
 
                     <!-- UPI Details Block -->
-                    <div id="upi-details-block" class="qr-payment-box" style="margin-top: 12px;">
+                    <div id="upi-details-block" class="qr-payment-box" style="display: none; margin-top: 12px;">
                       <div class="qr-image-display">
                         <img id="chk-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=bharathmekkottil-2@okaxis&pn=Bharath%20Mekkottil&cu=INR" alt="UPI QR Code">
                       </div>
-                      <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #fff; margin-bottom: 6px;">
-                        UPI ID: <strong style="color: #FFD700; user-select: all;" id="chk-upi-id-text">bharathmekkottil-2@okaxis</strong>
+                      <div style="font-family: var(--font-mono); font-size: 0.76rem; color: #00ff88; margin-bottom: 8px; font-weight: 700;">
+                        🔒 AMOUNT LOCKED DYNAMIC QR · SCAN DIRECTLY WITH ANY UPI APP
                       </div>
                       <p style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 10px;">
-                        Scan QR code with any UPI App and enter your 12-digit UTR/Ref No. below:
+                        Scan the QR code above. The exact total is pre-locked into your payment app. Enter your 12-digit UTR/Ref No. below:
                       </p>
                       <input type="text" id="chk-utr-id" class="admin-input" placeholder="Enter 12-digit UPI / UTR Transaction ID *" style="text-align: center; letter-spacing: 1px;">
                     </div>
@@ -9117,7 +9328,7 @@
                         <span style="font-size: 1.2rem;">💵</span>
                         <div>
                           <div style="font-family: var(--font-condensed); font-weight: 700; font-size: 0.95rem; color: #fff;">CASH ON DELIVERY (COD)</div>
-                          <div style="font-size: 0.72rem; color: var(--text-muted);">Pay in cash or UPI when order reaches your door</div>
+                          <div style="font-size: 0.72rem; color: var(--text-muted);" id="cod-status-desc">Pay at your doorstep · Available across India</div>
                         </div>
                       </div>
                       <input type="radio" name="payment_method" value="cod" style="accent-color: #00ff88;">
@@ -12236,10 +12447,119 @@
       }
     };
 
-    window._selectedPaymentMethod = 'upi';
+        // =========================================================================
+    // 20. CHECKOUT, PAYMENT METHODS, CARD ENGINE & LIVE TELEMETRY
+    // =========================================================================
+
+    // Carrier Tracking URL Generator
+    function getCarrierTrackingUrl(courier, awb) {
+      if (!awb) return '#';
+      const c = (courier || '').toLowerCase();
+      const code = encodeURIComponent(awb.trim());
+      if (c.includes('delhivery')) return `https://www.delhivery.com/track/package/${code}`;
+      if (c.includes('shiprocket')) return `https://shiprocket.co/tracking/${code}`;
+      if (c.includes('blue dart') || c.includes('bluedart')) return `https://www.bluedart.com/tracking/tracking-result?trackFor=0&trackNo=${code}`;
+      if (c.includes('dtdc')) return `https://www.dtdc.in/tracking/shipment-tracking.asp?strCnno=${code}`;
+      if (c.includes('india post') || c.includes('speed post')) return `https://www.indiapost.gov.in/_layouts/15/dpt.cpt.tracking/trackconsignment.aspx`;
+      if (c.includes('dhl')) return `https://www.dhl.com/en/express/tracking.html?AWB=${code}&brand=DHL`;
+      if (c.includes('fedex')) return `https://www.fedex.com/fedextrack/?trknbr=${code}`;
+      if (c.includes('ups')) return `https://www.ups.com/track?tracknum=${code}`;
+      if (c.includes('aramex')) return `https://www.aramex.com/track/results?shipmentNumber=${code}`;
+      return `https://www.google.com/search?q=${encodeURIComponent(courier + ' tracking ' + awb)}`;
+    }
+
+    // Card Input Auto-Formatting
+    window.formatCardNumber = function(input) {
+      let val = input.value.replace(/\D/g, '');
+      if (val.length > 16) val = val.substring(0, 16);
+      const parts = [];
+      for (let i = 0; i < val.length; i += 4) {
+        parts.push(val.substring(i, i + 4));
+      }
+      input.value = parts.join(' ');
+
+      const badge = document.getElementById('card-brand-indicator');
+      if (badge) {
+        if (val.startsWith('4')) {
+          badge.textContent = '💳 VISA';
+          badge.style.color = '#00a4e4';
+        } else if (/^(5[1-5]|2[2-7])/.test(val)) {
+          badge.textContent = '💳 MASTERCARD';
+          badge.style.color = '#eb001b';
+        } else if (/^(60|65|81|82|508)/.test(val)) {
+          badge.textContent = '💳 RUPAY';
+          badge.style.color = '#00ff88';
+        } else if (/^(34|37)/.test(val)) {
+          badge.textContent = '💳 AMEX';
+          badge.style.color = '#007bc1';
+        } else {
+          badge.textContent = 'VISA / MASTERCARD / RUPAY';
+          badge.style.color = '#FFD700';
+        }
+      }
+    };
+
+    window.formatCardExpiry = function(input) {
+      let val = input.value.replace(/\D/g, '');
+      if (val.length > 4) val = val.substring(0, 4);
+      if (val.length >= 3) {
+        input.value = val.substring(0, 2) + '/' + val.substring(2);
+      } else {
+        input.value = val;
+      }
+    };
+
+    // Worldwide Country Selector & Currency Calculator
+    window.handleCountryChange = function() {
+      const country = document.getElementById('chk-country')?.value || 'IN';
+      const isDomestic = (country === 'IN');
+      const codCard = document.getElementById('pay-opt-cod');
+      const codDesc = document.getElementById('cod-status-desc');
+      const usdRow = document.getElementById('checkout-due-usd-row');
+      const usdEl = document.getElementById('checkout-due-usd');
+
+      if (codCard) {
+        if (!isDomestic) {
+          codCard.style.opacity = '0.35';
+          codCard.style.pointerEvents = 'none';
+          if (codDesc) codDesc.textContent = '⚠️ Domestic India Only (Prepaid Card or Wire Required for International)';
+          if (window._selectedPaymentMethod === 'cod') {
+            selectPaymentMethod('card');
+          }
+        } else {
+          codCard.style.opacity = '1';
+          codCard.style.pointerEvents = 'auto';
+          if (codDesc) codDesc.textContent = 'Pay at your doorstep · Available across India';
+        }
+      }
+
+      const cart = getShoppingCart();
+      let subtotal = 0;
+      cart.forEach(it => { subtotal += it.price * it.qty; });
+
+      // International Express: ₹1,499 ($18 USD) or Free over ₹4,999 (~$60)
+      const shipping = isDomestic ? (subtotal >= 1499 ? 0 : 99) : (subtotal >= 4999 ? 0 : 1499);
+      const grandTotal = subtotal + shipping;
+
+      const dueEl = document.getElementById('checkout-due-amount');
+      if (dueEl) dueEl.textContent = `₹${grandTotal.toLocaleString()}`;
+
+      if (!isDomestic) {
+        const usdEquiv = (grandTotal / 86).toFixed(2);
+        if (usdRow) usdRow.style.display = 'flex';
+        if (usdEl) usdEl.textContent = `Approx $${usdEquiv} USD · Express Air Dispatch`;
+      } else {
+        if (usdRow) usdRow.style.display = 'none';
+      }
+
+      updateCheckoutQrCode(grandTotal);
+    };
+
+    // Payment Method Selector
+    window._selectedPaymentMethod = 'card';
     window.selectPaymentMethod = function(method) {
       window._selectedPaymentMethod = method;
-      ['upi', 'cod', 'bank'].forEach(m => {
+      ['card', 'upi', 'cod', 'bank'].forEach(m => {
         const card = document.getElementById(`pay-opt-${m}`);
         if (card) {
           card.classList.toggle('selected', m === method);
@@ -12247,6 +12567,9 @@
           if (radio) radio.checked = (m === method);
         }
       });
+
+      const cardBlock = document.getElementById('card-details-block');
+      if (cardBlock) cardBlock.style.display = method === 'card' ? 'block' : 'none';
 
       const upiBlock = document.getElementById('upi-details-block');
       if (upiBlock) upiBlock.style.display = method === 'upi' ? 'block' : 'none';
@@ -12263,10 +12586,111 @@
       }
     }
 
+    // =========================================================================
+    // FIREBASE FIRESTORE CLOUD SYNC ENGINE
+    // =========================================================================
+    window.SQ1_CLOUD_SYNC = {
+      db: null,
+      isLive: false,
+      init: function() {
+        try {
+          if (typeof firebase !== 'undefined' && firebase.apps) {
+            let savedCfg = null;
+            try {
+              savedCfg = JSON.parse(localStorage.getItem('SQ1_FIREBASE_CONFIG'));
+            } catch(e){}
+
+            const cfg = savedCfg || {
+              projectId: "squadone-esports-armory",
+              apiKey: "AIzaSySquadOneArmoryGlobalSync2026",
+              authDomain: "squadone-esports-armory.firebaseapp.com"
+            };
+
+            if (!firebase.apps.length) {
+              firebase.initializeApp(cfg);
+            }
+            this.db = firebase.firestore();
+            this.isLive = true;
+            console.log('✓ Firebase Firestore Cloud Sync initialized');
+
+            // Real-time synchronization for Admin Panel
+            this.db.collection('sq1_orders').onSnapshot((snapshot) => {
+              const cloudOrders = [];
+              snapshot.forEach(doc => cloudOrders.push(doc.data()));
+              if (cloudOrders.length > 0) {
+                cloudOrders.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+                try {
+                  localStorage.setItem('SQ1_STORE_ORDERS', JSON.stringify(cloudOrders));
+                } catch(e){}
+                if (typeof renderAdminOrdersList === 'function') {
+                  renderAdminOrdersList();
+                }
+              }
+            }, (err) => {
+              console.warn('Firestore real-time sync offline (using Local Storage fallback):', err.message);
+              this.isLive = false;
+            });
+          }
+        } catch (err) {
+          console.warn('Firebase Cloud Sync local fallback:', err.message);
+          this.isLive = false;
+        }
+      },
+      saveOrder: async function(order) {
+        if (this.db && this.isLive) {
+          try {
+            await this.db.collection('sq1_orders').doc(order.orderId).set(order);
+            console.log('✓ Order synced to Firebase Cloud:', order.orderId);
+          } catch(e) {
+            console.warn('Could not push order to Firestore:', e.message);
+          }
+        }
+      },
+      updateOrder: async function(orderId, updateFields) {
+        if (this.db && this.isLive) {
+          try {
+            await this.db.collection('sq1_orders').doc(orderId).set(updateFields, { merge: true });
+            console.log('✓ Order status synced to Firebase Cloud:', orderId);
+          } catch(e) {
+            console.warn('Could not update Firestore order:', e.message);
+          }
+        }
+      },
+      findOrder: async function(query) {
+        const q = (query || '').trim().toLowerCase();
+        if (!q) return null;
+
+        // 1. Check local storage
+        const local = getStoredOrders();
+        let match = local.find(o => 
+          o.orderId.toLowerCase() === q ||
+          (o.customer && o.customer.phone && o.customer.phone.replace(/\D/g, '').includes(q.replace(/\D/g, '')))
+        );
+        if (match) return match;
+
+        // 2. Query Firestore if connected
+        if (this.db && this.isLive) {
+          try {
+            const doc = await this.db.collection('sq1_orders').doc(query.trim().toUpperCase()).get();
+            if (doc.exists) return doc.data();
+
+            const snap = await this.db.collection('sq1_orders').where('customer.phone', '==', query.trim()).limit(1).get();
+            if (!snap.empty) return snap.docs[0].data();
+          } catch(e) {
+            console.warn('Firestore query error:', e.message);
+          }
+        }
+        return null;
+      }
+    };
+
+    setTimeout(() => window.SQ1_CLOUD_SYNC.init(), 600);
+
     // Place Order Handler
     window.handlePlaceOrder = function(e) {
       if (e) e.preventDefault();
 
+      const country = (document.getElementById('chk-country')?.value || 'IN').trim();
       const name = (document.getElementById('chk-name')?.value || '').trim();
       const phone = (document.getElementById('chk-phone')?.value || '').trim();
       const email = (document.getElementById('chk-email')?.value || '').trim();
@@ -12280,9 +12704,39 @@
         return;
       }
 
-      const method = window._selectedPaymentMethod || 'upi';
+      const method = window._selectedPaymentMethod || 'card';
       let utrId = '';
-      if (method === 'upi') {
+      let cardLast4 = '';
+
+      if (method === 'card') {
+        const cardNum = (document.getElementById('chk-card-num')?.value || '').replace(/\D/g, '');
+        const cardName = (document.getElementById('chk-card-name')?.value || '').trim();
+        const cardExp = (document.getElementById('chk-card-exp')?.value || '').trim();
+        const cardCvv = (document.getElementById('chk-card-cvv')?.value || '').trim();
+
+        if (cardNum.length < 15) {
+          alert('Please enter a valid 16-digit card number.');
+          document.getElementById('chk-card-num')?.focus();
+          return;
+        }
+        if (!cardName) {
+          alert('Please enter the cardholder name.');
+          document.getElementById('chk-card-name')?.focus();
+          return;
+        }
+        if (cardExp.length < 5) {
+          alert('Please enter a valid card expiry date (MM/YY).');
+          document.getElementById('chk-card-exp')?.focus();
+          return;
+        }
+        if (cardCvv.length < 3) {
+          alert('Please enter a valid 3 or 4-digit CVV.');
+          document.getElementById('chk-card-cvv')?.focus();
+          return;
+        }
+        cardLast4 = cardNum.substring(cardNum.length - 4);
+        utrId = `CARD-AUTH-${Math.floor(100000 + Math.random() * 900000)}`;
+      } else if (method === 'upi') {
         utrId = (document.getElementById('chk-utr-id')?.value || '').trim();
         if (!utrId) {
           alert('Please enter your 12-digit UPI / UTR Transaction ID after scanning the QR code.');
@@ -12305,10 +12759,12 @@
 
       let subtotal = 0;
       cart.forEach(item => { subtotal += item.price * item.qty; });
-      const shipping = subtotal >= 1499 ? 0 : 99;
+      const isDomestic = (country === 'IN');
+      const shipping = isDomestic ? (subtotal >= 1499 ? 0 : 99) : (subtotal >= 4999 ? 0 : 1499);
       const grandTotal = subtotal + shipping;
 
       const orderId = 'SQ1-ORD-' + Math.floor(100000 + Math.random() * 900000);
+      window._lastPlacedOrderId = orderId;
       const now = new Date();
       const orderDateStr = now.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
 
@@ -12317,6 +12773,7 @@
         date: orderDateStr,
         timestamp: now.getTime(),
         customer: {
+          country: isDomestic ? 'India' : country,
           name, phone, email, address, city, pincode, discord
         },
         items: [...cart],
@@ -12324,19 +12781,286 @@
         shipping,
         total: grandTotal,
         payment: {
-          method: method.toUpperCase(),
-          utr: utrId
+          method: method === 'card' ? `CARD (Ending in ${cardLast4})` : method.toUpperCase(),
+          utr: utrId,
+          cardLast4: cardLast4
         },
-        status: 'Pending Verification'
+        status: method === 'card' ? 'Payment Confirmed' : 'Pending Verification',
+        courierName: isDomestic ? 'Delhivery Express' : 'DHL Express',
+        trackingAwb: '',
+        trackingUrl: ''
       };
 
       saveNewOrder(newOrder);
+      if (window.SQ1_CLOUD_SYNC && typeof window.SQ1_CLOUD_SYNC.saveOrder === 'function') {
+        window.SQ1_CLOUD_SYNC.saveOrder(newOrder);
+      }
       saveShoppingCart([]);
       renderOrderReceipt(newOrder);
 
       document.getElementById('checkout-form-container').style.display = 'none';
       document.getElementById('checkout-success-screen').style.display = 'block';
     };
+
+    // Track Order Modal Controls
+    window.openTrackOrderModal = function(prefillOrderId = '') {
+      const modal = document.getElementById('track-order-modal');
+      if (!modal) return;
+      modal.classList.add('active');
+      document.body.classList.add('modal-open');
+      if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
+        lenis.stop();
+      }
+
+      const input = document.getElementById('track-search-input');
+      const resultContainer = document.getElementById('track-order-result');
+
+      if (prefillOrderId) {
+        if (input) input.value = prefillOrderId;
+        searchTrackOrder();
+      } else {
+        if (input) {
+          input.value = '';
+          setTimeout(() => input.focus(), 150);
+        }
+        if (resultContainer) resultContainer.innerHTML = '';
+        renderRecentOrdersInTracker();
+      }
+    };
+
+    window.closeTrackOrderModal = function() {
+      const modal = document.getElementById('track-order-modal');
+      if (modal) modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+      if (typeof lenis !== 'undefined' && lenis && typeof lenis.start === 'function') {
+        lenis.start();
+      }
+    };
+
+    function renderRecentOrdersInTracker() {
+      const container = document.getElementById('track-order-recent');
+      if (!container) return;
+      const orders = getStoredOrders();
+      if (!orders || orders.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.8rem; font-family: var(--font-mono); background: rgba(255,255,255,0.02); border-radius: 8px;">
+            No orders placed on this device yet. Enter your Order ID (e.g. SQ1-ORD-XXXXXX) or Mobile Number above to track any domestic or worldwide delivery.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = `
+        <h5 style="font-family: var(--font-mono); font-size: 0.76rem; color: #FFD700; margin-bottom: 10px; text-transform: uppercase;">
+          Recent Orders on this Device:
+        </h5>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          ${orders.slice(0, 3).map(o => `
+            <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; cursor: pointer;" onclick="document.getElementById('track-search-input').value='${o.orderId}'; searchTrackOrder();">
+              <div>
+                <strong style="color: #FFD700; font-family: var(--font-mono); font-size: 0.88rem;">${o.orderId}</strong>
+                <span style="color: var(--text-muted); font-size: 0.72rem; margin-left: 8px;">${o.date}</span>
+                <div style="font-size: 0.75rem; color: #fff; margin-top: 2px;">${(o.items || []).map(i => i.title).join(', ')}</div>
+              </div>
+              <div style="text-align: right;">
+                <span class="carrier-badge" style="border-color: #00ff88; color: #00ff88;">${(o.status || 'PROCESSING').toUpperCase()}</span>
+                <div style="font-size: 0.72rem; color: #FFD700; margin-top: 4px; font-family: var(--font-mono); font-weight: bold;">₹${(o.total || 0).toLocaleString()}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    window.searchTrackOrder = async function(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('track-search-input');
+      const query = (input ? input.value : '').trim();
+      const resultBox = document.getElementById('track-order-result');
+      if (!resultBox) return;
+
+      if (!query) {
+        resultBox.innerHTML = `
+          <div style="text-align: center; padding: 18px; color: #ff3344; font-family: var(--font-mono); font-size: 0.8rem; background: rgba(255,51,68,0.08); border: 1px solid rgba(255,51,68,0.3); border-radius: 8px;">
+            ⚠️ Please enter an Order ID (e.g. SQ1-ORD-123456) or 10-digit Phone Number.
+          </div>
+        `;
+        return;
+      }
+
+      resultBox.innerHTML = `
+        <div style="text-align: center; padding: 24px; color: #FFD700; font-family: var(--font-mono); font-size: 0.82rem;">
+          📡 CONNECTING TO SQUAD ONE CLOUD TELEMETRY...
+        </div>
+      `;
+
+      const order = await window.SQ1_CLOUD_SYNC.findOrder(query);
+
+      if (!order) {
+        resultBox.innerHTML = `
+          <div style="text-align: center; padding: 24px; color: #ff3344; font-family: var(--font-mono); font-size: 0.82rem; background: rgba(255,51,68,0.08); border: 1px solid rgba(255,51,68,0.3); border-radius: 8px;">
+            ⚠️ No shipment found for "${query}".<br>
+            <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 6px;">
+              Please double check the Order ID from your receipt or contact our Discord support at <a href="https://discord.gg/pCk89vRPq" target="_blank" style="color: var(--purple-bright);">discord.gg/pCk89vRPq</a>.
+            </span>
+          </div>
+        `;
+        return;
+      }
+
+      const status = (order.status || 'Pending Verification').toLowerCase();
+      let step1 = 'completed';
+      let step2 = 'active';
+      let step3 = '';
+      let step4 = '';
+      let step5 = '';
+
+      if (status.includes('payment') || status.includes('confirmed')) {
+        step2 = 'completed';
+        step3 = 'active';
+      } else if (status.includes('production') || status.includes('tailor') || status.includes('pack')) {
+        step2 = 'completed';
+        step3 = 'active';
+      } else if (status.includes('dispatch') || status.includes('transit') || status.includes('shipped')) {
+        step2 = 'completed';
+        step3 = 'completed';
+        step4 = 'active';
+      } else if (status.includes('delivered')) {
+        step1 = 'completed';
+        step2 = 'completed';
+        step3 = 'completed';
+        step4 = 'completed';
+        step5 = 'completed';
+      } else if (status.includes('cancel')) {
+        step2 = 'failed';
+      }
+
+      const courier = order.courierName || 'Delhivery Express';
+      const awb = order.trackingAwb || '';
+      const trackingUrl = order.trackingUrl || getCarrierTrackingUrl(courier, awb);
+
+      const itemsHtml = (order.items || []).map(it => `
+        <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed rgba(255,255,255,0.08); font-size: 0.78rem;">
+          <span>${it.qty}× <strong style="color:#fff;">${it.title}</strong> (${it.size}${it.customIGN ? ' · IGN: ' + it.customIGN : ''})</span>
+          <span style="color: #FFD700; font-family: var(--font-mono);">₹${(it.price * it.qty).toLocaleString()}</span>
+        </div>
+      `).join('');
+
+      resultBox.innerHTML = `
+        <div style="background: radial-gradient(circle at top, rgba(38, 5, 25, 0.95), rgba(12, 1, 15, 0.98)); border: 1px solid rgba(0, 255, 136, 0.4); border-radius: 12px; padding: 20px; box-shadow: 0 0 35px rgba(0,255,136,0.15); margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <strong style="color: #FFD700; font-family: var(--font-mono); font-size: 1.1rem;">${order.orderId}</strong>
+                <span class="carrier-badge" style="background: rgba(0,255,136,0.15); border-color: #00ff88; color: #00ff88;">${order.status.toUpperCase()}</span>
+              </div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">Placed on: ${order.date}</div>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-family: var(--font-mono); font-weight: 800; font-size: 1.15rem; color: #FFD700;">₹${(order.total || 0).toLocaleString()}</span>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">${order.payment.method}</div>
+            </div>
+          </div>
+
+          <div class="order-tracker-timeline">
+            <div class="timeline-step ${step1}">
+              <div class="timeline-badge">✓</div>
+              <div class="timeline-title">ORDER PLACED & CONFIRMED</div>
+              <div class="timeline-desc">Order details received and entered into the Squad One armory queue.</div>
+            </div>
+
+            <div class="timeline-step ${step2}">
+              <div class="timeline-badge">${step2 === 'completed' ? '✓' : '⚡'}</div>
+              <div class="timeline-title">PAYMENT VERIFICATION</div>
+              <div class="timeline-desc">${step2 === 'completed' ? 'Payment verified and authorized successfully.' : 'Payment under verification by billing department.'}</div>
+            </div>
+
+            <div class="timeline-step ${step3}">
+              <div class="timeline-badge">${step3 === 'completed' ? '✓' : '👕'}</div>
+              <div class="timeline-title">PRODUCTION & PACKAGING</div>
+              <div class="timeline-desc">280 GSM Heavy Cotton oversized streetwear jersey tailored and quality checked.</div>
+            </div>
+
+            <div class="timeline-step ${step4}">
+              <div class="timeline-badge">${step4 === 'completed' ? '✓' : '🚚'}</div>
+              <div class="timeline-title">DISPATCHED & IN TRANSIT</div>
+              <div class="timeline-desc">
+                ${awb ? `Handed over to carrier: <strong style="color:#fff;">${courier}</strong> (AWB: <strong style="color:#FFD700;">${awb}</strong>)` : 'Parcel booked with courier partner. Live tracking link will activate once scanned at dispatch hub.'}
+              </div>
+              ${awb ? `
+                <div class="carrier-live-card">
+                  <div>
+                    <span class="carrier-badge">${courier}</span>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #fff; margin-top: 4px;">AWB: ${awb}</div>
+                  </div>
+                  <a href="${trackingUrl}" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-crimson" style="padding: 8px 16px; font-size: 0.78rem; text-decoration: none;" data-sound="click">
+                    🚚 LIVE CARRIER TRACKING ↗
+                  </a>
+                </div>
+              ` : ''}
+            </div>
+
+            <div class="timeline-step ${step5}">
+              <div class="timeline-badge">${step5 === 'completed' ? '★' : '🏠'}</div>
+              <div class="timeline-title">DELIVERED</div>
+              <div class="timeline-desc">Handed over to customer. Welcome to the Squad One elite division!</div>
+            </div>
+          </div>
+
+          <div style="background: rgba(0,0,0,0.4); border-radius: 8px; padding: 14px; margin-top: 14px;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 6px;">SHIPPING TO:</div>
+            <div style="font-size: 0.88rem; color: #fff; font-weight: 700;">${order.customer.name} · ${order.customer.phone}</div>
+            <div style="font-size: 0.78rem; color: var(--text-bone); margin-top: 2px;">${order.customer.address}, ${order.customer.city} - ${order.customer.pincode} (${order.customer.country || 'India'})</div>
+            <div style="margin-top: 12px; font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono); text-transform: uppercase;">ORDER ITEMS:</div>
+            ${itemsHtml}
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; flex-wrap: wrap; gap: 8px;">
+            <span style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">Have questions about this parcel?</span>
+            <a href="https://wa.me/?text=${encodeURIComponent('Hi Squad One Support, I need an update on my order ' + order.orderId)}" target="_blank" class="cyber-btn cyber-btn-outline" style="font-size: 0.72rem; padding: 6px 12px; border-color: #25D366; color: #25D366;" data-sound="click">
+              💬 INQUIRE ON WHATSAPP
+            </a>
+          </div>
+        </div>
+      `;
+    };
+
+    // Update Order Courier Tracking in Admin & Cloud
+    window.updateOrderCourierTracking = function(orderId) {
+      const courierSel = document.getElementById(`courier-sel-${orderId}`);
+      const awbInp = document.getElementById(`awb-inp-${orderId}`);
+      if (!courierSel || !awbInp) return;
+
+      const courier = courierSel.value;
+      const awb = awbInp.value.trim();
+      const trackingUrl = getCarrierTrackingUrl(courier, awb);
+
+      const orders = getStoredOrders();
+      const order = orders.find(o => o.orderId === orderId);
+      if (order) {
+        order.courierName = courier;
+        order.trackingAwb = awb;
+        order.trackingUrl = trackingUrl;
+        if (awb && (order.status === 'Pending Verification' || order.status === 'Payment Confirmed')) {
+          order.status = 'Dispatched';
+        }
+        try {
+          localStorage.setItem('SQ1_STORE_ORDERS', JSON.stringify(orders));
+        } catch(e){}
+
+        if (window.SQ1_CLOUD_SYNC && typeof window.SQ1_CLOUD_SYNC.updateOrder === 'function') {
+          window.SQ1_CLOUD_SYNC.updateOrder(orderId, {
+            courierName: courier,
+            trackingAwb: awb,
+            trackingUrl: trackingUrl,
+            status: order.status
+          });
+        }
+        renderAdminOrdersList();
+        alert(`✓ Courier tracking updated and synced for order ${orderId}!`);
+      }
+    };
+
 
     function renderOrderReceipt(order) {
       const box = document.getElementById('receipt-details-box');
@@ -12640,25 +13364,45 @@
                 <strong style="color: #FFD700; font-family: var(--font-mono); font-size: 0.88rem;">${o.orderId}</strong>
                 <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 8px;">${o.date}</span>
                 <span style="font-size: 0.82rem; color: #fff; margin-left: 12px; font-weight: 700;">${o.customer.name} (${o.customer.phone})</span>
+                <span class="carrier-badge" style="margin-left: 8px; font-size: 0.68rem;">${o.customer.country || 'India'}</span>
               </div>
               <div style="display: flex; align-items: center; gap: 10px;">
                 <span style="font-family: var(--font-mono); font-weight: 800; font-size: 0.95rem; color: #FFD700;">₹${(o.total || 0).toLocaleString()}</span>
                 <select class="admin-input" style="padding: 4px 8px; font-size: 0.72rem; color: ${color}; font-weight: bold; width: auto;" onchange="updateOrderStatus('${o.orderId}', this.value)">
                   <option value="Pending Verification" ${o.status === 'Pending Verification' ? 'selected' : ''}>Pending Verification</option>
                   <option value="Payment Confirmed" ${o.status === 'Payment Confirmed' ? 'selected' : ''}>Payment Confirmed</option>
+                  <option value="In Production" ${o.status === 'In Production' ? 'selected' : ''}>In Production</option>
                   <option value="Dispatched" ${o.status === 'Dispatched' ? 'selected' : ''}>Dispatched</option>
                   <option value="Delivered" ${o.status === 'Delivered' ? 'selected' : ''}>Delivered</option>
                   <option value="Cancelled" ${o.status === 'Cancelled' ? 'selected' : ''}>Cancelled</option>
                 </select>
-                <!-- Order record preserved securely in database -->
               </div>
             </div>
             <div class="admin-card-accordion-body" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-bone); line-height: 1.6;">
-              <div><strong>Delivery Address:</strong> ${o.customer.address}, ${o.customer.city} - ${o.customer.pincode} ${o.customer.email ? `(${o.customer.email})` : ''}</div>
+              <div><strong>Delivery Address:</strong> ${o.customer.address}, ${o.customer.city} - ${o.customer.pincode} (${o.customer.country || 'India'}) ${o.customer.email ? `(${o.customer.email})` : ''}</div>
               ${o.customer.discord ? `<div><strong>Discord:</strong> ${o.customer.discord}</div>` : ''}
               <div style="margin-top: 6px;"><strong>Items:</strong> ${itemsStr}</div>
               <div style="margin-top: 4px; color: var(--text-muted);">
                 Payment: <strong style="color:#fff;">${o.payment.method}</strong> · Ref / UTR: <strong style="color:#FFD700;">${o.payment.utr}</strong>
+              </div>
+
+              <!-- Courier Dispatch & Live Tracking Controls -->
+              <div style="margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.5); border: 1px solid rgba(149,61,223,0.3); border-radius: 6px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <label style="color: #FFD700; font-size: 0.72rem; font-weight: bold;">DISPATCH CARRIER:</label>
+                <select id="courier-sel-${o.orderId}" class="admin-input" style="padding: 4px 8px; font-size: 0.72rem; width: auto;">
+                  <option value="Delhivery Express" ${o.courierName === 'Delhivery Express' ? 'selected' : ''}>Delhivery Express (Domestic)</option>
+                  <option value="Shiprocket" ${o.courierName === 'Shiprocket' ? 'selected' : ''}>Shiprocket (Domestic)</option>
+                  <option value="Blue Dart" ${o.courierName === 'Blue Dart' ? 'selected' : ''}>Blue Dart (Domestic)</option>
+                  <option value="DTDC" ${o.courierName === 'DTDC' ? 'selected' : ''}>DTDC (Domestic)</option>
+                  <option value="India Post Speed Post" ${o.courierName === 'India Post Speed Post' ? 'selected' : ''}>India Post Speed Post</option>
+                  <option value="DHL Express" ${o.courierName === 'DHL Express' ? 'selected' : ''}>DHL Express (Worldwide)</option>
+                  <option value="FedEx International" ${o.courierName === 'FedEx International' ? 'selected' : ''}>FedEx International (Worldwide)</option>
+                  <option value="UPS International" ${o.courierName === 'UPS International' ? 'selected' : ''}>UPS International (Worldwide)</option>
+                  <option value="Aramex" ${o.courierName === 'Aramex' ? 'selected' : ''}>Aramex (Worldwide / Middle East)</option>
+                </select>
+                <input type="text" id="awb-inp-${o.orderId}" class="admin-input" placeholder="AWB / Tracking Number" value="${o.trackingAwb || ''}" style="width: 170px; padding: 4px 8px; font-size: 0.72rem;">
+                <button type="button" class="cyber-btn cyber-btn-crimson" onclick="updateOrderCourierTracking('${o.orderId}')" style="padding: 4px 10px; font-size: 0.7rem;">SAVE TRACKING & SYNC</button>
+                ${o.trackingAwb ? `<a href="${o.trackingUrl || getCarrierTrackingUrl(o.courierName, o.trackingAwb)}" target="_blank" class="cyber-btn cyber-btn-outline" style="padding: 4px 10px; font-size: 0.7rem; color: #00ff88; border-color: #00ff88;">TEST CARRIER LINK ↗</a>` : ''}
               </div>
             </div>
           </div>
