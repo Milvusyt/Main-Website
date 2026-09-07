@@ -253,7 +253,7 @@
         "title": "Cyberpunk Clan Hoodie (Midnight Black)",
         "badge": "HOT DROP · OVERSIZED",
         "price": 2499,
-        "originalPrice": 3499,
+        "originalPrice": 1499,
         "currency": "₹",
         "image": "Brand_Nme_.png",
         "description": "",
@@ -318,8 +318,18 @@
           "L",
           "XL"
         ],
-        "stock": 20,
-        "checkoutUrl": "https://store.squadone.gg/hoodie-black"
+        "stock": 50,
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "title": "Cyberpunk Clan Hoodie (Midnight Black)",
+        "badge": "HOT DROP · OVERSIZED",
+        "price": 2499,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "Brand_Nme_.png",
+        "description": "",
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
       },
       {
         "id": "prod-1788722681111",
