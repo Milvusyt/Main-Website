@@ -1,0 +1,256 @@
+{
+  "broadcast": {
+    "isLive": true,
+    "videoId": "dQw4w9WgXcQ",
+    "streamUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0",
+    "matchTitle": "South Asia Cross-Bay Scrims — Grand Finals Match 5",
+    "scheduleTime": "8:00 PM IST",
+    "thumbnail": "sa-cross-bay-scrims.png",
+    "alivePlayers": 42,
+    "airdropSeconds": 24,
+    "tickerMessage": "GRAND FINALS MATCH 5 IS LIVE ON ERANGEL! WATCH ON YOUTUBE @SQUADONE"
+  },
+  "scrims": {
+    "activeDays": "Friday, Saturday & Sunday",
+    "startTime": "8:00 PM IST",
+    "status": "Open for registration",
+    "ewaveBookingUrl": "https://ewave.gg/squadone-scrims",
+    "discordUrl": "https://discord.gg/pCk89vRPq",
+    "countdownTargetHour": 20
+  },
+  "monthlyWinners": {
+    "fanOfMonth": {
+      "eyebrow": "MONTHLY AWARD",
+      "title": "TOP FAN OF THE MONTH",
+      "name": "milvus",
+      "badge": "COMMUNITY VOTE · ANNOUNCED MONTHLY",
+      "desc": "The most dedicated Squad One community member — voted by the squad each month.",
+      "avatar": ""
+    },
+    "topTeams": {
+      "eyebrow": "SEASON STANDINGS",
+      "title": "TOP TEAMS",
+      "seasonBadge": "OFFICIAL S2 CHAMPIONS",
+      "champion": {
+        "kicker": "CHAMPION · 1ST PLACE",
+        "teamName": "SQUADONE",
+        "logo": "assets/teams/squadone.png",
+        "points": "188 PTS",
+        "subStats": "57 RANK PTS · 131 KILL PTS"
+      },
+      "runner2": {
+        "rankBadge": "#2",
+        "teamName": "STUDS",
+        "logo": "assets/teams/studs.png",
+        "points": "136 PTS"
+      },
+      "runner3": {
+        "rankBadge": "#3",
+        "teamName": "4 GUYS",
+        "logo": "assets/teams/4guys.png",
+        "points": "132 PTS"
+      }
+    },
+    "killChallenge": {
+      "eyebrow": "KILL CHALLENGE",
+      "title": "TOP KILLS WINNERS",
+      "badge": "LEADERBOARD · ANNOUNCED MONTHLY",
+      "fraggers": [
+        {
+          "rank": "01",
+          "ign": "MILVUSGoD",
+          "team": "SQUADMATRIX",
+          "kills": "100000"
+        },
+        {
+          "rank": "02",
+          "ign": "TBA",
+          "team": "TEAM TBA",
+          "kills": "—"
+        },
+        {
+          "rank": "03",
+          "ign": "TBA",
+          "team": "TEAM TBA",
+          "kills": "—"
+        }
+      ]
+    },
+    "communityChallenge": {
+      "eyebrow": "COMMUNITY CHALLENGE",
+      "title": "CHALLENGE WINNERS",
+      "winnerName": "TBA",
+      "badge": "CHALLENGES · ANNOUNCED MONTHLY",
+      "desc": "Monthly community challenge — unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
+      "discordUrl": "https://discord.gg/pCk89vRPq",
+      "buttonText": "JOIN CHALLENGES ON DISCORD"
+    },
+    "podium": [
+      {
+        "rank": 1,
+        "teamName": "SQUADONE",
+        "points": 188,
+        "kills": 0,
+        "logo": "assets/teams/squadone.png"
+      },
+      {
+        "rank": 2,
+        "teamName": "STUDS",
+        "points": 136,
+        "kills": 0,
+        "logo": "assets/teams/studs.png"
+      },
+      {
+        "rank": 3,
+        "teamName": "4 GUYS",
+        "points": 132,
+        "kills": 0,
+        "logo": "assets/teams/4guys.png"
+      }
+    ],
+    "topFraggers": [
+      {
+        "rank": 1,
+        "ign": "MILVUSGoD",
+        "team": "SQUADMATRIX",
+        "kills": "100000"
+      },
+      {
+        "rank": 2,
+        "ign": "TBA",
+        "team": "TEAM TBA",
+        "kills": "—"
+      },
+      {
+        "rank": 3,
+        "ign": "TBA",
+        "team": "TEAM TBA",
+        "kills": "—"
+      }
+    ]
+  },
+  "winners": {
+    "card1": {
+      "name": "milvus",
+      "badge": "COMMUNITY VOTE · ANNOUNCED MONTHLY",
+      "desc": "The most dedicated Squad One community member — voted by the squad each month.",
+      "poster": "",
+      "usePoster": false
+    },
+    "card2": {
+      "cName": "SQUADONE",
+      "cLogo": "assets/teams/squadone.png",
+      "cPts": "188 PTS",
+      "cStats": "57 RANK PTS · 131 KILL PTS",
+      "r2Name": "STUDS",
+      "r2Logo": "assets/teams/studs.png",
+      "r2Pts": "136 PTS",
+      "r3Name": "4 GUYS",
+      "r3Logo": "assets/teams/4guys.png",
+      "r3Pts": "132 PTS",
+      "badge": "OFFICIAL S2 CHAMPIONS"
+    },
+    "card3": {
+      "badge": "LEADERBOARD · ANNOUNCED MONTHLY",
+      "p1": "MILVUSGoD",
+      "t1": "SQUADMATRIX",
+      "k1": "100000",
+      "p2": "TBA",
+      "t2": "TEAM TBA",
+      "k2": "—",
+      "p3": "TBA",
+      "t3": "TEAM TBA",
+      "k3": "—"
+    },
+    "card4": {
+      "name": "TBA",
+      "badge": "CHALLENGES · ANNOUNCED MONTHLY",
+      "desc": "Monthly community challenge — unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
+      "link": "https://discord.gg/pCk89vRPq",
+      "linkText": "JOIN CHALLENGES ON DISCORD"
+    }
+  },
+  "news": [
+    {
+      "id": "news-1",
+      "headline": "Squad One Partners with eWave for National League Season 2",
+      "category": "Governance",
+      "excerpt": "Official tournament brackets, live telemetry, and anti-cheat tracking integrated with eWave platform.",
+      "content": "Squad One Esports is proud to announce a landmark strategic partnership with eWave.gg, bringing next-generation automated bracket operations, live killfeed overlays, and real-time player telemetry to Indian competitive PUBG PC.",
+      "posterUrl": "sa-cross-bay-scrims.jpeg",
+      "ctaText": "Read Official Dispatch",
+      "ctaUrl": "#",
+      "createdAt": "2026-08-15"
+    },
+    {
+      "id": "news-2",
+      "headline": "Grand Finals 16 Teams Confirmed: ₹1,50,000 Prize Pool",
+      "category": "Season 3",
+      "excerpt": "Top 16 squads battle across 3 days, 15 matches for the ultimate title.",
+      "content": "After fierce qualifiers featuring 95 registered teams, the top 16 survivors have booked their ticket to the Squad One National League Grand Finals. Matches will be broadcast live across Erangel, Miramar, Taego, and Rondo.",
+      "posterUrl": "eventimage.jpeg",
+      "ctaText": "View Roster List",
+      "ctaUrl": "#finalists",
+      "createdAt": "2026-08-28"
+    }
+  ],
+  "storeArmory": {
+    "vaultLocked": false,
+    "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
+    "products": [
+      {
+        "id": "prod-1",
+        "name": "Squad One Pro Jersey 2026",
+        "category": "Jersey",
+        "priceINR": 1499,
+        "imageUrl": "t-shirt.png",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "stock": 45,
+        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
+      },
+      {
+        "id": "prod-2",
+        "name": "Cyberpunk Clan Hoodie (Midnight Black)",
+        "category": "Hoodie",
+        "priceINR": 2499,
+        "imageUrl": "Brand_Nme_.png",
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "stock": 20,
+        "checkoutUrl": "https://store.squadone.gg/hoodie-black"
+      },
+      {
+        "id": "prod-1788722681111",
+        "name": "me",
+        "category": "Jersey",
+        "priceINR": 10,
+        "imageUrl": "t-shirt.png",
+        "stock": 50,
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      }
+    ]
+  },
+  "siteSettings": {
+    "aboutUs": "Squad One Esports is India’s premier PUBG Battlegrounds PC organization, committed to structured grassroots talent development and elite tournament production.",
+    "rules": "Standard Super Ruleset with PUBG Esports point matrix. 10 Pts for 1st place, 1 Pt per Kill.",
+    "contactEmail": "contact@squadone.gg",
+    "discordInvite": "https://discord.gg/pCk89vRPq",
+    "youtubeUrl": "https://youtube.com/@SquadOneEsports",
+    "serverUrl": "http://127.0.0.1:8088"
+  }
+}
