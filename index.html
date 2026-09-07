@@ -11057,27 +11057,33 @@
 
         const btnLabel = (activeSeason === sNum && hubEl && hubEl.style.display !== 'none') ? `HIDE SEASON ${sNum} ✕` : `VIEW SEASON ${sNum} ↗`;
 
+        const yearTag = t.year ? t.year : (sNum === 1 ? 'ARCHIVE' : '2026');
+        const pillBadge = t.badgeText || statusText;
+        const synopsis = t.description ? t.description : (t.format ? `${t.name}. ${t.format}.` : `Official competitive season ${sNum} tournament.`);
+        const formatOrPrize = t.prizePool ? t.prizePool : (t.format ? (t.format.length > 20 ? t.format.slice(0, 18) + '...' : t.format) : 'QUALIFIERS');
+        const factLabel = t.prizePool ? 'PRIZE POOL' : 'FORMAT';
+
         card.innerHTML = `
           <div>
             <div class="season-card-topline">
-              <span>SEASON ${sNum} · ${sNum === 1 ? 'ARCHIVE' : '2026'}</span>
+              <span>SEASON ${sNum} · ${yearTag}</span>
               <span class="season-badge-past" style="background:${badgeBg};border-color:${badgeBorder};color:${badgeColor};">
                 <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${dotColor};margin-right:6px;"></span>
-                ${statusText}
+                ${pillBadge}
               </span>
             </div>
             <h3>${t.name || `Squad One Season ${sNum}`}</h3>
             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">
-              ${t.format ? `${t.name}. ${t.format}.` : `Official competitive season ${sNum} tournament.`}
+              ${synopsis}
             </p>
             <div class="season-card-facts">
               <div class="season-fact-item"><span>STAGE</span><strong>${(t.stage || 'QUALIFIERS').replace('_', ' ')}</strong></div>
-              <div class="season-fact-item"><span>FORMAT</span><strong>${t.format ? (t.format.length > 20 ? t.format.slice(0, 18) + '...' : t.format) : 'QUALIFIERS'}</strong></div>
+              <div class="season-fact-item"><span>${factLabel}</span><strong>${formatOrPrize}</strong></div>
               <div class="season-fact-item"><span>FINALS</span><strong>${t.finalistCount || 16} FINALISTS</strong></div>
               <div class="season-fact-item"><span>TEAMS</span><strong>${t.registeredCount || 95} APPLIED</strong></div>
             </div>
           </div>
-          <button class="cyber-btn ${sNum === 2 || sNum === 3 ? 'cyber-btn-crimson' : ''}" id="btn-view-season${sNum}" type="button" data-sound="click" style="width: 100%;">
+          <button class="cyber-btn ${isCurrentActive ? 'cyber-btn-crimson' : ''}" id="btn-view-season${sNum}" type="button" data-sound="click" style="width: 100%;">
             ${btnLabel}
           </button>
         `;
@@ -11222,7 +11228,7 @@
           const wBadgeEl = document.getElementById('winners-custom-badge');
           const wBracket = document.getElementById('winners-custom-bracket-link');
           if (wTitle) wTitle.textContent = `${tourney.name} CHAMPIONS TROPHY`;
-          if (wBadgeEl) wBadgeEl.textContent = `${tourney.status || 'UPCOMING'} · PODIUM ANNOUNCEMENT PENDING`;
+          if (wBadgeEl) wBadgeEl.textContent = `${tourney.prizePool ? `${tourney.prizePool} · ` : ''}${tourney.status || 'UPCOMING'} · PODIUM ANNOUNCEMENT PENDING`;
           if (wBracket && tourney.bracketUrl) wBracket.href = tourney.bracketUrl;
         }
 
@@ -11237,8 +11243,8 @@
           const fBracketLink = document.getElementById('finalists-custom-bracket-link');
 
           if (fTitle) fTitle.textContent = `${tourney.finalistCount || 16} GRAND FINALS SLOTS`;
-          if (fBadgeEl) fBadgeEl.textContent = `SEASON ${seasonNum} · ${(tourney.stage || 'QUALIFIERS').replace('_', ' ')}`;
-          if (fDesc) fDesc.textContent = `${tourney.registeredCount || 120} squads registered. Format: ${tourney.format || 'Open Qualifiers + Invitational Seeded Finals'}. Follow real-time bracket seeds and match schedules on eWave.gg.`;
+          if (fBadgeEl) fBadgeEl.textContent = tourney.badgeText || `SEASON ${seasonNum} · ${(tourney.stage || 'QUALIFIERS').replace('_', ' ')}`;
+          if (fDesc) fDesc.textContent = tourney.description || `${tourney.registeredCount || 120} squads registered. Format: ${tourney.format || 'Open Qualifiers + Invitational Seeded Finals'}. Follow real-time bracket seeds and match schedules on eWave.gg.`;
           if (fBracket && tourney.bracketUrl) fBracket.href = tourney.bracketUrl;
           if (fBracketLink && tourney.bracketUrl) fBracketLink.href = tourney.bracketUrl;
         }
