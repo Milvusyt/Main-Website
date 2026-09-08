@@ -299,7 +299,7 @@
         "price": 999,
         "originalPrice": 1499,
         "currency": "₹",
-        "image": "images/new Products/new_GTA_launch.png",
+        "image": "website/images/new Products/new_GTA_launch.png",
         "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
         "sizes": [
           "S",
@@ -417,8 +417,8 @@
           "XL",
           "XXL"
         ],
-        "image": "images/new Products/new_GTA_launch.png",
-        "imageUrl": "images/new Products/new_GTA_launch.png",
+        "image": "website/images/new Products/new_GTA_launch.png",
+        "imageUrl": "website/images/new Products/new_GTA_launch.png",
         "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
         "allowCustomIGN": true,
         "inStock": true,
