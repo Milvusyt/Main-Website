@@ -9557,19 +9557,6 @@
                     </div>
                   </div>
 
-                  <!-- Cash on Delivery Option -->
-                  <div class="payment-option-card" id="pay-opt-cod" onclick="selectPaymentMethod('cod')">
-                    <div style="display: flex; align-items: center; justify-content: space-between;">
-                      <div style="display: flex; align-items: center; gap: 10px;">
-                        <span style="font-size: 1.2rem;">💵</span>
-                        <div>
-                          <div style="font-family: var(--font-condensed); font-weight: 700; font-size: 0.95rem; color: #fff;">CASH ON DELIVERY (COD)</div>
-                          <div style="font-size: 0.72rem; color: var(--text-muted);" id="cod-status-desc">Pay at your doorstep · Available across India</div>
-                        </div>
-                      </div>
-                      <input type="radio" name="payment_method" value="cod" style="accent-color: #00ff88;">
-                    </div>
-                  </div>
 
                   <!-- Bank Transfer Option -->
                   <div class="payment-option-card" id="pay-opt-bank" onclick="selectPaymentMethod('bank')">
@@ -13003,25 +12990,8 @@
     window.handleCountryChange = function() {
       const country = document.getElementById('chk-country')?.value || 'IN';
       const isDomestic = (country === 'IN');
-      const codCard = document.getElementById('pay-opt-cod');
-      const codDesc = document.getElementById('cod-status-desc');
       const usdRow = document.getElementById('checkout-due-usd-row');
       const usdEl = document.getElementById('checkout-due-usd');
-
-      if (codCard) {
-        if (!isDomestic) {
-          codCard.style.opacity = '0.35';
-          codCard.style.pointerEvents = 'none';
-          if (codDesc) codDesc.textContent = '⚠️ Domestic India Only (Prepaid Card or Wire Required for International)';
-          if (window._selectedPaymentMethod === 'cod') {
-            selectPaymentMethod('card');
-          }
-        } else {
-          codCard.style.opacity = '1';
-          codCard.style.pointerEvents = 'auto';
-          if (codDesc) codDesc.textContent = 'Pay at your doorstep · Available across India';
-        }
-      }
 
       const cart = getShoppingCart();
       let subtotal = 0;
@@ -13049,7 +13019,7 @@
     window._selectedPaymentMethod = 'card';
     window.selectPaymentMethod = function(method) {
       window._selectedPaymentMethod = method;
-      ['card', 'upi', 'cod', 'bank'].forEach(m => {
+      ['card', 'upi', 'bank'].forEach(m => {
         const card = document.getElementById(`pay-opt-${m}`);
         if (card) {
           card.classList.toggle('selected', m === method);
@@ -13260,7 +13230,8 @@
           return;
         }
       } else {
-        utrId = 'CASH_ON_DELIVERY';
+        alert('Please select a valid payment method.');
+        return;
       }
 
       const cart = getShoppingCart();
