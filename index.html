@@ -12147,6 +12147,10 @@
           if (!parsed.store || !Array.isArray(parsed.store.products) || parsed.store.products.length === 0 || !parsed.store.products.some(p => p.id && p.id.startsWith('s1ve'))) {
             parsed.store = { ...SQ1_DEFAULT_CONFIG.store };
             try { localStorage.setItem('SQ1_SITE_CONFIG', JSON.stringify(parsed)); } catch(e){}
+          } else {
+            parsed.store.products.forEach(p => {
+              if (!p.quote) p.quote = 'Upgrade your Vogue';
+            });
           }
           if (parsed.sections) {
             parsed.sections['store'] = true;
@@ -12728,6 +12732,7 @@
         cart.push({
           id: product.id,
           title: product.title,
+          quote: product.quote || 'Upgrade your Vogue',
           price: product.price,
           currency: product.currency || '₹',
           image: product.image || 'assets/t-shirt.png',
@@ -12815,6 +12820,7 @@
             </div>
             <div class="cart-item-info">
               <div class="cart-item-name">${item.title}</div>
+              <div class="cart-item-quote" style="font-size: 0.72rem; font-style: italic; color: #FFD700; opacity: 0.85; margin: 1px 0 4px 0; letter-spacing: 0.3px;">“${item.quote || 'Upgrade your Vogue'}”</div>
               <div class="cart-item-meta">
                 <span>SIZE: <strong style="color:#fff;">${item.size}</strong></span>
                 ${item.customIGN ? `<span>IGN: <strong style="color:#FFD700;">${item.customIGN}</strong></span>` : ''}
@@ -12903,9 +12909,12 @@
           const t = item.price * item.qty;
           subtotal += t;
           return `
-            <div style="display:flex; justify-content:space-between; margin-bottom:4px; color:var(--text-bone);">
-              <span>${item.qty}× ${item.title} (${item.size}${item.customIGN ? ' · ' + item.customIGN : ''})</span>
-              <span style="color:#FFD700;">₹${t.toLocaleString()}</span>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px; color:var(--text-bone);">
+              <div>
+                <div>${item.qty}× ${item.title} (${item.size}${item.customIGN ? ' · ' + item.customIGN : ''})</div>
+                <div style="font-size:0.68rem; font-style:italic; color:#FFD700; opacity:0.85; margin-top:1px;">“${item.quote || 'Upgrade your Vogue'}”</div>
+              </div>
+              <span style="color:#FFD700; font-weight:700;">₹${t.toLocaleString()}</span>
             </div>
           `;
         }).join('');
