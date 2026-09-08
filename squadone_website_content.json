@@ -63,7 +63,7 @@
       }
     },
     "killChallenge": {
-      "enabled": false,
+      "enabled": true,
       "eyebrow": "KILL CHALLENGE",
       "title": "TOP KILLS WINNERS",
       "badge": "LEADERBOARD · ANNOUNCED MONTHLY",
@@ -172,7 +172,7 @@
       "badge": "OFFICIAL S2 CHAMPIONS"
     },
     "card3": {
-      "enabled": false,
+      "enabled": true,
       "badge": "LEADERBOARD · ANNOUNCED MONTHLY",
       "p1": "MILVUSGoD",
       "t1": "SQUADMATRIX",
@@ -199,6 +199,15 @@
     }
   },
   "news": [
+    {
+      "id": "news-1788879547072",
+      "createdAt": "2026-09-08",
+      "headline": "Launching S1VE X SQUADONE STORE",
+      "category": "Season 3",
+      "posterUrl": "sive.1.png",
+      "excerpt": "heyyy",
+      "content": "ok"
+    },
     {
       "id": "news-1",
       "headline": "Squad One Partners with eWave for National League Season 2",
