@@ -466,11 +466,15 @@
       "name": "Squad One Championship S1",
       "stage": "SEASON_ENDED",
       "status": "COMPLETED",
-      "registeredCount": 84,
+      "registeredCount": 31,
       "finalistCount": 16,
       "format": "Qualifiers + 3-Day Finals (15 Matches)",
       "bracketUrl": "https://ewave.gg/brackets/sq1-s1",
-      "bannerUrl": "eventimage.jpeg"
+      "bannerUrl": "eventimage.jpeg",
+      "year": "2025",
+      "prizePool": "10000",
+      "badgeText": "",
+      "description": ""
     }
   ],
   "activeSeasonId": "sq1-s2",
