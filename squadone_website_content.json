@@ -433,30 +433,6 @@
   },
   "tournaments": [
     {
-      "id": "sq1-s1",
-      "seasonNumber": 1,
-      "name": "Squad One Championship S1",
-      "stage": "SEASON_ENDED",
-      "status": "COMPLETED",
-      "registeredCount": 84,
-      "finalistCount": 16,
-      "format": "Qualifiers + 3-Day Finals (15 Matches)",
-      "bracketUrl": "https://ewave.gg/brackets/sq1-s1",
-      "bannerUrl": "eventimage.jpeg"
-    },
-    {
-      "id": "sq1-s2",
-      "seasonNumber": 3,
-      "name": "Squad One National League S3",
-      "stage": "QUALIFIERS",
-      "status": "UPCOMING",
-      "registeredCount": 95,
-      "finalistCount": 16,
-      "format": "2 Qualifiers, 3 Days, 15 Matches",
-      "bracketUrl": "https://ewave.gg/brackets/sq1-s2",
-      "bannerUrl": "eventimage.jpeg"
-    },
-    {
       "id": "sq1-s3",
       "seasonNumber": 3,
       "name": "Squad One Invitational S3",
@@ -466,6 +442,34 @@
       "finalistCount": 16,
       "format": "Open Qualifiers + Invitational Seeded Finals",
       "bracketUrl": "https://ewave.gg/brackets/sq1-s3",
+      "bannerUrl": "eventimage.jpeg"
+    },
+    {
+      "id": "sq1-s2",
+      "seasonNumber": 2,
+      "name": "Squad One National League S2",
+      "stage": "QUALIFIERS",
+      "status": "COMPLETED",
+      "registeredCount": 95,
+      "finalistCount": 16,
+      "format": "2 Qualifiers, 3 Days, 15 Matches",
+      "bracketUrl": "https://ewave.gg/brackets/sq1-s2",
+      "bannerUrl": "eventimage.jpeg",
+      "year": "2026",
+      "prizePool": "35000",
+      "badgeText": "",
+      "description": ""
+    },
+    {
+      "id": "sq1-s1",
+      "seasonNumber": 1,
+      "name": "Squad One Championship S1",
+      "stage": "SEASON_ENDED",
+      "status": "COMPLETED",
+      "registeredCount": 84,
+      "finalistCount": 16,
+      "format": "Qualifiers + 3-Day Finals (15 Matches)",
+      "bracketUrl": "https://ewave.gg/brackets/sq1-s1",
       "bannerUrl": "eventimage.jpeg"
     }
   ],
