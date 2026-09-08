@@ -38,14 +38,14 @@
       "usePoster": false
     },
     "topTeams": {
-      "enabled": false,
+      "enabled": true,
       "eyebrow": "SEASON STANDINGS",
       "title": "TOP TEAMS",
       "seasonBadge": "OFFICIAL S2 CHAMPIONS",
       "champion": {
         "kicker": "CHAMPION · 1ST PLACE",
-        "teamName": "SQUADONE",
-        "logo": "assets/teams/squadone.png",
+        "teamName": "RAKUZAN",
+        "logo": "assets/teams/rakuzan.png",
         "points": "188 PTS",
         "subStats": "57 RANK PTS · 131 KILL PTS"
       },
@@ -106,10 +106,10 @@
     "podium": [
       {
         "rank": 1,
-        "teamName": "SQUADONE",
+        "teamName": "RAKUZAN",
         "points": 188,
         "kills": 0,
-        "logo": "assets/teams/squadone.png"
+        "logo": "assets/teams/rakuzan.png"
       },
       {
         "rank": 2,
@@ -158,9 +158,9 @@
       "usePoster": false
     },
     "card2": {
-      "enabled": false,
-      "cName": "SQUADONE",
-      "cLogo": "assets/teams/squadone.png",
+      "enabled": true,
+      "cName": "RAKUZAN",
+      "cLogo": "assets/teams/rakuzan.png",
       "cPts": "188 PTS",
       "cStats": "57 RANK PTS · 131 KILL PTS",
       "r2Name": "STUDS",
@@ -299,7 +299,7 @@
         "price": 999,
         "originalPrice": 1499,
         "currency": "₹",
-        "image": "website/images/new Products/new_GTA_launch.png",
+        "image": "images/new Products/new_GTA_launch.png",
         "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
         "sizes": [
           "S",
@@ -417,8 +417,8 @@
           "XL",
           "XXL"
         ],
-        "image": "website/images/new Products/new_GTA_launch.png",
-        "imageUrl": "website/images/new Products/new_GTA_launch.png",
+        "image": "images/new Products/new_GTA_launch.png",
+        "imageUrl": "images/new Products/new_GTA_launch.png",
         "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
         "allowCustomIGN": true,
         "inStock": true,
