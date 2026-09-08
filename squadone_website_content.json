@@ -250,7 +250,8 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "quote": "Upgrade your Vogue"
       },
       {
         "id": "s1ve-sq1-oversized-black",
@@ -274,7 +275,8 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "quote": "Upgrade your Vogue"
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
@@ -298,7 +300,8 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "quote": "Upgrade your Vogue"
       }
     ]
   },
@@ -328,7 +331,8 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "quote": "Upgrade your Vogue"
       },
       {
         "id": "s1ve-sq1-oversized-black",
@@ -352,7 +356,8 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "quote": "Upgrade your Vogue"
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
@@ -376,7 +381,8 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "quote": "Upgrade your Vogue"
       }
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
