@@ -229,25 +229,6 @@
     "desc": "",
     "products": [
       {
-        "id": "prod-1788722681111",
-        "title": "me",
-        "badge": "HOT DROP · OVERSIZED",
-        "price": 10,
-        "originalPrice": 14,
-        "currency": "₹",
-        "image": "t-shirt.png",
-        "description": "",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false
-      },
-      {
         "id": "s1ve-sq1-oversized-white",
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "badge": "HOT DROP · OVERSIZED",
@@ -265,7 +246,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true
+        "hidden": false
       },
       {
         "id": "s1ve-sq1-oversized-black",
@@ -285,7 +266,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true
+        "hidden": false
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
@@ -305,7 +286,27 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true
+        "hidden": false
+      },
+      {
+        "id": "s1ve-custom-1788863290042",
+        "title": "New S1VE × Squad One GTA VI Edition",
+        "badge": "HOT DROP · OVERSIZED",
+        "price": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/new.png",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
       }
     ]
   },
@@ -313,21 +314,6 @@
     "vaultLocked": false,
     "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
     "products": [
-      {
-        "id": "prod-1788722681111",
-        "name": "me",
-        "category": "Jersey",
-        "priceINR": 10,
-        "imageUrl": "t-shirt.png",
-        "stock": 50,
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL"
-        ]
-      },
       {
         "id": "s1ve-sq1-oversized-white",
         "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
@@ -350,7 +336,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true,
+        "hidden": false,
         "stock": 45,
         "checkoutUrl": "https://store.squadone.gg/checkout"
       },
@@ -376,7 +362,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true,
+        "hidden": false,
         "stock": 35,
         "checkoutUrl": "https://store.squadone.gg/checkout"
       },
@@ -402,8 +388,34 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true,
-        "stock": 20,
+        "hidden": false,
+        "stock": 50,
+        "checkoutUrl": "https://store.squadone.gg/checkout"
+      },
+      {
+        "id": "s1ve-custom-1788863290042",
+        "title": "New S1VE × Squad One GTA VI Edition",
+        "name": "New S1VE × Squad One GTA VI Edition",
+        "badge": "HOT DROP · OVERSIZED",
+        "category": "Jersey",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "image": "images/new Products/new.png",
+        "imageUrl": "images/new Products/new.png",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 50,
         "checkoutUrl": "https://store.squadone.gg/checkout"
       }
     ],
