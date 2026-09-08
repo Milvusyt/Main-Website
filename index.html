@@ -6116,7 +6116,32 @@
       color: #fff;
       letter-spacing: 0.5px;
       line-height: 1.25;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+    }
+    .product-quote {
+      font-family: var(--font-condensed);
+      font-style: italic;
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      color: #ffd700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.95;
+    }
+    .product-quote::before,
+    .product-quote::after {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 215, 0, 0.6), transparent);
+    }
+    .product-quote::after {
+      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.6));
     }
     .product-desc {
       font-size: 0.84rem;
@@ -8554,6 +8579,7 @@
           </div>
           <div class="product-details">
             <h3 class="product-title">S1VE × SQUAD ONE 'White Edition' Oversized Tee</h3>
+            <div class="product-quote">“Upgrade your Vogue”</div>
             <p class="product-desc">280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.</p>
             <div class="product-price-box">
               <span class="product-price-curr">₹999</span>
@@ -8591,6 +8617,7 @@
           </div>
           <div class="product-details">
             <h3 class="product-title">S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee</h3>
+            <div class="product-quote">“Upgrade your Vogue”</div>
             <p class="product-desc">Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.</p>
             <div class="product-price-box">
               <span class="product-price-curr">₹999</span>
@@ -8628,6 +8655,7 @@
           </div>
           <div class="product-details">
             <h3 class="product-title">S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee</h3>
+            <div class="product-quote">“Upgrade your Vogue”</div>
             <p class="product-desc">Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.</p>
             <div class="product-price-box">
               <span class="product-price-curr">₹1,099</span>
@@ -9404,6 +9432,62 @@
                           <div style="font-size: 0.72rem; color: #00ff88;">Visa · MasterCard · RuPay · American Express · 256-Bit SSL Encrypted</div>
                         </div>
                       </div>
+
+  <!-- =========================================================================
+       21b. TRACK ORDER & SHIPMENT TELEMETRY MODAL
+       ========================================================================= -->
+  <div class="checkout-modal-overlay" id="track-order-modal" role="dialog" aria-modal="true" aria-label="Track Your Order" onclick="if(event.target===this)closeTrackOrderModal();">
+    <div class="checkout-modal-card" style="max-width: 680px; padding: clamp(16px, 3vw, 28px); position: relative; max-height: 90vh; overflow-y: auto;">
+      <button type="button" class="checkout-modal-close" onclick="closeTrackOrderModal()" aria-label="Close Tracking Modal" style="position: absolute; top: 18px; right: 18px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--red)'; this.style.borderColor='var(--red)';" onmouseout="this.style.background='rgba(255,255,255,0.06)'; this.style.borderColor='rgba(255,255,255,0.15)';">✕</button>
+
+      <!-- Modal Header -->
+      <div style="text-align: center; margin-bottom: 22px;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.72rem; color: #00ff88; letter-spacing: 1.5px; text-transform: uppercase; background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.25); padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #00ff88; box-shadow: 0 0 8px #00ff88;"></span>
+          LIVE LOGISTICS & DISPATCH TELEMETRY
+        </div>
+        <h3 style="font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.8rem); color: #fff; letter-spacing: 1px; margin: 0;">
+          TRACK YOUR <span style="color: var(--red);">ORDER</span>
+        </h3>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; font-family: var(--font-sans);">
+          Enter your Order ID (e.g. SQ1-ORD-XXXXXX) or registered 10-digit mobile number to track real-time delivery status across India and worldwide.
+        </p>
+      </div>
+
+      <!-- Search Input Box -->
+      <form onsubmit="searchTrackOrder(event);" style="margin-bottom: 20px;">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 240px; position: relative;">
+            <input type="text" id="track-search-input" class="admin-input" placeholder="Enter Order ID (e.g. SQ1-ORD-123456) or Phone Number..." style="width: 100%; padding: 13px 16px; font-family: var(--font-mono); font-size: 0.88rem; background: rgba(0,0,0,0.6); border: 1px solid rgba(149,61,223,0.4); border-radius: 8px; color: #fff; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--purple-primary)';" onblur="this.style.borderColor='rgba(149,61,223,0.4)';">
+          </div>
+          <button type="submit" class="cyber-btn cyber-btn-crimson" style="padding: 13px 24px; font-size: 0.85rem; font-weight: bold; cursor: pointer; white-space: nowrap;" data-sound="click">
+            TRACK SHIPMENT 🚀
+          </button>
+        </div>
+      </form>
+
+      <!-- Live Search Result Box -->
+      <div id="track-order-result"></div>
+
+      <!-- Recent Orders on this Device Box -->
+      <div id="track-order-recent" style="margin-top: 18px;"></div>
+
+      <!-- Help & Discord Support Footer -->
+      <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">
+        <div>Need urgent delivery assistance?</div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="https://discord.gg/pCk89vRPq" target="_blank" style="color: #5865F2; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            <span>💬 Discord Order Desk</span>
+          </a>
+          <span>·</span>
+          <a href="https://wa.me/919995551234" target="_blank" style="color: #25D366; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+            <span>📱 WhatsApp Logistics</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
                       <input type="radio" name="payment_method" value="card" checked style="accent-color: #00ff88;">
                     </div>
 
@@ -10938,37 +11022,52 @@
       {
         id: 'sq1-s3',
         seasonNumber: 3,
-        name: 'Squad One Invitational S3',
+        name: 'Squad One Invitational — Season 3',
         stage: 'QUALIFIERS',
         status: 'UPCOMING',
+        badgeText: 'UPCOMING / QUALIFIERS',
         registeredCount: 120,
         finalistCount: 16,
-        format: 'Open Qualifiers + Invitational Seeded Finals',
+        format: 'Open Qualifiers + Seeded Finals',
+        rounds: 'OPEN QUALIFIERS',
+        finals: '16 FINALISTS',
+        teams: '120 SLOTS',
+        description: 'Squad One Invitational S3. Open Qualifiers + Invitational Seeded Finals battling for 16 Grand Finals spots.',
         bracketUrl: 'https://ewave.gg/brackets/sq1-s3',
         bannerUrl: 'eventimage.jpeg'
       },
       {
         id: 'sq1-s2',
         seasonNumber: 2,
-        name: 'Squad One National League S2',
+        name: 'Squad One National League — Season 2',
         stage: 'GRAND_FINALS',
         status: 'ONGOING',
+        badgeText: 'SEASON ENDED',
         registeredCount: 95,
         finalistCount: 16,
         format: '2 Qualifiers, 3 Days, 15 Matches',
-        bracketUrl: 'https://ewave.gg/brackets/sq1-s2',
-        bannerUrl: 'eventimage.jpeg'
+        rounds: '2 QUALIFIERS',
+        finals: '3 DAYS (15 MATCHES)',
+        teams: '95 APPLIED · 16 FINALISTS',
+        description: 'National PUBG League Season 2. 95 registered squads battling through 2 Qualifier rounds for 16 Grand Finals spots.',
+        bracketUrl: 'https://ewave.gg/game/pubg/tournaments/5521ad78-82be-478b-a5df-bc62ee9b3bb2',
+        bannerUrl: 'https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/tournaments/ba190d5d-84ff-42fc-ac8a-a61f23432e9a.png'
       },
       {
         id: 'sq1-s1',
         seasonNumber: 1,
-        name: 'Squad One Elite Battlegrounds #1',
-        stage: 'SEASON_ENDED',
+        name: 'Squad One Elite Battlegrounds — Season 1',
+        stage: 'QUALIFIERS',
         status: 'COMPLETED',
+        badgeText: 'SEASON COMPLETE',
         registeredCount: 31,
         finalistCount: 16,
-        format: 'Qualifiers + 3-Day Finals (15 Matches)',
-        bracketUrl: 'https://ewave.gg/brackets/sq1-s1',
+        format: '2 Rounds, 3 Days',
+        rounds: '2 ROUNDS',
+        finals: '3 DAYS',
+        teams: '31 APPLIED',
+        description: 'Squad One Elite Battlegrounds #1 (Season 1). 31 verified competing organizations and official tournament roster.',
+        bracketUrl: 'https://ewave.gg/game/pubg/tournaments/c412d321-a4c3-4302-a909-3178b959214d',
         bannerUrl: 'eventimage.jpeg'
       }
     ];
@@ -11060,8 +11159,10 @@
         const yearTag = t.year ? t.year : (sNum === 1 ? 'ARCHIVE' : '2026');
         const pillBadge = t.badgeText || statusText;
         const synopsis = t.description ? t.description : (t.format ? `${t.name}. ${t.format}.` : `Official competitive season ${sNum} tournament.`);
-        const formatOrPrize = t.prizePool ? t.prizePool : (t.format ? (t.format.length > 20 ? t.format.slice(0, 18) + '...' : t.format) : 'QUALIFIERS');
-        const factLabel = t.prizePool ? 'PRIZE POOL' : 'FORMAT';
+        const stageVal = t.stage ? t.stage.replace('_', ' ') : (sNum === 2 ? 'GRAND FINALS' : 'QUALIFIERS');
+        const roundsVal = t.rounds || (sNum === 1 ? '2 ROUNDS' : (sNum === 2 ? '2 QUALIFIERS' : 'OPEN QUALIFIERS'));
+        const finalsVal = t.finals || (sNum === 1 ? '3 DAYS' : (sNum === 2 ? '3 DAYS (15 MATCHES)' : '16 FINALISTS'));
+        const teamsVal = t.teams || (sNum === 1 ? '31 APPLIED' : (sNum === 2 ? '95 APPLIED · 16 FINALISTS' : `${t.registeredCount || 120} SLOTS`));
 
         card.innerHTML = `
           <div>
@@ -11077,10 +11178,10 @@
               ${synopsis}
             </p>
             <div class="season-card-facts">
-              <div class="season-fact-item"><span>STAGE</span><strong>${(t.stage || 'QUALIFIERS').replace('_', ' ')}</strong></div>
-              <div class="season-fact-item"><span>${factLabel}</span><strong>${formatOrPrize}</strong></div>
-              <div class="season-fact-item"><span>FINALS</span><strong>${t.finalistCount || 16} FINALISTS</strong></div>
-              <div class="season-fact-item"><span>TEAMS</span><strong>${t.registeredCount || 95} APPLIED</strong></div>
+              <div class="season-fact-item"><span>STAGE</span><strong>${stageVal}</strong></div>
+              <div class="season-fact-item"><span>ROUNDS</span><strong>${roundsVal}</strong></div>
+              <div class="season-fact-item"><span>FINALS</span><strong>${finalsVal}</strong></div>
+              <div class="season-fact-item"><span>TEAMS</span><strong>${teamsVal}</strong></div>
             </div>
           </div>
           <button class="cyber-btn ${isCurrentActive ? 'cyber-btn-crimson' : ''}" id="btn-view-season${sNum}" type="button" data-sound="click" style="width: 100%;">
@@ -11152,48 +11253,15 @@
         bracketUrl: `https://ewave.gg/brackets/sq1-s${seasonNum}`
       };
 
-      if (bTitle) bTitle.textContent = (tourney.name || `SQUAD ONE SEASON ${seasonNum}`).toUpperCase();
-
-      let badgeBg = 'rgba(255,204,0,0.15)';
-      let badgeBorder = '#ffcc00';
-      let badgeColor = '#ffdd44';
-      let dotColor = '#ffcc00';
-      let statusText = tourney.status || 'UPCOMING';
-
-      if (tourney.status === 'COMPLETED' || tourney.stage === 'SEASON_ENDED') {
-        badgeBg = 'rgba(0,255,136,0.12)';
-        badgeBorder = '#00ff88';
-        badgeColor = '#00ff88';
-        dotColor = '#00ff88';
-        statusText = 'SEASON COMPLETE';
-      } else if (tourney.status === 'ONGOING' || tourney.stage === 'GRAND_FINALS') {
-        badgeBg = 'rgba(237,20,24,0.15)';
-        badgeBorder = 'var(--red)';
-        badgeColor = '#ff6677';
-        dotColor = '#ff4455';
-        statusText = tourney.stage ? tourney.stage.replace('_', ' ') : 'ONGOING';
-      } else if (tourney.status === 'UPCOMING') {
-        badgeBg = 'rgba(255,204,0,0.15)';
-        badgeBorder = '#ffcc00';
-        badgeColor = '#ffdd44';
-        dotColor = '#ffcc00';
-        statusText = 'UPCOMING / QUALIFIERS';
-      }
-
-      if (sBadge) {
-        sBadge.innerHTML = `<span class="season-badge-past" style="background:${badgeBg};border-color:${badgeBorder};color:${badgeColor};"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${dotColor};margin-right:6px;"></span>${statusText}</span> ${tourney.name || `SQUAD ONE SEASON ${seasonNum}`}`;
-      }
-
-      if (mTeams) mTeams.innerHTML = `TEAMS: <strong>${tourney.registeredCount || 95} APPLIED · ${tourney.finalistCount || 16} FINALISTS</strong>`;
-      if (tCount) tCount.textContent = `${tourney.registeredCount || 95} TEAMS`;
-
-      if (moreInfoBtn) {
-        moreInfoBtn.href = tourney.bracketUrl || 'https://ewave.gg';
-      }
-
       if (seasonNum === 2) {
+        if (bTitle) bTitle.textContent = 'SQUAD ONE NATIONAL LEAGUE';
+        if (sBadge) sBadge.innerHTML = `<span class="season-badge-past" style="background:rgba(237,20,24,0.15);border-color:var(--red);color:#ff6677;"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff4455;margin-right:6px;"></span>SEASON ENDED</span> SQUAD ONE NATIONAL LEAGUE — SEASON 2`;
+        if (mTeams) mTeams.innerHTML = `TEAMS: <strong>95 APPLIED · 16 FINALISTS</strong>`;
+        if (tCount) tCount.textContent = '95 TEAMS';
         if (fBadge) fBadge.textContent = '16 TEAMS';
         if (wBadge) wBadge.textContent = 'TOP 5';
+        if (moreInfoBtn) moreInfoBtn.href = 'https://ewave.gg/game/pubg/tournaments/5521ad78-82be-478b-a5df-bc62ee9b3bb2';
+
         if (wS2) wS2.style.display = 'block';
         if (wS1) wS1.style.display = 'none';
         if (wCustom) wCustom.style.display = 'none';
@@ -11204,8 +11272,14 @@
 
         renderApplicantCards(season2Data);
       } else if (seasonNum === 1) {
+        if (bTitle) bTitle.textContent = 'SQUAD ONE TOURNAMENT — SEASON 1';
+        if (sBadge) sBadge.innerHTML = `<span class="season-badge-past" style="background:rgba(0,255,136,0.12);border-color:#00ff88;color:#00ff88;"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#00ff88;margin-right:6px;"></span>SEASON COMPLETE</span> SQUAD ONE TOURNAMENT — SEASON 1`;
+        if (mTeams) mTeams.innerHTML = `TEAMS: <strong>31 APPLIED</strong>`;
+        if (tCount) tCount.textContent = '31 TEAMS';
         if (fBadge) fBadge.textContent = 'FINALS LOBBY';
         if (wBadge) wBadge.textContent = 'TOP 3';
+        if (moreInfoBtn) moreInfoBtn.href = 'https://ewave.gg/game/pubg/tournaments/c412d321-a4c3-4302-a909-3178b959214d';
+
         if (wS2) wS2.style.display = 'none';
         if (wS1) wS1.style.display = 'block';
         if (wCustom) wCustom.style.display = 'none';
@@ -11217,8 +11291,13 @@
         renderApplicantCards(season1Data);
       } else {
         // Dynamic / Custom / Upcoming season (e.g. Season 3)
+        if (bTitle) bTitle.textContent = (tourney.name || 'SQUAD ONE INVITATIONAL — SEASON 3').toUpperCase();
+        if (sBadge) sBadge.innerHTML = `<span class="season-badge-past" style="background:rgba(255,204,0,0.15);border-color:#ffcc00;color:#ffdd44;"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#ffcc00;margin-right:6px;"></span>UPCOMING / QUALIFIERS</span> ${tourney.name || 'SQUAD ONE INVITATIONAL — SEASON 3'}`;
+        if (mTeams) mTeams.innerHTML = `TEAMS: <strong>${tourney.registeredCount || 120} SLOTS · ${tourney.finalistCount || 16} FINALISTS</strong>`;
+        if (tCount) tCount.textContent = `${tourney.registeredCount || 120} SLOTS`;
         if (fBadge) fBadge.textContent = `${tourney.finalistCount || 16} SLOTS`;
         if (wBadge) wBadge.textContent = 'PODIUM';
+        if (moreInfoBtn) moreInfoBtn.href = tourney.bracketUrl || 'https://ewave.gg/brackets/sq1-s3';
 
         if (wS2) wS2.style.display = 'none';
         if (wS1) wS1.style.display = 'none';
@@ -11227,9 +11306,9 @@
           const wTitle = document.getElementById('winners-custom-title');
           const wBadgeEl = document.getElementById('winners-custom-badge');
           const wBracket = document.getElementById('winners-custom-bracket-link');
-          if (wTitle) wTitle.textContent = `${tourney.name} CHAMPIONS TROPHY`;
-          if (wBadgeEl) wBadgeEl.textContent = `${tourney.prizePool ? `${tourney.prizePool} · ` : ''}${tourney.status || 'UPCOMING'} · PODIUM ANNOUNCEMENT PENDING`;
-          if (wBracket && tourney.bracketUrl) wBracket.href = tourney.bracketUrl;
+          if (wTitle) wTitle.textContent = `${tourney.name || 'SQUAD ONE INVITATIONAL S3'} CHAMPIONS TROPHY`;
+          if (wBadgeEl) wBadgeEl.textContent = `SEASON 3 · UPCOMING · PODIUM ANNOUNCEMENT PENDING`;
+          if (wBracket) wBracket.href = tourney.bracketUrl || 'https://ewave.gg/brackets/sq1-s3';
         }
 
         if (fS2) fS2.style.display = 'none';
@@ -11243,13 +11322,51 @@
           const fBracketLink = document.getElementById('finalists-custom-bracket-link');
 
           if (fTitle) fTitle.textContent = `${tourney.finalistCount || 16} GRAND FINALS SLOTS`;
-          if (fBadgeEl) fBadgeEl.textContent = tourney.badgeText || `SEASON ${seasonNum} · ${(tourney.stage || 'QUALIFIERS').replace('_', ' ')}`;
-          if (fDesc) fDesc.textContent = tourney.description || `${tourney.registeredCount || 120} squads registered. Format: ${tourney.format || 'Open Qualifiers + Invitational Seeded Finals'}. Follow real-time bracket seeds and match schedules on eWave.gg.`;
-          if (fBracket && tourney.bracketUrl) fBracket.href = tourney.bracketUrl;
-          if (fBracketLink && tourney.bracketUrl) fBracketLink.href = tourney.bracketUrl;
+          if (fBadgeEl) fBadgeEl.textContent = `SEASON 3 · QUALIFIERS IN PROGRESS`;
+          if (fDesc) fDesc.textContent = `120 Team Slots across Open Qualifiers and Seeded Finals. Top 16 qualifying squads advance to Grand Finals. Follow real-time bracket seeds and match schedules on eWave.gg.`;
+          if (fBracket) fBracket.href = tourney.bracketUrl || 'https://ewave.gg/brackets/sq1-s3';
+          if (fBracketLink) fBracketLink.href = tourney.bracketUrl || 'https://ewave.gg/brackets/sq1-s3';
         }
 
-        renderApplicantCards(season2Data.slice(0, 48));
+        // Season 3 Tab 1 Showcase: Display official registration and qualifier hub (NEVER Season 2 squads!)
+        if (teamsGridEl) {
+          teamsGridEl.innerHTML = `
+            <div style="grid-column: 1 / -1; background: radial-gradient(circle at top, rgba(38, 5, 25, 0.9), rgba(10, 1, 14, 0.95)); border: 1px solid rgba(255,204,0,0.35); border-radius: 12px; padding: clamp(24px, 4vw, 40px); text-align: center; box-shadow: 0 0 35px rgba(255,204,0,0.1);">
+              <div style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.72rem; color: #ffdd44; letter-spacing: 1.5px; text-transform: uppercase; background: rgba(255,204,0,0.12); border: 1px solid rgba(255,204,0,0.3); padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;">
+                <span style="width: 7px; height: 7px; border-radius: 50%; background: #ffcc00; box-shadow: 0 0 8px #ffcc00;"></span>
+                UPCOMING QUALIFIERS · REGISTRATION IN PROGRESS
+              </div>
+              <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2.2rem); color: #fff; letter-spacing: 1px; margin-bottom: 10px;">
+                SQUAD ONE INVITATIONAL — SEASON 3
+              </h2>
+              <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 24px; line-height: 1.6;">
+                120 Team Slots available across open qualifier brackets and seeded invitational lobbies. 16 qualifying squads will advance directly to the 3-Day Grand Finals.
+              </p>
+              <div style="display: flex; justify-content: center; gap: clamp(12px, 3vw, 28px); flex-wrap: wrap; margin-bottom: 28px;">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 12px 20px; min-width: 140px;">
+                  <span style="display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">TOURNAMENT SLOTS</span>
+                  <strong style="font-family: var(--font-mono); font-size: 1.15rem; color: #ffdd44;">120 SQUADS</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 12px 20px; min-width: 140px;">
+                  <span style="display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">STAGE</span>
+                  <strong style="font-family: var(--font-mono); font-size: 1.15rem; color: #00ff88;">QUALIFIERS</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 12px 20px; min-width: 140px;">
+                  <span style="display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">GRAND FINALS</span>
+                  <strong style="font-family: var(--font-mono); font-size: 1.15rem; color: #fff;">16 SLOTS</strong>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                <a href="${tourney.bracketUrl || 'https://ewave.gg/game/pubg'}" target="_blank" class="cyber-btn cyber-btn-crimson" style="padding: 12px 28px; font-size: 0.88rem;" data-sound="click">
+                  REGISTER SQUAD ON EWAVE.GG ↗
+                </a>
+                <a href="https://discord.gg/pCk89vRPq" target="_blank" class="cyber-btn cyber-btn-outline" style="padding: 12px 24px; font-size: 0.88rem;" data-sound="click">
+                  JOIN SCRIMS & QUALIFIER DISCORD
+                </a>
+              </div>
+            </div>
+          `;
+        }
       }
     }
 
@@ -11949,6 +12066,7 @@
           {
             id: "s1ve-sq1-oversized-white",
             title: "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+            quote: "Upgrade your Vogue",
             badge: "HOT DROP · OVERSIZED",
             price: 999,
             originalPrice: 1499,
@@ -11963,6 +12081,7 @@
           {
             id: "s1ve-sq1-oversized-black",
             title: "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+            quote: "Upgrade your Vogue",
             badge: "BESTSELLER · OVERSIZED",
             price: 999,
             originalPrice: 1499,
@@ -11977,6 +12096,7 @@
           {
             id: "s1ve-sq1-oversized-maroon",
             title: "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+            quote: "Upgrade your Vogue",
             badge: "LIMITED DROP · 30% OFF",
             price: 1099,
             originalPrice: 1599,
@@ -12339,10 +12459,13 @@
        ========================================================================== */
     function getStoreProducts() {
       const cfg = window._sq1ActiveConfig || loadSiteConfig() || SQ1_DEFAULT_CONFIG;
-      if (cfg.store && Array.isArray(cfg.store.products)) {
-        return cfg.store.products;
+      let prods = (cfg.store && Array.isArray(cfg.store.products)) ? cfg.store.products : [];
+      // Sanitize: filter out dummy or placeholder products like prod-1788722681111, prod-1, etc.
+      prods = prods.filter(p => p && p.id && !p.id.includes('prod-1788722681111') && !p.id.startsWith('prod-') && (p.title || p.name));
+      if (prods.length === 0) {
+        prods = SQ1_DEFAULT_CONFIG.store.products;
       }
-      return [];
+      return prods;
     }
 
     // Render Store Products Grid on Live Website
@@ -12384,6 +12507,7 @@
             </div>
             <div class="product-details">
               <h3 class="product-title">${prod.title}</h3>
+              <div class="product-quote">“${prod.quote || 'Upgrade your Vogue'}”</div>
               <p class="product-desc">${prod.description || ''}</p>
               
               <div class="product-price-box">
@@ -13016,16 +13140,35 @@
       findOrder: async function(query) {
         const q = (query || '').trim().toLowerCase();
         if (!q) return null;
+        const qClean = q.replace(/\D/g, '');
 
-        // 1. Check local storage
-        const local = getStoredOrders();
-        let match = local.find(o => 
-          o.orderId.toLowerCase() === q ||
-          (o.customer && o.customer.phone && o.customer.phone.replace(/\D/g, '').includes(q.replace(/\D/g, '')))
-        );
-        if (match) return match;
+        // 1. Check local storage 'SQ1_STORE_ORDERS'
+        try {
+          const local = getStoredOrders();
+          if (Array.isArray(local)) {
+            let match = local.find(o => 
+              (o.orderId && o.orderId.toLowerCase() === q) ||
+              (o.id && o.id.toLowerCase() === q) ||
+              (qClean.length >= 4 && o.customer && o.customer.phone && o.customer.phone.replace(/\D/g, '').includes(qClean))
+            );
+            if (match) return match;
+          }
+        } catch(e) {}
 
-        // 2. Query Firestore if connected
+        // 2. Also check admin orders in 'sq1_orders'
+        try {
+          const adminOrders = JSON.parse(localStorage.getItem('sq1_orders') || '[]');
+          if (Array.isArray(adminOrders)) {
+            let match = adminOrders.find(o => 
+              (o.orderId && o.orderId.toLowerCase() === q) ||
+              (o.id && o.id.toLowerCase() === q) ||
+              (qClean.length >= 4 && o.customer && o.customer.phone && o.customer.phone.replace(/\D/g, '').includes(qClean))
+            );
+            if (match) return match;
+          }
+        } catch(e) {}
+
+        // 3. Query Firestore if connected
         if (this.db && this.isLive) {
           try {
             const doc = await this.db.collection('sq1_orders').doc(query.trim().toUpperCase()).get();
@@ -14017,6 +14160,14 @@
       }
 
       // Tab 5: Store & Products
+      if (cfg.store && Array.isArray(cfg.store.products)) {
+        const validProds = cfg.store.products.filter(p => p && p.id && !p.id.includes('prod-1788722681111') && !p.id.startsWith('prod-') && (p.title || p.name));
+        if (validProds.length > 0) {
+          cfg.store.products = validProds;
+        } else {
+          cfg.store.products = SQ1_DEFAULT_CONFIG.store.products;
+        }
+      }
       const st = cfg.store || SQ1_DEFAULT_CONFIG.store;
       const elStoreEn = document.getElementById('cfg-store-enabled');
       if (elStoreEn) elStoreEn.checked = st.enabled !== false;
@@ -14327,7 +14478,7 @@
     if (typeof updateCartBadge === 'function') updateCartBadge();
 
     // Stop scroll propagation so modal scrolling is 100% independent from Lenis
-    ['admin-portal-modal', 'checkout-modal'].forEach(id => {
+    ['admin-portal-modal', 'checkout-modal', 'track-order-modal'].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
         el.addEventListener('wheel', (e) => {
@@ -14373,6 +14524,10 @@
         const checkoutModal = document.getElementById('checkout-modal');
         if (checkoutModal && checkoutModal.classList.contains('active')) {
           closeCheckoutModal();
+        }
+        const trackModal = document.getElementById('track-order-modal');
+        if (trackModal && trackModal.classList.contains('active')) {
+          closeTrackOrderModal();
         }
       }
     });
