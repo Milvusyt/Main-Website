@@ -9,11 +9,11 @@
     "journey": true
   },
   "broadcast": {
-    "feedTitle": "South Asia Cross-Bay Scrims \u00e2\u20ac\u201d Grand Finals Match 5",
+    "feedTitle": "South Asia Cross-Bay Scrims â€” Grand Finals Match 5",
     "startTime": "8:00 PM IST",
     "youtubeUrl": "https://www.youtube.com/live/PMyjkKeQPPk",
     "videoId": "PMyjkKeQPPk",
-    "infoTitle": "South Asia Cross-Bay Scrims \u00e2\u20ac\u201d Grand Finals Match 5",
+    "infoTitle": "South Asia Cross-Bay Scrims â€” Grand Finals Match 5",
     "infoDesc": "Official Squad One live broadcast stream with real-time observer feeds and player telemetry.",
     "isLive": true
   },
@@ -31,8 +31,8 @@
       "eyebrow": "MONTHLY AWARD",
       "title": "TOP FAN OF THE MONTH",
       "name": "milvus",
-      "badge": "COMMUNITY VOTE \u00c2\u00b7 ANNOUNCED MONTHLY",
-      "desc": "The most dedicated Squad One community member \u00e2\u20ac\u201d voted by the squad each month.",
+      "badge": "COMMUNITY VOTE Â· ANNOUNCED MONTHLY",
+      "desc": "The most dedicated Squad One community member â€” voted by the squad each month.",
       "avatar": "",
       "poster": "",
       "usePoster": false
@@ -43,11 +43,11 @@
       "title": "TOP TEAMS",
       "seasonBadge": "OFFICIAL S2 CHAMPIONS",
       "champion": {
-        "kicker": "CHAMPION \u00c2\u00b7 1ST PLACE",
+        "kicker": "CHAMPION Â· 1ST PLACE",
         "teamName": "SQUADONE",
         "logo": "assets/teams/squadone.png",
         "points": "188 PTS",
-        "subStats": "57 RANK PTS \u00c2\u00b7 131 KILL PTS"
+        "subStats": "57 RANK PTS Â· 131 KILL PTS"
       },
       "runner2": {
         "rankBadge": "#2",
@@ -66,7 +66,7 @@
       "enabled": false,
       "eyebrow": "KILL CHALLENGE",
       "title": "TOP KILLS WINNERS",
-      "badge": "LEADERBOARD \u00c2\u00b7 ANNOUNCED MONTHLY",
+      "badge": "LEADERBOARD Â· ANNOUNCED MONTHLY",
       "fraggers": [
         {
           "rank": "01",
@@ -78,13 +78,13 @@
           "rank": "02",
           "ign": "TBA",
           "team": "TEAM TBA",
-          "kills": "\u00e2\u20ac\u201d"
+          "kills": "â€”"
         },
         {
           "rank": "03",
           "ign": "TBA",
           "team": "TEAM TBA",
-          "kills": "\u00e2\u20ac\u201d"
+          "kills": "â€”"
         }
       ]
     },
@@ -94,8 +94,8 @@
       "title": "CHALLENGE WINNERS",
       "winnerName": "TBA",
       "name": "TBA",
-      "badge": "CHALLENGES \u00c2\u00b7 ANNOUNCED MONTHLY",
-      "desc": "Monthly community challenge \u00e2\u20ac\u201d unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
+      "badge": "CHALLENGES Â· ANNOUNCED MONTHLY",
+      "desc": "Monthly community challenge â€” unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
       "poster": "",
       "usePoster": false,
       "discordUrl": "https://discord.gg/pCk89vRPq",
@@ -137,13 +137,13 @@
         "rank": 2,
         "ign": "TBA",
         "team": "TEAM TBA",
-        "kills": "\u00e2\u20ac\u201d"
+        "kills": "â€”"
       },
       {
         "rank": 3,
         "ign": "TBA",
         "team": "TEAM TBA",
-        "kills": "\u00e2\u20ac\u201d"
+        "kills": "â€”"
       }
     ]
   },
@@ -152,8 +152,8 @@
       "enabled": true,
       "title": "TOP FAN OF THE MONTH",
       "name": "milvus",
-      "badge": "COMMUNITY VOTE \u00c2\u00b7 ANNOUNCED MONTHLY",
-      "desc": "The most dedicated Squad One community member \u00e2\u20ac\u201d voted by the squad each month.",
+      "badge": "COMMUNITY VOTE Â· ANNOUNCED MONTHLY",
+      "desc": "The most dedicated Squad One community member â€” voted by the squad each month.",
       "poster": "",
       "usePoster": false
     },
@@ -162,7 +162,7 @@
       "cName": "SQUADONE",
       "cLogo": "assets/teams/squadone.png",
       "cPts": "188 PTS",
-      "cStats": "57 RANK PTS \u00c2\u00b7 131 KILL PTS",
+      "cStats": "57 RANK PTS Â· 131 KILL PTS",
       "r2Name": "STUDS",
       "r2Logo": "assets/teams/studs.png",
       "r2Pts": "136 PTS",
@@ -173,23 +173,23 @@
     },
     "card3": {
       "enabled": false,
-      "badge": "LEADERBOARD \u00c2\u00b7 ANNOUNCED MONTHLY",
+      "badge": "LEADERBOARD Â· ANNOUNCED MONTHLY",
       "p1": "MILVUSGoD",
       "t1": "SQUADMATRIX",
       "k1": "100000",
       "p2": "TBA",
       "t2": "TEAM TBA",
-      "k2": "\u00e2\u20ac\u201d",
+      "k2": "â€”",
       "p3": "TBA",
       "t3": "TEAM TBA",
-      "k3": "\u00e2\u20ac\u201d"
+      "k3": "â€”"
     },
     "card4": {
       "enabled": false,
       "title": "CHALLENGE WINNERS",
       "name": "TBA",
-      "badge": "CHALLENGES \u00c2\u00b7 ANNOUNCED MONTHLY",
-      "desc": "Monthly community challenge \u00e2\u20ac\u201d unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
+      "badge": "CHALLENGES Â· ANNOUNCED MONTHLY",
+      "desc": "Monthly community challenge â€” unique tasks, big rewards. Stay tuned on Discord for the next challenge.",
       "poster": "",
       "usePoster": false,
       "btnText": "JOIN CHALLENGES ON DISCORD",
@@ -212,7 +212,7 @@
     },
     {
       "id": "news-2",
-      "headline": "Grand Finals 16 Teams Confirmed: \u00e2\u201a\u00b91,50,000 Prize Pool",
+      "headline": "Grand Finals 16 Teams Confirmed: â‚¹1,50,000 Prize Pool",
       "category": "Season 3",
       "excerpt": "Top 16 squads battle across 3 days, 15 matches for the ultimate title.",
       "content": "After fierce qualifiers featuring 95 registered teams, the top 16 survivors have booked their ticket to the Squad One National League Grand Finals. Matches will be broadcast live across Erangel, Miramar, Taego, and Rondo.",
@@ -229,57 +229,72 @@
     "desc": "",
     "products": [
       {
-        "id": "prod-1",
-        "title": "Squad One Pro Jersey 2026",
-        "badge": "HOT DROP \u00c2\u00b7 OVERSIZED",
-        "price": 1499,
-        "originalPrice": 2099,
-        "currency": "\u00e2\u201a\u00b9",
-        "image": "t-shirt.png",
-        "description": "",
+        "id": "s1ve-sq1-oversized-white",
+        "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+        "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+        "badge": "HOT DROP · OVERSIZED",
+        "category": "T-Shirt",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_White.png",
+        "imageUrl": "images/new Products/Final_1-_White.png",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
         "sizes": [
           "S",
           "M",
           "L",
           "XL",
-          "2XL"
+          "XXL"
         ],
         "allowCustomIGN": true,
         "inStock": true,
         "hidden": false
       },
       {
-        "id": "prod-2",
-        "title": "Cyberpunk Clan Hoodie (Midnight Black)",
-        "badge": "HOT DROP \u00c2\u00b7 OVERSIZED",
-        "price": 2499,
+        "id": "s1ve-sq1-oversized-black",
+        "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+        "name": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+        "badge": "BESTSELLER · OVERSIZED",
+        "category": "T-Shirt",
+        "price": 999,
+        "priceINR": 999,
         "originalPrice": 1499,
-        "currency": "\u00e2\u201a\u00b9",
-        "image": "Brand_Nme_.png",
-        "description": "",
-        "sizes": [
-          "M",
-          "L",
-          "XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false
-      },
-      {
-        "id": "prod-1788722681111",
-        "title": "me",
-        "badge": "HOT DROP \u00c2\u00b7 OVERSIZED",
-        "price": 10,
-        "originalPrice": 14,
-        "currency": "\u00e2\u201a\u00b9",
-        "image": "t-shirt.png",
-        "description": "",
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Black_.png",
+        "imageUrl": "images/new Products/Final_1-_Black_.png",
+        "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
         "sizes": [
           "S",
           "M",
           "L",
-          "XL"
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      },
+      {
+        "id": "s1ve-sq1-oversized-maroon",
+        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "badge": "LIMITED DROP · 30% OFF",
+        "category": "T-Shirt",
+        "price": 1099,
+        "priceINR": 1099,
+        "originalPrice": 1599,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Maroon_.png",
+        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
+        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
         ],
         "allowCustomIGN": true,
         "inStock": true,
@@ -289,62 +304,79 @@
   },
   "storeArmory": {
     "vaultLocked": false,
-    "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY \u00e2\u20ac\u201d DROP INCOMING",
+    "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY – DROP INCOMING",
     "products": [
       {
-        "id": "prod-1",
-        "name": "Squad One Pro Jersey 2026",
-        "category": "Jersey",
-        "priceINR": 1499,
-        "imageUrl": "t-shirt.png",
+        "id": "s1ve-sq1-oversized-white",
+        "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+        "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+        "badge": "HOT DROP · OVERSIZED",
+        "category": "T-Shirt",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_White.png",
+        "imageUrl": "images/new Products/Final_1-_White.png",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
         "sizes": [
           "S",
           "M",
           "L",
           "XL",
-          "2XL"
+          "XXL"
         ],
-        "stock": 45,
-        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
-      },
-      {
-        "id": "prod-2",
-        "name": "Cyberpunk Clan Hoodie (Midnight Black)",
-        "category": "Hoodie",
-        "priceINR": 2499,
-        "imageUrl": "Brand_Nme_.png",
-        "sizes": [
-          "M",
-          "L",
-          "XL"
-        ],
-        "stock": 50,
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "title": "Cyberpunk Clan Hoodie (Midnight Black)",
-        "badge": "HOT DROP \u00c2\u00b7 OVERSIZED",
-        "price": 2499,
-        "originalPrice": 1499,
-        "currency": "\u00e2\u201a\u00b9",
-        "image": "Brand_Nme_.png",
-        "description": "",
         "allowCustomIGN": true,
         "inStock": true,
         "hidden": false
       },
       {
-        "id": "prod-1788722681111",
-        "name": "me",
-        "category": "Jersey",
-        "priceINR": 10,
-        "imageUrl": "t-shirt.png",
-        "stock": 50,
-        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "id": "s1ve-sq1-oversized-black",
+        "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+        "name": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+        "badge": "BESTSELLER · OVERSIZED",
+        "category": "T-Shirt",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Black_.png",
+        "imageUrl": "images/new Products/Final_1-_Black_.png",
+        "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
         "sizes": [
           "S",
           "M",
           "L",
-          "XL"
-        ]
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      },
+      {
+        "id": "s1ve-sq1-oversized-maroon",
+        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "badge": "LIMITED DROP · 30% OFF",
+        "category": "T-Shirt",
+        "price": 1099,
+        "priceINR": 1099,
+        "originalPrice": 1599,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Maroon_.png",
+        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
+        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
       }
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
@@ -352,7 +384,7 @@
     "enabled": true
   },
   "siteSettings": {
-    "aboutUs": "Squad One Esports is India\u00e2\u20ac\u2122s premier PUBG Battlegrounds PC organization, committed to structured grassroots talent development and elite tournament production.",
+    "aboutUs": "Squad One Esports is Indiaâ€™s premier PUBG Battlegrounds PC organization, committed to structured grassroots talent development and elite tournament production.",
     "rules": "Standard Super Ruleset with PUBG Esports point matrix. 10 Pts for 1st place, 1 Pt per Kill.",
     "contactEmail": "contact@squadone.gg",
     "discordInvite": "https://discord.gg/pCk89vRPq",
@@ -363,49 +395,55 @@
     {
       "id": "sq1-s3",
       "seasonNumber": 3,
-      "name": "Squad One Invitational S3",
+      "name": "Squad One Invitational — Season 3",
       "year": "2026",
-      "prizePool": "₹50,000 INR",
       "stage": "QUALIFIERS",
       "status": "UPCOMING",
       "badgeText": "UPCOMING / QUALIFIERS",
       "registeredCount": 120,
       "finalistCount": 16,
       "format": "Open Qualifiers + Invitational Seeded Finals",
-      "description": "Squad One Invitational S3. 120 registered squads battling through qualifiers for 16 Grand Finals spots.",
+      "rounds": "OPEN QUALIFIERS",
+      "finals": "16 FINALISTS",
+      "teams": "120 SLOTS",
+      "description": "Squad One Invitational S3. Open Qualifiers + Invitational Seeded Finals battling for 16 Grand Finals spots.",
       "bracketUrl": "https://ewave.gg/brackets/sq1-s3",
       "bannerUrl": "eventimage.jpeg"
     },
     {
       "id": "sq1-s2",
       "seasonNumber": 2,
-      "name": "Squad One National League S2",
+      "name": "Squad One National League — Season 2",
       "year": "2026",
-      "prizePool": "₹75,000 INR",
       "stage": "GRAND_FINALS",
       "status": "ONGOING",
-      "badgeText": "GRAND FINALS LIVE",
+      "badgeText": "SEASON ENDED",
       "registeredCount": 95,
       "finalistCount": 16,
       "format": "2 Qualifiers, 3 Days, 15 Matches",
-      "description": "Squad One National League S2. 16 elite finalists competing across 15 matches for the national title.",
-      "bracketUrl": "https://ewave.gg/brackets/sq1-s2",
-      "bannerUrl": "eventimage.jpeg"
+      "rounds": "2 QUALIFIERS",
+      "finals": "3 DAYS (15 MATCHES)",
+      "teams": "95 APPLIED · 16 FINALISTS",
+      "description": "National PUBG League Season 2. 95 registered squads battling through 2 Qualifier rounds for 16 Grand Finals spots.",
+      "bracketUrl": "https://ewave.gg/game/pubg/tournaments/5521ad78-82be-478b-a5df-bc62ee9b3bb2",
+      "bannerUrl": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/tournaments/ba190d5d-84ff-42fc-ac8a-a61f23432e9a.png"
     },
     {
       "id": "sq1-s1",
       "seasonNumber": 1,
-      "name": "Squad One Championship S1",
-      "year": "Archive",
-      "prizePool": "₹30,000 INR",
-      "stage": "SEASON_ENDED",
+      "name": "Squad One Elite Battlegrounds — Season 1",
+      "year": "ARCHIVE",
+      "stage": "QUALIFIERS",
       "status": "COMPLETED",
       "badgeText": "SEASON COMPLETE",
-      "registeredCount": 84,
+      "registeredCount": 31,
       "finalistCount": 16,
-      "format": "Qualifiers + 3-Day Finals (15 Matches)",
-      "description": "Squad One Championship Season 1. Inaugural competitive championship tournament.",
-      "bracketUrl": "https://ewave.gg/brackets/sq1-s1",
+      "format": "2 Rounds, 3 Days",
+      "rounds": "2 ROUNDS",
+      "finals": "3 DAYS",
+      "teams": "31 APPLIED",
+      "description": "Squad One Elite Battlegrounds #1 (Season 1). 31 verified competing organizations and official tournament roster.",
+      "bracketUrl": "https://ewave.gg/game/pubg/tournaments/c412d321-a4c3-4302-a909-3178b959214d",
       "bannerUrl": "eventimage.jpeg"
     }
   ],
