@@ -201,12 +201,17 @@
   "news": [
     {
       "id": "news-1788879547072",
-      "createdAt": "2026-09-08",
+      "createdAt": "2026-09-09",
       "headline": "Launching S1VE X SQUADONE STORE",
       "category": "International",
-      "posterUrl": "assets/Brand_Nme_.png",
+      "posterUrl": "assets/s1ve.newPost.png",
       "excerpt": "heyyy",
-      "content": "ok"
+      "content": "ok",
+      "title": "Launching S1VE X SQUADONE STORE",
+      "tag": "INTERNATIONAL",
+      "badge": "LATEST",
+      "image": "assets/s1ve.newPost.png",
+      "hidden": false
     },
     {
       "id": "news-1",
