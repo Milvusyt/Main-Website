@@ -218,17 +218,6 @@
       "ctaText": "Read Official Dispatch",
       "ctaUrl": "#",
       "createdAt": "2026-08-15"
-    },
-    {
-      "id": "news-2",
-      "headline": "Grand Finals 16 Teams Confirmed: ₹1,50,000 Prize Pool",
-      "category": "Season 3",
-      "excerpt": "Top 16 squads battle across 3 days, 15 matches for the ultimate title.",
-      "content": "After fierce qualifiers featuring 95 registered teams, the top 16 survivors have booked their ticket to the Squad One National League Grand Finals. Matches will be broadcast live across Erangel, Miramar, Taego, and Rondo.",
-      "posterUrl": "eventimage.jpeg",
-      "ctaText": "View Roster List",
-      "ctaUrl": "#finalists",
-      "createdAt": "2026-08-28"
     }
   ],
   "store": {
