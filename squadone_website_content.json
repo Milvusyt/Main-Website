@@ -201,12 +201,19 @@
   "news": [
     {
       "id": "news-1788879547072",
-      "createdAt": "2026-09-08",
       "headline": "Launching S1VE X SQUADONE STORE",
+      "title": "Launching S1VE X SQUADONE STORE",
       "category": "International",
-      "posterUrl": "assets/Brand_Nme_.png",
-      "excerpt": "heyyy",
-      "content": "ok"
+      "tag": "INTERNATIONAL",
+      "badge": "LATEST",
+      "posterUrl": "assets/s1ve.newPost.png",
+      "image": "assets/s1ve.newPost.png",
+      "excerpt": "New S1VE x Squad One apparel drop is now live. Grab the GTA VI Edition and exclusive oversized jerseys.",
+      "content": "New S1VE x Squad One apparel drop is now live. Grab the GTA VI Edition and exclusive oversized jerseys with 280 GSM heavy cotton construction.",
+      "ctaText": "Read Full Details",
+      "ctaUrl": "#",
+      "hidden": false,
+      "createdAt": "2026-09-08"
     },
     {
       "id": "news-1",
