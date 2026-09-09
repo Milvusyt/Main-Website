@@ -8287,6 +8287,29 @@
         </div>
 
       </div>
+
+      <!-- Community News Archive Shortcut & Status Bar -->
+      <div class="news-archive-banner" id="news-archive-banner" style="margin-top: 24px; padding: 16px 22px; background: rgba(149, 61, 223, 0.07); border: 1px solid rgba(149, 61, 223, 0.28); border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 38px; height: 38px; border-radius: 6px; background: rgba(149, 61, 223, 0.2); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; border: 1px solid rgba(149, 61, 223, 0.4); flex-shrink: 0;">
+            📁
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 0.92rem; color: #fff; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              COMMUNITY ARCHIVE &bull; NEWS &amp; EVENTS
+              <span id="news-archive-badge" style="font-family: var(--font-mono); font-size: 0.68rem; color: #FFD700; background: rgba(255,215,0,0.15); padding: 1px 7px; border-radius: 4px; border: 1px solid rgba(255,215,0,0.35);">ALL DISPATCHES</span>
+            </div>
+            <div id="news-archive-subtext" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+              Looking for older tournament bulletins and past announcements? Access the complete dispatch archive.
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <button class="cyber-btn cyber-btn-outline modal-trigger-btn" data-open-modal="modal-news" type="button" data-sound="click" style="font-size: 0.8rem; padding: 9px 18px; white-space: nowrap;">
+            OPEN COMMUNITY ARCHIVE ↗
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -10582,10 +10605,11 @@
     }
 
     /* ==========================================================================
-       14b. ROTATING NEWS CONTROLLER (TOP ROTATING DISPATCHES)
+       14b. ROTATING NEWS CONTROLLER (TOP 5 DISPATCHES & COMMUNITY ARCHIVE ENGINE)
        ========================================================================== */
-    let newsData = [
+    const DEFAULT_NEWS_STORIES = [
       {
+        id: 'news-scrims-sa-crossbay',
         tag: 'INTERNATIONAL SCRIMS · SA & SEA',
         title: '🚨 THE NEXT STEP FOR OUR SCRIMS! SA CROSS-BAY SCRIMS',
         image: 'images/sa-cross-bay-scrims.jpeg',
@@ -10600,6 +10624,7 @@
         `
       },
       {
+        id: 'news-sqnl-s3-announce',
         tag: 'NOVEMBER 2026 · NATIONS LEAGUE S3',
         title: '🔥 THE STAGE IS SET! Nations League Season 3 Announced',
         image: 'images/sqnlS3.png',
@@ -10614,6 +10639,7 @@
         `
       },
       {
+        id: 'news-ewave-executive-body',
         tag: 'COMMUNITY GOVERNANCE · SA & SEA',
         title: 'The Future of SA & SEA PUBG is in Your Hands',
         image: 'images/ewaveExecutiveBody.jpg',
@@ -10628,6 +10654,7 @@
         `
       },
       {
+        id: 'news-loyalty-program-live',
         tag: 'LIVE NOW · COMMUNITY REWARDS',
         title: '- LIVE NOW! - SquadOne & eWave Loyalty Program',
         image: 'images/loyalty.png',
@@ -10642,6 +10669,7 @@
         `
       },
       {
+        id: 'news-executive-deadline-update',
         tag: 'APPLICATION UPDATE · FINAL CALL',
         title: 'Executive Body Application Update: Deadline Sunday',
         image: 'images/EXECUTIVE BODY UPDATE.jpeg',
@@ -10656,6 +10684,92 @@
         `
       }
     ];
+
+    let newsData = [...DEFAULT_NEWS_STORIES];
+
+    // Safe normalization helper for news items from API, Admin, or static bundle
+    function normalizeNewsItem(item) {
+      if (!item) return null;
+      const title = (item.headline || item.title || '').trim() || 'Official Announcement';
+      const category = (item.category || item.tag || 'ANNOUNCEMENT').trim().toUpperCase();
+      const desc = (item.excerpt || item.desc || item.content || '').trim();
+      const content = (item.content || item.desc || item.excerpt || '').trim();
+
+      let image = (item.posterUrl || item.image || item.imageUrl || '').trim();
+      if (image) {
+        if (!image.startsWith('http') && !image.startsWith('data:') && !image.startsWith('images/') && !image.startsWith('assets/')) {
+          image = 'images/' + image;
+        }
+      } else {
+        image = 'images/eventimage.jpeg';
+      }
+
+      const ctaText = (item.ctaText || 'READ FULL DETAILS').trim();
+      const ctaUrl = (item.ctaUrl || '#').trim();
+      const isExternal = ctaUrl && ctaUrl !== '#' && !ctaUrl.startsWith('#');
+
+      const actions = item.actions || `
+        ${isExternal 
+          ? `<a href="${ctaUrl}" target="_blank" class="cyber-btn cyber-btn-crimson" data-sound="click">${ctaText} ↗</a>` 
+          : `<button class="cyber-btn cyber-btn-crimson modal-trigger-btn" data-open-modal="modal-news" type="button" data-sound="click">${ctaText}</button>`}
+        <button class="cyber-btn cyber-btn-outline" data-open-event-image data-image-src="${image}" type="button" data-sound="click">
+          VIEW POSTER
+        </button>
+      `;
+
+      return {
+        id: item.id || ('news-' + Math.random().toString(36).substr(2, 7)),
+        title,
+        headline: title,
+        tag: category,
+        badge: item.badge || (item.category ? item.category.toUpperCase() : 'UPDATE'),
+        desc,
+        content,
+        image,
+        posterUrl: image,
+        hidden: Boolean(item.hidden),
+        createdAt: item.createdAt || '',
+        actions
+      };
+    }
+
+    // Dynamic News Config Engine: Updates newsData with newest items, merges defaults, and re-renders
+    window.updateNewsFromConfig = function(incomingList) {
+      if (!Array.isArray(incomingList) || incomingList.length === 0) return;
+
+      const normalizedIncoming = incomingList.map(normalizeNewsItem).filter(Boolean);
+      
+      const seenTitles = new Set();
+      const seenIds = new Set();
+      const mergedList = [];
+
+      // 1. Prioritize incoming news (newest items first)
+      normalizedIncoming.forEach(item => {
+        const normTitle = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (normTitle && !seenTitles.has(normTitle)) {
+          seenTitles.add(normTitle);
+          if (item.id) seenIds.add(item.id);
+          mergedList.push(item);
+        }
+      });
+
+      // 2. Append default baseline stories if not duplicate
+      DEFAULT_NEWS_STORIES.forEach(defItem => {
+        const normTitle = (defItem.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (normTitle && !seenTitles.has(normTitle) && !seenIds.has(defItem.id)) {
+          seenTitles.add(normTitle);
+          mergedList.push(normalizeNewsItem(defItem));
+        }
+      });
+
+      newsData = mergedList;
+      try {
+        localStorage.setItem('SQ1_NEWS_STORE', JSON.stringify(newsData));
+      } catch (e) {}
+
+      renderNewsSystem();
+      showNewsStory(0, false);
+    };
 
     let currentNewsIndex = 0;
     let newsTimer = null;
@@ -10694,6 +10808,18 @@
       // Stories beyond the 5 newest automatically move to Community "News & Events" archive
       const archived = activeStories.slice(5);
 
+      // Update the community archive banner on the main page
+      const archiveBadge = document.getElementById('news-archive-badge');
+      const archiveSubtext = document.getElementById('news-archive-subtext');
+      if (archiveBadge) {
+        archiveBadge.textContent = archived.length > 0 ? `${archived.length} ARCHIVED STORIES` : 'ALL DISPATCHES';
+      }
+      if (archiveSubtext) {
+        archiveSubtext.textContent = archived.length > 0
+          ? `Showing 5 Latest Dispatches in rotation · 📁 ${archived.length} older dispatches archived in Community News & Events.`
+          : 'Complete dispatches, official bulletins, and community announcements.';
+      }
+
       // 1. Render the 5 Right-Side Rotator Tabs in "LATEST FROM SQUAD ONE"
       const tabsContainer = document.getElementById('news-tabs-list');
       if (tabsContainer) {
@@ -10721,46 +10847,63 @@
         });
       }
 
-      // 2. Render Community "News & Events" Modal Body (Contains All Stories + Older Dispatches)
+      // 2. Render Community "News & Events" Modal Body (Contains All Stories + Dedicated Archive Section)
       const modalBody = document.querySelector('#modal-news .esports-modal-body');
       if (modalBody) {
         const buildArticleHtml = (item, isArchived) => `
           <article class="news-article-card featured-event" style="${isArchived ? 'border-color: rgba(255,215,0,0.35); background: rgba(22, 3, 30, 0.7);' : ''}">
             <div class="news-article-card-copy">
-              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px;">
-                <div class="news-card-date">${item.tag || 'OFFICIAL DISPATCH'}</div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
+                <div class="news-card-date">${item.createdAt ? `${item.createdAt} &bull; ` : ''}${item.tag || 'OFFICIAL DISPATCH'}</div>
                 ${isArchived 
                   ? '<span style="font-family: var(--font-mono); font-size: 0.68rem; color: #FFD700; background: rgba(255,215,0,0.15); padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(255,215,0,0.35);">COMMUNITY ARCHIVE</span>' 
                   : '<span style="font-family: var(--font-mono); font-size: 0.68rem; color: #00ff88; background: rgba(0,255,136,0.15); padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(0,255,136,0.35);">TOP DISPATCH</span>'}
               </div>
               <div class="news-card-title">${item.title}</div>
               <div style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.55; margin-top: 6px;">
-                ${item.desc || ''}
+                ${item.content || item.desc || ''}
               </div>
               ${item.actions ? `<div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">${item.actions}</div>` : ''}
             </div>
             ${item.image ? `
               <button class="news-event-image-button" type="button" aria-label="Open event poster" data-open-event-image data-image-src="${item.image}">
-                <img src="${item.image}" alt="${item.title}" onerror="this.src='assets/teams/squadone.png'">
+                <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='images/eventimage.jpeg';">
               </button>
             ` : ''}
           </article>
         `;
 
         let modalHtml = '';
-        // Latest top 5
+        
+        // Header for Top 5 Featured Dispatches
+        modalHtml += `
+          <div style="margin-bottom: 18px; padding: 12px 18px; background: rgba(0, 255, 136, 0.06); border-left: 4px solid #00ff88; border-radius: 6px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+            <div>
+              <h4 style="font-family: var(--font-display); font-size: 1.05rem; color: #00ff88; margin: 0; letter-spacing: 0.5px;">
+                🔥 LATEST FROM SQUAD ONE (${top5.length} TOP DISPATCHES)
+              </h4>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin: 3px 0 0;">
+                The newest official tournament bulletins, roster updates, and organization announcements.
+              </p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #00ff88; background: rgba(0,255,136,0.12); padding: 3px 10px; border-radius: 4px; border: 1px solid rgba(0,255,136,0.3);">ACTIVE SHOWCASE</span>
+          </div>
+        `;
         modalHtml += top5.map(item => buildArticleHtml(item, false)).join('');
 
-        // If older stories have been moved into Community "News & Events"
+        // If older stories have been moved into Community "News & Events" archive
         if (archived.length > 0) {
           modalHtml += `
-            <div style="margin: 32px 0 18px; padding: 14px 20px; background: rgba(237, 20, 24, 0.08); border-left: 4px solid var(--red); border-radius: 6px;">
-              <h4 style="font-family: var(--font-display); font-size: 1.05rem; color: #FFD700; margin: 0; letter-spacing: 0.5px;">
-                📁 COMMUNITY ARCHIVE: PAST DISPATCHES &amp; EVENTS
-              </h4>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin: 4px 0 0;">
-                Previous announcements moved from the main showcase to keep newest dispatches highlighted without congestion.
-              </p>
+            <div style="margin: 36px 0 18px; padding: 14px 20px; background: rgba(255, 215, 0, 0.07); border-left: 4px solid #FFD700; border-radius: 6px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <h4 style="font-family: var(--font-display); font-size: 1.05rem; color: #FFD700; margin: 0; letter-spacing: 0.5px;">
+                  📁 COMMUNITY ARCHIVE: PREVIOUS DISPATCHES &amp; EVENTS (${archived.length})
+                </h4>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin: 4px 0 0;">
+                  Older announcements automatically preserved from the main showcase for easy viewer access.
+                </p>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #FFD700; background: rgba(255,215,0,0.12); padding: 3px 10px; border-radius: 4px; border: 1px solid rgba(255,215,0,0.3);">COMMUNITY VAULT</span>
             </div>
           `;
           modalHtml += archived.map(item => buildArticleHtml(item, true)).join('');
@@ -10775,7 +10918,10 @@
             const lb = document.getElementById('event-image-lightbox');
             if (lb && src) {
               const lbImg = lb.querySelector('img');
-              if (lbImg) lbImg.src = src;
+              if (lbImg) {
+                lbImg.src = src;
+                lbImg.onerror = function() { this.onerror = null; this.src = 'images/eventimage.jpeg'; };
+              }
               lb.classList.add('active');
               document.body.classList.add('modal-open');
               if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
@@ -10800,6 +10946,60 @@
       const item = top5[index];
       if (!item) return;
 
+      const applyItemToSpotlight = () => {
+        if (spotlightTag) spotlightTag.textContent = item.tag || 'OFFICIAL DISPATCH';
+        if (spotlightTitle) spotlightTitle.textContent = item.title || 'Official Announcement';
+        if (spotlightDesc) spotlightDesc.innerHTML = item.desc || '';
+        if (item.image && spotlightImage) {
+          spotlightImage.src = item.image;
+          spotlightImage.alt = item.title;
+          spotlightImage.onerror = function() {
+            this.onerror = null;
+            this.src = 'images/eventimage.jpeg';
+          };
+          if (spotlightPosterWrap) {
+            spotlightPosterWrap.setAttribute('data-image-src', item.image);
+            spotlightPosterWrap.style.display = 'block';
+          }
+        } else if (spotlightPosterWrap) {
+          spotlightPosterWrap.style.display = 'none';
+        }
+        if (spotlightActions) {
+          spotlightActions.innerHTML = item.actions || '';
+          spotlightActions.querySelectorAll('.modal-trigger-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const targetModalId = btn.getAttribute('data-open-modal');
+              const modal = document.getElementById(targetModalId);
+              if (modal) {
+                modal.classList.add('active');
+                document.body.classList.add('modal-open');
+                if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
+                  lenis.stop();
+                }
+              }
+            });
+          });
+          spotlightActions.querySelectorAll('[data-open-event-image]').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const src = btn.getAttribute('data-image-src') || (spotlightImage ? spotlightImage.src : null);
+              const lb = document.getElementById('event-image-lightbox');
+              if (lb && src) {
+                const lbImg = lb.querySelector('img');
+                if (lbImg) {
+                  lbImg.src = src;
+                  lbImg.onerror = function() { this.onerror = null; this.src = 'images/eventimage.jpeg'; };
+                }
+                lb.classList.add('active');
+                document.body.classList.add('modal-open');
+                if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
+                  lenis.stop();
+                }
+              }
+            });
+          });
+        }
+      };
+
       if (animateTransition) {
         if (spotlightContent) {
           spotlightContent.style.opacity = '0';
@@ -10810,50 +11010,7 @@
           spotlightPosterWrap.style.transform = 'translateY(6px)';
         }
         setTimeout(() => {
-          if (spotlightTag) spotlightTag.textContent = item.tag;
-          if (spotlightTitle) spotlightTitle.textContent = item.title;
-          if (spotlightDesc) spotlightDesc.innerHTML = item.desc;
-          if (item.image && spotlightImage) {
-            spotlightImage.src = item.image;
-            spotlightImage.alt = item.title;
-            if (spotlightPosterWrap) {
-              spotlightPosterWrap.setAttribute('data-image-src', item.image);
-              spotlightPosterWrap.style.display = 'block';
-            }
-          } else if (spotlightPosterWrap) {
-            spotlightPosterWrap.style.display = 'none';
-          }
-          if (spotlightActions) {
-            spotlightActions.innerHTML = item.actions;
-            spotlightActions.querySelectorAll('.modal-trigger-btn').forEach(btn => {
-              btn.addEventListener('click', () => {
-                const targetModalId = btn.getAttribute('data-open-modal');
-                const modal = document.getElementById(targetModalId);
-                if (modal) {
-                  modal.classList.add('active');
-                  document.body.classList.add('modal-open');
-                  if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
-                    lenis.stop();
-                  }
-                }
-              });
-            });
-            spotlightActions.querySelectorAll('[data-open-event-image]').forEach(btn => {
-              btn.addEventListener('click', () => {
-                const src = btn.getAttribute('data-image-src') || (spotlightImage ? spotlightImage.src : null);
-                const lb = document.getElementById('event-image-lightbox');
-                if (lb && src) {
-                  const lbImg = lb.querySelector('img');
-                  if (lbImg) lbImg.src = src;
-                  lb.classList.add('active');
-                  document.body.classList.add('modal-open');
-                  if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
-                    lenis.stop();
-                  }
-                }
-              });
-            });
-          }
+          applyItemToSpotlight();
           if (spotlightContent) {
             spotlightContent.style.opacity = '1';
             spotlightContent.style.transform = 'translateY(0)';
@@ -10864,24 +11021,11 @@
           }
         }, 180);
       } else {
-        if (spotlightTag) spotlightTag.textContent = item.tag;
-        if (spotlightTitle) spotlightTitle.textContent = item.title;
-        if (spotlightDesc) spotlightDesc.innerHTML = item.desc;
-        if (item.image && spotlightImage) {
-          spotlightImage.src = item.image;
-          spotlightImage.alt = item.title;
-          if (spotlightPosterWrap) {
-            spotlightPosterWrap.setAttribute('data-image-src', item.image);
-            spotlightPosterWrap.style.display = 'block';
-          }
-        } else if (spotlightPosterWrap) {
-          spotlightPosterWrap.style.display = 'none';
-        }
-        if (spotlightActions) spotlightActions.innerHTML = item.actions;
+        applyItemToSpotlight();
       }
 
       if (rotatorCounter) {
-        rotatorCounter.textContent = `0${index + 1} / 0${top5.length}`;
+        rotatorCounter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(top5.length).padStart(2, '0')}`;
       }
 
       const tabs = document.querySelectorAll('#news-tabs-list .news-rotator-tab');
@@ -11528,6 +11672,11 @@
       // 5. Tournaments & Seasons Dynamic Sync
       if (cfg.tournaments && Array.isArray(cfg.tournaments) && typeof renderTournamentSeasons === 'function') {
         renderTournamentSeasons(cfg.tournaments, cfg.activeSeasonId);
+      }
+
+      // 6. News & Announcements Dynamic Sync (Top 5 in Showcase Rotator, Older to Community Archive)
+      if (cfg.news && Array.isArray(cfg.news) && typeof window.updateNewsFromConfig === 'function') {
+        window.updateNewsFromConfig(cfg.news);
       }
     }
 
@@ -12361,6 +12510,13 @@
       if (window.SQ1_CLOUD_SYNC && typeof window.SQ1_CLOUD_SYNC.saveOrder === 'function') {
         window.SQ1_CLOUD_SYNC.saveOrder(newOrder);
       }
+      try {
+        fetch('/api/store/submit-order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newOrder)
+        }).catch(() => {});
+      } catch(e) {}
       saveShoppingCart([]);
       renderOrderReceipt(newOrder);
 
@@ -12652,7 +12808,20 @@
     function getStoredOrders() {
       try {
         const saved = localStorage.getItem('SQ1_STORE_ORDERS');
-        if (saved) return JSON.parse(saved);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) {
+            return parsed.filter(o => {
+              const name = (o.customer?.name || o.customer_name || '').toLowerCase();
+              const email = (o.customer?.email || o.customer_email || '').toLowerCase();
+              const id = (o.orderId || o.receipt || o.id || '').toLowerCase();
+              if (name.includes('rohan gupta') || name.includes('admin operator') || name.includes('rahul verma') || name.includes('siddharth roy')) return false;
+              if (email.includes('rohan.g@gmail.com') || email.includes('admin@squadoneesports.com')) return false;
+              if (id.includes('cb8c834f') || id.includes('6cf73c23') || id.includes('50dbcd10') || id.includes('882910')) return false;
+              return true;
+            });
+          }
+        }
       } catch (e) {}
       return [];
     }
@@ -12672,7 +12841,11 @@
       if (savedNews) {
         const parsed = JSON.parse(savedNews);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          newsData = parsed;
+          if (typeof window.updateNewsFromConfig === 'function') {
+            window.updateNewsFromConfig(parsed);
+          } else {
+            newsData = parsed;
+          }
         }
       }
     } catch (e) {}
