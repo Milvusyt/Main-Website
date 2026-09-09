@@ -106,8 +106,8 @@
   {
     "id": "s1-9",
     "name": "B4m Team - A",
-    "logo_url": "",
-    "fallback_logo": "squadone.png",
+    "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/bcd26480-d407-46ef-b8ae-8a567042b00b.png",
+    "fallback_logo": "b4m.png",
     "group": "GROUP A",
     "players": [
       "Ghostfire1922",
@@ -120,7 +120,7 @@
     "id": "s1-10",
     "name": "Back 4 More",
     "logo_url": "https://rywkcgvnvptncxgmljzp.supabase.co/storage/v1/object/public/teams/bcd26480-d407-46ef-b8ae-8a567042b00b.png",
-    "fallback_logo": "squadone.png",
+    "fallback_logo": "b4m.png",
     "group": "GROUP B",
     "players": [
       "MrNoobKiller",
