@@ -11114,7 +11114,6 @@
     /* ==========================================================================
        19. ENCRYPTED CONTROL PANEL (CMS) CONTROLLER & DYNAMIC STATE ENGINE
        ========================================================================== */
-    }
 
     const SQ1_DEFAULT_CONFIG = {
       sections: {
@@ -11531,18 +11530,6 @@
         renderTournamentSeasons(cfg.tournaments, cfg.activeSeasonId);
       }
     }
-      const targetId = cardMap[cardKey];
-      if (targetId) {
-        const targetEl = document.getElementById(targetId);
-        if (targetEl) {
-          if (isChecked) {
-            targetEl.style.removeProperty('display');
-          } else {
-            targetEl.style.setProperty('display', 'none', 'important');
-          }
-        }
-      }
-    };
 
     /* ==========================================================================
        19. SQUAD ONE OFFICIAL STORE & SHOPPING APP ENGINE
@@ -12725,7 +12712,7 @@
         }, { passive: true });
       }
     });
-    });
+
     // Modal Escape Key Listener
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
