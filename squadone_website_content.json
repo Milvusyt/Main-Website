@@ -212,17 +212,6 @@
       "badge": "LATEST",
       "image": "assets/s1ve.newPost.png",
       "hidden": false
-    },
-    {
-      "id": "news-1",
-      "headline": "Squad One Partners with eWave for National League Season 2",
-      "category": "Governance",
-      "excerpt": "Official tournament brackets, live telemetry, and anti-cheat tracking integrated with eWave platform.",
-      "content": "Squad One Esports is proud to announce a landmark strategic partnership with eWave.gg, bringing next-generation automated bracket operations, live killfeed overlays, and real-time player telemetry to Indian competitive PUBG PC.",
-      "posterUrl": "sa-cross-bay-scrims.jpeg",
-      "ctaText": "Read Official Dispatch",
-      "ctaUrl": "#",
-      "createdAt": "2026-08-15"
     }
   ],
   "store": {
