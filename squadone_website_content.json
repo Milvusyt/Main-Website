@@ -425,14 +425,24 @@
         "stock": 50,
         "isLimitedEdition": true,
         "attributes": {
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
           "fit": "Oversized",
           "fabric": "280 GSM Heavy Combed Cotton",
           "color": [
             "Maroon Cyber"
-          ],
-          "is_customizable": true
+          ]
         },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "salePrice": 1599,
+        "short_description": "",
+        "shortDescription": "",
+        "variants": []
       },
       {
         "id": "s1ve-custom-1788868261046",
