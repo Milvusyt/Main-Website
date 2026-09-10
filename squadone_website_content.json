@@ -221,6 +221,96 @@
     "products": [
       {
         "id": "s1ve-sq1-oversized-white",
+        "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+        "quote": "Upgrade your Vogue",
+        "badge": "HOT DROP · OVERSIZED",
+        "price": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_White.png",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      },
+      {
+        "id": "s1ve-sq1-oversized-black",
+        "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+        "quote": "Upgrade your Vogue",
+        "badge": "BESTSELLER · OVERSIZED",
+        "price": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Black_.png",
+        "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      },
+      {
+        "id": "s1ve-sq1-oversized-maroon",
+        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "quote": "Upgrade your Vogue",
+        "badge": "LIMITED DROP · 30% OFF",
+        "price": 1099,
+        "originalPrice": 1599,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Maroon_.png",
+        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      },
+      {
+        "id": "s1ve-custom-1788868261046",
+        "title": "New S1VE × Squad One Apparel Drop GTA VI Edition",
+        "quote": "Upgrade your Vogue",
+        "badge": "HOT DROP · OVERSIZED",
+        "price": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/new_GTA_launch.jpeg",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false
+      }
+    ]
+  },
+  "storeArmory": {
+    "vaultLocked": false,
+    "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
+    "products": [
+      {
+        "id": "s1ve-sq1-oversized-white",
         "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
@@ -332,7 +422,7 @@
         "allowCustomIGN": true,
         "inStock": true,
         "hidden": false,
-        "stock": 20,
+        "stock": 50,
         "isLimitedEdition": true,
         "attributes": {
           "fit": "Oversized",
@@ -345,1186 +435,12 @@
         "checkoutUrl": "https://store.squadone.gg/checkout"
       },
       {
-        "id": "sq1-pro-player-jersey-2026",
-        "name": "Squad One Pro Player Official Jersey 2026",
-        "title": "Squad One Pro Player Official Jersey 2026",
-        "quote": "Upgrade your Vogue",
-        "badge": "PRO ROSTER KIT · CUSTOM NAME",
-        "category": "Apparel",
-        "subcategory": "Player jerseys",
-        "sku": "SQ1-APP-JRS-2026",
-        "price": 1499,
-        "priceINR": 1499,
-        "originalPrice": 1999,
-        "currency": "₹",
-        "image": "images/t-shirt.png",
-        "imageUrl": "images/t-shirt.png",
-        "images": [
-          "images/t-shirt.png",
-          "images/t-shirt-front.nobk.png",
-          "images/t-shirt-back.nobk.png"
-        ],
-        "description": "Aerodynamic micro-mesh moisture wicking competitive player jersey as worn by Squad One during National League S3 Grand Finals.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 60,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Athletic Regular",
-          "fabric": "100% Breathable Micro-Poly Hydro-Dri",
-          "color": [
-            "Team Purple & Carbon"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-cyber-stealth-hoodie",
-        "name": "Squad One 'Stealth Division' Heavy Fleece Hoodie",
-        "title": "Squad One 'Stealth Division' Heavy Fleece Hoodie",
-        "quote": "Upgrade your Vogue",
-        "badge": "HEAVY FLEECE · 380 GSM",
-        "category": "Apparel",
-        "subcategory": "Hoodies",
-        "sku": "SQ1-APP-HOD-STL",
-        "price": 2199,
-        "priceINR": 2199,
-        "originalPrice": 2999,
-        "currency": "₹",
-        "image": "images/side-front.png",
-        "imageUrl": "images/side-front.png",
-        "images": [
-          "images/side-front.png",
-          "images/side.png"
-        ],
-        "description": "380 GSM brushed interior cotton fleece pullover hoodie with high-density silicone team crest and kangaroo hand-warmer pocket.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 30,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Regular Comfy",
-          "fabric": "380 GSM Brushed Cotton Fleece",
-          "color": [
-            "Midnight Black"
-          ]
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-pro-gamer-cap",
-        "name": "Squad One Tactical Structured Snapback Cap",
-        "title": "Squad One Tactical Structured Snapback Cap",
-        "quote": "Upgrade your Vogue",
-        "badge": "STRUCTURED 6-PANEL",
-        "category": "Apparel",
-        "subcategory": "Caps",
-        "sku": "SQ1-APP-CAP-TAC",
-        "price": 699,
-        "priceINR": 699,
-        "originalPrice": 999,
-        "currency": "₹",
-        "image": "assets/teams/squadone.png",
-        "imageUrl": "assets/teams/squadone.png",
-        "description": "High-profile 6-panel snapback with 3D puff embroidered Squad One crest and moisture-absorbing sweatband.",
-        "sizes": [
-          "FREE SIZE (Adjustable)"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 80,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Adjustable Snapback",
-          "fabric": "Wool Blend Crown with Breathable Eyelets",
-          "color": [
-            "Black / Violet"
-          ]
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-deskmat-crossbay",
-        "name": "Squad One Cross-Bay Extended Desk Mat (900×400mm)",
-        "title": "Squad One Cross-Bay Extended Desk Mat (900×400mm)",
-        "quote": "Upgrade your Vogue",
-        "badge": "SPEED SURFACE · 4MM",
-        "category": "Gaming Accessories",
-        "subcategory": "Extended mousepads / desk mats",
-        "sku": "SQ1-GAM-MAT-900",
-        "price": 1299,
-        "priceINR": 1299,
-        "originalPrice": 1799,
-        "currency": "₹",
-        "image": "images/sa-cross-bay-scrims.png",
-        "imageUrl": "images/sa-cross-bay-scrims.png",
-        "description": "900x400mm extra large desk mat featuring tournament map telemetry print, anti-fray stitched borders, and anti-slip natural rubber base.",
-        "sizes": [
-          "900x400x4mm"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 50,
-        "isLimitedEdition": false,
-        "attributes": {
-          "dimensions": "900mm x 400mm",
-          "thickness": "4mm",
-          "surface_type": "Speed",
-          "material": "Micro-woven textile with textured natural rubber base",
-          "design_edition": "South Asia Cross-Bay Scrims Official"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-precision-mousepad",
-        "name": "Squad One Precision Control Esports Mousepad (450×400mm)",
-        "title": "Squad One Precision Control Esports Mousepad (450×400mm)",
-        "quote": "Upgrade your Vogue",
-        "badge": "CONTROL SURFACE",
-        "category": "Gaming Accessories",
-        "subcategory": "Mousepads",
-        "sku": "SQ1-GAM-PAD-450",
-        "price": 799,
-        "priceINR": 799,
-        "originalPrice": 1099,
-        "currency": "₹",
-        "image": "images/Brand_Nme_.png",
-        "imageUrl": "images/Brand_Nme_.png",
-        "description": "Competition-grade 450x400mm mousepad designed for ultra-low DPI flick shots and recoil stabilization.",
-        "sizes": [
-          "450x400x3.5mm"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 75,
-        "isLimitedEdition": false,
-        "attributes": {
-          "dimensions": "450mm x 400mm",
-          "thickness": "3.5mm",
-          "surface_type": "Control",
-          "material": "Textured woven polyester cloth"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-perfume-victory-edp",
-        "name": "SQ-1 Victory Eau de Parfum (100ml)",
-        "title": "SQ-1 Victory Eau de Parfum (100ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "SIGNATURE FRAGRANCE · EDP",
-        "category": "Fragrances",
-        "subcategory": "Eau de Parfum (EDP)",
-        "sku": "SQ1-FRAG-VIC-100",
-        "price": 1899,
-        "priceINR": 1899,
-        "originalPrice": 2499,
-        "currency": "₹",
-        "image": "images/loyalty.png",
-        "imageUrl": "images/loyalty.png",
-        "description": "Flagship fragrance formulated with sparkling Italian bergamot, smoky birch, and deep ambergris. Bold, confident, and victorious.",
-        "sizes": [
-          "100ml EDP"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 40,
-        "isLimitedEdition": false,
-        "attributes": {
-          "line": "SQ-1 Victory",
-          "fragrance_type": "EDP",
-          "volume_ml": 100,
-          "gender_profile": "Unisex",
-          "scent_notes_top": [
-            "Italian Bergamot",
-            "Crisp Apple",
-            "Pink Pepper"
-          ],
-          "scent_notes_mid": [
-            "French Lavender",
-            "Cardamom",
-            "Smoky Birch"
-          ],
-          "scent_notes_base": [
-            "Ambergris",
-            "Atlas Cedarwood",
-            "Oakmoss"
-          ],
-          "concentration_percent": 22,
-          "longevity": "8-10 Hours"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-perfume-clutch-edp",
-        "name": "SQ-1 Clutch Intense Eau de Parfum (100ml)",
-        "title": "SQ-1 Clutch Intense Eau de Parfum (100ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "DARK AMBER & LEATHER",
-        "category": "Fragrances",
-        "subcategory": "Eau de Parfum (EDP)",
-        "sku": "SQ1-FRAG-CLT-100",
-        "price": 1999,
-        "priceINR": 1999,
-        "originalPrice": 2599,
-        "currency": "₹",
-        "image": "images/new Products/new_GTA_launch.jpeg",
-        "imageUrl": "images/new Products/new_GTA_launch.jpeg",
-        "description": "Dark spicy leather and rich saffron layered over Madagascar vanilla bourbon. Engineered for magnetic presence and nighttime dominance.",
-        "sizes": [
-          "100ml EDP"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 35,
-        "isLimitedEdition": false,
-        "attributes": {
-          "line": "SQ-1 Clutch",
-          "fragrance_type": "EDP",
-          "volume_ml": 100,
-          "gender_profile": "Men",
-          "scent_notes_top": [
-            "Blood Orange",
-            "Saffron",
-            "Black Pepper"
-          ],
-          "scent_notes_mid": [
-            "Raw Leather",
-            "Nutmeg",
-            "Midnight Jasmine"
-          ],
-          "scent_notes_base": [
-            "Rich Tobacco",
-            "Dark Patchouli",
-            "Vanilla Bourbon"
-          ],
-          "concentration_percent": 25,
-          "longevity": "10-12 Hours"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-perfume-stealth-edp",
-        "name": "SQ-1 Stealth Minimalist Eau de Parfum (50ml)",
-        "title": "SQ-1 Stealth Minimalist Eau de Parfum (50ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "CLEAN OZONIC & WHITE TEA",
-        "category": "Fragrances",
-        "subcategory": "Eau de Parfum (EDP)",
-        "sku": "SQ1-FRAG-STL-50",
-        "price": 1299,
-        "priceINR": 1299,
-        "originalPrice": 1699,
-        "currency": "₹",
-        "image": "images/Brand_Nme_.png",
-        "imageUrl": "images/Brand_Nme_.png",
-        "description": "Subtle, modern, and crisp. White tea and crushed grapefruit blend with sheer vetiver and ozone. Never overpowering, always refined.",
-        "sizes": [
-          "50ml EDP (Travel Ready)"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 55,
-        "isLimitedEdition": false,
-        "attributes": {
-          "line": "SQ-1 Stealth",
-          "fragrance_type": "EDP",
-          "volume_ml": 50,
-          "gender_profile": "Unisex",
-          "scent_notes_top": [
-            "White Tea",
-            "Grapefruit",
-            "Mint Leaf"
-          ],
-          "scent_notes_mid": [
-            "Ozonic Accord",
-            "Clary Sage",
-            "Green Bamboo"
-          ],
-          "scent_notes_base": [
-            "White Musk",
-            "Sandalwood",
-            "Haitian Vetiver"
-          ],
-          "concentration_percent": 20,
-          "longevity": "7-9 Hours"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-perfume-rush-deodorant",
-        "name": "SQ-1 Rush All-Day Deodorant Body Spray (150ml)",
-        "title": "SQ-1 Rush All-Day Deodorant Body Spray (150ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "24HR FRESH · ANTI-ODOR",
-        "category": "Fragrances",
-        "subcategory": "Deodorants",
-        "sku": "SQ1-FRAG-RSH-150",
-        "price": 399,
-        "priceINR": 399,
-        "originalPrice": 599,
-        "currency": "₹",
-        "image": "images/Brand_Nme_.png",
-        "imageUrl": "images/Brand_Nme_.png",
-        "description": "Fast-drying cooling body spray infused with iced spearmint and zesty mandarin. Neutralizes perspiration during intense tournament sessions.",
-        "sizes": [
-          "150ml Body Spray"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 120,
-        "isLimitedEdition": false,
-        "attributes": {
-          "line": "SQ-1 Rush",
-          "fragrance_type": "Deodorant",
-          "volume_ml": 150,
-          "gender_profile": "Unisex",
-          "scent_notes_top": [
-            "Icy Spearmint",
-            "Mandarin"
-          ],
-          "scent_notes_mid": [
-            "Marine Breeze",
-            "Geranium"
-          ],
-          "scent_notes_base": [
-            "Cedarwood",
-            "Clean Musk"
-          ],
-          "concentration_percent": 8,
-          "longevity": "12 Hours"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-perfume-elite-discovery",
-        "name": "SQ-1 Elite Fragrance Discovery Vault (6 × 10ml)",
-        "title": "SQ-1 Elite Fragrance Discovery Vault (6 × 10ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "FULL 6-SCENT DISCOVERY VAULT",
-        "category": "Fragrances",
-        "subcategory": "Perfume discovery/sample sets",
-        "sku": "SQ1-FRAG-ELT-BOX",
-        "price": 1499,
-        "priceINR": 1499,
-        "originalPrice": 1999,
-        "currency": "₹",
-        "image": "images/loyalty.png",
-        "imageUrl": "images/loyalty.png",
-        "description": "Deluxe presentation box containing 10ml luxury atomizers of all 6 Squad One fragrances: Victory, Clutch, Stealth, Rush, Elite, and Aftermatch.",
-        "sizes": [
-          "6 × 10ml Vials"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 45,
-        "isLimitedEdition": false,
-        "attributes": {
-          "line": "SQ-1 Elite",
-          "fragrance_type": "Discovery Set",
-          "volume_ml": 60,
-          "gender_profile": "Unisex",
-          "scent_notes_top": [
-            "Victory",
-            "Clutch",
-            "Stealth",
-            "Rush",
-            "Elite",
-            "Aftermatch"
-          ],
-          "scent_notes_mid": [
-            "6 Distinct Master Formulations"
-          ],
-          "scent_notes_base": [
-            "Collector Magnetic Presentation Box"
-          ],
-          "concentration_percent": 22,
-          "longevity": "Varied (8-12 Hours)"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-perfume-aftermatch-edt",
-        "name": "SQ-1 Aftermatch Cool Down Eau de Toilette (100ml)",
-        "title": "SQ-1 Aftermatch Cool Down Eau de Toilette (100ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "AQUATIC & CITRUS",
-        "category": "Fragrances",
-        "subcategory": "Eau de Toilette (EDT)",
-        "sku": "SQ1-FRAG-AFT-100",
-        "price": 1399,
-        "priceINR": 1399,
-        "originalPrice": 1799,
-        "currency": "₹",
-        "image": "images/Brand_Nme_.png",
-        "imageUrl": "images/Brand_Nme_.png",
-        "description": "Cooling marine sea salt, blue lotus, and sun-drenched driftwood. The ideal daily scent after rigorous scrims and physical training.",
-        "sizes": [
-          "100ml EDT"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 50,
-        "isLimitedEdition": false,
-        "attributes": {
-          "line": "SQ-1 Aftermatch",
-          "fragrance_type": "EDT",
-          "volume_ml": 100,
-          "gender_profile": "Unisex",
-          "scent_notes_top": [
-            "Calabrian Lemon",
-            "Eucalyptus"
-          ],
-          "scent_notes_mid": [
-            "Sea Salt Accord",
-            "Blue Lotus"
-          ],
-          "scent_notes_base": [
-            "Driftwood",
-            "Clear Amber"
-          ],
-          "concentration_percent": 15,
-          "longevity": "6-8 Hours"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-backpack-tactical-28l",
-        "name": "Squad One Tactical Laptop Backpack (28L)",
-        "title": "Squad One Tactical Laptop Backpack (28L)",
-        "quote": "Upgrade your Vogue",
-        "badge": "WATERPROOF · 16\" LAPTOP COMPARTMENT",
-        "category": "Bags",
-        "subcategory": "Squad One backpacks",
-        "sku": "SQ1-BAG-BPK-28L",
-        "price": 2499,
-        "priceINR": 2499,
-        "originalPrice": 3499,
-        "currency": "₹",
-        "image": "images/side-front.png",
-        "imageUrl": "images/side-front.png",
-        "description": "Heavy duty 900D water-repellent Cordura nylon backpack with padded velvet compartment for up to 16\" gaming laptops, USB-C pass-through port, and MOLLE webbing.",
-        "sizes": [
-          "28L Capacity"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 35,
-        "isLimitedEdition": false,
-        "attributes": {
-          "capacity_liters": 28,
-          "material": "900D Ballistic Cordura Nylon",
-          "laptop_compartment": true,
-          "laptop_size_fit": "Up to 16.0 inch Gaming Laptops",
-          "water_resistant": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-crossbody-sling-bag",
-        "name": "Squad One Tactical Crossbody Sling Bag",
-        "title": "Squad One Tactical Crossbody Sling Bag",
-        "quote": "Upgrade your Vogue",
-        "badge": "MAGNETIC BUCKLE · RIPSTOP",
-        "category": "Bags",
-        "subcategory": "Sling bags",
-        "sku": "SQ1-BAG-SLG-6L",
-        "price": 1199,
-        "priceINR": 1199,
-        "originalPrice": 1699,
-        "currency": "₹",
-        "image": "images/Brand_Nme_.png",
-        "imageUrl": "images/Brand_Nme_.png",
-        "description": "Compact 6L tactical sling bag with Fidlock magnetic buckle, waterproof zippers, and hidden passport/phone security pocket.",
-        "sizes": [
-          "6L EDC Size"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 45,
-        "isLimitedEdition": false,
-        "attributes": {
-          "capacity_liters": 6,
-          "material": "Reinforced Ripstop Nylon",
-          "water_resistant": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-case-iphone-galaxy",
-        "name": "Squad One Cyber Armor Shockproof Phone Case",
-        "title": "Squad One Cyber Armor Shockproof Phone Case",
-        "quote": "Upgrade your Vogue",
-        "badge": "MIL-STD 810G DROP TESTED",
-        "category": "Tech",
-        "subcategory": "Phone cases",
-        "sku": "SQ1-TCH-CSE-PHN",
-        "price": 699,
-        "priceINR": 699,
-        "originalPrice": 999,
-        "currency": "₹",
-        "image": "images/Brand_Nme_.png",
-        "imageUrl": "images/Brand_Nme_.png",
-        "description": "Dual-layer bumper phone case engineered with air-cushioned corners and anti-scratch matte backplate. Available for leading flagship devices.",
-        "sizes": [
-          "iPhone 16 Pro Max",
-          "iPhone 15 Pro",
-          "Galaxy S24 Ultra"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 90,
-        "isLimitedEdition": false,
-        "attributes": {
-          "compatible_devices": [
-            "iPhone 16 Pro Max",
-            "iPhone 15 Pro",
-            "Galaxy S24 Ultra",
-            "Galaxy S23"
-          ],
-          "material": "Impact-absorbing TPU + Polycarbonate Armor"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-airpods-pro-case",
-        "name": "Squad One Cyber Armor AirPods Pro 1/2 Case",
-        "title": "Squad One Cyber Armor AirPods Pro 1/2 Case",
-        "quote": "Upgrade your Vogue",
-        "badge": "CARABINER INCLUDED",
-        "category": "Tech",
-        "subcategory": "Earbud cases",
-        "sku": "SQ1-TCH-CSE-APD",
-        "price": 499,
-        "priceINR": 499,
-        "originalPrice": 799,
-        "currency": "₹",
-        "image": "assets/teams/squadone.png",
-        "imageUrl": "assets/teams/squadone.png",
-        "description": "Rugged silicone cover with Squad One crest and zinc alloy carabiner. Compatible with wireless charging.",
-        "sizes": [
-          "AirPods Pro 1 & 2 Gen"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 70,
-        "isLimitedEdition": false,
-        "attributes": {
-          "compatible_devices": [
-            "AirPods Pro 1st & 2nd Gen"
-          ],
-          "material": "Heavy Shockproof Silicone"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-steel-thermos-flask",
-        "name": "Squad One Matte Insulated Vacuum Thermos Flask (750ml)",
-        "title": "Squad One Matte Insulated Vacuum Thermos Flask (750ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "24HR COLD · 12HR HOT",
-        "category": "Lifestyle",
-        "subcategory": "Thermos/flasks",
-        "sku": "SQ1-LFE-FLK-750",
-        "price": 899,
-        "priceINR": 899,
-        "originalPrice": 1299,
-        "currency": "₹",
-        "image": "images/loyalty.png",
-        "imageUrl": "images/loyalty.png",
-        "description": "Double-walled vacuum insulated 304 food-grade stainless steel bottle. Keeps drinks icy cold for 24 hours with leakproof spout lid.",
-        "sizes": [
-          "750ml"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 65,
-        "isLimitedEdition": false,
-        "attributes": {
-          "capacity_ml": 750,
-          "material": "304 Food Grade Stainless Steel",
-          "insulated": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-matte-coffee-mug",
-        "name": "Squad One Ceramic Combat Coffee Mug (400ml)",
-        "title": "Squad One Ceramic Combat Coffee Mug (400ml)",
-        "quote": "Upgrade your Vogue",
-        "badge": "MICROWAVE & DISHWASHER SAFE",
-        "category": "Lifestyle",
-        "subcategory": "Coffee mugs",
-        "sku": "SQ1-LFE-MUG-400",
-        "price": 449,
-        "priceINR": 449,
-        "originalPrice": 649,
-        "currency": "₹",
-        "image": "images/Brand_Nme_.png",
-        "imageUrl": "images/Brand_Nme_.png",
-        "description": "Matte black stoneware ceramic coffee mug with neon cyber crest and ergonomic comfort handle.",
-        "sizes": [
-          "400ml"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 80,
-        "isLimitedEdition": false,
-        "attributes": {
-          "capacity_ml": 400,
-          "material": "Matte Stoneware Ceramic"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-s3-champion-tee",
-        "name": "Squad One National League S3 Grand Finals Champion Tee",
-        "title": "Squad One National League S3 Grand Finals Champion Tee",
-        "quote": "Upgrade your Vogue",
-        "badge": "OFFICIAL S3 TOURNAMENT MERCH",
-        "category": "Esports",
-        "subcategory": "Champion T-shirts",
-        "sku": "SQ1-ESP-TEE-S3",
-        "price": 1199,
-        "priceINR": 1199,
-        "originalPrice": 1699,
-        "currency": "₹",
-        "image": "images/eventimage.jpeg",
-        "imageUrl": "images/eventimage.jpeg",
-        "description": "Official tournament souvenir tee celebrating 95 competing squads and the top 16 survivors of Season 3 Grand Finals.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 50,
-        "isLimitedEdition": false,
-        "attributes": {
-          "tournament_name": "Squad One National League S3",
-          "season_year": "2026",
-          "edition_type": "Champion",
-          "size": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-          ]
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-tournament-medal-lanyard",
-        "name": "Squad One S3 Commemorative Heavy Metal Medal & Lanyard",
-        "title": "Squad One S3 Commemorative Heavy Metal Medal & Lanyard",
-        "quote": "Upgrade your Vogue",
-        "badge": "SOLID DIE-CAST ZINC",
-        "category": "Esports",
-        "subcategory": "Tournament medals",
-        "sku": "SQ1-ESP-MDL-S3",
-        "price": 799,
-        "priceINR": 799,
-        "originalPrice": 1199,
-        "currency": "₹",
-        "image": "images/loyalty.png",
-        "imageUrl": "images/loyalty.png",
-        "description": "70mm heavyweight antique-plated tournament medal with embossed PUBG Battlegrounds winner motif and woven sublimated lanyard.",
-        "sizes": [
-          "70mm Diameter"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 40,
-        "isLimitedEdition": false,
-        "attributes": {
-          "tournament_name": "Squad One National League S3",
-          "season_year": "2026",
-          "edition_type": "Winner"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-wall-flag-banner",
-        "name": "Squad One Championship Heavy Fabric Wall Flag (3×5 ft)",
-        "title": "Squad One Championship Heavy Fabric Wall Flag (3×5 ft)",
-        "quote": "Upgrade your Vogue",
-        "badge": "BRASS GROMMETS · 3×5 FT",
-        "category": "Décor",
-        "subcategory": "Wall flags",
-        "sku": "SQ1-DEC-FLG-3X5",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "currency": "₹",
-        "image": "images/eventimage.jpeg",
-        "imageUrl": "images/eventimage.jpeg",
-        "description": "High-density 100D knitted flag polyester banner with double-stitched hem and brass mounting grommets. Vivid UV-resistant colors.",
-        "sizes": [
-          "3ft x 5ft (90 x 150cm)"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 60,
-        "isLimitedEdition": false,
-        "attributes": {
-          "dimensions": "36in x 60in (3ft x 5ft)",
-          "material": "100D Knitted Flag Polyester",
-          "mount_type": "Hanging"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-framed-hologram-poster",
-        "name": "Squad One 16 Finalists Metallic Hologram Framed Poster",
-        "title": "Squad One 16 Finalists Metallic Hologram Framed Poster",
-        "quote": "Upgrade your Vogue",
-        "badge": "ALUMINUM FRAME INCLUDED",
-        "category": "Décor",
-        "subcategory": "Framed team artwork",
-        "sku": "SQ1-DEC-POS-16F",
-        "price": 1299,
-        "priceINR": 1299,
-        "originalPrice": 1899,
-        "currency": "₹",
-        "image": "images/sa-cross-bay-scrims.jpeg",
-        "imageUrl": "images/sa-cross-bay-scrims.jpeg",
-        "description": "18x24\" metallic foil print featuring the rosters and crests of all 16 finalist teams, encased in a matte black brushed aluminum frame with acrylic glass.",
-        "sizes": [
-          "18in x 24in"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 35,
-        "isLimitedEdition": false,
-        "attributes": {
-          "dimensions": "18in x 24in",
-          "material": "Foil Holographic Metallic Paper",
-          "frame_included": true,
-          "mount_type": "Freestanding"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-enamel-crest-pin",
-        "name": "Squad One Gold Edition Die-Cast Enamel Pin",
-        "title": "Squad One Gold Edition Die-Cast Enamel Pin",
-        "quote": "Upgrade your Vogue",
-        "badge": "18K GOLD FINISH · NUMBERED",
-        "category": "Collectibles",
-        "subcategory": "Enamel pins",
-        "sku": "SQ1-COL-PIN-GLD",
-        "price": 399,
-        "priceINR": 399,
-        "originalPrice": 599,
-        "currency": "₹",
-        "image": "assets/teams/squadone.png",
-        "imageUrl": "assets/teams/squadone.png",
-        "description": "Hard enamel metal pin with polished 18K gold electroplating and dual rubber clutch backing. Mounted on laser-etched collector backing card.",
-        "sizes": [
-          "1.5 inch (38mm)"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 100,
-        "isLimitedEdition": false,
-        "attributes": {
-          "edition_size": 1000,
-          "material": "Hard Enamel with 18K Gold Finish",
-          "set_name": "2026 Founder Series"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-collector-card-pack",
-        "name": "Squad One 16 Finalists Official Holographic Player Card Pack",
-        "title": "Squad One 16 Finalists Official Holographic Player Card Pack",
-        "quote": "Upgrade your Vogue",
-        "badge": "5 HOLOGRAPHIC CARDS PER PACK",
-        "category": "Collectibles",
-        "subcategory": "Player cards",
-        "sku": "SQ1-COL-CRD-PCK",
-        "price": 499,
-        "priceINR": 499,
-        "originalPrice": 749,
-        "currency": "₹",
-        "image": "images/eventimage.jpeg",
-        "imageUrl": "images/eventimage.jpeg",
-        "description": "Sealed booster pack containing 5 holographic cards featuring tournament finalists, player combat statistics, and a 1:10 chance of gold foil signature cards.",
-        "sizes": [
-          "5 Cards / Sealed Foil"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 150,
-        "isLimitedEdition": false,
-        "attributes": {
-          "edition_size": 2500,
-          "material": "350 GSM Holographic Foil Cardstock",
-          "set_name": "Series 1: National League"
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-cyber-overlay-pack",
-        "name": "Squad One Animated Stream Overlay Pro Pack (OBS & Streamlabs)",
-        "title": "Squad One Animated Stream Overlay Pro Pack (OBS & Streamlabs)",
-        "quote": "Upgrade your Vogue",
-        "badge": "INSTANT DOWNLOAD · OBS READY",
-        "category": "Digital",
-        "subcategory": "Stream overlays",
-        "sku": "SQ1-DIG-OVL-PRO",
-        "price": 699,
-        "priceINR": 699,
-        "originalPrice": 1299,
-        "currency": "₹",
-        "image": "images/sa-cross-bay-scrims.png",
-        "imageUrl": "images/sa-cross-bay-scrims.png",
-        "description": "Complete esports broadcast pack: 6 animated scenes (Starting Soon, Intermission, Live Gameplay, Be Right Back, Ending), animated webcam frames, stingers, alerts, and chat box.",
-        "sizes": [
-          "Instant ZIP Download (450MB)"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 9999,
-        "isLimitedEdition": false,
-        "attributes": {
-          "file_format": [
-            "WEBM",
-            "PNG",
-            "PSD",
-            "OBS Scene Collection"
-          ],
-          "resolution": "4K UHD & 1080p 60FPS",
-          "delivery_method": "Instant download",
-          "license_type": "Streamer use",
-          "download_url": "https://assets.squadone.gg/digital/sq1-stream-overlay-v3.zip",
-          "compatible_platforms": [
-            "OBS Studio",
-            "Streamlabs Desktop",
-            "Twitch",
-            "YouTube"
-          ]
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-4k-wallpaper-vault",
-        "name": "Squad One 4K Cyber Animated Phone & PC Wallpaper Vault",
-        "title": "Squad One 4K Cyber Animated Phone & PC Wallpaper Vault",
-        "quote": "Upgrade your Vogue",
-        "badge": "30 ULTRA HD WALLPAPERS",
-        "category": "Digital",
-        "subcategory": "PC wallpapers",
-        "sku": "SQ1-DIG-WAL-30P",
-        "price": 299,
-        "priceINR": 299,
-        "originalPrice": 599,
-        "currency": "₹",
-        "image": "images/sqnlS3.png",
-        "imageUrl": "images/sqnlS3.png",
-        "description": "Curated gallery of 30 4K UHD desktop and mobile wallpapers with cybernetic esports aesthetics, live animated loop versions for Wallpaper Engine included.",
-        "sizes": [
-          "Instant ZIP Download (680MB)"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 9999,
-        "isLimitedEdition": false,
-        "attributes": {
-          "file_format": [
-            "PNG",
-            "MP4 (Live Wallpaper)"
-          ],
-          "resolution": "4K UHD (3840x2160)",
-          "delivery_method": "Instant download",
-          "license_type": "Personal use",
-          "download_url": "https://assets.squadone.gg/digital/sq1-4k-wallpapers.zip",
-          "compatible_platforms": [
-            "Windows",
-            "macOS",
-            "Wallpaper Engine",
-            "iOS",
-            "Android"
-          ]
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-starter-gamer-pack",
-        "name": "Starter Gamer Pack: Oversized Tee + Tactical Cap + Mousepad",
-        "title": "Starter Gamer Pack: Oversized Tee + Tactical Cap + Mousepad",
-        "quote": "Upgrade your Vogue",
-        "badge": "BUNDLE & SAVE 30%",
-        "category": "Bundles",
-        "subcategory": "Starter Gamer Pack",
-        "sku": "SQ1-BDL-STR-PCK",
-        "price": 2299,
-        "priceINR": 2299,
-        "originalPrice": 3297,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_Black_.png",
-        "imageUrl": "images/new Products/Final_1-_Black_.png",
-        "description": "Save 30% on our premier gear bundle: includes (1) S1VE × Squad One Blackout Oversized Tee, (1) Tactical Snapback Cap, and (1) Precision Esports Mousepad.",
-        "sizes": [
-          "Tee: S to XXL (Selectable)"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 30,
-        "isLimitedEdition": false,
-        "attributes": {
-          "bundle_items": [
-            "s1ve-sq1-oversized-black",
-            "sq1-pro-gamer-cap",
-            "sq1-precision-mousepad"
-          ],
-          "bundle_discount_percent": 30,
-          "is_customizable_bundle": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-ultimate-fan-box",
-        "name": "Ultimate SQ-1 Fan Box (Jersey + Perfume + Backpack + Enamel Pin)",
-        "title": "Ultimate SQ-1 Fan Box (Jersey + Perfume + Backpack + Enamel Pin)",
-        "quote": "Upgrade your Vogue",
-        "badge": "VIP COLLECTOR CRATE · 32% SAVINGS",
-        "category": "Bundles",
-        "subcategory": "Ultimate SQ-1 Fan Box",
-        "sku": "SQ1-BDL-ULT-BOX",
-        "price": 4999,
-        "priceINR": 4999,
-        "originalPrice": 7296,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_White.png",
-        "imageUrl": "images/new Products/Final_1-_White.png",
-        "description": "The definitive Squad One experience: Custom Player Jersey 2026, SQ-1 Victory EDP (100ml), 28L Tactical Laptop Backpack, and 18K Gold Enamel Pin, delivered in a luxury magnetic gift crate.",
-        "sizes": [
-          "Jersey: S to XXL (Selectable)"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 20,
-        "isLimitedEdition": false,
-        "attributes": {
-          "bundle_items": [
-            "s1ve-sq1-oversized-white",
-            "sq1-perfume-victory-edp",
-            "sq1-backpack-tactical-28l",
-            "sq1-enamel-crest-pin"
-          ],
-          "bundle_discount_percent": 32,
-          "is_customizable_bundle": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-limited-anniversary-drop",
-        "name": "SQ-1 2nd Anniversary Gold Edition Embroidered Bomber Jacket",
-        "title": "SQ-1 2nd Anniversary Gold Edition Embroidered Bomber Jacket",
-        "quote": "Upgrade your Vogue",
-        "badge": "ONLY 100 PIECES · GOLD METALLIC",
-        "category": "Limited Drop",
-        "subcategory": "Anniversary collection",
-        "sku": "SQ1-LTD-JCK-100",
-        "price": 3499,
-        "priceINR": 3499,
-        "originalPrice": 4999,
-        "currency": "₹",
-        "image": "images/side.png",
-        "imageUrl": "images/side.png",
-        "description": "Exclusive 2nd Anniversary satin bomber jacket featuring intricate 100,000-stitch metallic gold team embroidery on the back and individual laser-numbered metal badge on the sleeve.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 100,
-        "isLimitedEdition": true,
-        "attributes": {
-          "drop_name": "SQ-1 Anniversary Drop 01",
-          "release_date": "2026-09-15 18:00 IST",
-          "total_stock": 100,
-          "countdown_enabled": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "sq1-limited-founder-fragrance",
-        "name": "SQ-1 Black Gold Founder Edition Perfume (Hand-Signed Box)",
-        "title": "SQ-1 Black Gold Founder Edition Perfume (Hand-Signed Box)",
-        "quote": "Upgrade your Vogue",
-        "badge": "HAND-NUMBERED · 1 OF 250",
-        "category": "Limited Drop",
-        "subcategory": "Limited perfumes",
-        "sku": "SQ1-LTD-FRG-250",
-        "price": 2499,
-        "priceINR": 2499,
-        "originalPrice": 3499,
-        "currency": "₹",
-        "image": "images/loyalty.png",
-        "imageUrl": "images/loyalty.png",
-        "description": "Ultra-concentrated Extrait de Parfum in an obsidian glass flacon with 24K gold foil branding. Hand-signed presentation box by Squad One leadership.",
-        "sizes": [
-          "100ml Extrait"
-        ],
-        "allowCustomIGN": false,
-        "inStock": true,
-        "hidden": false,
-        "stock": 250,
-        "isLimitedEdition": true,
-        "attributes": {
-          "drop_name": "Founder Fragrance Series",
-          "release_date": "2026-09-12 20:00 IST",
-          "total_stock": 250,
-          "countdown_enabled": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      }
-    ]
-  },
-  "storeArmory": {
-    "vaultLocked": false,
-    "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
-    "products": [
-      {
-        "id": "s1ve-sq1-oversized-white",
-        "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
-        "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
-        "badge": "HOT DROP · OVERSIZED",
-        "category": "Jersey",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_White.png",
-        "imageUrl": "images/new Products/Final_1-_White.png",
-        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 45,
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "quote": "Upgrade your Vogue"
-      },
-      {
-        "id": "s1ve-sq1-oversized-black",
-        "name": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
-        "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
-        "badge": "BESTSELLER · OVERSIZED",
-        "category": "Jersey",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_Black_.png",
-        "imageUrl": "images/new Products/Final_1-_Black_.png",
-        "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 35,
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "quote": "Upgrade your Vogue"
-      },
-      {
-        "id": "s1ve-sq1-oversized-maroon",
-        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "badge": "LIMITED DROP · 30% OFF",
-        "category": "Jersey",
-        "price": 1099,
-        "priceINR": 1099,
-        "originalPrice": 1599,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_Maroon_.png",
-        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
-        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 50,
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "quote": "Upgrade your Vogue"
-      },
-      {
         "id": "s1ve-custom-1788868261046",
         "title": "New S1VE × Squad One Apparel Drop GTA VI Edition",
         "name": "New S1VE × Squad One Apparel Drop GTA VI Edition",
         "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Jersey",
+        "category": "Apparel",
         "price": 999,
         "priceINR": 999,
         "originalPrice": 1499,
@@ -1543,7 +459,33 @@
         "inStock": true,
         "hidden": false,
         "stock": 50,
-        "checkoutUrl": "https://store.squadone.gg/checkout"
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "subcategory": "",
+        "sku": "",
+        "salePrice": 1499,
+        "images": [
+          "images/new Products/new_GTA_launch.jpeg"
+        ],
+        "short_description": "",
+        "shortDescription": "",
+        "isLimitedEdition": false,
+        "attributes": {
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "fit": "Oversized",
+          "fabric": "280 GSM Heavy Combed Cotton",
+          "color": [
+            "Black",
+            "White",
+            "Crimson"
+          ]
+        },
+        "variants": []
       }
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
