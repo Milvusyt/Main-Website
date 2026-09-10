@@ -6614,6 +6614,1137 @@
       font-family: var(--font-mono);
       font-size: 0.72rem;
     }
+  
+    /* ==========================================================================
+       SQUAD ONE 12-CATEGORY MERCHANDISE ECOSYSTEM STYLES
+       ========================================================================== */
+
+    /* 1. Header Navigation Dropdown for Store */
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nav-link-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .dropdown-chevron-icon {
+      transition: transform 0.25s ease;
+      stroke: var(--purple-bright);
+    }
+    .nav-item-dropdown:hover .dropdown-chevron-icon,
+    .nav-item-dropdown.is-open .dropdown-chevron-icon {
+      transform: rotate(180deg);
+      stroke: var(--red-primary);
+    }
+    .store-nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      width: min(580px, 92vw);
+      background: rgba(15, 2, 22, 0.98);
+      border: 1px solid rgba(149, 61, 223, 0.4);
+      border-radius: 8px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(149, 61, 223, 0.25);
+      backdrop-filter: blur(20px);
+      padding: 16px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+      z-index: 1000;
+    }
+    .nav-item-dropdown:hover .store-nav-dropdown-menu,
+    .nav-item-dropdown:focus-within .store-nav-dropdown-menu,
+    .nav-item-dropdown.is-open .store-nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    .store-nav-dropdown-header {
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(149, 61, 223, 0.2);
+    }
+    .dropdown-header-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--purple-bright);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .dropdown-header-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: #fff;
+      letter-spacing: 0.8px;
+    }
+    .store-nav-dropdown-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .store-dropdown-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .store-dropdown-link:hover {
+      background: rgba(149, 61, 223, 0.15);
+      border-color: rgba(149, 61, 223, 0.5);
+      transform: translateX(3px);
+    }
+    .store-dropdown-link.highlight-drop {
+      border-color: rgba(237, 20, 24, 0.35);
+      background: rgba(237, 20, 24, 0.06);
+    }
+    .store-dropdown-link.highlight-drop:hover {
+      background: rgba(237, 20, 24, 0.2);
+      border-color: var(--red-primary);
+    }
+    .dropdown-link-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    .dropdown-link-text {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .dropdown-link-name {
+      font-family: var(--font-condensed);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .dropdown-link-sub {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* 2. Sleek Categories Dropdown & Active Filter Bar */
+    .store-category-dropdown-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .store-category-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      background: rgba(5, 1, 4, 0.85);
+      border: 1px solid rgba(149, 61, 223, 0.35);
+      border-radius: 6px;
+      color: #fff;
+      font-family: var(--font-condensed);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .store-category-btn:hover {
+      background: rgba(149, 61, 223, 0.15);
+      border-color: var(--purple-bright);
+      box-shadow: 0 0 14px rgba(149, 61, 223, 0.35);
+      transform: translateY(-1px);
+    }
+    .store-category-dropdown-wrap.is-open .store-category-btn {
+      border-color: var(--purple-bright);
+      background: rgba(149, 61, 223, 0.2);
+      box-shadow: 0 0 16px rgba(149, 61, 223, 0.4);
+    }
+    .cat-btn-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .cat-btn-label {
+      color: var(--purple-light);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+    }
+    .cat-btn-active-val {
+      color: #fff;
+      font-weight: 700;
+    }
+    .cat-btn-arrow {
+      stroke: var(--purple-bright);
+      transition: transform 0.2s ease;
+      margin-left: 2px;
+    }
+    .store-category-dropdown-wrap.is-open .cat-btn-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Horizontal Category Pill Bar */
+    .store-category-pills-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 6px 2px 14px 2px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--purple-bright) transparent;
+      width: 100%;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+    .store-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-bone);
+      font-family: var(--font-condensed);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .store-pill-btn:hover {
+      background: rgba(149, 61, 223, 0.2);
+      border-color: rgba(149, 61, 223, 0.5);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .store-pill-btn.active {
+      background: linear-gradient(135deg, rgba(237, 20, 24, 0.85), rgba(149, 61, 223, 0.85));
+      border-color: #ED1418;
+      color: #fff;
+      box-shadow: 0 0 16px rgba(237, 20, 24, 0.4);
+    }
+    .store-pill-btn.highlight-ltd {
+      border-color: rgba(255, 180, 0, 0.5);
+      color: #ffd700;
+    }
+    .store-pill-btn.highlight-ltd.active {
+      background: linear-gradient(135deg, rgba(255, 120, 0, 0.9), rgba(237, 20, 24, 0.9));
+      border-color: #ffd700;
+      color: #fff;
+    }
+    .store-pill-btn .pill-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* Popover Panel */
+    .store-category-popover {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      width: min(480px, 92vw);
+      background: rgba(13, 1, 20, 0.98);
+      border: 1px solid rgba(149, 61, 223, 0.4);
+      border-radius: 8px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(149, 61, 223, 0.25);
+      backdrop-filter: blur(20px);
+      padding: 14px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(6px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+      z-index: 1000;
+    }
+    .store-category-dropdown-wrap.is-open .store-category-popover {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .popover-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(149, 61, 223, 0.2);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--purple-light);
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    .popover-close-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 2px 6px;
+      transition: color 0.15s;
+    }
+    .popover-close-btn:hover {
+      color: #fff;
+    }
+    .popover-items-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 4px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--purple-bright) transparent;
+    }
+    @media (max-width: 580px) {
+      .popover-items-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .popover-cat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(149, 61, 223, 0.15);
+      border-radius: 5px;
+      color: var(--text-bone);
+      font-family: var(--font-condensed);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      width: 100%;
+    }
+    .popover-cat-item:hover {
+      background: rgba(149, 61, 223, 0.18);
+      border-color: rgba(149, 61, 223, 0.5);
+      color: #fff;
+      transform: translateX(2px);
+    }
+    .popover-cat-item.active {
+      background: linear-gradient(135deg, rgba(149, 61, 223, 0.8), rgba(237, 20, 24, 0.85));
+      border-color: #fff;
+      color: #fff;
+      box-shadow: 0 0 12px rgba(149, 61, 223, 0.4);
+    }
+    .popover-cat-item.highlight-ltd.active {
+      background: linear-gradient(135deg, #ED1418, #951121);
+    }
+    .popover-cat-item .item-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .popover-cat-item .item-name {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .popover-cat-item .item-badge {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 1px 6px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+
+    /* Active Category Filter Bar */
+    .store-active-filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding: 6px 0;
+    }
+    .active-filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      border-radius: 4px;
+      background: rgba(149, 61, 223, 0.2);
+      border: 1px solid var(--purple-bright);
+      color: #fff;
+      font-family: var(--font-condensed);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .active-filter-remove {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 0 2px;
+      transition: color 0.15s;
+    }
+    .active-filter-remove:hover {
+      color: var(--red-primary);
+    }
+    .clear-all-filters-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .clear-all-filters-btn:hover {
+      color: var(--red-primary);
+    }
+
+    /* 3. Faceted Search & Filters Toolbar */
+    .store-faceted-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding: 12px 16px;
+      background: rgba(17, 2, 26, 0.7);
+      border: 1px solid rgba(149, 61, 223, 0.2);
+      border-radius: 8px;
+    }
+    .store-search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 240px;
+      max-width: 480px;
+    }
+    .store-search-wrap .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--purple-bright);
+      pointer-events: none;
+    }
+    .store-search-input {
+      width: 100%;
+      padding: 9px 36px 9px 36px;
+      background: rgba(5, 1, 4, 0.85);
+      border: 1px solid rgba(149, 61, 223, 0.3);
+      border-radius: 6px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .store-search-input:focus {
+      border-color: var(--purple-bright);
+      box-shadow: 0 0 14px rgba(149, 61, 223, 0.35);
+    }
+    .search-clear-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: none;
+    }
+    .store-search-input:not(:placeholder-shown) + .search-clear-btn {
+      display: block;
+    }
+    .store-sort-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .store-select {
+      background: rgba(5, 1, 4, 0.85);
+      border: 1px solid rgba(149, 61, 223, 0.3);
+      border-radius: 6px;
+      color: #fff;
+      font-family: var(--font-condensed);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 12px;
+      cursor: pointer;
+      outline: none;
+    }
+    .store-select:focus {
+      border-color: var(--purple-bright);
+    }
+    .store-quick-toggles {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .store-toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-condensed);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+    }
+    .store-toggle-label input {
+      accent-color: var(--red-primary);
+      cursor: pointer;
+    }
+
+    /* 4. Subfilter Strip (Fragrance Lines, Sizes, etc.) */
+    .store-subfilter-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 10px 14px;
+      background: rgba(28, 5, 41, 0.6);
+      border-left: 3px solid var(--purple-bright);
+      border-radius: 4px;
+    }
+    .subfilter-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--purple-light);
+      font-weight: 700;
+      margin-right: 4px;
+      text-transform: uppercase;
+    }
+    .subfilter-chip {
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(5, 1, 4, 0.6);
+      border: 1px solid rgba(149, 61, 223, 0.25);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .subfilter-chip:hover {
+      border-color: var(--purple-bright);
+      color: #fff;
+    }
+    .subfilter-chip.active {
+      background: var(--purple-primary);
+      border-color: #fff;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(149, 61, 223, 0.4);
+    }
+
+    /* 5. Enhanced Product Cards */
+    .product-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-cat-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--purple-light);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .product-spec-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 8px 0;
+    }
+    .spec-mini-pill {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(149, 61, 223, 0.1);
+      border: 1px solid rgba(149, 61, 223, 0.2);
+      color: var(--text-bone);
+    }
+    .spec-mini-pill.pill-notes {
+      background: rgba(255, 215, 0, 0.08);
+      border-color: rgba(255, 215, 0, 0.25);
+      color: #FFD700;
+    }
+    .product-inspect-btn {
+      width: 100%;
+      margin-bottom: 6px;
+      padding: 8px 12px;
+      font-size: 0.75rem;
+      letter-spacing: 0.8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border-radius: 4px;
+      font-family: var(--font-condensed);
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .product-inspect-btn:hover {
+      background: rgba(149, 61, 223, 0.25);
+      border-color: var(--purple-bright);
+      box-shadow: 0 0 12px rgba(149, 61, 223, 0.4);
+    }
+
+    /* 6. Interactive Product Detail Modal */
+    .store-detail-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(2, 0, 3, 0.88);
+      backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(12px, 3vw, 28px);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s;
+    }
+    .store-detail-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+      display: flex !important;
+    }
+    .store-detail-modal-card {
+      position: relative;
+      width: min(980px, 95vw);
+      max-height: 92vh;
+      overflow-y: auto;
+      background: #0d0114;
+      border: 1px solid rgba(149, 61, 223, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(149, 61, 223, 0.25);
+      padding: clamp(18px, 3vw, 32px);
+      scrollbar-width: thin;
+      scrollbar-color: var(--purple-bright) rgba(0, 0, 0, 0.3);
+    }
+    .store-modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+    .store-modal-close-btn:hover {
+      background: var(--red-primary);
+      border-color: var(--red-primary);
+      transform: rotate(90deg);
+    }
+    .store-modal-inner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: clamp(20px, 3vw, 36px);
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .store-modal-inner-grid {
+        grid-template-columns: 1fr;
+      }
+      .store-nav-dropdown-menu {
+        width: 95vw;
+      }
+      .store-nav-dropdown-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .store-modal-gallery-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .store-modal-main-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 8px;
+      background: radial-gradient(circle at center, rgba(149, 61, 223, 0.12) 0%, rgba(5, 1, 4, 0.95) 75%);
+      border: 1px solid rgba(149, 61, 223, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: crosshair;
+    }
+    .store-modal-main-image-wrap img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.8));
+      transition: transform 0.05s ease-out;
+    }
+    .store-modal-thumbs-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .store-modal-thumb-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      background: rgba(17, 2, 26, 0.8);
+      border: 1px solid rgba(149, 61, 223, 0.25);
+      padding: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .store-modal-thumb-btn:hover,
+    .store-modal-thumb-btn.active {
+      border-color: var(--purple-bright);
+      box-shadow: 0 0 10px rgba(149, 61, 223, 0.4);
+    }
+    .store-modal-thumb-btn img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .store-modal-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .store-modal-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .store-modal-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--red-primary);
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+    .store-modal-cat-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(149, 61, 223, 0.2);
+      border: 1px solid rgba(149, 61, 223, 0.4);
+      color: var(--purple-light);
+      font-weight: 700;
+    }
+    .store-modal-sku-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+    .store-modal-title {
+      font-family: var(--font-condensed);
+      font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+    }
+    .store-modal-quote {
+      font-family: var(--font-body);
+      font-style: italic;
+      color: #FFD700;
+      font-size: 0.95rem;
+    }
+    .store-modal-pricing {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .store-modal-price {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .store-modal-orig-price {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      text-decoration: line-through;
+    }
+    .store-modal-discount-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(0, 255, 136, 0.15);
+      border: 1px solid #00ff88;
+      color: #00ff88;
+    }
+    .store-modal-stock-status {
+      margin-left: auto;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #00ff88;
+    }
+    .store-modal-desc {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Category Specific Spec Blocks */
+    .store-modal-spec-block {
+      background: rgba(17, 2, 26, 0.6);
+      border: 1px solid rgba(149, 61, 223, 0.2);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .olfactory-pyramid-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #FFD700;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .olfactory-row {
+      display: flex;
+      gap: 10px;
+      font-size: 0.8rem;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+    }
+    .olfactory-row:last-child {
+      border-bottom: none;
+    }
+    .olfactory-tier {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--purple-light);
+      min-width: 85px;
+    }
+    .olfactory-notes {
+      color: var(--text-bone);
+    }
+    .spec-grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      font-size: 0.8rem;
+    }
+    .spec-item-row {
+      display: flex;
+      flex-direction: column;
+    }
+    .spec-key {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .spec-val {
+      font-family: var(--font-condensed);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* Size / Variant Selector */
+    .store-modal-variants-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .store-modal-variant-label {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .store-modal-selected-variant-name {
+      color: #FFD700;
+      font-weight: 700;
+    }
+    .store-modal-variant-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .modal-var-btn {
+      padding: 7px 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      color: #fff;
+      font-family: var(--font-condensed);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .modal-var-btn:hover {
+      border-color: var(--purple-bright);
+      background: rgba(149, 61, 223, 0.2);
+    }
+    .modal-var-btn.active {
+      background: var(--purple-primary);
+      border-color: #fff;
+      box-shadow: 0 0 10px rgba(149, 61, 223, 0.5);
+    }
+
+    /* Player IGN Customizer */
+    .store-modal-ign-box {
+      background: rgba(237, 20, 24, 0.06);
+      border: 1px solid rgba(237, 20, 24, 0.25);
+      border-radius: 6px;
+      padding: 10px 12px;
+    }
+    .ign-customizer-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--red-primary);
+      letter-spacing: 0.8px;
+    }
+    .ign-customizer-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 4px 0 8px;
+    }
+    .ign-input-group {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(237, 20, 24, 0.4);
+      border-radius: 4px;
+      padding: 4px 10px;
+    }
+    .ign-prefix {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--red-primary);
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .ign-input-group input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      outline: none;
+      text-transform: uppercase;
+    }
+    .ign-preview-badge {
+      margin-top: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: #FFD700;
+      letter-spacing: 1px;
+    }
+
+    /* Actions Wrap */
+    .store-modal-actions-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .store-modal-qty-picker {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+    .qty-btn {
+      width: 32px;
+      height: 38px;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .qty-btn:hover {
+      background: rgba(149, 61, 223, 0.3);
+    }
+    .qty-display {
+      min-width: 30px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+    .store-modal-add-btn {
+      flex: 1;
+      min-width: 130px;
+      padding: 10px 16px;
+    }
+    .store-modal-buy-btn {
+      flex: 1;
+      min-width: 130px;
+      padding: 10px 16px;
+    }
+
+  
+    /* Professional Vector Icon Styling for Store & Categories */
+    .sq1-cat-svg {
+      display: inline-block;
+      vertical-align: middle;
+      stroke: var(--purple-light);
+      flex-shrink: 0;
+      transition: stroke 0.2s ease, transform 0.2s ease;
+    }
+    .sq1-action-svg {
+      display: inline-block;
+      vertical-align: -1.5px;
+      stroke: currentColor;
+      margin-right: 5px;
+      flex-shrink: 0;
+    }
+    .dropdown-link-icon-wrap, .item-icon-wrap {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: rgba(149, 61, 223, 0.12);
+      border: 1px solid rgba(149, 61, 223, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+    .store-dropdown-link:hover .dropdown-link-icon-wrap,
+    .popover-cat-item:hover .item-icon-wrap,
+    .popover-cat-item.active .item-icon-wrap {
+      background: var(--purple-primary);
+      border-color: #fff;
+      box-shadow: 0 0 10px rgba(149, 61, 223, 0.4);
+    }
+    .store-dropdown-link:hover .sq1-cat-svg,
+    .popover-cat-item:hover .sq1-cat-svg,
+    .popover-cat-item.active .sq1-cat-svg {
+      stroke: #fff;
+      transform: scale(1.08);
+    }
+    .popover-cat-item.highlight-ltd .item-icon-wrap,
+    .store-dropdown-link.highlight-drop .dropdown-link-icon-wrap {
+      border-color: rgba(237, 20, 24, 0.4);
+      background: rgba(237, 20, 24, 0.1);
+    }
+    .popover-cat-item.highlight-ltd .sq1-cat-svg,
+    .store-dropdown-link.highlight-drop .sq1-cat-svg {
+      stroke: var(--red-primary);
+    }
+    .popover-cat-item.highlight-ltd.active .item-icon-wrap,
+    .store-dropdown-link.highlight-drop:hover .dropdown-link-icon-wrap {
+      background: var(--red-primary);
+      border-color: #fff;
+      box-shadow: 0 0 12px rgba(237, 20, 24, 0.5);
+    }
+    .popover-cat-item.highlight-ltd:hover .sq1-cat-svg,
+    .popover-cat-item.highlight-ltd.active .sq1-cat-svg,
+    .store-dropdown-link.highlight-drop:hover .sq1-cat-svg {
+      stroke: #fff;
+    }
+    .cat-btn-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: rgba(149, 61, 223, 0.15);
+      border: 1px solid rgba(149, 61, 223, 0.3);
+    }
+    .cat-btn-icon-wrap .sq1-cat-svg {
+      stroke: var(--purple-light);
+    }
+    .note-tier-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      background: rgba(149, 61, 223, 0.2);
+      border: 1px solid rgba(149, 61, 223, 0.35);
+      color: var(--purple-light);
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
   </style>
   <!-- Firebase Real-Time Worldwide Cloud Sync SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
@@ -6679,7 +7810,111 @@
       <li><a href="#tournaments" class="nav-link" data-sound="hover">Tournaments</a></li>
       <li><a href="#broadcast" class="nav-link" data-sound="hover">Broadcast</a></li>
       <li><a href="#news" class="nav-link" data-sound="hover">News</a></li>
-      <li><a href="#store" class="nav-link" data-sound="hover">Store</a></li>
+      <li class="nav-item-dropdown" id="nav-item-store-dropdown">
+        <a href="#store" class="nav-link nav-link-dropdown-toggle" data-sound="hover" onclick="if(window.innerWidth<=768){toggleStoreNavDropdown(event);}">
+          <span>STORE</span>
+          <svg class="dropdown-chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="store-nav-dropdown-menu" id="store-nav-dropdown-panel">
+          <div class="store-nav-dropdown-header">
+            <div class="dropdown-header-tag">SQUAD ONE MERCHANDISE ECOSYSTEM</div>
+            <div class="dropdown-header-title">12 OFFICIAL ARMORY DIVISIONS</div>
+          </div>
+                    <div class="store-nav-dropdown-grid">
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('All', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">All Merchandise</span>
+                <span class="dropdown-link-sub">Full 32-Item Armory</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Apparel', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Apparel</span>
+                <span class="dropdown-link-sub">Jerseys, Oversized Tees, Hoodies</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Gaming Accessories', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="6"></rect></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Gaming Peripherals</span>
+                <span class="dropdown-link-sub">Cordura Mousepads & Desk Mats</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Fragrances', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4v3h-4z"></path><path d="M7 8h10l1.5 13H5.5L7 8z"></path><path d="M12 8v13"></path><path d="M9 13h6"></path></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Perfumes & Fragrances</span>
+                <span class="dropdown-link-sub">SQ-1 Victory, Clutch, Stealth...</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Bags', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-9z"></path><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><path d="M8 12h8"></path><path d="M8 16h8"></path></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Bags & Travel</span>
+                <span class="dropdown-link-sub">Tactical Backpacks & Slings</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Tech', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Mobile & Tech</span>
+                <span class="dropdown-link-sub">Armored Cases & 3M Laptop Skins</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Lifestyle', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8v2H8z"></path><path d="M7 6h10a1 1 0 0 1 1 1v13a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7a1 1 0 0 1 1-1z"></path><line x1="6" y1="11" x2="18" y2="11"></line></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Lifestyle</span>
+                <span class="dropdown-link-sub">Insulated Flasks, Shakers & Flasks</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Esports', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M6 3h12v7a6 6 0 0 1-12 0V3z"></path></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Esports Merchandise</span>
+                <span class="dropdown-link-sub">S2 Championship & Tournaments</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Décor', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Room & Décor</span>
+                <span class="dropdown-link-sub">Neon LED Signs & Metal Art</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Collectibles', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5.25-3.5 10-8 11-4.5-1-8-5.75-8-11V6l8-4z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Collectibles</span>
+                <span class="dropdown-link-sub">Metal Keychains, Enamel Pins, Coins</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Digital', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line><path d="M8 10l4 4 4-4"></path></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Digital Products</span>
+                <span class="dropdown-link-sub">Streamer HUD Overlays & 4K Walls</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Bundles', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Gift & Bundle Packs</span>
+                <span class="dropdown-link-sub">Pro Champion Tactical Crates</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link highlight-drop" onclick="setStoreCategoryFilter('Limited Drop', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Limited Drops</span>
+                <span class="dropdown-link-sub">Numbered Founder Jackets & Scents</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </li>
       <li><a href="#journey" class="nav-link" data-sound="hover">Our Story</a></li>
     </ul>
 
@@ -8367,13 +9602,197 @@
         </div>
       </div>
 
+      
+      <!-- Horizontal Category Pill Bar (Active when Selector Mode is Pill Bar) -->
+      <div class="store-category-pills-bar" id="store-category-pills-bar">
+        <button type="button" class="store-pill-btn active" data-cat="All" onclick="setStoreCategoryFilter('All', event)">
+          <span class="pill-icon">✨</span>
+          <span>ALL</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Apparel" onclick="setStoreCategoryFilter('Apparel', event)">
+          <span class="pill-icon">👕</span>
+          <span>Apparel</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Gaming Accessories" onclick="setStoreCategoryFilter('Gaming Accessories', event)">
+          <span class="pill-icon">🎮</span>
+          <span>Gaming</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Fragrances" onclick="setStoreCategoryFilter('Fragrances', event)">
+          <span class="pill-icon">🧴</span>
+          <span>Fragrances</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Bags" onclick="setStoreCategoryFilter('Bags', event)">
+          <span class="pill-icon">🎒</span>
+          <span>Bags</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Tech" onclick="setStoreCategoryFilter('Tech', event)">
+          <span class="pill-icon">📱</span>
+          <span>Tech</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Lifestyle" onclick="setStoreCategoryFilter('Lifestyle', event)">
+          <span class="pill-icon">🥤</span>
+          <span>Lifestyle</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Esports" onclick="setStoreCategoryFilter('Esports', event)">
+          <span class="pill-icon">🏆</span>
+          <span>Esports</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Décor" onclick="setStoreCategoryFilter('Décor', event)">
+          <span class="pill-icon">🖼️</span>
+          <span>Décor</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Collectibles" onclick="setStoreCategoryFilter('Collectibles', event)">
+          <span class="pill-icon">🔑</span>
+          <span>Collectibles</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Digital" onclick="setStoreCategoryFilter('Digital', event)">
+          <span class="pill-icon">💻</span>
+          <span>Digital</span>
+        </button>
+        <button type="button" class="store-pill-btn" data-cat="Bundles" onclick="setStoreCategoryFilter('Bundles', event)">
+          <span class="pill-icon">🎁</span>
+          <span>Bundles</span>
+        </button>
+        <button type="button" class="store-pill-btn highlight-ltd" data-cat="Limited Drop" onclick="setStoreCategoryFilter('Limited Drop', event)">
+          <span class="pill-icon">🔥</span>
+          <span>Limited Drops</span>
+        </button>
+      </div>
+
+      <!-- Faceted Search & Filters Toolbar -->
+      <div class="store-faceted-toolbar">
+        <div class="store-search-wrap">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="store-search-input" class="store-search-input" placeholder="Search armory (e.g. jersey, Victory EDP, mousepad, GTA VI)..." oninput="onStoreSearchInput(this.value)">
+          <button type="button" class="search-clear-btn" id="store-search-clear" onclick="clearStoreSearch()" title="Clear search">✕</button>
+        </div>
+        <!-- Sleek Categories Dropdown Option (Clean & Professional) -->
+        <div class="store-category-dropdown-wrap" id="store-category-dropdown-wrap">
+          <button type="button" class="store-category-btn" id="store-category-trigger-btn" onclick="toggleStoreCategoryDropdown(event)">
+            <span class="cat-btn-icon-wrap" id="active-cat-icon"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg></span>
+            <span class="cat-btn-label">CATEGORY:</span>
+            <span class="cat-btn-active-val" id="active-cat-name">ALL MERCHANDISE (32)</span>
+            <svg class="cat-btn-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="store-category-popover" id="store-category-popover">
+            <div class="popover-header">
+              <span>ARMORY CATEGORIES</span>
+              <button type="button" class="popover-close-btn" onclick="toggleStoreCategoryDropdown(event)">✕</button>
+            </div>
+            <div class="popover-items-grid">
+              <button type="button" class="popover-cat-item active" data-cat="All" onclick="setStoreCategoryFilter('All', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
+                <span class="item-name">All Merchandise</span>
+                <span class="item-badge" id="count-All">32</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Apparel" onclick="setStoreCategoryFilter('Apparel', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg></div>
+                <span class="item-name">Apparel</span>
+                <span class="item-badge" id="count-Apparel">6</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Gaming Accessories" onclick="setStoreCategoryFilter('Gaming Accessories', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="6"></rect></svg></div>
+                <span class="item-name">Gaming Peripherals</span>
+                <span class="item-badge" id="count-Gaming Accessories">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Fragrances" onclick="setStoreCategoryFilter('Fragrances', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4v3h-4z"></path><path d="M7 8h10l1.5 13H5.5L7 8z"></path><path d="M12 8v13"></path><path d="M9 13h6"></path></svg></div>
+                <span class="item-name">Fragrances</span>
+                <span class="item-badge" id="count-Fragrances">6</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Bags" onclick="setStoreCategoryFilter('Bags', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-9z"></path><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><path d="M8 12h8"></path><path d="M8 16h8"></path></svg></div>
+                <span class="item-name">Bags & Travel</span>
+                <span class="item-badge" id="count-Bags">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Tech" onclick="setStoreCategoryFilter('Tech', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
+                <span class="item-name">Mobile & Tech</span>
+                <span class="item-badge" id="count-Tech">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Lifestyle" onclick="setStoreCategoryFilter('Lifestyle', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8v2H8z"></path><path d="M7 6h10a1 1 0 0 1 1 1v13a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7a1 1 0 0 1 1-1z"></path><line x1="6" y1="11" x2="18" y2="11"></line></svg></div>
+                <span class="item-name">Lifestyle</span>
+                <span class="item-badge" id="count-Lifestyle">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Esports" onclick="setStoreCategoryFilter('Esports', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M6 3h12v7a6 6 0 0 1-12 0V3z"></path></svg></div>
+                <span class="item-name">Esports Merchandise</span>
+                <span class="item-badge" id="count-Esports">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Décor" onclick="setStoreCategoryFilter('Décor', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+                <span class="item-name">Room & Décor</span>
+                <span class="item-badge" id="count-Décor">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Collectibles" onclick="setStoreCategoryFilter('Collectibles', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5.25-3.5 10-8 11-4.5-1-8-5.75-8-11V6l8-4z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+                <span class="item-name">Collectibles</span>
+                <span class="item-badge" id="count-Collectibles">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Digital" onclick="setStoreCategoryFilter('Digital', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line><path d="M8 10l4 4 4-4"></path></svg></div>
+                <span class="item-name">Digital Products</span>
+                <span class="item-badge" id="count-Digital">2</span>
+              </button>
+              <button type="button" class="popover-cat-item" data-cat="Bundles" onclick="setStoreCategoryFilter('Bundles', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg></div>
+                <span class="item-name">Gift & Bundles</span>
+                <span class="item-badge" id="count-Bundles">2</span>
+              </button>
+              <button type="button" class="popover-cat-item highlight-ltd" data-cat="Limited Drop" onclick="setStoreCategoryFilter('Limited Drop', event)">
+                <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                <span class="item-name">Limited Drops</span>
+                <span class="item-badge" id="count-Limited Drop">2</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-sort-wrap">
+          <label for="store-sort-select">SORT BY:</label>
+          <select id="store-sort-select" class="store-select" onchange="onStoreSortChange(this.value)">
+            <option value="featured">Featured / Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+            <option value="limited">Limited Drops First</option>
+          </select>
+        </div>
+
+        <div class="store-quick-toggles">
+          <label class="store-toggle-label">
+            <input type="checkbox" id="toggle-limited-only" onchange="onToggleLimitedOnly(this.checked)">
+            <span>LIMITED DROPS ONLY</span>
+          </label>
+          <label class="store-toggle-label">
+            <input type="checkbox" id="toggle-instock-only" onchange="onToggleInStockOnly(this.checked)">
+            <span>IN STOCK ONLY</span>
+          </label>
+        </div>
+      </div>
+
+            <!-- Active Category Filter Indicator (Clean & Minimal) -->
+      <div class="store-active-filter-bar" id="store-active-filter-bar" style="display: none;">
+        <div class="active-filter-chip">
+          <span class="active-filter-icon" id="active-filter-icon"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg></span>
+          <span class="active-filter-text" id="active-filter-text">Category: All</span>
+          <button type="button" class="active-filter-remove" onclick="setStoreCategoryFilter('All', event)" title="Clear filter">✕</button>
+        </div>
+        <button type="button" class="clear-all-filters-btn" onclick="resetAllStoreFilters()">RESET ALL FILTERS</button>
+      </div>
+
+      <!-- Dynamic Contextual Category Subfilter Strip -->
+      <div class="store-subfilter-strip" id="store-subfilters" style="display: none;">
+      </div>
+
       <!-- Products Grid (Pre-rendered and Dynamically Maintained) -->
       <div class="product-grid" id="store-product-grid" style="display: grid;">
         <!-- Product 1: White Edition -->
         <div class="product-card" id="product-card-s1ve-sq1-oversized-white" data-sound="hover">
           <div class="product-badge">HOT DROP · OVERSIZED</div>
           <div class="product-image-box" data-zoom-box="true" data-image-src="images/new Products/Final_1-_White.png" title="Hover & drag to zoom and inspect details">
-            <span class="product-zoom-pill">🔍 DRAG TO ZOOM</span>
+            <span class="product-zoom-pill">DRAG TO ZOOM</span>
             <img src="images/new Products/Final_1-_White.png" alt="S1VE × SQUAD ONE 'White Edition' Oversized Tee" onerror="this.src='assets/teams/squadone.png'">
           </div>
           <div class="product-details">
@@ -8398,10 +9817,10 @@
             </div>
             <div class="product-actions-row">
               <button type="button" class="cyber-btn cyber-btn-outline" onclick="addProductToCart('s1ve-sq1-oversized-white', false)" data-sound="click">
-                ADD TO CART 🛒
+                ADD TO CART
               </button>
               <button type="button" class="cyber-btn cyber-btn-crimson" onclick="addProductToCart('s1ve-sq1-oversized-white', true)" data-sound="click">
-                BUY NOW ⚡
+                BUY NOW
               </button>
             </div>
           </div>
@@ -8411,7 +9830,7 @@
         <div class="product-card" id="product-card-s1ve-sq1-oversized-black" data-sound="hover">
           <div class="product-badge">BESTSELLER · OVERSIZED</div>
           <div class="product-image-box" data-zoom-box="true" data-image-src="images/new Products/Final_1-_Black_.png" title="Hover & drag to zoom and inspect details">
-            <span class="product-zoom-pill">🔍 DRAG TO ZOOM</span>
+            <span class="product-zoom-pill">DRAG TO ZOOM</span>
             <img src="images/new Products/Final_1-_Black_.png" alt="S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee" onerror="this.src='assets/teams/squadone.png'">
           </div>
           <div class="product-details">
@@ -8436,10 +9855,10 @@
             </div>
             <div class="product-actions-row">
               <button type="button" class="cyber-btn cyber-btn-outline" onclick="addProductToCart('s1ve-sq1-oversized-black', false)" data-sound="click">
-                ADD TO CART 🛒
+                ADD TO CART
               </button>
               <button type="button" class="cyber-btn cyber-btn-crimson" onclick="addProductToCart('s1ve-sq1-oversized-black', true)" data-sound="click">
-                BUY NOW ⚡
+                BUY NOW
               </button>
             </div>
           </div>
@@ -8449,7 +9868,7 @@
         <div class="product-card" id="product-card-s1ve-sq1-oversized-maroon" data-sound="hover">
           <div class="product-badge">LIMITED DROP · 30% OFF</div>
           <div class="product-image-box" data-zoom-box="true" data-image-src="images/new Products/Final_1-_Maroon_.png" title="Hover & drag to zoom and inspect details">
-            <span class="product-zoom-pill">🔍 DRAG TO ZOOM</span>
+            <span class="product-zoom-pill">DRAG TO ZOOM</span>
             <img src="images/new Products/Final_1-_Maroon_.png" alt="S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee" onerror="this.src='assets/teams/squadone.png'">
           </div>
           <div class="product-details">
@@ -8474,10 +9893,10 @@
             </div>
             <div class="product-actions-row">
               <button type="button" class="cyber-btn cyber-btn-outline" onclick="addProductToCart('s1ve-sq1-oversized-maroon', false)" data-sound="click">
-                ADD TO CART 🛒
+                ADD TO CART
               </button>
               <button type="button" class="cyber-btn cyber-btn-crimson" onclick="addProductToCart('s1ve-sq1-oversized-maroon', true)" data-sound="click">
-                BUY NOW ⚡
+                BUY NOW
               </button>
             </div>
           </div>
@@ -9120,6 +10539,93 @@
       </div>
     </div>
   </div>
+
+  
+  <!-- Interactive Product Detail & Quick View Modal -->
+  <div class="store-detail-modal-overlay" id="store-product-detail-modal" role="dialog" aria-modal="true" aria-label="Product Details" data-lenis-prevent="true" style="display: none;">
+    <div class="store-detail-modal-card" data-lenis-prevent="true">
+      <button type="button" class="store-modal-close-btn" onclick="closeProductDetailModal()" aria-label="Close modal">✕</button>
+      
+      <div class="store-modal-inner-grid">
+        <!-- Left: Image Gallery & Drag Zoom -->
+        <div class="store-modal-gallery-col">
+          <div class="store-modal-main-image-wrap" id="modal-image-zoom-box" data-zoom-box="true">
+            <span class="product-zoom-pill">DRAG TO ZOOM</span>
+            <img id="modal-product-main-img" src="" alt="Product image">
+          </div>
+          <div class="store-modal-thumbs-row" id="modal-product-thumbs">
+          </div>
+        </div>
+
+        <!-- Right: Details, Specs, Customizer, Add to Cart -->
+        <div class="store-modal-info-col">
+          <div class="store-modal-badges-row">
+            <span class="store-modal-badge" id="modal-product-badge">HOT DROP</span>
+            <span class="store-modal-cat-tag" id="modal-product-cat-tag">APPAREL</span>
+            <span class="store-modal-sku-tag" id="modal-product-sku">SKU: SQ1-APP-001</span>
+          </div>
+
+          <h2 class="store-modal-title" id="modal-product-title">Product Title</h2>
+          <div class="store-modal-quote" id="modal-product-quote">“Upgrade your Vogue”</div>
+
+          <div class="store-modal-pricing">
+            <span class="store-modal-price" id="modal-product-price">₹999</span>
+            <span class="store-modal-orig-price" id="modal-product-orig-price">₹1,499</span>
+            <span class="store-modal-discount-tag" id="modal-product-discount">-33% OFF</span>
+            <span class="store-modal-stock-status" id="modal-product-stock-status">● In Stock</span>
+          </div>
+
+          <p class="store-modal-desc" id="modal-product-desc">
+            Product description
+          </p>
+
+          <!-- Category Dynamic Spec Block -->
+          <div class="store-modal-spec-block" id="modal-dynamic-specs">
+          </div>
+
+          <!-- Size / Variant Selector -->
+          <div class="store-modal-variants-wrap" id="modal-variants-section">
+            <div class="store-modal-variant-label">
+              <span id="modal-variant-heading">SELECT OPTION</span>
+              <span class="store-modal-selected-variant-name" id="modal-selected-variant-label"></span>
+            </div>
+            <div class="store-modal-variant-buttons" id="modal-variant-buttons">
+            </div>
+          </div>
+
+          <!-- Player IGN Customizer -->
+          <div class="store-modal-ign-box" id="modal-ign-customizer" style="display: none;">
+            <div class="ign-customizer-header">
+              <span class="ign-icon">⚡</span>
+              <span>CUSTOM PLAYER IGN EMBROIDERY / PRINT (+FREE)</span>
+            </div>
+            <p class="ign-customizer-sub">Enter your gaming in-game name to have it permanently customized on the jersey plate:</p>
+            <div class="ign-input-group">
+              <span class="ign-prefix">IGN:</span>
+              <input type="text" id="modal-player-ign-input" maxlength="20" placeholder="e.g. SQ1_VIPER" oninput="updateJerseyPreviewIGN(this.value)">
+            </div>
+            <div class="ign-preview-badge" id="modal-ign-preview-plate">PREVIEW: [ <span id="modal-ign-preview-text">YOUR_NAME</span> ]</div>
+          </div>
+
+          <!-- Purchase Controls: Quantity & Buttons -->
+          <div class="store-modal-actions-wrap">
+            <div class="store-modal-qty-picker">
+              <button type="button" class="qty-btn" onclick="adjustModalQty(-1)">−</button>
+              <span class="qty-display" id="modal-qty-display">1</span>
+              <button type="button" class="qty-btn" onclick="adjustModalQty(1)">+</button>
+            </div>
+            <button type="button" class="cyber-btn cyber-btn-outline store-modal-add-btn" onclick="addModalProductToCart(false)">
+              ADD TO CART
+            </button>
+            <button type="button" class="cyber-btn cyber-btn-crimson store-modal-buy-btn" onclick="addModalProductToCart(true)">
+              BUY NOW
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- In-App Cyber Checkout Modal -->
   <div class="checkout-modal-overlay" id="checkout-modal" role="dialog" aria-modal="true" aria-label="Store Checkout" data-lenis-prevent="true">
@@ -11384,51 +12890,1220 @@
         title: "S1VE BY SQUADONE",
         desc: "",
         products: [
+[
           {
-            id: "s1ve-sq1-oversized-white",
-            title: "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
-            quote: "Upgrade your Vogue",
-            badge: "HOT DROP · OVERSIZED",
-            price: 999,
-            originalPrice: 1499,
-            currency: "₹",
-            image: "images/new Products/Final_1-_White.png",
-            description: "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
-            sizes: ["S", "M", "L", "XL", "XXL"],
-            allowCustomIGN: true,
-            inStock: true,
-            hidden: false
+                    "id": "s1ve-sq1-oversized-white",
+                    "name": "S1VE \u00d7 SQUAD ONE 'White Edition' Oversized Tee",
+                    "title": "S1VE \u00d7 SQUAD ONE 'White Edition' Oversized Tee",
+                    "quote": "Upgrade your Vogue",
+                    "badge": "HOT DROP \u00b7 OVERSIZED",
+                    "category": "Apparel",
+                    "subcategory": "Oversized T-shirts",
+                    "sku": "SQ1-APP-TEE-WHT",
+                    "price": 999,
+                    "priceINR": 999,
+                    "originalPrice": 1499,
+                    "currency": "\u20b9",
+                    "image": "images/new Products/Final_1-_White.png",
+                    "imageUrl": "images/new Products/Final_1-_White.png",
+                    "images": [
+                              "images/new Products/Final_1-_White.png",
+                              "images/white_mesh.glb"
+                    ],
+                    "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
+                    "sizes": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 45,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "fit": "Oversized",
+                              "fabric": "280 GSM Heavy Combed Cotton",
+                              "color": [
+                                        "Cyber White",
+                                        "Ghost White"
+                              ],
+                              "is_customizable": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
           },
           {
-            id: "s1ve-sq1-oversized-black",
-            title: "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
-            quote: "Upgrade your Vogue",
-            badge: "BESTSELLER · OVERSIZED",
-            price: 999,
-            originalPrice: 1499,
-            currency: "₹",
-            image: "images/new Products/Final_1-_Black_.png",
-            description: "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
-            sizes: ["S", "M", "L", "XL", "XXL"],
-            allowCustomIGN: true,
-            inStock: true,
-            hidden: false
+                    "id": "s1ve-sq1-oversized-black",
+                    "name": "S1VE \u00d7 SQUAD ONE 'Blackout Edition' Oversized Tee",
+                    "title": "S1VE \u00d7 SQUAD ONE 'Blackout Edition' Oversized Tee",
+                    "quote": "Upgrade your Vogue",
+                    "badge": "BESTSELLER \u00b7 OVERSIZED",
+                    "category": "Apparel",
+                    "subcategory": "Oversized T-shirts",
+                    "sku": "SQ1-APP-TEE-BLK",
+                    "price": 999,
+                    "priceINR": 999,
+                    "originalPrice": 1499,
+                    "currency": "\u20b9",
+                    "image": "images/new Products/Final_1-_Black_.png",
+                    "imageUrl": "images/new Products/Final_1-_Black_.png",
+                    "images": [
+                              "images/new Products/Final_1-_Black_.png"
+                    ],
+                    "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
+                    "sizes": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 35,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "fit": "Oversized",
+                              "fabric": "280 GSM Heavy Combed Cotton",
+                              "color": [
+                                        "Stealth Black"
+                              ],
+                              "is_customizable": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
           },
           {
-            id: "s1ve-sq1-oversized-maroon",
-            title: "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-            quote: "Upgrade your Vogue",
-            badge: "LIMITED DROP · 30% OFF",
-            price: 1099,
-            originalPrice: 1599,
-            currency: "₹",
-            image: "images/new Products/Final_1-_Maroon_.png",
-            description: "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
-            sizes: ["S", "M", "L", "XL", "XXL"],
-            allowCustomIGN: true,
-            inStock: true,
-            hidden: false
+                    "id": "s1ve-sq1-oversized-maroon",
+                    "name": "S1VE \u00d7 SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+                    "title": "S1VE \u00d7 SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+                    "quote": "Upgrade your Vogue",
+                    "badge": "LIMITED DROP \u00b7 30% OFF",
+                    "category": "Apparel",
+                    "subcategory": "Oversized T-shirts",
+                    "sku": "SQ1-APP-TEE-MRN",
+                    "price": 1099,
+                    "priceINR": 1099,
+                    "originalPrice": 1599,
+                    "currency": "\u20b9",
+                    "image": "images/new Products/Final_1-_Maroon_.png",
+                    "imageUrl": "images/new Products/Final_1-_Maroon_.png",
+                    "images": [
+                              "images/new Products/Final_1-_Maroon_.png"
+                    ],
+                    "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
+                    "sizes": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 20,
+                    "isLimitedEdition": true,
+                    "attributes": {
+                              "fit": "Oversized",
+                              "fabric": "280 GSM Heavy Combed Cotton",
+                              "color": [
+                                        "Maroon Cyber"
+                              ],
+                              "is_customizable": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-pro-player-jersey-2026",
+                    "name": "Squad One Pro Player Official Jersey 2026",
+                    "title": "Squad One Pro Player Official Jersey 2026",
+                    "quote": "Official Esports Combat Kit",
+                    "badge": "PRO ROSTER KIT \u00b7 CUSTOM NAME",
+                    "category": "Apparel",
+                    "subcategory": "Player jerseys",
+                    "sku": "SQ1-APP-JRS-2026",
+                    "price": 1499,
+                    "priceINR": 1499,
+                    "originalPrice": 1999,
+                    "currency": "\u20b9",
+                    "image": "images/t-shirt.png",
+                    "imageUrl": "images/t-shirt.png",
+                    "images": [
+                              "images/t-shirt.png",
+                              "images/t-shirt-front.nobk.png",
+                              "images/t-shirt-back.nobk.png"
+                    ],
+                    "description": "Aerodynamic micro-mesh moisture wicking competitive player jersey as worn by Squad One during National League S3 Grand Finals.",
+                    "sizes": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 60,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "fit": "Athletic Regular",
+                              "fabric": "100% Breathable Micro-Poly Hydro-Dri",
+                              "color": [
+                                        "Team Purple & Carbon"
+                              ],
+                              "is_customizable": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-cyber-stealth-hoodie",
+                    "name": "Squad One 'Stealth Division' Heavy Fleece Hoodie",
+                    "title": "Squad One 'Stealth Division' Heavy Fleece Hoodie",
+                    "quote": "Warmth for late night scrims",
+                    "badge": "HEAVY FLEECE \u00b7 380 GSM",
+                    "category": "Apparel",
+                    "subcategory": "Hoodies",
+                    "sku": "SQ1-APP-HOD-STL",
+                    "price": 2199,
+                    "priceINR": 2199,
+                    "originalPrice": 2999,
+                    "currency": "\u20b9",
+                    "image": "images/side-front.png",
+                    "imageUrl": "images/side-front.png",
+                    "images": [
+                              "images/side-front.png",
+                              "images/side.png"
+                    ],
+                    "description": "380 GSM brushed interior cotton fleece pullover hoodie with high-density silicone team crest and kangaroo hand-warmer pocket.",
+                    "sizes": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 30,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "fit": "Regular Comfy",
+                              "fabric": "380 GSM Brushed Cotton Fleece",
+                              "color": [
+                                        "Midnight Black"
+                              ]
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-pro-gamer-cap",
+                    "name": "Squad One Tactical Structured Snapback Cap",
+                    "title": "Squad One Tactical Structured Snapback Cap",
+                    "quote": "Lock in your vision",
+                    "badge": "STRUCTURED 6-PANEL",
+                    "category": "Apparel",
+                    "subcategory": "Caps",
+                    "sku": "SQ1-APP-CAP-TAC",
+                    "price": 699,
+                    "priceINR": 699,
+                    "originalPrice": 999,
+                    "currency": "\u20b9",
+                    "image": "assets/teams/squadone.png",
+                    "imageUrl": "assets/teams/squadone.png",
+                    "description": "High-profile 6-panel snapback with 3D puff embroidered Squad One crest and moisture-absorbing sweatband.",
+                    "sizes": [
+                              "FREE SIZE (Adjustable)"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 80,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "fit": "Adjustable Snapback",
+                              "fabric": "Wool Blend Crown with Breathable Eyelets",
+                              "color": [
+                                        "Black / Violet"
+                              ]
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-deskmat-crossbay",
+                    "name": "Squad One Cross-Bay Extended Desk Mat (900\u00d7400mm)",
+                    "title": "Squad One Cross-Bay Extended Desk Mat (900\u00d7400mm)",
+                    "quote": "Flawless mouse tracking surface",
+                    "badge": "SPEED SURFACE \u00b7 4MM",
+                    "category": "Gaming Accessories",
+                    "subcategory": "Extended mousepads / desk mats",
+                    "sku": "SQ1-GAM-MAT-900",
+                    "price": 1299,
+                    "priceINR": 1299,
+                    "originalPrice": 1799,
+                    "currency": "\u20b9",
+                    "image": "images/sa-cross-bay-scrims.png",
+                    "imageUrl": "images/sa-cross-bay-scrims.png",
+                    "description": "900x400mm extra large desk mat featuring tournament map telemetry print, anti-fray stitched borders, and anti-slip natural rubber base.",
+                    "sizes": [
+                              "900x400x4mm"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 50,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "dimensions": "900mm x 400mm",
+                              "thickness": "4mm",
+                              "surface_type": "Speed",
+                              "material": "Micro-woven textile with textured natural rubber base",
+                              "design_edition": "South Asia Cross-Bay Scrims Official"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-precision-mousepad",
+                    "name": "Squad One Precision Control Esports Mousepad (450\u00d7400mm)",
+                    "title": "Squad One Precision Control Esports Mousepad (450\u00d7400mm)",
+                    "quote": "Micro-textured stopping power",
+                    "badge": "CONTROL SURFACE",
+                    "category": "Gaming Accessories",
+                    "subcategory": "Mousepads",
+                    "sku": "SQ1-GAM-PAD-450",
+                    "price": 799,
+                    "priceINR": 799,
+                    "originalPrice": 1099,
+                    "currency": "\u20b9",
+                    "image": "images/Brand_Nme_.png",
+                    "imageUrl": "images/Brand_Nme_.png",
+                    "description": "Competition-grade 450x400mm mousepad designed for ultra-low DPI flick shots and recoil stabilization.",
+                    "sizes": [
+                              "450x400x3.5mm"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 75,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "dimensions": "450mm x 400mm",
+                              "thickness": "3.5mm",
+                              "surface_type": "Control",
+                              "material": "Textured woven polyester cloth"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-perfume-victory-edp",
+                    "name": "SQ-1 Victory Eau de Parfum (100ml)",
+                    "title": "SQ-1 Victory Eau de Parfum (100ml)",
+                    "quote": "The Scent of Champions",
+                    "badge": "SIGNATURE FRAGRANCE \u00b7 EDP",
+                    "category": "Fragrances",
+                    "subcategory": "Eau de Parfum (EDP)",
+                    "sku": "SQ1-FRAG-VIC-100",
+                    "price": 1899,
+                    "priceINR": 1899,
+                    "originalPrice": 2499,
+                    "currency": "\u20b9",
+                    "image": "images/loyalty.png",
+                    "imageUrl": "images/loyalty.png",
+                    "description": "Flagship fragrance formulated with sparkling Italian bergamot, smoky birch, and deep ambergris. Bold, confident, and victorious.",
+                    "sizes": [
+                              "100ml EDP"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 40,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "line": "SQ-1 Victory",
+                              "fragrance_type": "EDP",
+                              "volume_ml": 100,
+                              "gender_profile": "Unisex",
+                              "scent_notes_top": [
+                                        "Italian Bergamot",
+                                        "Crisp Apple",
+                                        "Pink Pepper"
+                              ],
+                              "scent_notes_mid": [
+                                        "French Lavender",
+                                        "Cardamom",
+                                        "Smoky Birch"
+                              ],
+                              "scent_notes_base": [
+                                        "Ambergris",
+                                        "Atlas Cedarwood",
+                                        "Oakmoss"
+                              ],
+                              "concentration_percent": 22,
+                              "longevity": "8-10 Hours"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-perfume-clutch-edp",
+                    "name": "SQ-1 Clutch Intense Eau de Parfum (100ml)",
+                    "title": "SQ-1 Clutch Intense Eau de Parfum (100ml)",
+                    "quote": "Calm under 1v4 pressure",
+                    "badge": "DARK AMBER & LEATHER",
+                    "category": "Fragrances",
+                    "subcategory": "Eau de Parfum (EDP)",
+                    "sku": "SQ1-FRAG-CLT-100",
+                    "price": 1999,
+                    "priceINR": 1999,
+                    "originalPrice": 2599,
+                    "currency": "\u20b9",
+                    "image": "images/new Products/new_GTA_launch.jpeg",
+                    "imageUrl": "images/new Products/new_GTA_launch.jpeg",
+                    "description": "Dark spicy leather and rich saffron layered over Madagascar vanilla bourbon. Engineered for magnetic presence and nighttime dominance.",
+                    "sizes": [
+                              "100ml EDP"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 35,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "line": "SQ-1 Clutch",
+                              "fragrance_type": "EDP",
+                              "volume_ml": 100,
+                              "gender_profile": "Men",
+                              "scent_notes_top": [
+                                        "Blood Orange",
+                                        "Saffron",
+                                        "Black Pepper"
+                              ],
+                              "scent_notes_mid": [
+                                        "Raw Leather",
+                                        "Nutmeg",
+                                        "Midnight Jasmine"
+                              ],
+                              "scent_notes_base": [
+                                        "Rich Tobacco",
+                                        "Dark Patchouli",
+                                        "Vanilla Bourbon"
+                              ],
+                              "concentration_percent": 25,
+                              "longevity": "10-12 Hours"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-perfume-stealth-edp",
+                    "name": "SQ-1 Stealth Minimalist Eau de Parfum (50ml)",
+                    "title": "SQ-1 Stealth Minimalist Eau de Parfum (50ml)",
+                    "quote": "Unseen until the final circle",
+                    "badge": "CLEAN OZONIC & WHITE TEA",
+                    "category": "Fragrances",
+                    "subcategory": "Eau de Parfum (EDP)",
+                    "sku": "SQ1-FRAG-STL-50",
+                    "price": 1299,
+                    "priceINR": 1299,
+                    "originalPrice": 1699,
+                    "currency": "\u20b9",
+                    "image": "images/Brand_Nme_.png",
+                    "imageUrl": "images/Brand_Nme_.png",
+                    "description": "Subtle, modern, and crisp. White tea and crushed grapefruit blend with sheer vetiver and ozone. Never overpowering, always refined.",
+                    "sizes": [
+                              "50ml EDP (Travel Ready)"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 55,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "line": "SQ-1 Stealth",
+                              "fragrance_type": "EDP",
+                              "volume_ml": 50,
+                              "gender_profile": "Unisex",
+                              "scent_notes_top": [
+                                        "White Tea",
+                                        "Grapefruit",
+                                        "Mint Leaf"
+                              ],
+                              "scent_notes_mid": [
+                                        "Ozonic Accord",
+                                        "Clary Sage",
+                                        "Green Bamboo"
+                              ],
+                              "scent_notes_base": [
+                                        "White Musk",
+                                        "Sandalwood",
+                                        "Haitian Vetiver"
+                              ],
+                              "concentration_percent": 20,
+                              "longevity": "7-9 Hours"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-perfume-rush-deodorant",
+                    "name": "SQ-1 Rush All-Day Deodorant Body Spray (150ml)",
+                    "title": "SQ-1 Rush All-Day Deodorant Body Spray (150ml)",
+                    "quote": "Instant adrenaline refresh",
+                    "badge": "24HR FRESH \u00b7 ANTI-ODOR",
+                    "category": "Fragrances",
+                    "subcategory": "Deodorants",
+                    "sku": "SQ1-FRAG-RSH-150",
+                    "price": 399,
+                    "priceINR": 399,
+                    "originalPrice": 599,
+                    "currency": "\u20b9",
+                    "image": "images/Brand_Nme_.png",
+                    "imageUrl": "images/Brand_Nme_.png",
+                    "description": "Fast-drying cooling body spray infused with iced spearmint and zesty mandarin. Neutralizes perspiration during intense tournament sessions.",
+                    "sizes": [
+                              "150ml Body Spray"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 120,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "line": "SQ-1 Rush",
+                              "fragrance_type": "Deodorant",
+                              "volume_ml": 150,
+                              "gender_profile": "Unisex",
+                              "scent_notes_top": [
+                                        "Icy Spearmint",
+                                        "Mandarin"
+                              ],
+                              "scent_notes_mid": [
+                                        "Marine Breeze",
+                                        "Geranium"
+                              ],
+                              "scent_notes_base": [
+                                        "Cedarwood",
+                                        "Clean Musk"
+                              ],
+                              "concentration_percent": 8,
+                              "longevity": "12 Hours"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-perfume-elite-discovery",
+                    "name": "SQ-1 Elite Fragrance Discovery Vault (6 \u00d7 10ml)",
+                    "title": "SQ-1 Elite Fragrance Discovery Vault (6 \u00d7 10ml)",
+                    "quote": "Explore the complete fragrance line",
+                    "badge": "FULL 6-SCENT DISCOVERY VAULT",
+                    "category": "Fragrances",
+                    "subcategory": "Perfume discovery/sample sets",
+                    "sku": "SQ1-FRAG-ELT-BOX",
+                    "price": 1499,
+                    "priceINR": 1499,
+                    "originalPrice": 1999,
+                    "currency": "\u20b9",
+                    "image": "images/loyalty.png",
+                    "imageUrl": "images/loyalty.png",
+                    "description": "Deluxe presentation box containing 10ml luxury atomizers of all 6 Squad One fragrances: Victory, Clutch, Stealth, Rush, Elite, and Aftermatch.",
+                    "sizes": [
+                              "6 \u00d7 10ml Vials"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 45,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "line": "SQ-1 Elite",
+                              "fragrance_type": "Discovery Set",
+                              "volume_ml": 60,
+                              "gender_profile": "Unisex",
+                              "scent_notes_top": [
+                                        "Victory",
+                                        "Clutch",
+                                        "Stealth",
+                                        "Rush",
+                                        "Elite",
+                                        "Aftermatch"
+                              ],
+                              "scent_notes_mid": [
+                                        "6 Distinct Master Formulations"
+                              ],
+                              "scent_notes_base": [
+                                        "Collector Magnetic Presentation Box"
+                              ],
+                              "concentration_percent": 22,
+                              "longevity": "Varied (8-12 Hours)"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-perfume-aftermatch-edt",
+                    "name": "SQ-1 Aftermatch Cool Down Eau de Toilette (100ml)",
+                    "title": "SQ-1 Aftermatch Cool Down Eau de Toilette (100ml)",
+                    "quote": "The post-game celebratory freshness",
+                    "badge": "AQUATIC & CITRUS",
+                    "category": "Fragrances",
+                    "subcategory": "Eau de Toilette (EDT)",
+                    "sku": "SQ1-FRAG-AFT-100",
+                    "price": 1399,
+                    "priceINR": 1399,
+                    "originalPrice": 1799,
+                    "currency": "\u20b9",
+                    "image": "images/Brand_Nme_.png",
+                    "imageUrl": "images/Brand_Nme_.png",
+                    "description": "Cooling marine sea salt, blue lotus, and sun-drenched driftwood. The ideal daily scent after rigorous scrims and physical training.",
+                    "sizes": [
+                              "100ml EDT"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 50,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "line": "SQ-1 Aftermatch",
+                              "fragrance_type": "EDT",
+                              "volume_ml": 100,
+                              "gender_profile": "Unisex",
+                              "scent_notes_top": [
+                                        "Calabrian Lemon",
+                                        "Eucalyptus"
+                              ],
+                              "scent_notes_mid": [
+                                        "Sea Salt Accord",
+                                        "Blue Lotus"
+                              ],
+                              "scent_notes_base": [
+                                        "Driftwood",
+                                        "Clear Amber"
+                              ],
+                              "concentration_percent": 15,
+                              "longevity": "6-8 Hours"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-backpack-tactical-28l",
+                    "name": "Squad One Tactical Laptop Backpack (28L)",
+                    "title": "Squad One Tactical Laptop Backpack (28L)",
+                    "quote": "Armored protection for your rig",
+                    "badge": "WATERPROOF \u00b7 16\" LAPTOP COMPARTMENT",
+                    "category": "Bags",
+                    "subcategory": "Squad One backpacks",
+                    "sku": "SQ1-BAG-BPK-28L",
+                    "price": 2499,
+                    "priceINR": 2499,
+                    "originalPrice": 3499,
+                    "currency": "\u20b9",
+                    "image": "images/side-front.png",
+                    "imageUrl": "images/side-front.png",
+                    "description": "Heavy duty 900D water-repellent Cordura nylon backpack with padded velvet compartment for up to 16\" gaming laptops, USB-C pass-through port, and MOLLE webbing.",
+                    "sizes": [
+                              "28L Capacity"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 35,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "capacity_liters": 28,
+                              "material": "900D Ballistic Cordura Nylon",
+                              "laptop_compartment": true,
+                              "laptop_size_fit": "Up to 16.0 inch Gaming Laptops",
+                              "water_resistant": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-crossbody-sling-bag",
+                    "name": "Squad One Tactical Crossbody Sling Bag",
+                    "title": "Squad One Tactical Crossbody Sling Bag",
+                    "quote": "Quick-access everyday carry",
+                    "badge": "MAGNETIC BUCKLE \u00b7 RIPSTOP",
+                    "category": "Bags",
+                    "subcategory": "Sling bags",
+                    "sku": "SQ1-BAG-SLG-6L",
+                    "price": 1199,
+                    "priceINR": 1199,
+                    "originalPrice": 1699,
+                    "currency": "\u20b9",
+                    "image": "images/Brand_Nme_.png",
+                    "imageUrl": "images/Brand_Nme_.png",
+                    "description": "Compact 6L tactical sling bag with Fidlock magnetic buckle, waterproof zippers, and hidden passport/phone security pocket.",
+                    "sizes": [
+                              "6L EDC Size"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 45,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "capacity_liters": 6,
+                              "material": "Reinforced Ripstop Nylon",
+                              "water_resistant": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-case-iphone-galaxy",
+                    "name": "Squad One Cyber Armor Shockproof Phone Case",
+                    "title": "Squad One Cyber Armor Shockproof Phone Case",
+                    "quote": "Military standard impact barrier",
+                    "badge": "MIL-STD 810G DROP TESTED",
+                    "category": "Tech",
+                    "subcategory": "Phone cases",
+                    "sku": "SQ1-TCH-CSE-PHN",
+                    "price": 699,
+                    "priceINR": 699,
+                    "originalPrice": 999,
+                    "currency": "\u20b9",
+                    "image": "images/Brand_Nme_.png",
+                    "imageUrl": "images/Brand_Nme_.png",
+                    "description": "Dual-layer bumper phone case engineered with air-cushioned corners and anti-scratch matte backplate. Available for leading flagship devices.",
+                    "sizes": [
+                              "iPhone 16 Pro Max",
+                              "iPhone 15 Pro",
+                              "Galaxy S24 Ultra"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 90,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "compatible_devices": [
+                                        "iPhone 16 Pro Max",
+                                        "iPhone 15 Pro",
+                                        "Galaxy S24 Ultra",
+                                        "Galaxy S23"
+                              ],
+                              "material": "Impact-absorbing TPU + Polycarbonate Armor"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-airpods-pro-case",
+                    "name": "Squad One Cyber Armor AirPods Pro 1/2 Case",
+                    "title": "Squad One Cyber Armor AirPods Pro 1/2 Case",
+                    "quote": "Secure earbud tactical armor",
+                    "badge": "CARABINER INCLUDED",
+                    "category": "Tech",
+                    "subcategory": "Earbud cases",
+                    "sku": "SQ1-TCH-CSE-APD",
+                    "price": 499,
+                    "priceINR": 499,
+                    "originalPrice": 799,
+                    "currency": "\u20b9",
+                    "image": "assets/teams/squadone.png",
+                    "imageUrl": "assets/teams/squadone.png",
+                    "description": "Rugged silicone cover with Squad One crest and zinc alloy carabiner. Compatible with wireless charging.",
+                    "sizes": [
+                              "AirPods Pro 1 & 2 Gen"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 70,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "compatible_devices": [
+                                        "AirPods Pro 1st & 2nd Gen"
+                              ],
+                              "material": "Heavy Shockproof Silicone"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-steel-thermos-flask",
+                    "name": "Squad One Matte Insulated Vacuum Thermos Flask (750ml)",
+                    "title": "Squad One Matte Insulated Vacuum Thermos Flask (750ml)",
+                    "quote": "Peak hydration at the gaming desk",
+                    "badge": "24HR COLD \u00b7 12HR HOT",
+                    "category": "Lifestyle",
+                    "subcategory": "Thermos/flasks",
+                    "sku": "SQ1-LFE-FLK-750",
+                    "price": 899,
+                    "priceINR": 899,
+                    "originalPrice": 1299,
+                    "currency": "\u20b9",
+                    "image": "images/loyalty.png",
+                    "imageUrl": "images/loyalty.png",
+                    "description": "Double-walled vacuum insulated 304 food-grade stainless steel bottle. Keeps drinks icy cold for 24 hours with leakproof spout lid.",
+                    "sizes": [
+                              "750ml"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 65,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "capacity_ml": 750,
+                              "material": "304 Food Grade Stainless Steel",
+                              "insulated": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-matte-coffee-mug",
+                    "name": "Squad One Ceramic Combat Coffee Mug (400ml)",
+                    "title": "Squad One Ceramic Combat Coffee Mug (400ml)",
+                    "quote": "Fuel for early tournament brackets",
+                    "badge": "MICROWAVE & DISHWASHER SAFE",
+                    "category": "Lifestyle",
+                    "subcategory": "Coffee mugs",
+                    "sku": "SQ1-LFE-MUG-400",
+                    "price": 449,
+                    "priceINR": 449,
+                    "originalPrice": 649,
+                    "currency": "\u20b9",
+                    "image": "images/Brand_Nme_.png",
+                    "imageUrl": "images/Brand_Nme_.png",
+                    "description": "Matte black stoneware ceramic coffee mug with neon cyber crest and ergonomic comfort handle.",
+                    "sizes": [
+                              "400ml"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 80,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "capacity_ml": 400,
+                              "material": "Matte Stoneware Ceramic"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-s3-champion-tee",
+                    "name": "Squad One National League S3 Grand Finals Champion Tee",
+                    "title": "Squad One National League S3 Grand Finals Champion Tee",
+                    "quote": "Commemorating Season 3 Glory",
+                    "badge": "OFFICIAL S3 TOURNAMENT MERCH",
+                    "category": "Esports",
+                    "subcategory": "Champion T-shirts",
+                    "sku": "SQ1-ESP-TEE-S3",
+                    "price": 1199,
+                    "priceINR": 1199,
+                    "originalPrice": 1699,
+                    "currency": "\u20b9",
+                    "image": "images/eventimage.jpeg",
+                    "imageUrl": "images/eventimage.jpeg",
+                    "description": "Official tournament souvenir tee celebrating 95 competing squads and the top 16 survivors of Season 3 Grand Finals.",
+                    "sizes": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 50,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "tournament_name": "Squad One National League S3",
+                              "season_year": "2026",
+                              "edition_type": "Champion",
+                              "size": [
+                                        "S",
+                                        "M",
+                                        "L",
+                                        "XL",
+                                        "XXL"
+                              ]
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-tournament-medal-lanyard",
+                    "name": "Squad One S3 Commemorative Heavy Metal Medal & Lanyard",
+                    "title": "Squad One S3 Commemorative Heavy Metal Medal & Lanyard",
+                    "quote": "Tangible proof of victory",
+                    "badge": "SOLID DIE-CAST ZINC",
+                    "category": "Esports",
+                    "subcategory": "Tournament medals",
+                    "sku": "SQ1-ESP-MDL-S3",
+                    "price": 799,
+                    "priceINR": 799,
+                    "originalPrice": 1199,
+                    "currency": "\u20b9",
+                    "image": "images/loyalty.png",
+                    "imageUrl": "images/loyalty.png",
+                    "description": "70mm heavyweight antique-plated tournament medal with embossed PUBG Battlegrounds winner motif and woven sublimated lanyard.",
+                    "sizes": [
+                              "70mm Diameter"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 40,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "tournament_name": "Squad One National League S3",
+                              "season_year": "2026",
+                              "edition_type": "Winner"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-wall-flag-banner",
+                    "name": "Squad One Championship Heavy Fabric Wall Flag (3\u00d75 ft)",
+                    "title": "Squad One Championship Heavy Fabric Wall Flag (3\u00d75 ft)",
+                    "quote": "Rep the squad in your stream background",
+                    "badge": "BRASS GROMMETS \u00b7 3\u00d75 FT",
+                    "category": "D\u00e9cor",
+                    "subcategory": "Wall flags",
+                    "sku": "SQ1-DEC-FLG-3X5",
+                    "price": 999,
+                    "priceINR": 999,
+                    "originalPrice": 1499,
+                    "currency": "\u20b9",
+                    "image": "images/eventimage.jpeg",
+                    "imageUrl": "images/eventimage.jpeg",
+                    "description": "High-density 100D knitted flag polyester banner with double-stitched hem and brass mounting grommets. Vivid UV-resistant colors.",
+                    "sizes": [
+                              "3ft x 5ft (90 x 150cm)"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 60,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "dimensions": "36in x 60in (3ft x 5ft)",
+                              "material": "100D Knitted Flag Polyester",
+                              "mount_type": "Hanging"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-framed-hologram-poster",
+                    "name": "Squad One 16 Finalists Metallic Hologram Framed Poster",
+                    "title": "Squad One 16 Finalists Metallic Hologram Framed Poster",
+                    "quote": "Framed collector artwork",
+                    "badge": "ALUMINUM FRAME INCLUDED",
+                    "category": "D\u00e9cor",
+                    "subcategory": "Framed team artwork",
+                    "sku": "SQ1-DEC-POS-16F",
+                    "price": 1299,
+                    "priceINR": 1299,
+                    "originalPrice": 1899,
+                    "currency": "\u20b9",
+                    "image": "images/sa-cross-bay-scrims.jpeg",
+                    "imageUrl": "images/sa-cross-bay-scrims.jpeg",
+                    "description": "18x24\" metallic foil print featuring the rosters and crests of all 16 finalist teams, encased in a matte black brushed aluminum frame with acrylic glass.",
+                    "sizes": [
+                              "18in x 24in"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 35,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "dimensions": "18in x 24in",
+                              "material": "Foil Holographic Metallic Paper",
+                              "frame_included": true,
+                              "mount_type": "Freestanding"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-enamel-crest-pin",
+                    "name": "Squad One Gold Edition Die-Cast Enamel Pin",
+                    "title": "Squad One Gold Edition Die-Cast Enamel Pin",
+                    "quote": "Wearable metallic prestige",
+                    "badge": "18K GOLD FINISH \u00b7 NUMBERED",
+                    "category": "Collectibles",
+                    "subcategory": "Enamel pins",
+                    "sku": "SQ1-COL-PIN-GLD",
+                    "price": 399,
+                    "priceINR": 399,
+                    "originalPrice": 599,
+                    "currency": "\u20b9",
+                    "image": "assets/teams/squadone.png",
+                    "imageUrl": "assets/teams/squadone.png",
+                    "description": "Hard enamel metal pin with polished 18K gold electroplating and dual rubber clutch backing. Mounted on laser-etched collector backing card.",
+                    "sizes": [
+                              "1.5 inch (38mm)"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 100,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "edition_size": 1000,
+                              "material": "Hard Enamel with 18K Gold Finish",
+                              "set_name": "2026 Founder Series"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-collector-card-pack",
+                    "name": "Squad One 16 Finalists Official Holographic Player Card Pack",
+                    "title": "Squad One 16 Finalists Official Holographic Player Card Pack",
+                    "quote": "Chase rare player signature foils",
+                    "badge": "5 HOLOGRAPHIC CARDS PER PACK",
+                    "category": "Collectibles",
+                    "subcategory": "Player cards",
+                    "sku": "SQ1-COL-CRD-PCK",
+                    "price": 499,
+                    "priceINR": 499,
+                    "originalPrice": 749,
+                    "currency": "\u20b9",
+                    "image": "images/eventimage.jpeg",
+                    "imageUrl": "images/eventimage.jpeg",
+                    "description": "Sealed booster pack containing 5 holographic cards featuring tournament finalists, player combat statistics, and a 1:10 chance of gold foil signature cards.",
+                    "sizes": [
+                              "5 Cards / Sealed Foil"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 150,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "edition_size": 2500,
+                              "material": "350 GSM Holographic Foil Cardstock",
+                              "set_name": "Series 1: National League"
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-cyber-overlay-pack",
+                    "name": "Squad One Animated Stream Overlay Pro Pack (OBS & Streamlabs)",
+                    "title": "Squad One Animated Stream Overlay Pro Pack (OBS & Streamlabs)",
+                    "quote": "Professional broadcast quality in 1 click",
+                    "badge": "INSTANT DOWNLOAD \u00b7 OBS READY",
+                    "category": "Digital",
+                    "subcategory": "Stream overlays",
+                    "sku": "SQ1-DIG-OVL-PRO",
+                    "price": 699,
+                    "priceINR": 699,
+                    "originalPrice": 1299,
+                    "currency": "\u20b9",
+                    "image": "images/sa-cross-bay-scrims.png",
+                    "imageUrl": "images/sa-cross-bay-scrims.png",
+                    "description": "Complete esports broadcast pack: 6 animated scenes (Starting Soon, Intermission, Live Gameplay, Be Right Back, Ending), animated webcam frames, stingers, alerts, and chat box.",
+                    "sizes": [
+                              "Instant ZIP Download (450MB)"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 9999,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "file_format": [
+                                        "WEBM",
+                                        "PNG",
+                                        "PSD",
+                                        "OBS Scene Collection"
+                              ],
+                              "resolution": "4K UHD & 1080p 60FPS",
+                              "delivery_method": "Instant download",
+                              "license_type": "Streamer use",
+                              "download_url": "https://assets.squadone.gg/digital/sq1-stream-overlay-v3.zip",
+                              "compatible_platforms": [
+                                        "OBS Studio",
+                                        "Streamlabs Desktop",
+                                        "Twitch",
+                                        "YouTube"
+                              ]
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-4k-wallpaper-vault",
+                    "name": "Squad One 4K Cyber Animated Phone & PC Wallpaper Vault",
+                    "title": "Squad One 4K Cyber Animated Phone & PC Wallpaper Vault",
+                    "quote": "30 ultra high resolution wallpapers",
+                    "badge": "30 ULTRA HD WALLPAPERS",
+                    "category": "Digital",
+                    "subcategory": "PC wallpapers",
+                    "sku": "SQ1-DIG-WAL-30P",
+                    "price": 299,
+                    "priceINR": 299,
+                    "originalPrice": 599,
+                    "currency": "\u20b9",
+                    "image": "images/sqnlS3.png",
+                    "imageUrl": "images/sqnlS3.png",
+                    "description": "Curated gallery of 30 4K UHD desktop and mobile wallpapers with cybernetic esports aesthetics, live animated loop versions for Wallpaper Engine included.",
+                    "sizes": [
+                              "Instant ZIP Download (680MB)"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 9999,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "file_format": [
+                                        "PNG",
+                                        "MP4 (Live Wallpaper)"
+                              ],
+                              "resolution": "4K UHD (3840x2160)",
+                              "delivery_method": "Instant download",
+                              "license_type": "Personal use",
+                              "download_url": "https://assets.squadone.gg/digital/sq1-4k-wallpapers.zip",
+                              "compatible_platforms": [
+                                        "Windows",
+                                        "macOS",
+                                        "Wallpaper Engine",
+                                        "iOS",
+                                        "Android"
+                              ]
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-starter-gamer-pack",
+                    "name": "Starter Gamer Pack: Oversized Tee + Tactical Cap + Mousepad",
+                    "title": "Starter Gamer Pack: Oversized Tee + Tactical Cap + Mousepad",
+                    "quote": "The complete esports starter kit",
+                    "badge": "BUNDLE & SAVE 30%",
+                    "category": "Bundles",
+                    "subcategory": "Starter Gamer Pack",
+                    "sku": "SQ1-BDL-STR-PCK",
+                    "price": 2299,
+                    "priceINR": 2299,
+                    "originalPrice": 3297,
+                    "currency": "\u20b9",
+                    "image": "images/new Products/Final_1-_Black_.png",
+                    "imageUrl": "images/new Products/Final_1-_Black_.png",
+                    "description": "Save 30% on our premier gear bundle: includes (1) S1VE \u00d7 Squad One Blackout Oversized Tee, (1) Tactical Snapback Cap, and (1) Precision Esports Mousepad.",
+                    "sizes": [
+                              "Tee: S to XXL (Selectable)"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 30,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "bundle_items": [
+                                        "s1ve-sq1-oversized-black",
+                                        "sq1-pro-gamer-cap",
+                                        "sq1-precision-mousepad"
+                              ],
+                              "bundle_discount_percent": 30,
+                              "is_customizable_bundle": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-ultimate-fan-box",
+                    "name": "Ultimate SQ-1 Fan Box (Jersey + Perfume + Backpack + Enamel Pin)",
+                    "title": "Ultimate SQ-1 Fan Box (Jersey + Perfume + Backpack + Enamel Pin)",
+                    "quote": "The crowning Squad One collector crate",
+                    "badge": "VIP COLLECTOR CRATE \u00b7 32% SAVINGS",
+                    "category": "Bundles",
+                    "subcategory": "Ultimate SQ-1 Fan Box",
+                    "sku": "SQ1-BDL-ULT-BOX",
+                    "price": 4999,
+                    "priceINR": 4999,
+                    "originalPrice": 7296,
+                    "currency": "\u20b9",
+                    "image": "images/new Products/Final_1-_White.png",
+                    "imageUrl": "images/new Products/Final_1-_White.png",
+                    "description": "The definitive Squad One experience: Custom Player Jersey 2026, SQ-1 Victory EDP (100ml), 28L Tactical Laptop Backpack, and 18K Gold Enamel Pin, delivered in a luxury magnetic gift crate.",
+                    "sizes": [
+                              "Jersey: S to XXL (Selectable)"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 20,
+                    "isLimitedEdition": false,
+                    "attributes": {
+                              "bundle_items": [
+                                        "s1ve-sq1-oversized-white",
+                                        "sq1-perfume-victory-edp",
+                                        "sq1-backpack-tactical-28l",
+                                        "sq1-enamel-crest-pin"
+                              ],
+                              "bundle_discount_percent": 32,
+                              "is_customizable_bundle": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-limited-anniversary-drop",
+                    "name": "SQ-1 2nd Anniversary Gold Edition Embroidered Bomber Jacket",
+                    "title": "SQ-1 2nd Anniversary Gold Edition Embroidered Bomber Jacket",
+                    "quote": "Only 100 pieces crafted worldwide",
+                    "badge": "ONLY 100 PIECES \u00b7 GOLD METALLIC",
+                    "category": "Limited Drop",
+                    "subcategory": "Anniversary collection",
+                    "sku": "SQ1-LTD-JCK-100",
+                    "price": 3499,
+                    "priceINR": 3499,
+                    "originalPrice": 4999,
+                    "currency": "\u20b9",
+                    "image": "images/side.png",
+                    "imageUrl": "images/side.png",
+                    "description": "Exclusive 2nd Anniversary satin bomber jacket featuring intricate 100,000-stitch metallic gold team embroidery on the back and individual laser-numbered metal badge on the sleeve.",
+                    "sizes": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                    ],
+                    "allowCustomIGN": true,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 100,
+                    "isLimitedEdition": true,
+                    "attributes": {
+                              "drop_name": "SQ-1 Anniversary Drop 01",
+                              "release_date": "2026-09-15 18:00 IST",
+                              "total_stock": 100,
+                              "countdown_enabled": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+                    "id": "sq1-limited-founder-fragrance",
+                    "name": "SQ-1 Black Gold Founder Edition Perfume (Hand-Signed Box)",
+                    "title": "SQ-1 Black Gold Founder Edition Perfume (Hand-Signed Box)",
+                    "quote": "Extrait de Parfum \u00b7 30% concentration",
+                    "badge": "HAND-NUMBERED \u00b7 1 OF 250",
+                    "category": "Limited Drop",
+                    "subcategory": "Limited perfumes",
+                    "sku": "SQ1-LTD-FRG-250",
+                    "price": 2499,
+                    "priceINR": 2499,
+                    "originalPrice": 3499,
+                    "currency": "\u20b9",
+                    "image": "images/loyalty.png",
+                    "imageUrl": "images/loyalty.png",
+                    "description": "Ultra-concentrated Extrait de Parfum in an obsidian glass flacon with 24K gold foil branding. Hand-signed presentation box by Squad One leadership.",
+                    "sizes": [
+                              "100ml Extrait"
+                    ],
+                    "allowCustomIGN": false,
+                    "inStock": true,
+                    "hidden": false,
+                    "stock": 250,
+                    "isLimitedEdition": true,
+                    "attributes": {
+                              "drop_name": "Founder Fragrance Series",
+                              "release_date": "2026-09-12 20:00 IST",
+                              "total_stock": 250,
+                              "countdown_enabled": true
+                    },
+                    "checkoutUrl": "https://store.squadone.gg/checkout"
           }
+]
         ]
       },
       news: DEFAULT_NEWS_STORIES
@@ -11733,6 +14408,11 @@
         renderStoreProducts();
       }
 
+      const storeSettings = cfg.storeSettings || (cfg.store && cfg.store.settings) || null;
+      if (storeSettings && typeof window.applyStoreSettings === 'function') {
+        window.applyStoreSettings(storeSettings);
+      }
+
       // 5. Tournaments & Seasons Dynamic Sync
       if (cfg.tournaments && Array.isArray(cfg.tournaments) && typeof renderTournamentSeasons === 'function') {
         renderTournamentSeasons(cfg.tournaments, cfg.activeSeasonId);
@@ -11747,10 +14427,22 @@
     /* ==========================================================================
        19. SQUAD ONE OFFICIAL STORE & SHOPPING APP ENGINE
        ========================================================================== */
+    window._activeStoreCategory = 'All';
+    window._activeFragranceLine = 'All';
+    window._activeFragranceType = 'All';
+    window._activeApparelSize = 'All';
+    window._activeStoreSort = 'featured';
+    window._storeSearchQuery = '';
+    window._storeFilterLimitedOnly = false;
+    window._storeFilterInStockOnly = false;
+    window._currentModalProduct = null;
+    window._currentModalQty = 1;
+    window._currentModalSelectedVariant = null;
+
     function getStoreProducts() {
       const cfg = window._sq1ActiveConfig || loadSiteConfig() || SQ1_DEFAULT_CONFIG;
       let prods = (cfg.store && Array.isArray(cfg.store.products)) ? cfg.store.products : [];
-      // Sanitize: filter out dummy or placeholder products like prod-1788722681111, prod-1, etc.
+      // Sanitize: filter out dummy or corrupted items
       prods = prods.filter(p => p && p.id && !p.id.includes('prod-1788722681111') && !p.id.startsWith('prod-') && (p.title || p.name));
       if (prods.length === 0) {
         prods = SQ1_DEFAULT_CONFIG.store.products;
@@ -11758,68 +14450,509 @@
       return prods;
     }
 
-    // Render Store Products Grid on Live Website
+    // Toggle navigation dropdown on mobile devices
+    window.toggleStoreNavDropdown = function(e) {
+      if (e) e.preventDefault();
+      const item = document.getElementById('nav-item-store-dropdown');
+      if (item) item.classList.toggle('is-open');
+    };
+
+
+    // Professional SVG Vector Icon Dictionary
+    const SQ1_ICONS = {
+      'categories': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>`,
+      'All': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>`,
+      'Apparel': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>`,
+      'Gaming Accessories': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="6"></rect></svg>`,
+      'Fragrances': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4v3h-4z"></path><path d="M7 8h10l1.5 13H5.5L7 8z"></path><path d="M12 8v13"></path><path d="M9 13h6"></path></svg>`,
+      'Bags': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-9z"></path><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><path d="M8 12h8"></path><path d="M8 16h8"></path></svg>`,
+      'Tech': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`,
+      'Lifestyle': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8v2H8z"></path><path d="M7 6h10a1 1 0 0 1 1 1v13a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V7a1 1 0 0 1 1-1z"></path><line x1="6" y1="11" x2="18" y2="11"></line></svg>`,
+      'Esports': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path><path d="M6 3h12v7a6 6 0 0 1-12 0V3z"></path></svg>`,
+      'Décor': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>`,
+      'Collectibles': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5.25-3.5 10-8 11-4.5-1-8-5.75-8-11V6l8-4z"></path><path d="M9 12l2 2 4-4"></path></svg>`,
+      'Digital': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line><path d="M8 10l4 4 4-4"></path></svg>`,
+      'Bundles': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>`,
+      'Limited Drop': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>`,
+      'cart': `<svg class="sq1-action-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`,
+      'bolt': `<svg class="sq1-action-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`,
+      'zoom': `<svg class="sq1-action-svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`,
+      'edit': `<svg class="sq1-action-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>`
+    };
+
+    // Toggle Categories Popover in Store Toolbar
+    window.toggleStoreCategoryDropdown = function(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const wrap = document.getElementById('store-category-dropdown-wrap');
+      if (wrap) wrap.classList.toggle('is-open');
+    };
+
+    // Global listener: Close category popover when clicking anywhere outside
+    document.addEventListener('click', function(e) {
+      const wrap = document.getElementById('store-category-dropdown-wrap');
+      if (wrap && wrap.classList.contains('is-open')) {
+        if (!wrap.contains(e.target)) {
+          wrap.classList.remove('is-open');
+        }
+      }
+    });
+
+    // Category Filter Trigger
+    window.setStoreCategoryFilter = function(catName, e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      window._activeStoreCategory = catName;
+      window._activeFragranceLine = 'All';
+      window._activeFragranceType = 'All';
+      window._activeApparelSize = 'All';
+
+      // Close popover and nav dropdown if open
+      const wrap = document.getElementById('store-category-dropdown-wrap');
+      if (wrap) wrap.classList.remove('is-open');
+      const navItem = document.getElementById('nav-item-store-dropdown');
+      if (navItem) navItem.classList.remove('is-open');
+
+      const allProds = getStoreProducts();
+      const count = (catName === 'All') ? allProds.length : allProds.filter(p => p.category === catName).length;
+      const svgIcon = SQ1_ICONS[catName] || SQ1_ICONS['categories'];
+
+      // Update Toolbar Categories Button Label
+      const valEl = document.getElementById('active-cat-name');
+      const icoEl = document.getElementById('active-cat-icon');
+      if (valEl) valEl.textContent = (catName === 'All') ? `ALL MERCHANDISE (${count})` : `${catName.toUpperCase()} (${count})`;
+      if (icoEl) icoEl.innerHTML = svgIcon;
+
+      // Update Popover Active Items
+      document.querySelectorAll('.popover-cat-item').forEach(item => {
+        if (item.getAttribute('data-cat') === catName) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      // Update Horizontal Pill Bar Active Items
+      document.querySelectorAll('#store-category-pills-bar .store-pill-btn').forEach(btn => {
+        if (btn.getAttribute('data-cat') === catName) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Update Active Filter Bar
+      const activeBar = document.getElementById('store-active-filter-bar');
+      const activeTxt = document.getElementById('active-filter-text');
+      const activeIco = document.getElementById('active-filter-icon');
+      if (activeBar) {
+        if (catName !== 'All' && !activeBar.getAttribute('data-disabled')) {
+          activeBar.style.display = 'flex';
+          if (activeTxt) activeTxt.textContent = `Category: ${catName} (${count})`;
+          if (activeIco) activeIco.innerHTML = svgIcon;
+        } else {
+          activeBar.style.display = 'none';
+        }
+      }
+
+      renderSubfilters();
+      renderStoreProducts();
+
+      // Scroll smoothly to store section if requested from outside
+      const storeSec = document.getElementById('store');
+      if (storeSec && e && !e.target.closest('.store-category-dropdown-wrap') && !e.target.closest('.store-category-pills-bar')) {
+        storeSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    // Reset All Store Filters
+    window.resetAllStoreFilters = function() {
+      window._activeStoreCategory = 'All';
+      window._activeFragranceLine = 'All';
+      window._activeFragranceType = 'All';
+      window._activeApparelSize = 'All';
+      window._storeSearchQuery = '';
+      window._storeFilterLimitedOnly = false;
+      window._storeFilterInStockOnly = false;
+
+      const searchInp = document.getElementById('store-search-input');
+      if (searchInp) searchInp.value = '';
+
+      const ltdToggle = document.getElementById('toggle-limited-only');
+      if (ltdToggle) ltdToggle.checked = false;
+
+      const stockToggle = document.getElementById('toggle-instock-only');
+      if (stockToggle) stockToggle.checked = false;
+
+      document.querySelectorAll('#store-category-pills-bar .store-pill-btn').forEach(btn => {
+        if (btn.getAttribute('data-cat') === 'All') {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      setStoreCategoryFilter('All');
+    };
+
+    // Storefront Configuration & Layout Consumer
+    window.applyStoreSettings = function(settings) {
+      if (!settings) return;
+      window._currentStoreSettings = settings;
+
+      // 1. Search Bar Visibility Toggle
+      const searchWrap = document.querySelector('.store-search-wrap');
+      if (searchWrap) {
+        searchWrap.style.display = (settings.enable_search === false || settings.enableSearch === false) ? 'none' : 'flex';
+      }
+
+      // 2. Sort Dropdown Visibility Toggle
+      const sortWrap = document.querySelector('.store-sort-wrap');
+      if (sortWrap) {
+        sortWrap.style.display = (settings.enable_sort === false || settings.enableSort === false) ? 'none' : 'flex';
+      }
+
+      // 3. Active Chips Visibility Toggle
+      const chipsBar = document.getElementById('store-active-filter-bar');
+      if (chipsBar) {
+        if (settings.enable_chips === false || settings.enableChips === false) {
+          chipsBar.setAttribute('data-disabled', 'true');
+          chipsBar.style.display = 'none';
+        } else {
+          chipsBar.removeAttribute('data-disabled');
+        }
+      }
+
+      // 4. Category Selector Mode: Pill Bar vs Compact Dropdown
+      const displayMode = settings.display_mode || settings.displayMode || 'pill_bar';
+      const dropdownWrap = document.getElementById('store-category-dropdown-wrap');
+      const pillsBar = document.getElementById('store-category-pills-bar');
+
+      if (displayMode === 'pill_bar') {
+        if (pillsBar) pillsBar.style.display = 'flex';
+        if (dropdownWrap) dropdownWrap.style.display = 'none';
+      } else {
+        if (pillsBar) pillsBar.style.display = 'none';
+        if (dropdownWrap) dropdownWrap.style.display = 'block';
+      }
+
+      // 5. Populate / Filter active categories in Pill Bar and Popover
+      if (Array.isArray(settings.categories) && settings.categories.length > 0) {
+        const activeCats = settings.categories.filter(c => (c.is_active !== false && c.active !== false));
+        if (pillsBar) {
+          pillsBar.innerHTML = `
+            <button type="button" class="store-pill-btn ${(window._activeStoreCategory === 'All') ? 'active' : ''}" data-cat="All" onclick="setStoreCategoryFilter('All', event)">
+              <span class="pill-icon">✨</span>
+              <span>ALL</span>
+            </button>
+            ${activeCats.map(c => `
+              <button type="button" class="store-pill-btn ${(window._activeStoreCategory === c.name) ? 'active' : ''} ${c.name === 'Limited Drop' ? 'highlight-ltd' : ''}" data-cat="${c.name}" onclick="setStoreCategoryFilter('${c.name}', event)">
+                <span class="pill-icon">${SQ1_ICONS[c.name] || c.badge || '📦'}</span>
+                <span>${c.name}</span>
+              </button>
+            `).join('')}
+          `;
+        }
+      }
+    };
+
+    window.onStoreSearchInput = function(val) {
+      window._storeSearchQuery = (val || '').trim().toLowerCase();
+      renderStoreProducts();
+    };
+
+    window.clearStoreSearch = function() {
+      const inp = document.getElementById('store-search-input');
+      if (inp) inp.value = '';
+      window._storeSearchQuery = '';
+      renderStoreProducts();
+    };
+
+    window.onStoreSortChange = function(val) {
+      window._activeStoreSort = val;
+      renderStoreProducts();
+    };
+
+    window.onToggleLimitedOnly = function(checked) {
+      window._storeFilterLimitedOnly = !!checked;
+      renderStoreProducts();
+    };
+
+    window.onToggleInStockOnly = function(checked) {
+      window._storeFilterInStockOnly = !!checked;
+      renderStoreProducts();
+    };
+
+    // Render Contextual Subfilters for Fragrance, Apparel, etc.
+    function renderSubfilters() {
+      const container = document.getElementById('store-subfilters');
+      if (!container) return;
+
+      const cat = window._activeStoreCategory;
+
+      if (cat === 'Fragrances') {
+        container.style.display = 'flex';
+        const lines = ['All', 'Victory', 'Clutch', 'Stealth', 'Rush', 'Elite', 'Aftermatch'];
+        const types = ['All', 'EDP', 'EDT', 'Cologne', 'Gift set', 'Spray', 'Deodorant', 'Car fragrance', 'Discovery set'];
+
+        container.innerHTML = `
+          <span class="subfilter-label">Fragrance Line:</span>
+          ${lines.map(line => `
+            <button type="button" class="subfilter-chip ${window._activeFragranceLine === line ? 'active' : ''}" onclick="setFragranceLineFilter('${line}')">
+              ${line === 'All' ? 'All Lines' : 'SQ-1 ' + line}
+            </button>
+          `).join('')}
+          <span class="subfilter-label" style="margin-left: 12px;">Type:</span>
+          ${types.map(t => `
+            <button type="button" class="subfilter-chip ${window._activeFragranceType === t ? 'active' : ''}" onclick="setFragranceTypeFilter('${t}')">
+              ${t}
+            </button>
+          `).join('')}
+        `;
+      } else if (cat === 'Apparel') {
+        container.style.display = 'flex';
+        const sizes = ['All', 'S', 'M', 'L', 'XL', 'XXL'];
+        container.innerHTML = `
+          <span class="subfilter-label">Filter by Size:</span>
+          ${sizes.map(s => `
+            <button type="button" class="subfilter-chip ${window._activeApparelSize === s ? 'active' : ''}" onclick="setApparelSizeFilter('${s}')">
+              ${s}
+            </button>
+          `).join('')}
+        `;
+      } else {
+        container.style.display = 'none';
+        container.innerHTML = '';
+      }
+    }
+
+    window.setFragranceLineFilter = function(line) {
+      window._activeFragranceLine = line;
+      renderSubfilters();
+      renderStoreProducts();
+    };
+
+    window.setFragranceTypeFilter = function(type) {
+      window._activeFragranceType = type;
+      renderSubfilters();
+      renderStoreProducts();
+    };
+
+    window.setApparelSizeFilter = function(size) {
+      window._activeApparelSize = size;
+      renderSubfilters();
+      renderStoreProducts();
+    };
+
+    // Update Category Pills Counts
+    function updateCategoryPillsCount(allProducts) {
+      const counts = { 'All': allProducts.length };
+      allProducts.forEach(p => {
+        const c = p.category || 'Apparel';
+        counts[c] = (counts[c] || 0) + 1;
+      });
+
+      Object.keys(counts).forEach(k => {
+        const el = document.getElementById(`count-${k}`);
+        if (el) el.textContent = counts[k];
+      });
+    }
+
+    // Main Storefront Render Method
     window.renderStoreProducts = function() {
       const grid = document.getElementById('store-product-grid');
       const vaultCard = document.getElementById('store-vault-empty-card') || document.querySelector('.store-vault-card');
       if (!grid) return;
 
       const allProducts = getStoreProducts();
-      // Filter out products that are set to hidden: true
-      const products = allProducts.filter(p => !p.hidden);
+      updateCategoryPillsCount(allProducts);
 
-      if (!products || products.length === 0) {
+      // Filtering Pipeline
+      let filtered = allProducts.filter(p => !p.hidden);
+
+      // 1. Category Filter
+      if (window._activeStoreCategory && window._activeStoreCategory !== 'All') {
+        filtered = filtered.filter(p => p.category === window._activeStoreCategory);
+      }
+
+      // 2. Fragrance Subfilters
+      if (window._activeStoreCategory === 'Fragrances') {
+        if (window._activeFragranceLine && window._activeFragranceLine !== 'All') {
+          const target = window._activeFragranceLine.toLowerCase();
+          filtered = filtered.filter(p => {
+            const lineAttr = (p.attributes && p.attributes.fragrance_line) ? p.attributes.fragrance_line.toLowerCase() : '';
+            const title = (p.title || p.name || '').toLowerCase();
+            return lineAttr.includes(target) || title.includes(target);
+          });
+        }
+        if (window._activeFragranceType && window._activeFragranceType !== 'All') {
+          const targetType = window._activeFragranceType.toLowerCase();
+          filtered = filtered.filter(p => {
+            const sub = (p.subcategory || '').toLowerCase();
+            const ftype = (p.attributes && p.attributes.fragrance_type) ? p.attributes.fragrance_type.toLowerCase() : '';
+            const title = (p.title || p.name || '').toLowerCase();
+            return sub.includes(targetType) || ftype.includes(targetType) || title.includes(targetType);
+          });
+        }
+      }
+
+      // 3. Apparel Size Subfilter
+      if (window._activeStoreCategory === 'Apparel' && window._activeApparelSize && window._activeApparelSize !== 'All') {
+        filtered = filtered.filter(p => p.sizes && p.sizes.includes(window._activeApparelSize));
+      }
+
+      // 4. Quick Toggles
+      if (window._storeFilterLimitedOnly) {
+        filtered = filtered.filter(p => p.isLimitedEdition || p.category === 'Limited Drop');
+      }
+      if (window._storeFilterInStockOnly) {
+        filtered = filtered.filter(p => p.inStock !== false && (p.stock === undefined || p.stock > 0));
+      }
+
+      // 5. Search Query
+      if (window._storeSearchQuery) {
+        const q = window._storeSearchQuery;
+        filtered = filtered.filter(p => {
+          const title = (p.title || p.name || '').toLowerCase();
+          const desc = (p.description || '').toLowerCase();
+          const sub = (p.subcategory || '').toLowerCase();
+          const quote = (p.quote || '').toLowerCase();
+          const sku = (p.sku || '').toLowerCase();
+          const cat = (p.category || '').toLowerCase();
+          return title.includes(q) || desc.includes(q) || sub.includes(q) || quote.includes(q) || sku.includes(q) || cat.includes(q);
+        });
+      }
+
+      // 6. Sorting
+      if (window._activeStoreSort === 'price-asc') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (window._activeStoreSort === 'price-desc') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (window._activeStoreSort === 'name-asc') {
+        filtered.sort((a, b) => (a.title || a.name).localeCompare(b.title || b.name));
+      } else if (window._activeStoreSort === 'limited') {
+        filtered.sort((a, b) => (b.isLimitedEdition ? 1 : 0) - (a.isLimitedEdition ? 1 : 0));
+      }
+
+      // Render Empty State
+      if (!filtered || filtered.length === 0) {
         grid.style.display = 'none';
         grid.innerHTML = '';
-        if (vaultCard) vaultCard.style.display = 'block';
+        if (vaultCard) {
+          vaultCard.style.display = 'block';
+          vaultCard.querySelector('.store-vault-title').textContent = 'NO MERCHANDISE MATCHES YOUR FILTER';
+          vaultCard.querySelector('.store-vault-desc').textContent = 'Try adjusting your search terms, fragrance line selection, or reset category filters to browse all available armory items.';
+        }
         return;
       }
 
       if (vaultCard) vaultCard.style.display = 'none';
       grid.style.display = 'grid';
-      grid.innerHTML = products.map((prod, idx) => {
-        const sizes = prod.sizes || ["S", "M", "L", "XL"];
+
+      grid.innerHTML = filtered.map(prod => {
+        const sizes = prod.sizes || ["STD"];
+        const curSize = window._selectedProductSizes[prod.id] || sizes[0];
         const discountPct = (prod.originalPrice && prod.originalPrice > prod.price)
           ? Math.round(((prod.originalPrice - prod.price) / prod.originalPrice) * 100)
           : null;
 
-        const sizesHtml = sizes.map((s, sIdx) => `
-          <button type="button" class="size-btn ${sIdx === 0 ? 'active' : ''}" data-prod-id="${prod.id}" data-size="${s}" onclick="selectProductSize('${prod.id}', this, '${s}')">
+        const catSvg = SQ1_ICONS[prod.category] || SQ1_ICONS['All'];
+
+        // Dynamic Mini Spec Pills Preview (Clean Typography Without Emojis)
+        let specPillsHtml = '';
+        if (prod.category === 'Fragrances' && prod.attributes && prod.attributes.top_notes) {
+          specPillsHtml = `
+            <div class="product-spec-preview">
+              <span class="spec-mini-pill pill-notes"><span class="note-tier-badge">TOP</span>${prod.attributes.top_notes.slice(0, 2).join(', ')}</span>
+              ${prod.attributes.fragrance_line ? `<span class="spec-mini-pill">SQ-1 ${prod.attributes.fragrance_line.toUpperCase()}</span>` : ''}
+            </div>
+          `;
+        } else if (prod.category === 'Gaming Accessories' && prod.attributes && prod.attributes.dimensions) {
+          specPillsHtml = `
+            <div class="product-spec-preview">
+              <span class="spec-mini-pill">DIM: ${prod.attributes.dimensions}</span>
+              <span class="spec-mini-pill">${prod.attributes.surface || 'Cordura Weave'}</span>
+            </div>
+          `;
+        } else if (prod.category === 'Apparel' && prod.attributes && prod.attributes.fabric) {
+          specPillsHtml = `
+            <div class="product-spec-preview">
+              <span class="spec-mini-pill">${prod.attributes.fabric}</span>
+              <span class="spec-mini-pill">${prod.attributes.fit || 'Oversized'}</span>
+            </div>
+          `;
+        } else if (prod.category === 'Digital' && prod.attributes && prod.attributes.format) {
+          specPillsHtml = `
+            <div class="product-spec-preview">
+              <span class="spec-mini-pill">${prod.attributes.format}</span>
+              <span class="spec-mini-pill">${prod.attributes.resolution || '4K 60FPS'}</span>
+            </div>
+          `;
+        } else if (prod.subcategory) {
+          specPillsHtml = `
+            <div class="product-spec-preview">
+              <span class="spec-mini-pill">${prod.subcategory}</span>
+            </div>
+          `;
+        }
+
+        const sizesHtml = sizes.length > 1 ? sizes.map(s => `
+          <button type="button" class="size-btn ${s === curSize ? 'active' : ''}" data-prod-id="${prod.id}" data-size="${s}" onclick="selectProductSize('${prod.id}', this, '${s}')">
             ${s}
           </button>
-        `).join('');
+        `).join('') : '';
 
         return `
           <div class="product-card" id="product-card-${prod.id}" data-sound="hover">
             ${prod.badge ? `<div class="product-badge">${prod.badge}</div>` : ''}
+            
             <div class="product-image-box" data-zoom-box="true" data-image-src="${prod.image || 'images/new Products/Final_1-_White.png'}" title="Hover & drag to zoom and inspect details">
-              <img src="${prod.image || 'images/new Products/Final_1-_White.png'}" alt="${prod.title}" onerror="this.src='assets/teams/squadone.png'">
+              <span class="product-zoom-pill">${SQ1_ICONS['zoom']} DRAG TO ZOOM</span>
+              <img src="${prod.image || 'images/new Products/Final_1-_White.png'}" alt="${prod.title || prod.name}" onerror="this.src='assets/teams/squadone.png'">
             </div>
+
             <div class="product-details">
-              <h3 class="product-title">${prod.title}</h3>
+              <div class="product-cat-chip">
+                <span>${catSvg}</span>
+                <span>${prod.category || 'APPAREL'} ${prod.subcategory ? '· ' + prod.subcategory : ''}</span>
+              </div>
+
+              <h3 class="product-title">${prod.title || prod.name}</h3>
               <div class="product-quote">“${prod.quote || 'Upgrade your Vogue'}”</div>
               <p class="product-desc">${prod.description || ''}</p>
               
+              ${specPillsHtml}
+
               <div class="product-price-box">
                 <span class="product-price-curr">${prod.currency || '₹'}${prod.price.toLocaleString()}</span>
                 ${prod.originalPrice ? `<span class="product-price-orig">${prod.currency || '₹'}${prod.originalPrice.toLocaleString()}</span>` : ''}
                 ${discountPct ? `<span class="product-discount-tag">-${discountPct}% OFF</span>` : ''}
               </div>
 
-              <div class="product-size-label">
-                <span>SELECT SIZE</span>
-                <span style="color: var(--text-bone); font-size: 0.68rem;" id="selected-size-label-${prod.id}">SIZE: ${sizes[0] || 'STD'}</span>
-              </div>
-              <div class="product-sizes-row" id="size-row-${prod.id}">
-                ${sizesHtml}
-              </div>
+              ${sizes.length > 1 ? `
+                <div class="product-size-label">
+                  <span>SELECT OPTION</span>
+                  <span style="color: var(--text-bone); font-size: 0.68rem;" id="selected-size-label-${prod.id}">SIZE: ${curSize}</span>
+                </div>
+                <div class="product-sizes-row" id="size-row-${prod.id}">
+                  ${sizesHtml}
+                </div>
+              ` : ''}
+
+              <button type="button" class="product-inspect-btn" onclick="openProductDetailModal('${prod.id}')" data-sound="click">
+                QUICK VIEW / SPECS ↗
+              </button>
 
               <div class="product-actions-row">
                 <button type="button" class="cyber-btn cyber-btn-outline" onclick="addProductToCart('${prod.id}', false)" data-sound="click">
-                  ADD TO CART 🛒
+                  ${SQ1_ICONS['cart']} ADD TO CART
                 </button>
                 <button type="button" class="cyber-btn cyber-btn-crimson" onclick="addProductToCart('${prod.id}', true)" data-sound="click">
-                  BUY NOW ⚡
+                  ${SQ1_ICONS['bolt']} BUY NOW
                 </button>
               </div>
             </div>
@@ -11832,144 +14965,311 @@
       }
     };
 
-    // Interactive Product Image Drag & Zoom Controller (Drag-Only, Normal Hover Preserved)
-    window.initProductImageZoomDrag = function() {
-      document.querySelectorAll('.product-image-box[data-zoom-box="true"]').forEach(box => {
-        if (box._zoomInitialized) return;
-        box._zoomInitialized = true;
+    // Interactive Product Detail Modal Logic
+    window.openProductDetailModal = function(productId) {
+      const products = getStoreProducts();
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
 
-        const img = box.querySelector('img');
-        if (!img) return;
+      window._currentModalProduct = product;
+      window._currentModalQty = 1;
 
-        let isPointerDown = false;
-        let isDragging = false;
-        let startX = 0, startY = 0;
-        let lastX = 0, lastY = 0;
-        let currentX = 0, currentY = 0;
-        let dragDistance = 0;
-        const ZOOM_FACTOR = 1.9; // Magnify when actively dragged
+      const modal = document.getElementById('store-product-detail-modal');
+      if (!modal) return;
 
-        function setTransform(x, y, scale, smooth = false) {
-          img.style.transition = smooth ? 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)' : 'transform 0.05s ease-out';
-          img.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+      // Badges & Categories
+      document.getElementById('modal-product-badge').textContent = product.badge || 'OFFICIAL ARMORY';
+      document.getElementById('modal-product-cat-tag').textContent = `${product.category || 'MERCHANDISE'} ${product.subcategory ? '· ' + product.subcategory : ''}`;
+      document.getElementById('modal-product-sku').textContent = `SKU: ${product.sku || product.id.toUpperCase()}`;
+
+      // Title, Quote, Description
+      document.getElementById('modal-product-title').textContent = product.title || product.name;
+      document.getElementById('modal-product-quote').textContent = `“${product.quote || 'Upgrade your Vogue'}”`;
+      document.getElementById('modal-product-desc').textContent = product.description || '';
+
+      // Pricing
+      const discountPct = (product.originalPrice && product.originalPrice > product.price)
+        ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+        : null;
+
+      document.getElementById('modal-product-price').textContent = `${product.currency || '₹'}${product.price.toLocaleString()}`;
+      const origEl = document.getElementById('modal-product-orig-price');
+      if (product.originalPrice) {
+        origEl.textContent = `${product.currency || '₹'}${product.originalPrice.toLocaleString()}`;
+        origEl.style.display = 'inline';
+      } else {
+        origEl.style.display = 'none';
+      }
+
+      const discEl = document.getElementById('modal-product-discount');
+      if (discountPct) {
+        discEl.textContent = `-${discountPct}% OFF`;
+        discEl.style.display = 'inline';
+      } else {
+        discEl.style.display = 'none';
+      }
+
+      // Stock status
+      const inStock = product.inStock !== false && (product.stock === undefined || product.stock > 0);
+      const stockEl = document.getElementById('modal-product-stock-status');
+      stockEl.textContent = inStock ? `● In Stock (${product.stock || 50} Available)` : '✕ Sold Out';
+      stockEl.style.color = inStock ? '#00ff88' : '#ED1418';
+
+      // Images Gallery
+      const mainImg = document.getElementById('modal-product-main-img');
+      const gallery = (product.images && product.images.length > 0) ? product.images : [product.image || 'images/new Products/Final_1-_White.png'];
+      mainImg.src = gallery[0];
+      mainImg.alt = product.title || product.name;
+
+      const thumbsContainer = document.getElementById('modal-product-thumbs');
+      if (thumbsContainer) {
+        if (gallery.length > 1) {
+          thumbsContainer.innerHTML = gallery.map((imgSrc, idx) => `
+            <button type="button" class="store-modal-thumb-btn ${idx === 0 ? 'active' : ''}" onclick="switchModalGalleryImage('${imgSrc}', this)">
+              <img src="${imgSrc}" alt="Thumbnail ${idx + 1}" onerror="this.src='assets/teams/squadone.png'">
+            </button>
+          `).join('');
+          thumbsContainer.style.display = 'flex';
+        } else {
+          thumbsContainer.innerHTML = '';
+          thumbsContainer.style.display = 'none';
         }
+      }
 
-        // NO automatic zoom on simple cursor touch/hover (preserves standard old-type hover)
-        box.addEventListener('mousedown', (e) => {
-          isPointerDown = true;
-          isDragging = false;
-          dragDistance = 0;
-          startX = lastX = e.clientX;
-          startY = lastY = e.clientY;
-          currentX = 0;
-          currentY = 0;
-          e.preventDefault();
-        });
+      // Category Dynamic Spec Block
+      const specContainer = document.getElementById('modal-dynamic-specs');
+      const attrs = product.attributes || {};
 
-        window.addEventListener('mousemove', (e) => {
-          if (!isPointerDown) return; // Cursor touching image without holding mouse point does NOT zoom
+      if (product.category === 'Fragrances') {
+        specContainer.style.display = 'block';
+        specContainer.innerHTML = `
+          <div class="olfactory-pyramid-title">${SQ1_ICONS['Fragrances']} OLFACTORY NOTES PYRAMID</div>
+          <div class="olfactory-row">
+            <span class="olfactory-tier"><span class="note-tier-badge">TOP</span>NOTES:</span>
+            <span class="olfactory-notes">${Array.isArray(attrs.top_notes) ? attrs.top_notes.join(', ') : (attrs.top_notes || 'Italian Bergamot, Crisp Citrus, Pink Pepper')}</span>
+          </div>
+          <div class="olfactory-row">
+            <span class="olfactory-tier"><span class="note-tier-badge">HEART</span>NOTES:</span>
+            <span class="olfactory-notes">${Array.isArray(attrs.middle_notes) ? attrs.middle_notes.join(', ') : (attrs.middle_notes || 'Smoked Lavender, Cardamom, Cypress')}</span>
+          </div>
+          <div class="olfactory-row">
+            <span class="olfactory-tier"><span class="note-tier-badge">BASE</span>NOTES:</span>
+            <span class="olfactory-notes">${Array.isArray(attrs.base_notes) ? attrs.base_notes.join(', ') : (attrs.base_notes || 'Virginia Cedarwood, Ambergris, Dark Musk')}</span>
+          </div>
+          <div class="spec-grid-2col" style="margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 8px;">
+            <div class="spec-item-row">
+              <span class="spec-key">Fragrance Line</span>
+              <span class="spec-val">SQ-1 ${attrs.fragrance_line || 'Victory'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Longevity & Sillage</span>
+              <span class="spec-val">${attrs.longevity || '10-12 Hours · Heavy Sillage'}</span>
+            </div>
+          </div>
+        `;
+      } else if (product.category === 'Gaming Accessories') {
+        specContainer.style.display = 'block';
+        specContainer.innerHTML = `
+          <div class="olfactory-pyramid-title">${SQ1_ICONS['Gaming Accessories']} PRO PERIPHERAL SPECIFICATIONS</div>
+          <div class="spec-grid-2col">
+            <div class="spec-item-row">
+              <span class="spec-key">Dimensions</span>
+              <span class="spec-val">${attrs.dimensions || '900 × 400 × 4 mm'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Surface Material</span>
+              <span class="spec-val">${attrs.surface || 'Ultra-Dense Cordura Weave'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Base Rubber</span>
+              <span class="spec-val">${attrs.base || 'Non-Slip Textured Natural Rubber'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Stitching</span>
+              <span class="spec-val">${attrs.stitching || '360° Anti-Fray Flush Edge'}</span>
+            </div>
+          </div>
+        `;
+      } else if (product.category === 'Apparel') {
+        specContainer.style.display = 'block';
+        specContainer.innerHTML = `
+          <div class="olfactory-pyramid-title">${SQ1_ICONS['Apparel']} APPAREL & FABRIC TECHNICAL SPECS</div>
+          <div class="spec-grid-2col">
+            <div class="spec-item-row">
+              <span class="spec-key">Fabric Construction</span>
+              <span class="spec-val">${attrs.fabric || '280 GSM Heavy Combed Cotton'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Fit Silhouette</span>
+              <span class="spec-val">${attrs.fit || 'Oversized Streetwear Drop'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Print Technology</span>
+              <span class="spec-val">High-Density Screen + Cyber Typography</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Care Advice</span>
+              <span class="spec-val">Machine Wash Cold · Inside Out</span>
+            </div>
+          </div>
+        `;
+      } else if (product.category === 'Digital') {
+        specContainer.style.display = 'block';
+        specContainer.innerHTML = `
+          <div class="olfactory-pyramid-title">${SQ1_ICONS['Digital']} DIGITAL ASSET SPECIFICATIONS</div>
+          <div class="spec-grid-2col">
+            <div class="spec-item-row">
+              <span class="spec-key">File Formats</span>
+              <span class="spec-val">${attrs.format || 'WebM, PNG, PSD, OBS Scene'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Resolution</span>
+              <span class="spec-val">${attrs.resolution || '3840×2160 (4K 60FPS)'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">License</span>
+              <span class="spec-val">${attrs.license || 'Streamer Pro · Commercial Use'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Delivery</span>
+              <span class="spec-val">Instant Secure Download Token</span>
+            </div>
+          </div>
+        `;
+      } else if (product.category === 'Limited Drop') {
+        specContainer.style.display = 'block';
+        specContainer.innerHTML = `
+          <div class="olfactory-pyramid-title" style="color: var(--red-primary);">${SQ1_ICONS['Limited Drop']} EXCLUSIVE LIMITED DROP AUTHENTICATION</div>
+          <div class="spec-grid-2col">
+            <div class="spec-item-row">
+              <span class="spec-key">Batch Production</span>
+              <span class="spec-val">Strictly Limited to ${attrs.total_stock || 100} Units</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Authentication</span>
+              <span class="spec-val">Laser-Etched Individual Numbering</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Release Series</span>
+              <span class="spec-val">${attrs.drop_name || 'SQ-1 Collector Series 01'}</span>
+            </div>
+            <div class="spec-item-row">
+              <span class="spec-key">Certificate</span>
+              <span class="spec-val">Squad One Physical Authenticity Card</span>
+            </div>
+          </div>
+        `;
+      } else {
+        specContainer.style.display = 'none';
+      }
 
-          const totalDist = Math.hypot(e.clientX - startX, e.clientY - startY);
-          if (totalDist > 5) {
-            isDragging = true;
-            box.classList.add('is-zoomed', 'is-dragging');
+      // Sizes / Variants
+      const sizes = product.sizes || ['Standard'];
+      window._currentModalSelectedVariant = sizes[0];
+      document.getElementById('modal-selected-variant-label').textContent = sizes[0];
 
-            const deltaX = (e.clientX - lastX) * 1.3;
-            const deltaY = (e.clientY - lastY) * 1.3;
-            lastX = e.clientX;
-            lastY = e.clientY;
+      const varButtonsContainer = document.getElementById('modal-variant-buttons');
+      varButtonsContainer.innerHTML = sizes.map((s, idx) => `
+        <button type="button" class="modal-var-btn ${idx === 0 ? 'active' : ''}" onclick="selectModalVariant('${s}', this)">
+          ${s}
+        </button>
+      `).join('');
 
-            // Pan image in the direction user is dragging
-            currentX += deltaX;
-            currentY += deltaY;
+      // Player IGN Customizer
+      const ignBox = document.getElementById('modal-ign-customizer');
+      if (product.allowCustomIGN) {
+        ignBox.style.display = 'block';
+        document.getElementById('modal-player-ign-input').value = '';
+        document.getElementById('modal-ign-preview-text').textContent = 'YOUR_NAME';
+      } else {
+        ignBox.style.display = 'none';
+      }
 
-            // Constrain pan within box
-            const maxPanX = 130;
-            const maxPanY = 90;
-            currentX = Math.max(-maxPanX, Math.min(maxPanX, currentX));
-            currentY = Math.max(-maxPanY, Math.min(maxPanY, currentY));
+      // Reset Quantity
+      document.getElementById('modal-qty-display').textContent = '1';
 
-            setTransform(currentX, currentY, ZOOM_FACTOR, false);
-          }
-        });
-
-        function handlePointerUp() {
-          if (isPointerDown) {
-            isPointerDown = false;
-            if (isDragging) {
-              isDragging = false;
-              box.classList.remove('is-zoomed', 'is-dragging');
-              setTransform(0, 0, 1, true); // Smoothly reset to old type resting position
-            }
-          }
-        }
-
-        window.addEventListener('mouseup', handlePointerUp);
-        box.addEventListener('mouseleave', handlePointerUp);
-
-        // Touch events for tablet & mobile
-        box.addEventListener('touchstart', (e) => {
-          if (e.touches.length === 1) {
-            isPointerDown = true;
-            isDragging = false;
-            dragDistance = 0;
-            startX = lastX = e.touches[0].clientX;
-            startY = lastY = e.touches[0].clientY;
-            currentX = 0;
-            currentY = 0;
-          }
-        }, { passive: true });
-
-        box.addEventListener('touchmove', (e) => {
-          if (!isPointerDown || e.touches.length !== 1) return;
-          const touch = e.touches[0];
-          const totalDist = Math.hypot(touch.clientX - startX, touch.clientY - startY);
-
-          if (totalDist > 6) {
-            isDragging = true;
-            box.classList.add('is-zoomed', 'is-dragging');
-
-            const deltaX = (touch.clientX - lastX) * 1.3;
-            const deltaY = (touch.clientY - lastY) * 1.3;
-            lastX = touch.clientX;
-            lastY = touch.clientY;
-
-            currentX += deltaX;
-            currentY += deltaY;
-
-            const maxPanX = 110;
-            const maxPanY = 80;
-            currentX = Math.max(-maxPanX, Math.min(maxPanX, currentX));
-            currentY = Math.max(-maxPanY, Math.min(maxPanY, currentY));
-
-            setTransform(currentX, currentY, ZOOM_FACTOR, false);
-          }
-        }, { passive: true });
-
-        box.addEventListener('touchend', () => {
-          handlePointerUp();
-        });
-
-        // Click to open high-res lightbox if user clicked without dragging
-        box.addEventListener('click', () => {
-          if (!isDragging && dragDistance < 8) {
-            const src = box.getAttribute('data-image-src') || (img ? img.src : null);
-            const lb = document.getElementById('event-image-lightbox');
-            if (lb && src) {
-              const lbImg = lb.querySelector('img');
-              if (lbImg) lbImg.src = src;
-              lb.classList.add('active');
-              document.body.classList.add('modal-open');
-              if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
-                lenis.stop();
-              }
-            }
-          }
-        });
-      });
+      modal.classList.add('active');
+      document.body.classList.add('modal-open');
+      if (typeof lenis !== 'undefined' && lenis && typeof lenis.stop === 'function') {
+        lenis.stop();
+      }
     };
 
-    // Product Size Selection
+    window.closeProductDetailModal = function() {
+      const modal = document.getElementById('store-product-detail-modal');
+      if (modal) modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+      if (typeof lenis !== 'undefined' && lenis && typeof lenis.start === 'function') {
+        lenis.start();
+      }
+    };
+
+    window.switchModalGalleryImage = function(imgSrc, thumbBtn) {
+      const mainImg = document.getElementById('modal-product-main-img');
+      if (mainImg) mainImg.src = imgSrc;
+      document.querySelectorAll('.store-modal-thumb-btn').forEach(btn => btn.classList.remove('active'));
+      if (thumbBtn) thumbBtn.classList.add('active');
+    };
+
+    window.selectModalVariant = function(variantVal, btn) {
+      window._currentModalSelectedVariant = variantVal;
+      document.getElementById('modal-selected-variant-label').textContent = variantVal;
+      document.querySelectorAll('.modal-var-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    };
+
+    window.updateJerseyPreviewIGN = function(val) {
+      const clean = (val || '').trim().toUpperCase();
+      document.getElementById('modal-ign-preview-text').textContent = clean || 'YOUR_NAME';
+    };
+
+    window.adjustModalQty = function(delta) {
+      let qty = (window._currentModalQty || 1) + delta;
+      if (qty < 1) qty = 1;
+      if (qty > 10) qty = 10;
+      window._currentModalQty = qty;
+      document.getElementById('modal-qty-display').textContent = qty;
+    };
+
+    window.addModalProductToCart = function(isBuyNow = false) {
+      const product = window._currentModalProduct;
+      if (!product) return;
+
+      const size = window._currentModalSelectedVariant || (product.sizes && product.sizes[0]) || 'STD';
+      const customIGN = (document.getElementById('modal-player-ign-input')?.value || '').trim();
+      const qty = window._currentModalQty || 1;
+
+      const cart = getShoppingCart();
+      const existingIdx = cart.findIndex(item => item.id === product.id && item.size === size && item.customIGN === customIGN);
+
+      if (existingIdx > -1) {
+        cart[existingIdx].qty += qty;
+      } else {
+        cart.push({
+          id: product.id,
+          title: product.title || product.name,
+          quote: product.quote || 'Upgrade your Vogue',
+          price: product.price,
+          currency: product.currency || '₹',
+          image: product.image || 'images/new Products/Final_1-_White.png',
+          size: size,
+          customIGN: customIGN,
+          qty: qty
+        });
+      }
+
+      saveShoppingCart(cart);
+      showCartToast('ITEM ADDED TO CART', `${product.title || product.name} (${size}) × ${qty} added to inventory.`);
+      closeProductDetailModal();
+
+      if (isBuyNow) {
+        openCheckoutModal();
+      } else {
+        openCartDrawer();
+      }
+    };
+
+        // Product Size Selection
     window._selectedProductSizes = {};
     window.selectProductSize = function(prodId, btnEl, sizeVal) {
       window._selectedProductSizes[prodId] = sizeVal;
