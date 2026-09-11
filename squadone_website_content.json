@@ -32,6 +32,7 @@
       "title": "TOP FAN OF THE MONTH",
       "name": "me",
       "badge": "COMMUNITY VOTE · ANNOUNCED MONTHLY",
+      "desc": "The most dedicated Squad One community member — voted by the squad each month.",
       "avatar": "",
       "poster": "",
       "usePoster": false
@@ -200,17 +201,121 @@
   "news": [
     {
       "id": "news-1788879547072",
-      "createdAt": "2026-09-10",
       "headline": "Launching S1VE X SQUADONE STORE",
-      "category": "International",
-      "posterUrl": "assets/s1ve.newPost.png",
-      "excerpt": "heyyy",
-      "content": "ok",
       "title": "Launching S1VE X SQUADONE STORE",
+      "category": "International",
       "tag": "INTERNATIONAL",
       "badge": "LATEST",
+      "posterUrl": "assets/s1ve.newPost.png",
       "image": "assets/s1ve.newPost.png",
-      "hidden": false
+      "excerpt": "New S1VE x Squad One apparel drop is now live. Grab the GTA VI Edition and exclusive oversized jerseys.",
+      "content": "New S1VE x Squad One apparel drop is now live. Grab the GTA VI Edition and exclusive oversized jerseys with 280 GSM heavy cotton construction.",
+      "ctaText": "Read Full Details",
+      "ctaUrl": "#",
+      "hidden": false,
+      "createdAt": "2026-09-10"
+    },
+    {
+      "id": "news-1",
+      "headline": "Squad One Partners with eWave for National League Season 2",
+      "category": "Governance",
+      "excerpt": "Official tournament brackets, live telemetry, and anti-cheat tracking integrated with eWave platform.",
+      "content": "Squad One Esports is proud to announce a landmark strategic partnership with eWave.gg, bringing next-generation automated bracket operations, live killfeed overlays, and real-time player telemetry to Indian competitive PUBG PC.",
+      "posterUrl": "sa-cross-bay-scrims.jpeg",
+      "ctaText": "Read Official Dispatch",
+      "ctaUrl": "#",
+      "createdAt": "2026-08-15"
+    },
+    {
+      "id": "news-2",
+      "headline": "Grand Finals 16 Teams Confirmed: ₹1,50,000 Prize Pool",
+      "category": "Season 3",
+      "excerpt": "Top 16 squads battle across 3 days, 15 matches for the ultimate title.",
+      "content": "After fierce qualifiers featuring 95 registered teams, the top 16 survivors have booked their ticket to the Squad One National League Grand Finals. Matches will be broadcast live across Erangel, Miramar, Taego, and Rondo.",
+      "posterUrl": "eventimage.jpeg",
+      "ctaText": "View Roster List",
+      "ctaUrl": "#finalists",
+      "createdAt": "2026-08-28"
+    },
+    {
+      "id": "news-official-1",
+      "headline": "🚨 THE NEXT STEP FOR OUR SCRIMS! SA CROSS-BAY SCRIMS",
+      "title": "🚨 THE NEXT STEP FOR OUR SCRIMS! SA CROSS-BAY SCRIMS",
+      "category": "International",
+      "tag": "INTERNATIONAL SCRIMS · SA & SEA",
+      "badge": "CROSS-BAY",
+      "posterUrl": "images/sa-cross-bay-scrims.jpeg",
+      "image": "images/sa-cross-bay-scrims.jpeg",
+      "excerpt": "India Scrims are officially evolving to South Asia Cross-Bay Scrims with SEA guest squads.",
+      "content": "India Scrims are officially evolving to South Asia Cross-Bay Scrims! Regular domestic tournaments continue uninterrupted, with SA Cross-Bay as an additional competitive proving ground alongside SEA guest squads.",
+      "ctaText": "Read Full Details",
+      "ctaUrl": "#",
+      "hidden": false,
+      "createdAt": "2026-09-01"
+    },
+    {
+      "id": "news-official-2",
+      "headline": "🔥 THE STAGE IS SET! Nations League Season 3 Announced",
+      "title": "🔥 THE STAGE IS SET! Nations League Season 3 Announced",
+      "category": "Season 3",
+      "tag": "NOVEMBER 2026 · NATIONS LEAGUE S3",
+      "badge": "MAJOR CUP",
+      "posterUrl": "images/sqnlS3.png",
+      "image": "images/sqnlS3.png",
+      "excerpt": "Top squads lock in for supreme dominance this November 2026. Stay tuned for registration!",
+      "content": "The SquadOne PUBG PC Nations League Season 3 is officially on the horizon! Top squads in the region lock in for ultimate glory and supreme dominance in November 2026.",
+      "ctaText": "Season 3 Details",
+      "ctaUrl": "#",
+      "hidden": false,
+      "createdAt": "2026-08-28"
+    },
+    {
+      "id": "news-official-3",
+      "headline": "The Future of SA & SEA PUBG is in Your Hands",
+      "title": "The Future of SA & SEA PUBG is in Your Hands",
+      "category": "Governance",
+      "tag": "COMMUNITY GOVERNANCE · SA & SEA",
+      "badge": "EXECUTIVE BODY",
+      "posterUrl": "images/ewaveExecutiveBody.jpg",
+      "image": "images/ewaveExecutiveBody.jpg",
+      "excerpt": "Forming the player-led eWave Executive Body for SA & SEA to decide tournament rules & formats.",
+      "content": "Forming the eWave Executive Body for SA & SEA — an elite, player-led council giving the community total authority over tournament rules, formats, and regional development.",
+      "ctaText": "Apply on Discord",
+      "ctaUrl": "https://discord.gg/Sjy7ACKah7",
+      "hidden": false,
+      "createdAt": "2026-08-20"
+    },
+    {
+      "id": "news-official-4",
+      "headline": "- LIVE NOW! - SquadOne & eWave Loyalty Program",
+      "title": "- LIVE NOW! - SquadOne & eWave Loyalty Program",
+      "category": "Rewards",
+      "tag": "LIVE NOW · COMMUNITY REWARDS",
+      "badge": "LIVE NOW",
+      "posterUrl": "images/loyalty.png",
+      "image": "images/loyalty.png",
+      "excerpt": "Earn points toward exclusive Mystery Gifts every time you watch our official livestreams.",
+      "content": "Unlock exclusive rewards! Earn points toward an exclusive Mystery Gift every time you subscribe, chat, and watch our official live streams. Start earning your rewards today!",
+      "ctaText": "Watch Live on YouTube",
+      "ctaUrl": "https://www.youtube.com/live/wGCGBC1VmiQ?si=oq3bjpT_NStsC-tU",
+      "hidden": false,
+      "createdAt": "2026-08-15"
+    },
+    {
+      "id": "news-official-5",
+      "headline": "Executive Body Application Update: Deadline Sunday",
+      "title": "Executive Body Application Update: Deadline Sunday",
+      "category": "Governance",
+      "tag": "APPLICATION UPDATE · FINAL CALL",
+      "badge": "FINAL CALL",
+      "posterUrl": "images/EXECUTIVE BODY UPDATE.jpeg",
+      "image": "images/EXECUTIVE BODY UPDATE.jpeg",
+      "excerpt": "Direct ascension to eWave Founding Council. Applications close this Sunday at Midnight!",
+      "content": "Overwhelming response for the SA & SEA Executive Body! Direct ascension to the General Founding Council of eWave with global decision-making power. Applications close this Sunday at Midnight.",
+      "ctaText": "Open Support Ticket",
+      "ctaUrl": "https://discord.com/channels/1157258588662796328/1237666558051094589",
+      "hidden": false,
+      "createdAt": "2026-08-10"
     }
   ],
   "store": {
@@ -221,113 +326,16 @@
     "products": [
       {
         "id": "s1ve-sq1-oversized-white",
-        "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
-        "badge": "HOT DROP · OVERSIZED",
-        "price": 999,
-        "originalPrice": 1499,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_White.png",
-        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false
-      },
-      {
-        "id": "s1ve-sq1-oversized-black",
-        "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
-        "badge": "BESTSELLER · OVERSIZED",
-        "price": 999,
-        "originalPrice": 1499,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_Black_.png",
-        "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false
-      },
-      {
-        "id": "s1ve-sq1-oversized-maroon",
-        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
-        "badge": "LIMITED DROP · 30% OFF",
-        "price": 1099,
-        "originalPrice": 1599,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_Maroon_.png",
-        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false
-      },
-      {
-        "id": "s1ve-custom-1788868261046",
-        "title": "New S1VE × Squad One Apparel Drop GTA VI Edition",
-        "quote": "Upgrade your Vogue",
-        "badge": "HOT DROP · OVERSIZED",
-        "price": 999,
-        "originalPrice": 1499,
-        "currency": "₹",
-        "image": "images/new Products/new_GTA_launch.jpeg",
-        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false
-      }
-    ]
-  },
-  "storeArmory": {
-    "vaultLocked": false,
-    "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
-    "products": [
-      {
-        "id": "s1ve-sq1-oversized-white",
         "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
-        "sku": "SQ1-APP-TEE-WHT",
+        "category": "Jersey",
         "price": 999,
         "priceINR": 999,
         "originalPrice": 1499,
         "currency": "₹",
         "image": "images/new Products/Final_1-_White.png",
         "imageUrl": "images/new Products/Final_1-_White.png",
-        "images": [
-          "images/new Products/Final_1-_White.png",
-          "images/white_mesh.glb"
-        ],
         "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
         "sizes": [
           "S",
@@ -340,36 +348,24 @@
         "inStock": true,
         "hidden": false,
         "stock": 45,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Oversized",
-          "fabric": "280 GSM Heavy Combed Cotton",
-          "color": [
-            "Cyber White",
-            "Ghost White"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "quote": "Upgrade your Vogue",
+        "images": [
+          "images/new Products/Final_1-_White.png"
+        ]
       },
       {
         "id": "s1ve-sq1-oversized-black",
         "name": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
         "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
         "badge": "BESTSELLER · OVERSIZED",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
-        "sku": "SQ1-APP-TEE-BLK",
+        "category": "Jersey",
         "price": 999,
         "priceINR": 999,
         "originalPrice": 1499,
         "currency": "₹",
         "image": "images/new Products/Final_1-_Black_.png",
         "imageUrl": "images/new Products/Final_1-_Black_.png",
-        "images": [
-          "images/new Products/Final_1-_Black_.png"
-        ],
         "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
         "sizes": [
           "S",
@@ -382,35 +378,24 @@
         "inStock": true,
         "hidden": false,
         "stock": 35,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Oversized",
-          "fabric": "280 GSM Heavy Combed Cotton",
-          "color": [
-            "Stealth Black"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "quote": "Upgrade your Vogue",
+        "images": [
+          "images/new Products/Final_1-_Black_.png"
+        ]
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
         "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
         "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
         "badge": "LIMITED DROP · 30% OFF",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
-        "sku": "SQ1-APP-TEE-MRN",
+        "category": "Jersey",
         "price": 1099,
         "priceINR": 1099,
         "originalPrice": 1599,
         "currency": "₹",
         "image": "images/new Products/Final_1-_Maroon_.png",
         "imageUrl": "images/new Products/Final_1-_Maroon_.png",
-        "images": [
-          "images/new Products/Final_1-_Maroon_.png"
-        ],
         "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
         "sizes": [
           "S",
@@ -423,26 +408,11 @@
         "inStock": true,
         "hidden": false,
         "stock": 50,
-        "isLimitedEdition": true,
-        "attributes": {
-          "sizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-          ],
-          "fit": "Oversized",
-          "fabric": "280 GSM Heavy Combed Cotton",
-          "color": [
-            "Maroon Cyber"
-          ]
-        },
         "checkoutUrl": "https://store.squadone.gg/checkout",
-        "salePrice": 1599,
-        "short_description": "",
-        "shortDescription": "",
-        "variants": []
+        "quote": "Upgrade your Vogue",
+        "images": [
+          "images/new Products/Final_1-_Maroon_.png"
+        ]
       },
       {
         "id": "s1ve-custom-1788868261046",
@@ -450,7 +420,7 @@
         "name": "New S1VE × Squad One Apparel Drop GTA VI Edition",
         "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Apparel",
+        "category": "Jersey",
         "price": 999,
         "priceINR": 999,
         "originalPrice": 1499,
@@ -470,32 +440,135 @@
         "hidden": false,
         "stock": 50,
         "checkoutUrl": "https://store.squadone.gg/checkout",
-        "subcategory": "",
-        "sku": "",
-        "salePrice": 1499,
         "images": [
           "images/new Products/new_GTA_launch.jpeg"
+        ]
+      }
+    ]
+  },
+  "storeArmory": {
+    "vaultLocked": false,
+    "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
+    "products": [
+      {
+        "id": "s1ve-sq1-oversized-white",
+        "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+        "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
+        "badge": "HOT DROP · OVERSIZED",
+        "category": "Jersey",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_White.png",
+        "imageUrl": "images/new Products/Final_1-_White.png",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print and crest typography.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
         ],
-        "short_description": "",
-        "shortDescription": "",
-        "isLimitedEdition": false,
-        "attributes": {
-          "sizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-          ],
-          "fit": "Oversized",
-          "fabric": "280 GSM Heavy Combed Cotton",
-          "color": [
-            "Black",
-            "White",
-            "Crimson"
-          ]
-        },
-        "variants": []
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 45,
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "quote": "Upgrade your Vogue",
+        "images": [
+          "images/new Products/Final_1-_White.png"
+        ]
+      },
+      {
+        "id": "s1ve-sq1-oversized-black",
+        "name": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+        "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
+        "badge": "BESTSELLER · OVERSIZED",
+        "category": "Jersey",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Black_.png",
+        "imageUrl": "images/new Products/Final_1-_Black_.png",
+        "description": "Stealth aesthetic 280 GSM premium heavy cotton oversized tee with cybernetic detailing and high-density branding.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 35,
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "quote": "Upgrade your Vogue",
+        "images": [
+          "images/new Products/Final_1-_Black_.png"
+        ]
+      },
+      {
+        "id": "s1ve-sq1-oversized-maroon",
+        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "badge": "LIMITED DROP · 30% OFF",
+        "category": "Jersey",
+        "price": 1099,
+        "priceINR": 1099,
+        "originalPrice": 1599,
+        "currency": "₹",
+        "image": "images/new Products/Final_1-_Maroon_.png",
+        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
+        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 50,
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "quote": "Upgrade your Vogue",
+        "images": [
+          "images/new Products/Final_1-_Maroon_.png"
+        ]
+      },
+      {
+        "id": "s1ve-custom-1788868261046",
+        "title": "New S1VE × Squad One Apparel Drop GTA VI Edition",
+        "name": "New S1VE × Squad One Apparel Drop GTA VI Edition",
+        "quote": "Upgrade your Vogue",
+        "badge": "HOT DROP · OVERSIZED",
+        "category": "Jersey",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "image": "images/new Products/new_GTA_launch.jpeg",
+        "imageUrl": "images/new Products/new_GTA_launch.jpeg",
+        "description": "280 GSM Heavy Cotton oversized streetwear jersey featuring official S1VE and Squad One back print.",
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 50,
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "images": [
+          "images/new Products/new_GTA_launch.jpeg"
+        ]
       }
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
