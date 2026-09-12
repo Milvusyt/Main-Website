@@ -5615,10 +5615,10 @@
 
 
     /* ==========================================================================
-       ESPORTS WORLD CUP (EWC) SHOP EXPERIENCE & TEST SWITCHER STYLES
+       ESPORTS WORLD CUP (S1VE) SHOP EXPERIENCE & TEST SWITCHER STYLES
        ========================================================================== */
     /* S1VE Store Root Container (100% Fullscreen / Edge-to-Edge) */
-    .ewc-shop-root {
+    .s1ve-shop-root {
       background: #070709;
       color: #f0f0f3;
       font-family: 'Figtree', sans-serif;
@@ -5646,13 +5646,13 @@
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
-    .ewc-sticky-bar-wrapper {
+    .s1ve-sticky-bar-wrapper {
       position: relative;
       width: 100%;
       min-height: 56px;
       z-index: 10005;
     }
-    .ewc-sticky-header-container {
+    .s1ve-sticky-header-container {
       position: sticky;
       top: 0;
       z-index: 10005;
@@ -5663,14 +5663,14 @@
       justify-content: center;
       transition: all 0.2s ease;
     }
-    .ewc-sticky-header-container.is-pinned-top {
+    .s1ve-sticky-header-container.is-pinned-top {
       position: fixed !important;
       top: 0 !important;
       left: 0 !important;
       width: 100% !important;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
     }
-    .ewc-pill-bar {
+    .s1ve-pill-bar {
       background: #b6b6b9;
       color: #000000;
       border-radius: 0 0 20px 20px;
@@ -5685,12 +5685,12 @@
       font-family: 'Roboto Condensed', sans-serif;
       position: relative;
     }
-    .ewc-bar-left {
+    .s1ve-bar-left {
       display: flex;
       align-items: center;
       gap: 18px;
     }
-    .ewc-bar-link {
+    .s1ve-bar-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -5707,27 +5707,27 @@
       border-radius: 4px;
       transition: opacity 0.15s ease, transform 0.15s ease;
     }
-    .ewc-bar-link:hover {
+    .s1ve-bar-link:hover {
       opacity: 0.7;
     }
-    .ewc-bar-hamburger {
+    .s1ve-bar-hamburger {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       width: 18px;
       height: 13px;
     }
-    .ewc-bar-hamburger span {
+    .s1ve-bar-hamburger span {
       display: block;
       height: 2.2px;
       width: 100%;
       background: #000000;
       border-radius: 1px;
     }
-    .ewc-bar-curr-wrap {
+    .s1ve-bar-curr-wrap {
       position: relative;
     }
-    .ewc-flag-img {
+    .s1ve-flag-img {
       width: 16px;
       height: 16px;
       border-radius: 50%;
@@ -5736,8 +5736,8 @@
       border: 1px solid rgba(0, 0, 0, 0.2);
     }
 
-    /* EWC Center Logo */
-    .ewc-bar-center {
+    /* S1VE Center Logo */
+    .s1ve-bar-center {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -5745,19 +5745,19 @@
       align-items: center;
       justify-content: center;
     }
-    .ewc-bar-logo-link {
+    .s1ve-bar-logo-link {
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
     }
-    .ewc-bar-ewc-logo {
+    .s1ve-bar-s1ve-logo {
       height: 19px;
       width: auto;
       object-fit: contain;
       display: block;
     }
-    .ewc-text-logo, .s1ve-text-logo {
+    .s1ve-text-logo {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 1.65rem;
       font-weight: 900;
@@ -5770,15 +5770,15 @@
     }
 
     /* S1VE Top Bar Actions */
-    .ewc-bar-right {
+    .s1ve-bar-right {
       display: flex;
       align-items: center;
       gap: 20px;
     }
-    .ewc-bar-cart-link {
+    .s1ve-bar-cart-link {
       position: relative;
     }
-    .ewc-bar-cart-badge {
+    .s1ve-bar-cart-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -5794,7 +5794,7 @@
     }
 
     /* Currency Dropdown from S1VE Pill */
-    .ewc-currency-dropdown {
+    .s1ve-currency-dropdown {
       position: absolute;
       top: calc(100% + 10px);
       left: 0;
@@ -5807,11 +5807,11 @@
       display: none;
       z-index: 10025;
     }
-    .ewc-currency-dropdown.show {
+    .s1ve-currency-dropdown.show {
       display: block;
-      animation: ewcFadeIn 0.2s ease;
+      animation: s1veFadeIn 0.2s ease;
     }
-    .ewc-dropdown-item {
+    .s1ve-dropdown-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -5823,7 +5823,7 @@
       cursor: pointer;
       transition: background 0.15s ease;
     }
-    .ewc-dropdown-item:hover, .ewc-dropdown-item.active {
+    .s1ve-dropdown-item:hover, .s1ve-dropdown-item.active {
       background: rgba(212, 175, 55, 0.18);
       color: #d4af37;
     }
@@ -5987,7 +5987,7 @@
     /* ==========================================================================
        EXACT 1:1 HERO BANNER (Matches Screenshot media_1789063324120.png)
        ========================================================================== */
-    .ewc-hero-banner-replica {
+    .s1ve-hero-banner-replica {
       position: relative;
       width: 100%;
       min-height: 520px;
@@ -6003,7 +6003,7 @@
       background-repeat: no-repeat;
       overflow: hidden;
     }
-    .ewc-hero-content-center {
+    .s1ve-hero-content-center {
       position: relative;
       z-index: 2;
       max-width: 760px;
@@ -6013,7 +6013,7 @@
       align-items: center;
       justify-content: center;
     }
-    .ewc-hero-eyebrow {
+    .s1ve-hero-eyebrow {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.95rem;
       font-weight: 700;
@@ -6023,7 +6023,7 @@
       margin-bottom: 12px;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
-    .ewc-hero-headline {
+    .s1ve-hero-headline {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: clamp(2.6rem, 6.5vw, 4.8rem);
       font-weight: 900;
@@ -6034,7 +6034,7 @@
       margin-bottom: 24px;
       text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
     }
-    .ewc-hero-cta-btn {
+    .s1ve-hero-cta-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -6052,14 +6052,14 @@
       transition: all 0.2s ease;
       cursor: pointer;
     }
-    .ewc-hero-cta-btn:hover {
+    .s1ve-hero-cta-btn:hover {
       background: #f0f0f0;
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
     }
 
     /* SS26 Manifesto Editorial Section */
-    .ewc-manifesto-block {
+    .s1ve-manifesto-block {
       background: #09090c;
       padding: 50px 32px 40px;
       text-align: center;
@@ -6067,7 +6067,7 @@
       margin: 0 auto;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .ewc-manifesto-title {
+    .s1ve-manifesto-title {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 2.2rem;
       font-weight: 900;
@@ -6076,13 +6076,13 @@
       color: #ffffff;
       margin-bottom: 18px;
     }
-    .ewc-manifesto-p {
+    .s1ve-manifesto-p {
       font-size: 0.98rem;
       line-height: 1.7;
       color: #a8a8b8;
       margin-bottom: 24px;
     }
-    .ewc-manifesto-link {
+    .s1ve-manifesto-link {
       display: inline-block;
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.9rem;
@@ -6094,27 +6094,27 @@
       text-underline-offset: 4px;
       transition: color 0.15s ease;
     }
-    .ewc-manifesto-link:hover {
+    .s1ve-manifesto-link:hover {
       color: #d4af37;
     }
 
     /* ==========================================================================
-       16:9 SQUAD ONE X EWAVE VIDEO ANIMATION SECTION (Replaces EWC Trading Cards)
+       16:9 SQUAD ONE X EWAVE VIDEO ANIMATION SECTION (Replaces S1VE Trading Cards)
        ========================================================================== */
-    .ewc-ewave-video-section {
+    .s1ve-ewave-video-section {
       background: #000000;
       padding: 60px 0 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       position: relative;
       width: 100%;
     }
-    .ewc-section-header-center {
+    .s1ve-section-header-center {
       text-align: center;
       max-width: 760px;
       margin: 0 auto 28px;
       padding: 0 20px;
     }
-    .ewc-section-eyebrow-ewave {
+    .s1ve-section-eyebrow-ewave {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.78rem;
       font-weight: 700;
@@ -6123,7 +6123,7 @@
       color: #c47df5;
       margin-bottom: 6px;
     }
-    .ewc-section-title-ewave {
+    .s1ve-section-title-ewave {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: clamp(2rem, 4.5vw, 2.8rem);
       font-weight: 900;
@@ -6132,12 +6132,12 @@
       color: #ffffff;
       margin-bottom: 12px;
     }
-    .ewc-section-sub-ewave {
+    .s1ve-section-sub-ewave {
       font-size: 0.95rem;
       color: #a0a0b2;
       line-height: 1.6;
     }
-    .ewc-video-container-16-9 {
+    .s1ve-video-container-16-9 {
       position: relative;
       width: 100%;
       max-width: 100%;
@@ -6148,8 +6148,8 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
     }
-    .ewc-video-container-16-9 video.ewc-video-horizontal-full,
-    .ewc-video-container-16-9 video {
+    .s1ve-video-container-16-9 video.s1ve-video-horizontal-full,
+    .s1ve-video-container-16-9 video {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -6160,7 +6160,7 @@
     }
 
     /* Minimal Category Bar */
-    .ewc-category-bar {
+    .s1ve-category-bar {
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -6171,10 +6171,10 @@
       overflow-x: auto;
       scrollbar-width: none;
     }
-    .ewc-category-bar::-webkit-scrollbar {
+    .s1ve-category-bar::-webkit-scrollbar {
       display: none;
     }
-    .ewc-cat-pill {
+    .s1ve-cat-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -6192,21 +6192,21 @@
       white-space: nowrap;
       transition: all 0.2s ease;
     }
-    .ewc-cat-pill:hover {
+    .s1ve-cat-pill:hover {
       background: rgba(255, 255, 255, 0.12);
       color: #ffffff;
     }
-    .ewc-cat-pill.active {
+    .s1ve-cat-pill.active {
       background: #ffffff;
       color: #0c0c0e;
       border-color: #ffffff;
     }
 
-    /* EWC Products Section */
-    .ewc-section-padding {
+    /* S1VE Products Section */
+    .s1ve-section-padding {
       padding: 48px 32px;
     }
-    .ewc-section-header {
+    .s1ve-section-header {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -6214,7 +6214,7 @@
       flex-wrap: wrap;
       gap: 16px;
     }
-    .ewc-section-eyebrow {
+    .s1ve-section-eyebrow {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.75rem;
       font-weight: 700;
@@ -6223,7 +6223,7 @@
       color: #d4af37;
       margin-bottom: 6px;
     }
-    .ewc-section-title {
+    .s1ve-section-title {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 2rem;
       font-weight: 900;
@@ -6232,13 +6232,13 @@
       color: #ffffff;
     }
 
-    /* EWC Product Card Grid (Matching https://shop.esportsworldcup.com/collections/jerseys) */
-    .ewc-products-grid {
+    /* S1VE Product Card Grid (Matching https://shop.esportsworldcup.com/collections/jerseys) */
+    .s1ve-products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       gap: 26px;
     }
-    .ewc-product-card {
+    .s1ve-product-card {
       background: #111116;
       border: 1px solid rgba(255, 255, 255, 0.09);
       border-radius: 12px;
@@ -6248,12 +6248,12 @@
       transition: all 0.25s ease;
       position: relative;
     }
-    .ewc-product-card:hover {
+    .s1ve-product-card:hover {
       transform: translateY(-4px);
       border-color: rgba(255, 255, 255, 0.3);
       box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
     }
-    .ewc-card-badge {
+    .s1ve-card-badge {
       position: absolute;
       top: 12px;
       left: 12px;
@@ -6269,7 +6269,7 @@
       text-transform: uppercase;
       color: #ffffff;
     }
-    .ewc-card-image-box {
+    .s1ve-card-image-box {
       position: relative;
       width: 100%;
       height: 330px;
@@ -6280,13 +6280,13 @@
       overflow: hidden;
       cursor: pointer;
     }
-    .ewc-card-image-box img {
+    .s1ve-card-image-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.45s ease, opacity 0.35s ease;
     }
-    .ewc-card-img-back {
+    .s1ve-card-img-back {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -6296,17 +6296,17 @@
       pointer-events: none;
       transition: transform 0.45s ease, opacity 0.35s ease;
     }
-    .ewc-product-card:hover .ewc-card-img-back {
+    .s1ve-product-card:hover .s1ve-card-img-back {
       opacity: 1;
       transform: scale(1.05);
     }
-    .ewc-product-card:hover .ewc-card-img-front.has-back {
+    .s1ve-product-card:hover .s1ve-card-img-front.has-back {
       opacity: 0;
     }
-    .ewc-product-card:hover .ewc-card-image-box img:not(.has-back) {
+    .s1ve-product-card:hover .s1ve-card-image-box img:not(.has-back) {
       transform: scale(1.05);
     }
-    .ewc-card-quickview-btn {
+    .s1ve-card-quickview-btn {
       position: absolute;
       bottom: 12px;
       left: 50%;
@@ -6327,17 +6327,17 @@
       cursor: pointer;
       z-index: 8;
     }
-    .ewc-product-card:hover .ewc-card-quickview-btn {
+    .s1ve-product-card:hover .s1ve-card-quickview-btn {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
-    .ewc-card-details {
+    .s1ve-card-details {
       padding: 18px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
-    .ewc-card-cat {
+    .s1ve-card-cat {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
@@ -6346,7 +6346,7 @@
       color: #8e8e99;
       margin-bottom: 6px;
     }
-    .ewc-card-title {
+    .s1ve-card-title {
       font-size: 1.05rem;
       font-weight: 700;
       color: #ffffff;
@@ -6355,40 +6355,40 @@
       min-height: 42px;
       cursor: pointer;
     }
-    .ewc-card-title:hover {
+    .s1ve-card-title:hover {
       color: #d4af37;
     }
-    .ewc-card-price-row {
+    .s1ve-card-price-row {
       display: flex;
       align-items: baseline;
       gap: 10px;
       margin-bottom: 14px;
     }
-    .ewc-card-price {
+    .s1ve-card-price {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 1.35rem;
       font-weight: 800;
       color: #ffffff;
     }
-    .ewc-card-orig-price {
+    .s1ve-card-orig-price {
       font-size: 0.85rem;
       color: #6a6a75;
       text-decoration: line-through;
     }
-    .ewc-card-sizes {
+    .s1ve-card-sizes {
       display: flex;
       align-items: center;
       gap: 6px;
       margin-bottom: 16px;
       flex-wrap: wrap;
     }
-    .ewc-card-sizes span.size-label {
+    .s1ve-card-sizes span.size-label {
       font-size: 0.7rem;
       color: #7e7e88;
       font-weight: 600;
       margin-right: 4px;
     }
-    .ewc-size-btn {
+    .s1ve-size-btn {
       width: 28px;
       height: 28px;
       border-radius: 4px;
@@ -6404,18 +6404,18 @@
       justify-content: center;
       transition: all 0.15s ease;
     }
-    .ewc-size-btn:hover, .ewc-size-btn.active {
+    .s1ve-size-btn:hover, .s1ve-size-btn.active {
       background: #ffffff;
       color: #0c0c0e;
       border-color: #ffffff;
     }
-    .ewc-card-actions {
+    .s1ve-card-actions {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
       margin-top: auto;
     }
-    .ewc-btn-cart {
+    .s1ve-btn-cart {
       padding: 9px 12px;
       border-radius: 6px;
       background: rgba(255, 255, 255, 0.08);
@@ -6429,10 +6429,10 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-    .ewc-btn-cart:hover {
+    .s1ve-btn-cart:hover {
       background: rgba(255, 255, 255, 0.18);
     }
-    .ewc-btn-buy {
+    .s1ve-btn-buy {
       padding: 9px 12px;
       border-radius: 6px;
       background: #ffffff;
@@ -6446,14 +6446,14 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-    .ewc-btn-buy:hover {
+    .s1ve-btn-buy:hover {
       background: #d4af37;
     }
 
     /* ==========================================================================
-       EWC 1:1 PRODUCT DETAIL MODAL (Matches https://shop.esportsworldcup.com/products/ewc-pro-jersey-black)
+       S1VE 1:1 PRODUCT DETAIL MODAL (Matches https://shop.esportsworldcup.com/products/s1ve-pro-jersey-black)
        ========================================================================== */
-    .ewc-pdp-overlay {
+    .s1ve-pdp-overlay {
       position: fixed;
       inset: 0;
       background: rgba(0, 0, 0, 0.85);
@@ -6463,11 +6463,11 @@
       visibility: hidden;
       transition: all 0.3s ease;
     }
-    .ewc-pdp-overlay.active {
+    .s1ve-pdp-overlay.active {
       opacity: 1;
       visibility: visible;
     }
-    .ewc-pdp-modal {
+    .s1ve-pdp-modal {
       position: fixed;
       top: 50%;
       left: 50%;
@@ -6486,13 +6486,13 @@
       display: none;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .ewc-pdp-modal.active {
+    .s1ve-pdp-modal.active {
       transform: translate(-50%, -50%) scale(1);
       opacity: 1;
       visibility: visible;
       display: block;
     }
-    .ewc-pdp-close {
+    .s1ve-pdp-close {
       position: absolute;
       top: 18px;
       right: 18px;
@@ -6510,21 +6510,21 @@
       z-index: 12;
       transition: all 0.15s ease;
     }
-    .ewc-pdp-close:hover {
+    .s1ve-pdp-close:hover {
       background: #ed1418;
     }
-    .ewc-pdp-grid {
+    .s1ve-pdp-grid {
       display: grid;
       grid-template-columns: 1fr 1.05fr;
       gap: 36px;
       padding: 36px;
     }
-    .ewc-pdp-gallery {
+    .s1ve-pdp-gallery {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
-    .ewc-pdp-main-img-wrap {
+    .s1ve-pdp-main-img-wrap {
       width: 100%;
       height: 420px;
       background: #181822;
@@ -6534,16 +6534,16 @@
       align-items: center;
       justify-content: center;
     }
-    .ewc-pdp-main-img {
+    .s1ve-pdp-main-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .ewc-pdp-thumbs-row {
+    .s1ve-pdp-thumbs-row {
       display: flex;
       gap: 8px;
     }
-    .ewc-pdp-thumb {
+    .s1ve-pdp-thumb {
       width: 64px;
       height: 64px;
       border-radius: 8px;
@@ -6553,14 +6553,14 @@
       border: 2px solid transparent;
       transition: border-color 0.15s ease;
     }
-    .ewc-pdp-thumb.active {
+    .s1ve-pdp-thumb.active {
       border-color: #d4af37;
     }
-    .ewc-pdp-info {
+    .s1ve-pdp-info {
       display: flex;
       flex-direction: column;
     }
-    .ewc-pdp-badge {
+    .s1ve-pdp-badge {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
@@ -6569,7 +6569,7 @@
       color: #d4af37;
       margin-bottom: 8px;
     }
-    .ewc-pdp-title {
+    .s1ve-pdp-title {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 1.8rem;
       font-weight: 800;
@@ -6577,19 +6577,19 @@
       line-height: 1.2;
       margin-bottom: 12px;
     }
-    .ewc-pdp-price-row {
+    .s1ve-pdp-price-row {
       display: flex;
       align-items: baseline;
       gap: 14px;
       margin-bottom: 20px;
     }
-    .ewc-pdp-price {
+    .s1ve-pdp-price {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 1.8rem;
       font-weight: 900;
       color: #ffffff;
     }
-    .ewc-pdp-size-title {
+    .s1ve-pdp-size-title {
       font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.78rem;
       font-weight: 700;
@@ -6599,13 +6599,13 @@
       display: flex;
       justify-content: space-between;
     }
-    .ewc-pdp-sizes-grid {
+    .s1ve-pdp-sizes-grid {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 22px;
     }
-    .ewc-pdp-size-chip {
+    .s1ve-pdp-size-chip {
       padding: 8px 16px;
       border-radius: 6px;
       background: rgba(255, 255, 255, 0.05);
@@ -6617,18 +6617,18 @@
       cursor: pointer;
       transition: all 0.15s ease;
     }
-    .ewc-pdp-size-chip:hover, .ewc-pdp-size-chip.active {
+    .s1ve-pdp-size-chip:hover, .s1ve-pdp-size-chip.active {
       background: #ffffff;
       color: #0c0c0e;
       border-color: #ffffff;
     }
-    .ewc-pdp-qty-row {
+    .s1ve-pdp-qty-row {
       display: flex;
       align-items: center;
       gap: 12px;
       margin-bottom: 24px;
     }
-    .ewc-pdp-qty-box {
+    .s1ve-pdp-qty-box {
       display: inline-flex;
       align-items: center;
       border: 1px solid rgba(255, 255, 255, 0.2);
@@ -6636,7 +6636,7 @@
       overflow: hidden;
       background: #16161e;
     }
-    .ewc-pdp-qty-btn {
+    .s1ve-pdp-qty-btn {
       width: 36px;
       height: 38px;
       background: transparent;
@@ -6645,19 +6645,19 @@
       font-size: 1rem;
       cursor: pointer;
     }
-    .ewc-pdp-qty-val {
+    .s1ve-pdp-qty-val {
       width: 40px;
       text-align: center;
       font-weight: 700;
       color: #ffffff;
     }
-    .ewc-pdp-actions {
+    .s1ve-pdp-actions {
       display: flex;
       flex-direction: column;
       gap: 10px;
       margin-bottom: 28px;
     }
-    .ewc-pdp-btn-add {
+    .s1ve-pdp-btn-add {
       width: 100%;
       padding: 14px;
       border-radius: 8px;
@@ -6672,10 +6672,10 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-    .ewc-pdp-btn-add:hover {
+    .s1ve-pdp-btn-add:hover {
       background: #d4af37;
     }
-    .ewc-pdp-btn-buy {
+    .s1ve-pdp-btn-buy {
       width: 100%;
       padding: 14px;
       border-radius: 8px;
@@ -6690,18 +6690,18 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-    .ewc-pdp-btn-buy:hover {
+    .s1ve-pdp-btn-buy:hover {
       background: #ff2a2e;
     }
 
     /* PDP Accordions */
-    .ewc-pdp-accordion-item {
+    .s1ve-pdp-accordion-item {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .ewc-pdp-accordion-item:last-child {
+    .s1ve-pdp-accordion-item:last-child {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .ewc-pdp-accordion-header {
+    .s1ve-pdp-accordion-header {
       width: 100%;
       background: transparent;
       border: none;
@@ -6719,30 +6719,30 @@
       text-align: left;
       transition: color 0.15s ease;
     }
-    .ewc-pdp-accordion-header:hover {
+    .s1ve-pdp-accordion-header:hover {
       color: #d4af37;
     }
-    .ewc-pdp-accordion-content {
+    .s1ve-pdp-accordion-content {
       display: none;
       padding-bottom: 16px;
       font-size: 0.85rem;
       color: #a0a0b2;
       line-height: 1.6;
     }
-    .ewc-pdp-accordion-item.open .ewc-pdp-accordion-content {
+    .s1ve-pdp-accordion-item.open .s1ve-pdp-accordion-content {
       display: block;
     }
-    .ewc-pdp-accordion-item.open .ewc-pdp-acc-icon {
+    .s1ve-pdp-accordion-item.open .s1ve-pdp-acc-icon {
       transform: rotate(180deg);
     }
-    .ewc-pdp-acc-icon {
+    .s1ve-pdp-acc-icon {
       transition: transform 0.2s ease;
       font-size: 0.75rem;
       color: #8e8e99;
     }
 
     /* Account Modal */
-    .ewc-account-modal {
+    .s1ve-account-modal {
       position: fixed;
       top: 50%;
       left: 50%;
@@ -6759,32 +6759,32 @@
       visibility: hidden;
       transition: all 0.25s ease;
     }
-    .ewc-account-modal.active {
+    .s1ve-account-modal.active {
       transform: translate(-50%, -50%) scale(1);
       opacity: 1;
       visibility: visible;
     }
 
     @media (max-width: 900px) {
-      .ewc-pdp-grid {
+      .s1ve-pdp-grid {
         grid-template-columns: 1fr;
       }
-      .ewc-pdp-main-img-wrap {
+      .s1ve-pdp-main-img-wrap {
         height: 320px;
       }
     }
     @media (max-width: 600px) {
-      .ewc-pill-bar {
+      .s1ve-pill-bar {
         padding: 0 14px;
         height: 44px;
       }
-      .ewc-bar-left, .ewc-bar-right {
+      .s1ve-bar-left, .s1ve-bar-right {
         gap: 10px;
       }
-      .ewc-bar-link {
+      .s1ve-bar-link {
         font-size: 0.78rem;
       }
-      .ewc-section-padding {
+      .s1ve-section-padding {
         padding: 32px 16px;
       }
     }
@@ -11041,67 +11041,67 @@
     <!-- =========================================================================
          S1VE LUXURY STORE EXPERIENCE (100% Fullscreen / Edge-to-Edge)
          ========================================================================= -->
-    <div id="ewc-shop-experience" class="ewc-shop-root" style="display: block;">
+    <div id="s1ve-shop-experience" class="s1ve-shop-root" style="display: block;">
         
         <!-- 1. EXACT 1:1 STICKY FLOATING PILL NAVBAR (Matches Screenshots media_1789063219217.png & media_1789063324120.png) -->
-        <div class="ewc-sticky-bar-wrapper">
-        <div class="ewc-sticky-header-container" id="ewc-sticky-bar">
-          <div class="ewc-pill-bar">
+        <div class="s1ve-sticky-bar-wrapper">
+        <div class="s1ve-sticky-header-container" id="s1ve-sticky-bar">
+          <div class="s1ve-pill-bar">
             <!-- Left: ☰ Menu, Search, Country/Currency -->
-            <div class="ewc-bar-left">
-              <button type="button" class="ewc-bar-link" onclick="toggleS1veMenu()" aria-label="Open categories menu" title="Open Categories Menu">
-                <span class="ewc-bar-hamburger">
+            <div class="s1ve-bar-left">
+              <button type="button" class="s1ve-bar-link" onclick="toggleS1veMenu()" aria-label="Open categories menu" title="Open Categories Menu">
+                <span class="s1ve-bar-hamburger">
                   <span></span>
                   <span></span>
                   <span></span>
                 </span>
               </button>
 
-              <button type="button" class="ewc-bar-link" onclick="toggleS1veSearch()" aria-label="Search collection" title="Search Products">
+              <button type="button" class="s1ve-bar-link" onclick="toggleS1veSearch()" aria-label="Search collection" title="Search Products">
                 <span>SEARCH</span>
               </button>
 
-              <div class="ewc-bar-curr-wrap">
-                <button type="button" class="ewc-bar-link" id="ewc-currency-pill" onclick="toggleEwcCurrencyDropdown(event)" aria-label="Currency & Region" title="Currency / Region">
-                  <span id="ewc-active-flag" style="font-size: 1.05rem; line-height: 1;">🇮🇳</span>
-                  <span id="ewc-active-currency-label">INR / EN</span>
+              <div class="s1ve-bar-curr-wrap">
+                <button type="button" class="s1ve-bar-link" id="s1ve-currency-pill" onclick="toggleS1veCurrencyDropdown(event)" aria-label="Currency & Region" title="Currency / Region">
+                  <span id="s1ve-active-flag" style="font-size: 1.05rem; line-height: 1;">🇮🇳</span>
+                  <span id="s1ve-active-currency-label">INR / EN</span>
                 </button>
-                <div class="ewc-currency-dropdown" id="ewc-currency-dropdown">
-                  <div class="ewc-dropdown-item active" id="ewc-curr-opt-INR" onclick="setEwcCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳')">
+                <div class="s1ve-currency-dropdown" id="s1ve-currency-dropdown">
+                  <div class="s1ve-dropdown-item active" id="s1ve-curr-opt-INR" onclick="setS1veCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳')">
                     <span>🇮🇳 INR / EN (₹)</span>
-                    <span class="ewc-check">✓</span>
+                    <span class="s1ve-check">✓</span>
                   </div>
-                  <div class="ewc-dropdown-item" id="ewc-curr-opt-EUR" onclick="setEwcCurrency('EUR', '€', 0.011, 'EUR / EN', '🇪🇺')">
+                  <div class="s1ve-dropdown-item" id="s1ve-curr-opt-EUR" onclick="setS1veCurrency('EUR', '€', 0.011, 'EUR / EN', '🇪🇺')">
                     <span>🇪🇺 EUR / EN (€)</span>
-                    <span class="ewc-check"></span>
+                    <span class="s1ve-check"></span>
                   </div>
-                  <div class="ewc-dropdown-item" id="ewc-curr-opt-USD" onclick="setEwcCurrency('USD', '$', 0.012, 'USD / EN', '🇺🇸')">
+                  <div class="s1ve-dropdown-item" id="s1ve-curr-opt-USD" onclick="setS1veCurrency('USD', '$', 0.012, 'USD / EN', '🇺🇸')">
                     <span>🇺🇸 USD / EN ($)</span>
-                    <span class="ewc-check"></span>
+                    <span class="s1ve-check"></span>
                   </div>
-                  <div class="ewc-dropdown-item" id="ewc-curr-opt-GBP" onclick="setEwcCurrency('GBP', '£', 0.0094, 'GBP / EN', '🇬🇧')">
+                  <div class="s1ve-dropdown-item" id="s1ve-curr-opt-GBP" onclick="setS1veCurrency('GBP', '£', 0.0094, 'GBP / EN', '🇬🇧')">
                     <span>🇬🇧 GBP / EN (£)</span>
-                    <span class="ewc-check"></span>
+                    <span class="s1ve-check"></span>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Center: S1VE Bold Italic Condensed Logo -->
-            <div class="ewc-bar-center">
-              <a href="#store" class="ewc-bar-logo-link" onclick="filterEwcCategory('All')" title="S1VE Official Store">
+            <div class="s1ve-bar-center">
+              <a href="#store" class="s1ve-bar-logo-link" onclick="filterS1veCategory('All')" title="S1VE Official Store">
                 <span class="s1ve-text-logo">S1VE</span>
               </a>
             </div>
 
             <!-- Right: Track Order, Cart (Account removed per instructions) -->
-            <div class="ewc-bar-right">
-              <button type="button" class="ewc-bar-link" onclick="openS1veTrackModal()" title="Track Your Package">
+            <div class="s1ve-bar-right">
+              <button type="button" class="s1ve-bar-link" onclick="openS1veTrackModal()" title="Track Your Package">
                 <span>TRACK</span>
               </button>
-              <button type="button" class="ewc-bar-link ewc-bar-cart-link" onclick="openCartDrawer()" title="View Shopping Cart">
+              <button type="button" class="s1ve-bar-link s1ve-bar-cart-link" onclick="openCartDrawer()" title="View Shopping Cart">
                 <span>CART</span>
-                <span class="ewc-bar-cart-badge" id="ewc-cart-count-badge">0</span>
+                <span class="s1ve-bar-cart-badge" id="s1ve-cart-count-badge">0</span>
               </button>
             </div>
           </div>
@@ -11111,11 +11111,11 @@
             <button type="button" class="s1ve-cat-close-btn" onclick="toggleS1veMenu(false)" aria-label="Close categories">✕</button>
             <div class="s1ve-cat-label">CATEGORIES</div>
             <ul class="s1ve-cat-nav">
-              <li><a href="javascript:void(0)" onclick="filterEwcCategory('Jerseys')">Jerseys</a></li>
-              <li><a href="javascript:void(0)" onclick="filterEwcCategory('T-shirts')">T-shirts</a></li>
-              <li><a href="javascript:void(0)" onclick="filterEwcCategory('Hoodies')">Hoodies</a></li>
-              <li><a href="javascript:void(0)" onclick="filterEwcCategory('Accessories')">Accessories</a></li>
-              <li><a href="javascript:void(0)" onclick="filterEwcCategory('Collectibles')">Collectibles</a></li>
+              <li><a href="javascript:void(0)" onclick="filterS1veCategory('Jerseys')">Jerseys</a></li>
+              <li><a href="javascript:void(0)" onclick="filterS1veCategory('T-shirts')">T-shirts</a></li>
+              <li><a href="javascript:void(0)" onclick="filterS1veCategory('Hoodies')">Hoodies</a></li>
+              <li><a href="javascript:void(0)" onclick="filterS1veCategory('Accessories')">Accessories</a></li>
+              <li><a href="javascript:void(0)" onclick="filterS1veCategory('Collectibles')">Collectibles</a></li>
             </ul>
           </div>
 
@@ -11123,21 +11123,21 @@
           <div class="s1ve-search-bar-dropdown" id="s1ve-search-dropdown">
             <div class="s1ve-search-inner">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <input type="text" id="s1ve-search-input" placeholder="Search jerseys, hoodies, fragrances..." oninput="onEwcSearchInput(this.value)">
+              <input type="text" id="s1ve-search-input" placeholder="Search jerseys, hoodies, fragrances..." oninput="onS1veSearchInput(this.value)">
               <button type="button" class="s1ve-search-close-btn" onclick="toggleS1veSearch(false)">✕</button>
             </div>
             <div class="s1ve-search-live-panel" id="s1ve-search-results"></div>
           </div>
         </div>
-        </div> <!-- End .ewc-sticky-bar-wrapper -->
+        </div> <!-- End .s1ve-sticky-bar-wrapper -->
 
 
         <!-- 3. EXACT 1:1 HERO BANNER (Matches Screenshot media_1789063324120.png) -->
-        <div class="ewc-hero-banner-replica">
-          <div class="ewc-hero-content-center">
-            <span class="ewc-hero-eyebrow">NEW COLLECTION</span>
-            <h1 class="ewc-hero-headline">SPRING SUMMER 2026</h1>
-            <a href="#ewc-product-showcase" class="ewc-hero-cta-btn" onclick="filterEwcCategory('All')">
+        <div class="s1ve-hero-banner-replica">
+          <div class="s1ve-hero-content-center">
+            <span class="s1ve-hero-eyebrow">NEW COLLECTION</span>
+            <h1 class="s1ve-hero-headline">SPRING SUMMER 2026</h1>
+            <a href="#product-showcase" class="s1ve-hero-cta-btn" onclick="filterS1veCategory('All')">
               SHOP SS26 COLLECTION
             </a>
           </div>
@@ -11145,65 +11145,65 @@
 
 
         <!-- 4. CATEGORY FILTER (Hidden from body; accessed via floating pill bar ☰ Categories) -->
-        <div class="ewc-category-bar" id="ewc-category-bar" style="display: none;">
-          <button type="button" class="ewc-cat-pill active" data-cat="All" onclick="filterEwcCategory('All')">ALL (32)</button>
-          <button type="button" class="ewc-cat-pill" data-cat="Jerseys" onclick="filterEwcCategory('Jerseys')">JERSEYS</button>
-          <button type="button" class="ewc-cat-pill" data-cat="T-shirts" onclick="filterEwcCategory('T-shirts')">T-SHIRTS</button>
-          <button type="button" class="ewc-cat-pill" data-cat="Hoodies" onclick="filterEwcCategory('Hoodies')">HOODIES</button>
-          <button type="button" class="ewc-cat-pill" data-cat="Accessories" onclick="filterEwcCategory('Accessories')">ACCESSORIES</button>
-          <button type="button" class="ewc-cat-pill" data-cat="Collectibles" onclick="filterEwcCategory('Collectibles')">COLLECTIBLES</button>
-          <button type="button" class="ewc-cat-pill" data-cat="Fragrances" onclick="filterEwcCategory('Fragrances')">FRAGRANCES</button>
-          <button type="button" class="ewc-cat-pill" data-cat="Bundles" onclick="filterEwcCategory('Bundles')">BUNDLES</button>
+        <div class="s1ve-category-bar" id="s1ve-category-bar" style="display: none;">
+          <button type="button" class="s1ve-cat-pill active" data-cat="All" onclick="filterS1veCategory('All')">ALL (32)</button>
+          <button type="button" class="s1ve-cat-pill" data-cat="Jerseys" onclick="filterS1veCategory('Jerseys')">JERSEYS</button>
+          <button type="button" class="s1ve-cat-pill" data-cat="T-shirts" onclick="filterS1veCategory('T-shirts')">T-SHIRTS</button>
+          <button type="button" class="s1ve-cat-pill" data-cat="Hoodies" onclick="filterS1veCategory('Hoodies')">HOODIES</button>
+          <button type="button" class="s1ve-cat-pill" data-cat="Accessories" onclick="filterS1veCategory('Accessories')">ACCESSORIES</button>
+          <button type="button" class="s1ve-cat-pill" data-cat="Collectibles" onclick="filterS1veCategory('Collectibles')">COLLECTIBLES</button>
+          <button type="button" class="s1ve-cat-pill" data-cat="Fragrances" onclick="filterS1veCategory('Fragrances')">FRAGRANCES</button>
+          <button type="button" class="s1ve-cat-pill" data-cat="Bundles" onclick="filterS1veCategory('Bundles')">BUNDLES</button>
         </div>
 
         <!-- 5. FEATURED PRODUCTS GRID (Bestsellers & Drops) -->
-        <div class="ewc-section-padding" id="ewc-product-showcase">
-          <div class="ewc-section-header">
+        <div class="s1ve-section-padding" id="product-showcase">
+          <div class="s1ve-section-header">
             <div>
-              <div class="ewc-section-eyebrow" id="ewc-section-eyebrow">CURATED COLLECTION</div>
-              <h2 class="ewc-section-title" id="ewc-section-heading">FEATURED BESTSELLERS & DROPS</h2>
+              <div class="s1ve-section-eyebrow" id="s1ve-section-eyebrow">CURATED COLLECTION</div>
+              <h2 class="s1ve-section-title" id="s1ve-section-heading">FEATURED BESTSELLERS & DROPS</h2>
             </div>
-            <div style="font-size: 0.82rem; color: #8e8e99; font-weight: 600;" id="ewc-product-count-label">
+            <div style="font-size: 0.82rem; color: #8e8e99; font-weight: 600;" id="s1ve-product-count-label">
               SHOWING 8 PRODUCTS
             </div>
           </div>
 
-          <div class="ewc-products-grid" id="ewc-products-grid">
+          <div class="s1ve-products-grid" id="s1ve-products-grid">
             <!-- Dynamic S1VE Cards Rendered by JS -->
           </div>
         </div>
 
 
         <!-- 7. 16:9 SQUAD ONE X EWAVE VIDEO ANIMATION (Pure Cinematic Full-Width, No Buttons) -->
-        <div class="ewc-ewave-video-section" id="ewc-ewave-video-section">
-          <div class="ewc-section-header-center">
-            <div class="ewc-section-eyebrow-ewave">OFFICIAL ANIMATION & TELEMETRY COLLABORATION</div>
-            <h2 class="ewc-section-title-ewave">SQUAD ONE X EWAVE</h2>
-            <p class="ewc-section-sub-ewave">
+        <div class="s1ve-ewave-video-section" id="s1ve-ewave-video-section">
+          <div class="s1ve-section-header-center">
+            <div class="s1ve-section-eyebrow-ewave">OFFICIAL ANIMATION & TELEMETRY COLLABORATION</div>
+            <h2 class="s1ve-section-title-ewave">SQUAD ONE X EWAVE</h2>
+            <p class="s1ve-section-sub-ewave">
               Exclusive competitive telemetry partnership and pro apparel collaboration. Official 16:9 widescreen cinematic animation.
             </p>
           </div>
 
-          <div class="ewc-video-container-16-9">
-            <video id="ewc-ewave-video" class="ewc-video-horizontal-full" src="assets/s1veXewawe.mp4" autoplay loop muted playsinline poster="images/new Products/Final_1-_Black_.png">
+          <div class="s1ve-video-container-16-9">
+            <video id="s1ve-ewave-video" class="s1ve-video-horizontal-full" src="assets/s1veXewawe.mp4" autoplay loop muted playsinline poster="images/new Products/Final_1-_Black_.png">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
 
-        <!-- 11. EWC 1:1 PRODUCT DETAIL MODAL (PDP) -->
-        <div class="ewc-pdp-overlay" id="ewc-pdp-overlay" onclick="closeEwcProductModal()"></div>
-        <div class="ewc-pdp-modal" id="ewc-pdp-modal" role="dialog" aria-modal="true" aria-labelledby="ewc-pdp-title-el">
-          <button type="button" class="ewc-pdp-close" onclick="closeEwcProductModal()" aria-label="Close product view">✕</button>
-          <div class="ewc-pdp-grid" id="ewc-pdp-body">
-            <!-- Dynamically populated by openEwcProductModal() -->
+        <!-- 11. S1VE 1:1 PRODUCT DETAIL MODAL (PDP) -->
+        <div class="s1ve-pdp-overlay" id="s1ve-pdp-overlay" onclick="closeS1veProductModal()"></div>
+        <div class="s1ve-pdp-modal" id="s1ve-pdp-modal" role="dialog" aria-modal="true" aria-labelledby="s1ve-pdp-title-el">
+          <button type="button" class="s1ve-pdp-close" onclick="closeS1veProductModal()" aria-label="Close product view">✕</button>
+          <div class="s1ve-pdp-grid" id="s1ve-pdp-body">
+            <!-- Dynamically populated by openS1veProductModal() -->
           </div>
         </div>
 
         <!-- 12. S1VE LIVE ORDER TRACKING MODAL -->
-        <div class="ewc-pdp-overlay" id="s1ve-track-overlay" onclick="closeS1veTrackModal()"></div>
+        <div class="s1ve-pdp-overlay" id="s1ve-track-overlay" onclick="closeS1veTrackModal()"></div>
         <div class="s1ve-track-modal" id="s1ve-track-modal" role="dialog" aria-modal="true">
-          <button type="button" class="ewc-pdp-close" onclick="closeS1veTrackModal()" aria-label="Close track dialog">✕</button>
+          <button type="button" class="s1ve-pdp-close" onclick="closeS1veTrackModal()" aria-label="Close track dialog">✕</button>
           <div style="text-align: center; margin-bottom: 22px;">
             <div style="font-family: 'Roboto Condensed', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; color: #00ff88; text-transform: uppercase; margin-bottom: 6px;">
               DISPATCH TELEMETRY · 24/7
@@ -11221,7 +11221,7 @@
               <label style="display: block; font-family: 'Roboto Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; color: #b0b0c2; text-transform: uppercase; margin-bottom: 6px;">Order ID or Phone Number</label>
               <input type="text" id="s1ve-track-input" required placeholder="SQ1-84920 or +91 9876543210" style="width: 100%; padding: 12px 14px; background: #1c1c26; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #ffffff; font-size: 0.95rem; font-family: 'Roboto Condensed', sans-serif;">
             </div>
-            <button type="submit" class="ewc-pdp-btn-add" style="margin-top: 4px;">FETCH LIVE STATUS ↗</button>
+            <button type="submit" class="s1ve-pdp-btn-add" style="margin-top: 4px;">FETCH LIVE STATUS ↗</button>
             <div id="s1ve-track-result" style="margin-top: 8px; display: none;"></div>
           </form>
         </div>
@@ -15982,8 +15982,8 @@
       if (drawerBadge) drawerBadge.textContent = totalCount;
       const floatBadge = document.getElementById('floating-cart-badge');
       if (floatBadge) floatBadge.textContent = totalCount;
-      const ewcBadge = document.getElementById('ewc-cart-count-badge');
-      if (ewcBadge) ewcBadge.textContent = totalCount;
+      const s1veBadge = document.getElementById('s1ve-cart-count-badge');
+      if (s1veBadge) s1veBadge.textContent = totalCount;
     };
 
     // Checkout Modal Handling
@@ -16818,21 +16818,21 @@
     });
 
     // ==========================================================================
-    // ESPORTS WORLD CUP (EWC) SHOP EXPERIENCE CONTROLLER
+    // ESPORTS WORLD CUP (S1VE) SHOP EXPERIENCE CONTROLLER
     // ==========================================================================
-    window._ewcCurrency = {
+    window._s1veCurrency = {
       code: 'EUR',
       symbol: '€',
       rate: 0.011,
       label: 'EUR / EN',
       flag: '🇪🇺'
     };
-    window._ewcActiveCategory = 'All';
+    window._s1veActiveCategory = 'All';
 
     // Format price according to active currency
-    window.formatEwcPrice = function(inrAmount) {
+    window.formatS1vePrice = function(inrAmount) {
       if (!inrAmount || isNaN(inrAmount)) return '€0.00';
-      const c = window._ewcCurrency;
+      const c = window._s1veCurrency;
       if (c.code === 'INR') {
         return `₹${Math.round(inrAmount).toLocaleString('en-IN')}`;
       } else if (c.code === 'EUR') {
@@ -16848,34 +16848,34 @@
       return `${c.symbol}${(inrAmount * c.rate).toFixed(2)}`;
     };
 
-    // Toggle Version: EWC Test Mode vs Classic Armory
+    // Toggle Version: S1VE Test Mode vs Classic Armory
     window.setShopTestVersion = function(version) {
-      const ewcExp = document.getElementById('ewc-shop-experience');
+      const s1veExp = document.getElementById('s1ve-shop-experience');
       const classicExp = document.getElementById('classic-shop-experience');
-      const btnEwc = document.getElementById('vswitch-btn-ewc');
+      const btnS1ve = document.getElementById('vswitch-btn-s1ve');
       const btnClassic = document.getElementById('vswitch-btn-classic');
 
       if (version === 'classic') {
-        if (ewcExp) ewcExp.style.display = 'none';
+        if (s1veExp) s1veExp.style.display = 'none';
         if (classicExp) classicExp.style.display = 'block';
-        if (btnEwc) {
-          btnEwc.classList.remove('active');
+        if (btnS1ve) {
+          btnS1ve.classList.remove('active');
         }
         if (btnClassic) {
           btnClassic.classList.add('active-classic');
         }
         localStorage.setItem('sq1_shop_test_mode', 'classic');
       } else {
-        if (ewcExp) ewcExp.style.display = 'block';
+        if (s1veExp) s1veExp.style.display = 'block';
         if (classicExp) classicExp.style.display = 'none';
-        if (btnEwc) {
-          btnEwc.classList.add('active');
+        if (btnS1ve) {
+          btnS1ve.classList.add('active');
         }
         if (btnClassic) {
           btnClassic.classList.remove('active-classic');
         }
-        localStorage.setItem('sq1_shop_test_mode', 'ewc');
-        renderEwcProducts();
+        localStorage.setItem('sq1_shop_test_mode', 's1ve');
+        renderS1veProducts();
       }
     };
 
@@ -16905,7 +16905,7 @@
         if (open) {
           dd.classList.add('active');
           if (input) { input.value = ''; setTimeout(() => input.focus(), 150); }
-          onEwcSearchInput('');
+          onS1veSearchInput('');
         } else {
           dd.classList.remove('active');
         }
@@ -16914,7 +16914,7 @@
         if (dd.classList.contains('active') && input) {
           input.value = '';
           setTimeout(() => input.focus(), 150);
-          onEwcSearchInput('');
+          onS1veSearchInput('');
         }
       }
       // Close categories dropdown if opening search
@@ -16926,7 +16926,7 @@
 
     // Close S1VE dropdowns on click outside
     document.addEventListener('click', (e) => {
-      const stickyBar = document.getElementById('ewc-sticky-bar');
+      const stickyBar = document.getElementById('s1ve-sticky-bar');
       if (stickyBar && !stickyBar.contains(e.target)) {
         const catDd = document.getElementById('s1ve-categories-dropdown');
         if (catDd) catDd.classList.remove('active');
@@ -16936,70 +16936,70 @@
     });
 
     // Toggle Currency Dropdown
-    window.toggleEwcCurrencyDropdown = function(e) {
+    window.toggleS1veCurrencyDropdown = function(e) {
       if (e) e.stopPropagation();
-      const dd = document.getElementById('ewc-currency-dropdown');
+      const dd = document.getElementById('s1ve-currency-dropdown');
       if (dd) dd.classList.toggle('show');
     };
 
     // Close currency dropdown when clicking outside
     document.addEventListener('click', (e) => {
-      const wrap = document.querySelector('.ewc-bar-curr-wrap');
+      const wrap = document.querySelector('.s1ve-bar-curr-wrap');
       if (wrap && !wrap.contains(e.target)) {
-        const dd = document.getElementById('ewc-currency-dropdown');
+        const dd = document.getElementById('s1ve-currency-dropdown');
         if (dd) dd.classList.remove('show');
       }
     });
 
     // Set Active Currency & Live Re-render
-    window.setEwcCurrency = function(code, symbol, rate, label, flag) {
-      window._ewcCurrency = { code, symbol, rate, label, flag };
-      localStorage.setItem('sq1_ewc_currency', JSON.stringify(window._ewcCurrency));
+    window.setS1veCurrency = function(code, symbol, rate, label, flag) {
+      window._s1veCurrency = { code, symbol, rate, label, flag };
+      localStorage.setItem('sq1_s1ve_currency', JSON.stringify(window._s1veCurrency));
 
-      const labelEl = document.getElementById('ewc-active-currency-label');
+      const labelEl = document.getElementById('s1ve-active-currency-label');
       if (labelEl) labelEl.textContent = label;
-      const flagEl = document.getElementById('ewc-active-flag');
+      const flagEl = document.getElementById('s1ve-active-flag');
       if (flagEl) flagEl.textContent = flag;
 
       // Update dropdown items active state
       ['EUR', 'INR', 'USD', 'GBP'].forEach(curr => {
-        const item = document.getElementById(`ewc-curr-opt-${curr}`);
+        const item = document.getElementById(`s1ve-curr-opt-${curr}`);
         if (item) {
           if (curr === code) {
             item.classList.add('active');
-            const chk = item.querySelector('.ewc-check');
+            const chk = item.querySelector('.s1ve-check');
             if (chk) chk.textContent = '✓';
           } else {
             item.classList.remove('active');
-            const chk = item.querySelector('.ewc-check');
+            const chk = item.querySelector('.s1ve-check');
             if (chk) chk.textContent = '';
           }
         }
-        const dchip = document.getElementById(`ewc-dchip-${curr}`);
+        const dchip = document.getElementById(`s1ve-dchip-${curr}`);
         if (dchip) {
           if (curr === code) dchip.classList.add('active');
           else dchip.classList.remove('active');
         }
       });
 
-      const dd = document.getElementById('ewc-currency-dropdown');
+      const dd = document.getElementById('s1ve-currency-dropdown');
       if (dd) dd.classList.remove('show');
 
       // Update featured blocks
-      const colPrice = document.getElementById('ewc-collectible-price');
-      if (colPrice) colPrice.textContent = `${formatEwcPrice(799)} / ₹799`;
-      const fragPrice = document.getElementById('ewc-fragrance-price');
-      if (fragPrice) fragPrice.textContent = `${formatEwcPrice(1899)} / ₹1,899`;
+      const colPrice = document.getElementById('s1ve-collectible-price');
+      if (colPrice) colPrice.textContent = `${formatS1vePrice(799)} / ₹799`;
+      const fragPrice = document.getElementById('s1ve-fragrance-price');
+      if (fragPrice) fragPrice.textContent = `${formatS1vePrice(1899)} / ₹1,899`;
 
-      renderEwcProducts();
+      renderS1veProducts();
     };
 
-    // Filter EWC / S1VE Categories
-    window.filterEwcCategory = function(catName) {
-      window._ewcActiveCategory = catName;
+    // Filter S1VE / S1VE Categories
+    window.filterS1veCategory = function(catName) {
+      window._s1veActiveCategory = catName;
       
       // Update pills if present
-      document.querySelectorAll('.ewc-cat-pill').forEach(pill => {
+      document.querySelectorAll('.s1ve-cat-pill').forEach(pill => {
         if (pill.getAttribute('data-cat') === catName) {
           pill.classList.add('active');
         } else {
@@ -17008,8 +17008,8 @@
       });
 
       // Update headers
-      const eyebrow = document.getElementById('ewc-section-eyebrow');
-      const heading = document.getElementById('ewc-section-heading');
+      const eyebrow = document.getElementById('s1ve-section-eyebrow');
+      const heading = document.getElementById('s1ve-section-heading');
       if (catName === 'All') {
         if (eyebrow) eyebrow.textContent = 'CURATED COLLECTION';
         if (heading) heading.textContent = 'FEATURED BESTSELLERS & DROPS';
@@ -17018,23 +17018,23 @@
         if (heading) heading.textContent = `${catName.toUpperCase()} COLLECTION`;
       }
 
-      renderEwcProducts();
+      renderS1veProducts();
       toggleS1veMenu(false);
 
       // Smooth scroll into product grid view
-      const target = document.getElementById('ewc-product-showcase');
+      const target = document.getElementById('product-showcase');
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     };
 
     // Helper to scroll to section
-    window.scrollToEwcSection = function(sectionId) {
+    window.scrollToS1veSection = function(sectionId) {
       const el = document.getElementById(sectionId);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // S1VE 2026 Stage Jerseys (Clean S1VE branding, zero EWC references)
+    // S1VE 2026 Stage Jerseys (Clean S1VE branding, zero S1VE references)
     const S1VE_OFFICIAL_JERSEYS = [
       {
         id: 's1ve-pro-jersey-or',
@@ -17079,18 +17079,18 @@
     ];
 
     // Helper: combine S1VE stage items with Squad One armory items
-    function getAllEwcProducts() {
+    function getAllS1veProducts() {
       const storeProds = getStoreProducts();
       return [...S1VE_OFFICIAL_JERSEYS, ...storeProds];
     }
 
-    // Render EWC Product Cards
-    window.renderEwcProducts = function() {
-      const grid = document.getElementById('ewc-products-grid');
+    // Render S1VE Product Cards
+    window.renderS1veProducts = function() {
+      const grid = document.getElementById('s1ve-products-grid');
       if (!grid) return;
 
-      const allProds = getAllEwcProducts();
-      const cat = window._ewcActiveCategory || 'All';
+      const allProds = getAllS1veProducts();
+      const cat = window._s1veActiveCategory || 'All';
 
       let filtered = allProds;
       if (cat === 'Jerseys') {
@@ -17142,55 +17142,55 @@
       }
 
       // Update count label
-      const countLabel = document.getElementById('ewc-product-count-label');
+      const countLabel = document.getElementById('s1ve-product-count-label');
       if (countLabel) countLabel.textContent = `SHOWING ${filtered.length} PRODUCTS`;
 
       grid.innerHTML = filtered.map(prod => {
         const curSize = (window._selectedProductSizes && window._selectedProductSizes[prod.id]) || (prod.sizes && prod.sizes[0]) || 'S';
         const sizes = prod.sizes || ['S', 'M', 'L', 'XL', 'XXL'];
-        const priceFmt = formatEwcPrice(prod.price);
-        const origPriceFmt = formatEwcPrice(prod.originalPrice || Math.round(prod.price * 1.4));
+        const priceFmt = formatS1vePrice(prod.price);
+        const origPriceFmt = formatS1vePrice(prod.originalPrice || Math.round(prod.price * 1.4));
         const badgeText = prod.badge || (prod.category === 'Apparel' ? 'HOT DROP · 280 GSM' : 'OFFICIAL S3 MERCH');
         const imgSrc = prod.image || 'images/new Products/Final_1-_White.png';
         const backImgSrc = (prod.images && prod.images.length > 1) ? prod.images[1] : null;
 
         const sizeButtons = sizes.slice(0, 5).map(s => `
-          <button type="button" class="ewc-size-btn ${s === curSize ? 'active' : ''}" onclick="selectProductSize('${prod.id}', this, '${s}')" title="Size ${s}">
+          <button type="button" class="s1ve-size-btn ${s === curSize ? 'active' : ''}" onclick="selectProductSize('${prod.id}', this, '${s}')" title="Size ${s}">
             ${s}
           </button>
         `).join('');
 
         return `
-          <div class="ewc-product-card" id="ewc-card-${prod.id}">
-            <div class="ewc-card-badge">${badgeText}</div>
+          <div class="s1ve-product-card" id="s1ve-card-${prod.id}">
+            <div class="s1ve-card-badge">${badgeText}</div>
             
-            <div class="ewc-card-image-box" onclick="openEwcProductModal('${prod.id}')" title="Click to view full details">
-              <img class="ewc-card-img-front ${backImgSrc ? 'has-back' : ''}" src="${imgSrc}" alt="${prod.title || prod.name}" onerror="this.src='assets/teams/squadone.png'">
-              ${backImgSrc ? `<img class="ewc-card-img-back" src="${backImgSrc}" alt="${prod.title || prod.name} Back View" onerror="this.src='assets/teams/squadone.png'">` : ''}
-              <button type="button" class="ewc-card-quickview-btn">QUICK VIEW</button>
+            <div class="s1ve-card-image-box" onclick="openS1veProductModal('${prod.id}')" title="Click to view full details">
+              <img class="s1ve-card-img-front ${backImgSrc ? 'has-back' : ''}" src="${imgSrc}" alt="${prod.title || prod.name}" onerror="this.src='assets/teams/squadone.png'">
+              ${backImgSrc ? `<img class="s1ve-card-img-back" src="${backImgSrc}" alt="${prod.title || prod.name} Back View" onerror="this.src='assets/teams/squadone.png'">` : ''}
+              <button type="button" class="s1ve-card-quickview-btn">QUICK VIEW</button>
             </div>
 
-            <div class="ewc-card-details">
-              <div class="ewc-card-cat">${prod.category || 'APPAREL'} · ${prod.subcategory || 'S1VE STREETWEAR'}</div>
-              <h3 class="ewc-card-title" onclick="openEwcProductModal('${prod.id}')" title="View details">${prod.title || prod.name}</h3>
-              <div class="ewc-card-quote">“${prod.quote || 'Upgrade your Vogue'}”</div>
+            <div class="s1ve-card-details">
+              <div class="s1ve-card-cat">${prod.category || 'APPAREL'} · ${prod.subcategory || 'S1VE STREETWEAR'}</div>
+              <h3 class="s1ve-card-title" onclick="openS1veProductModal('${prod.id}')" title="View details">${prod.title || prod.name}</h3>
+              <div class="s1ve-card-quote">“${prod.quote || 'Upgrade your Vogue'}”</div>
 
-              <div class="ewc-card-price-row">
-                <span class="ewc-card-price">${priceFmt}</span>
-                <span class="ewc-card-orig-price">${origPriceFmt}</span>
-                <span class="ewc-card-discount">-20% OFF</span>
+              <div class="s1ve-card-price-row">
+                <span class="s1ve-card-price">${priceFmt}</span>
+                <span class="s1ve-card-orig-price">${origPriceFmt}</span>
+                <span class="s1ve-card-discount">-20% OFF</span>
               </div>
 
-              <div class="ewc-card-sizes">
+              <div class="s1ve-card-sizes">
                 <span class="size-label">SIZE:</span>
                 ${sizeButtons}
               </div>
 
-              <div class="ewc-card-actions">
-                <button type="button" class="ewc-btn-cart" onclick="addProductToCart('${prod.id}', false)">
+              <div class="s1ve-card-actions">
+                <button type="button" class="s1ve-btn-cart" onclick="addProductToCart('${prod.id}', false)">
                   ADD TO CART
                 </button>
-                <button type="button" class="ewc-btn-buy" onclick="openEwcProductModal('${prod.id}')">
+                <button type="button" class="s1ve-btn-buy" onclick="openS1veProductModal('${prod.id}')">
                   VIEW ITEM
                 </button>
               </div>
@@ -17203,122 +17203,122 @@
     // ==========================================================================
     // 1:1 PRODUCT DETAIL MODAL (PDP) CONTROLLERS
     // ==========================================================================
-    window._ewcPdpSelectedSize = 'M';
-    window._ewcPdpQty = 1;
+    window._s1vePdpSelectedSize = 'M';
+    window._s1vePdpQty = 1;
 
-    window.openEwcProductModal = function(prodId) {
-      const allProds = getAllEwcProducts();
+    window.openS1veProductModal = function(prodId) {
+      const allProds = getAllS1veProducts();
       const prod = allProds.find(p => p.id === prodId) || allProds[0];
       if (!prod) return;
 
-      window._ewcCurrentModalProd = prod;
-      window._ewcPdpSelectedSize = (prod.sizes && prod.sizes[0]) || 'M';
-      window._ewcPdpQty = 1;
+      window._s1veCurrentModalProd = prod;
+      window._s1vePdpSelectedSize = (prod.sizes && prod.sizes[0]) || 'M';
+      window._s1vePdpQty = 1;
 
-      const body = document.getElementById('ewc-pdp-body');
+      const body = document.getElementById('s1ve-pdp-body');
       if (!body) return;
 
       const images = (prod.images && prod.images.length > 0) ? prod.images : [prod.image || 'images/new Products/Final_1-_White.png'];
       const sizes = prod.sizes || ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'];
-      const priceFmt = formatEwcPrice(prod.price);
-      const origPriceFmt = formatEwcPrice(prod.originalPrice || Math.round(prod.price * 1.3));
+      const priceFmt = formatS1vePrice(prod.price);
+      const origPriceFmt = formatS1vePrice(prod.originalPrice || Math.round(prod.price * 1.3));
 
       const thumbsHtml = images.map((img, idx) => `
-        <img src="${img}" class="ewc-pdp-thumb ${idx === 0 ? 'active' : ''}" onclick="changeEwcPdpThumb('${img}', this)" alt="Thumb ${idx + 1}" onerror="this.src='assets/teams/squadone.png'">
+        <img src="${img}" class="s1ve-pdp-thumb ${idx === 0 ? 'active' : ''}" onclick="changeS1vePdpThumb('${img}', this)" alt="Thumb ${idx + 1}" onerror="this.src='assets/teams/squadone.png'">
       `).join('');
 
       const sizeChipsHtml = sizes.map(s => `
-        <button type="button" class="ewc-pdp-size-chip ${s === window._ewcPdpSelectedSize ? 'active' : ''}" onclick="selectEwcPdpSize('${s}', this)">
+        <button type="button" class="s1ve-pdp-size-chip ${s === window._s1vePdpSelectedSize ? 'active' : ''}" onclick="selectS1vePdpSize('${s}', this)">
           ${s}
         </button>
       `).join('');
 
       body.innerHTML = `
-        <div class="ewc-pdp-gallery">
-          <div class="ewc-pdp-main-img-wrap">
-            <img src="${images[0]}" id="ewc-pdp-active-img" class="ewc-pdp-main-img" alt="${prod.title || prod.name}" onerror="this.src='assets/teams/squadone.png'">
+        <div class="s1ve-pdp-gallery">
+          <div class="s1ve-pdp-main-img-wrap">
+            <img src="${images[0]}" id="s1ve-pdp-active-img" class="s1ve-pdp-main-img" alt="${prod.title || prod.name}" onerror="this.src='assets/teams/squadone.png'">
           </div>
-          <div class="ewc-pdp-thumbs-row">
+          <div class="s1ve-pdp-thumbs-row">
             ${thumbsHtml}
           </div>
         </div>
 
-        <div class="ewc-pdp-info">
-          <div class="ewc-pdp-badge">${prod.badge || 'OFFICIAL 2026 DROP'}</div>
-          <h2 class="ewc-pdp-title" id="ewc-pdp-title-el">${prod.title || prod.name}</h2>
+        <div class="s1ve-pdp-info">
+          <div class="s1ve-pdp-badge">${prod.badge || 'OFFICIAL 2026 DROP'}</div>
+          <h2 class="s1ve-pdp-title" id="s1ve-pdp-title-el">${prod.title || prod.name}</h2>
           
-          <div class="ewc-pdp-price-row">
-            <span class="ewc-pdp-price" id="ewc-pdp-price-el">${priceFmt}</span>
+          <div class="s1ve-pdp-price-row">
+            <span class="s1ve-pdp-price" id="s1ve-pdp-price-el">${priceFmt}</span>
             <span style="font-size: 0.95rem; color: #6a6a75; text-decoration: line-through;">${origPriceFmt}</span>
             <span style="font-size: 0.75rem; color: #00ff88; font-weight: 700; background: rgba(0,255,136,0.12); padding: 3px 8px; border-radius: 4px;">FREE SHIPPING INCLUDED</span>
           </div>
 
-          <div class="ewc-pdp-size-title">
+          <div class="s1ve-pdp-size-title">
             <span>SELECT SIZE</span>
-            <span style="color: #d4af37; cursor: pointer; text-decoration: underline;" onclick="toggleEwcPdpAccordion(document.getElementById('ewc-acc-header-fit'))">SIZE GUIDE ↗</span>
+            <span style="color: #d4af37; cursor: pointer; text-decoration: underline;" onclick="toggleS1vePdpAccordion(document.getElementById('s1ve-acc-header-fit'))">SIZE GUIDE ↗</span>
           </div>
 
-          <div class="ewc-pdp-sizes-grid">
+          <div class="s1ve-pdp-sizes-grid">
             ${sizeChipsHtml}
           </div>
 
-          <div class="ewc-pdp-qty-row">
+          <div class="s1ve-pdp-qty-row">
             <span style="font-family:'Roboto Condensed',sans-serif; font-size: 0.78rem; font-weight: 700; color: #8e8e99;">QUANTITY:</span>
-            <div class="ewc-pdp-qty-box">
-              <button type="button" class="ewc-pdp-qty-btn" onclick="stepEwcPdpQty(-1)">−</button>
-              <span class="ewc-pdp-qty-val" id="ewc-pdp-qty-val">1</span>
-              <button type="button" class="ewc-pdp-qty-btn" onclick="stepEwcPdpQty(1)">+</button>
+            <div class="s1ve-pdp-qty-box">
+              <button type="button" class="s1ve-pdp-qty-btn" onclick="stepS1vePdpQty(-1)">−</button>
+              <span class="s1ve-pdp-qty-val" id="s1ve-pdp-qty-val">1</span>
+              <button type="button" class="s1ve-pdp-qty-btn" onclick="stepS1vePdpQty(1)">+</button>
             </div>
           </div>
 
-          <div class="ewc-pdp-actions">
-            <button type="button" class="ewc-pdp-btn-add" onclick="addEwcPdpToCart('${prod.id}', false)">
+          <div class="s1ve-pdp-actions">
+            <button type="button" class="s1ve-pdp-btn-add" onclick="addS1vePdpToCart('${prod.id}', false)">
               ADD TO CART
             </button>
-            <button type="button" class="ewc-pdp-btn-buy" onclick="addEwcPdpToCart('${prod.id}', true)">
+            <button type="button" class="s1ve-pdp-btn-buy" onclick="addS1vePdpToCart('${prod.id}', true)">
               BUY IT NOW
             </button>
           </div>
 
           <!-- Collapsible Accordions -->
-          <div class="ewc-pdp-accordion-item open">
-            <button type="button" class="ewc-pdp-accordion-header" onclick="toggleEwcPdpAccordion(this)">
+          <div class="s1ve-pdp-accordion-item open">
+            <button type="button" class="s1ve-pdp-accordion-header" onclick="toggleS1vePdpAccordion(this)">
               <span>PRODUCT DETAILS & TECH SPECS</span>
-              <span class="ewc-pdp-acc-icon">▼</span>
+              <span class="s1ve-pdp-acc-icon">▼</span>
             </button>
-            <div class="ewc-pdp-accordion-content">
+            <div class="s1ve-pdp-accordion-content">
               ${prod.description || 'Crafted with pro-tier breathable aeromesh, moisture-wicking technology, and championship tournament emblems.'}
               <br><br>
               <strong>Material:</strong> ${prod.material || '100% Breathable Aeromesh / 280 GSM Heavy Combed Cotton'}.
             </div>
           </div>
 
-          <div class="ewc-pdp-accordion-item">
-            <button type="button" class="ewc-pdp-accordion-header" id="ewc-acc-header-fit" onclick="toggleEwcPdpAccordion(this)">
+          <div class="s1ve-pdp-accordion-item">
+            <button type="button" class="s1ve-pdp-accordion-header" id="s1ve-acc-header-fit" onclick="toggleS1vePdpAccordion(this)">
               <span>SIZE & FIT GUIDE</span>
-              <span class="ewc-pdp-acc-icon">▼</span>
+              <span class="s1ve-pdp-acc-icon">▼</span>
             </button>
-            <div class="ewc-pdp-accordion-content">
+            <div class="s1ve-pdp-accordion-content">
               ${prod.fit || 'True to size for pro athletic fit. For an oversized streetwear aesthetic, order one size larger.'}
               <br><br>
               Chest (inches): XS (36"), S (38"), M (40"), L (42"), XL (44"), 2XL (46"), 3XL (48").
             </div>
           </div>
 
-          <div class="ewc-pdp-accordion-item">
-            <button type="button" class="ewc-pdp-accordion-header" onclick="toggleEwcPdpAccordion(this)">
+          <div class="s1ve-pdp-accordion-item">
+            <button type="button" class="s1ve-pdp-accordion-header" onclick="toggleS1vePdpAccordion(this)">
               <span>SHIPPING & FREE 7-DAY RETURNS</span>
-              <span class="ewc-pdp-acc-icon">▼</span>
+              <span class="s1ve-pdp-acc-icon">▼</span>
             </button>
-            <div class="ewc-pdp-accordion-content">
+            <div class="s1ve-pdp-accordion-content">
               Dispatches within 24-48 hours via express air delivery. Free express shipping on all orders. Free 7-day size exchange guarantee with reverse pickup.
             </div>
           </div>
         </div>
       `;
 
-      const modal = document.getElementById('ewc-pdp-modal');
-      const overlay = document.getElementById('ewc-pdp-overlay');
+      const modal = document.getElementById('s1ve-pdp-modal');
+      const overlay = document.getElementById('s1ve-pdp-overlay');
       if (modal && overlay) {
         modal.classList.add('active');
         overlay.classList.add('active');
@@ -17326,9 +17326,9 @@
       }
     };
 
-    window.closeEwcProductModal = function() {
-      const modal = document.getElementById('ewc-pdp-modal');
-      const overlay = document.getElementById('ewc-pdp-overlay');
+    window.closeS1veProductModal = function() {
+      const modal = document.getElementById('s1ve-pdp-modal');
+      const overlay = document.getElementById('s1ve-pdp-overlay');
       if (modal && overlay) {
         modal.classList.remove('active');
         overlay.classList.remove('active');
@@ -17336,30 +17336,30 @@
       }
     };
 
-    window.changeEwcPdpThumb = function(imgSrc, thumbEl) {
-      const activeImg = document.getElementById('ewc-pdp-active-img');
+    window.changeS1vePdpThumb = function(imgSrc, thumbEl) {
+      const activeImg = document.getElementById('s1ve-pdp-active-img');
       if (activeImg) activeImg.src = imgSrc;
-      document.querySelectorAll('.ewc-pdp-thumb').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.s1ve-pdp-thumb').forEach(t => t.classList.remove('active'));
       if (thumbEl) thumbEl.classList.add('active');
     };
 
-    window.selectEwcPdpSize = function(size, btnEl) {
-      window._ewcPdpSelectedSize = size;
-      document.querySelectorAll('.ewc-pdp-size-chip').forEach(c => c.classList.remove('active'));
+    window.selectS1vePdpSize = function(size, btnEl) {
+      window._s1vePdpSelectedSize = size;
+      document.querySelectorAll('.s1ve-pdp-size-chip').forEach(c => c.classList.remove('active'));
       if (btnEl) btnEl.classList.add('active');
     };
 
-    window.stepEwcPdpQty = function(delta) {
-      window._ewcPdpQty = Math.max(1, (window._ewcPdpQty || 1) + delta);
-      const valEl = document.getElementById('ewc-pdp-qty-val');
-      if (valEl) valEl.textContent = window._ewcPdpQty;
+    window.stepS1vePdpQty = function(delta) {
+      window._s1vePdpQty = Math.max(1, (window._s1vePdpQty || 1) + delta);
+      const valEl = document.getElementById('s1ve-pdp-qty-val');
+      if (valEl) valEl.textContent = window._s1vePdpQty;
     };
 
-    window.addEwcPdpToCart = function(prodId, buyNow) {
-      const allProds = getAllEwcProducts();
-      const prod = allProds.find(p => p.id === prodId) || window._ewcCurrentModalProd;
-      const size = window._ewcPdpSelectedSize || 'M';
-      const qty = window._ewcPdpQty || 1;
+    window.addS1vePdpToCart = function(prodId, buyNow) {
+      const allProds = getAllS1veProducts();
+      const prod = allProds.find(p => p.id === prodId) || window._s1veCurrentModalProd;
+      const size = window._s1vePdpSelectedSize || 'M';
+      const qty = window._s1vePdpQty || 1;
 
       // Add to main cart state
       for (let i = 0; i < qty; i++) {
@@ -17368,7 +17368,7 @@
         }
       }
 
-      closeEwcProductModal();
+      closeS1veProductModal();
 
       if (buyNow) {
         if (typeof openCartDrawer === 'function') {
@@ -17377,9 +17377,9 @@
       }
     };
 
-    window.toggleEwcPdpAccordion = function(headerEl) {
+    window.toggleS1vePdpAccordion = function(headerEl) {
       if (!headerEl) return;
-      const item = headerEl.closest('.ewc-pdp-accordion-item');
+      const item = headerEl.closest('.s1ve-pdp-accordion-item');
       if (item) item.classList.toggle('open');
     };
 
@@ -17387,8 +17387,8 @@
     // 16:9 SQUAD ONE X EWAVE VIDEO CONTROLLERS
     // ==========================================================================
     window.toggleEwaveVideoSound = function() {
-      const vid = document.getElementById('ewc-ewave-video');
-      const icon = document.getElementById('ewc-sound-icon');
+      const vid = document.getElementById('s1ve-ewave-video');
+      const icon = document.getElementById('s1ve-sound-icon');
       if (vid && icon) {
         vid.muted = !vid.muted;
         if (vid.muted) {
@@ -17400,8 +17400,8 @@
     };
 
     window.toggleEwaveVideoPlay = function() {
-      const vid = document.getElementById('ewc-ewave-video');
-      const icon = document.getElementById('ewc-play-icon');
+      const vid = document.getElementById('s1ve-ewave-video');
+      const icon = document.getElementById('s1ve-play-icon');
       if (vid && icon) {
         if (vid.paused) {
           vid.play();
@@ -17414,7 +17414,7 @@
     };
 
     window.toggleEwaveVideoFullscreen = function() {
-      const container = document.querySelector('.ewc-video-container-16-9');
+      const container = document.querySelector('.s1ve-video-container-16-9');
       if (container) {
         if (!document.fullscreenElement) {
           container.requestFullscreen().catch(err => alert(err.message));
@@ -17472,14 +17472,14 @@
     };
 
     // Instant Search Input Handler (Outputs to Top Bar Dropdown & Modal)
-    window.onEwcSearchInput = function(query) {
+    window.onS1veSearchInput = function(query) {
       const containers = [
         document.getElementById('s1ve-search-results'),
-        document.getElementById('ewc-search-results')
+        document.getElementById('s1ve-search-results')
       ].filter(Boolean);
       if (containers.length === 0) return;
 
-      const prods = getAllEwcProducts();
+      const prods = getAllS1veProducts();
       const q = (query || '').toLowerCase().trim();
 
       const results = q ? prods.filter(p => 
@@ -17494,17 +17494,17 @@
           No merchandise found matching "<strong>${query}</strong>". Try searching for <em>Jersey, Hoodie, EDP, or Tee</em>.
         </div>
       ` : results.map(p => `
-        <div class="ewc-search-result-row" onclick="openEwcProductModal('${p.id}'); toggleS1veSearch(false);">
-          <div class="ewc-sres-left">
-            <img src="${p.image || 'images/new Products/Final_1-_White.png'}" class="ewc-sres-thumb" alt="${p.title || p.name}" onerror="this.src='assets/teams/squadone.png'">
+        <div class="s1ve-search-result-row" onclick="openS1veProductModal('${p.id}'); toggleS1veSearch(false);">
+          <div class="s1ve-sres-left">
+            <img src="${p.image || 'images/new Products/Final_1-_White.png'}" class="s1ve-sres-thumb" alt="${p.title || p.name}" onerror="this.src='assets/teams/squadone.png'">
             <div>
-              <div class="ewc-sres-name">${p.title || p.name}</div>
-              <div class="ewc-sres-cat">${p.category || 'APPAREL'}</div>
+              <div class="s1ve-sres-name">${p.title || p.name}</div>
+              <div class="s1ve-sres-cat">${p.category || 'APPAREL'}</div>
             </div>
           </div>
           <div style="display: flex; align-items: center; gap: 12px;">
-            <span class="ewc-sres-price">${formatEwcPrice(p.price)}</span>
-            <button type="button" class="ewc-btn-cart" style="padding: 6px 10px; font-size: 0.72rem;">VIEW</button>
+            <span class="s1ve-sres-price">${formatS1vePrice(p.price)}</span>
+            <button type="button" class="s1ve-btn-cart" style="padding: 6px 10px; font-size: 0.72rem;">VIEW</button>
           </div>
         </div>
       `).join('');
@@ -17513,18 +17513,18 @@
     };
 
     // FAQ Accordion Toggle
-    window.toggleEwcFaq = function(buttonEl) {
+    window.toggleS1veFaq = function(buttonEl) {
       if (!buttonEl) return;
-      const item = buttonEl.closest('.ewc-faq-item');
+      const item = buttonEl.closest('.s1ve-faq-item');
       if (item) {
         item.classList.toggle('active');
       }
     };
 
     // Newsletter Submission Handler
-    window.handleEwcNewsletterSubmit = function(e) {
+    window.handleS1veNewsletterSubmit = function(e) {
       if (e) e.preventDefault();
-      const emailInput = document.getElementById('ewc-nl-email');
+      const emailInput = document.getElementById('s1ve-nl-email');
       const email = emailInput ? emailInput.value : '';
       if (email) {
         alert(`✓ Welcome to the S1VE VIP Drop Circle!\n\nThank you for subscribing (${email}). Use voucher code: S1VE10 for an instant 10% discount at checkout!`);
@@ -17532,46 +17532,46 @@
       }
     };
 
-    // Initialize EWC / S1VE Shop State on Load
+    // Initialize S1VE / S1VE Shop State on Load
     document.addEventListener('DOMContentLoaded', () => {
-      // Restore saved test mode preference (default to 'ewc')
-      const savedMode = 'ewc'; // Finalized permanent S1VE Armory Store
+      // Restore saved test mode preference (default to 's1ve')
+      const savedMode = 's1ve'; // Finalized permanent S1VE Armory Store
       setShopTestVersion(savedMode);
 
       // Restore saved currency or default to INR
       try {
-        const savedCurr = localStorage.getItem('sq1_ewc_currency');
+        const savedCurr = localStorage.getItem('sq1_s1ve_currency');
         if (savedCurr) {
           const c = JSON.parse(savedCurr);
           if (c && c.code) {
-            setEwcCurrency(c.code, c.symbol, c.rate, c.label, c.flag);
+            setS1veCurrency(c.code, c.symbol, c.rate, c.label, c.flag);
           } else {
-            setEwcCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳');
+            setS1veCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳');
           }
         } else {
-          setEwcCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳');
+          setS1veCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳');
         }
       } catch (err) {
-        setEwcCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳');
+        setS1veCurrency('INR', '₹', 1, 'INR / EN', '🇮🇳');
       }
 
       // Render initial products
-      renderEwcProducts();
+      renderS1veProducts();
       updateCartBadge();
 
       // Scroll Check & Fail-Safe Pinning for S1VE Pill Navbar
       const storeSec = document.getElementById('store');
-      const stickyBar = document.getElementById('ewc-sticky-bar');
+      const stickyBar = document.getElementById('s1ve-sticky-bar');
       function checkStoreHUD() {
         if (!storeSec) return;
-        const isEwcActive = (document.getElementById('ewc-shop-experience') && document.getElementById('ewc-shop-experience').style.display !== 'none');
+        const isS1veActive = (document.getElementById('s1ve-shop-experience') && document.getElementById('s1ve-shop-experience').style.display !== 'none');
         const rect = storeSec.getBoundingClientRect();
-        const inStore = (rect.top <= 100 && rect.bottom >= 100) && isEwcActive;
+        const inStore = (rect.top <= 100 && rect.bottom >= 100) && isS1veActive;
         document.body.classList.toggle('in-s1ve-store', inStore);
-        document.body.classList.toggle('in-ewc-shop', inStore);
+        document.body.classList.toggle('in-s1ve-shop', inStore);
 
         // Ensure pill bar stays pinned firmly to top of viewport while inside store
-        if (stickyBar && isEwcActive) {
+        if (stickyBar && isS1veActive) {
           const barHeight = stickyBar.offsetHeight || 56;
           const shouldPin = (rect.top <= 0 && rect.bottom >= barHeight);
           stickyBar.classList.toggle('is-pinned-top', shouldPin);
@@ -17584,8 +17584,8 @@
       checkStoreHUD();
 
       // Video Ambient Sync
-      const mainVid = document.getElementById('ewc-ewave-video');
-      const ambVid = document.getElementById('ewc-ewave-video-ambient');
+      const mainVid = document.getElementById('s1ve-ewave-video');
+      const ambVid = document.getElementById('s1ve-ewave-video-ambient');
       if (mainVid && ambVid) {
         mainVid.addEventListener('play', () => { ambVid.play().catch(() => {}); });
         mainVid.addEventListener('pause', () => { ambVid.pause(); });
@@ -17598,7 +17598,7 @@
       if (e.key === 'Escape') {
         toggleS1veMenu(false);
         toggleS1veSearch(false);
-        closeEwcProductModal();
+        closeS1veProductModal();
         closeS1veTrackModal();
       }
     });
