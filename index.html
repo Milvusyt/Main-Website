@@ -5617,99 +5617,6 @@
     /* ==========================================================================
        ESPORTS WORLD CUP (EWC) SHOP EXPERIENCE & TEST SWITCHER STYLES
        ========================================================================== */
-    /* Test Mode Switcher Banner */
-    .sq1-shop-version-switch-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      padding: 14px 22px;
-      margin-bottom: 30px;
-      background: linear-gradient(90deg, rgba(20, 20, 26, 0.95), rgba(12, 12, 16, 0.98));
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.1);
-      position: relative;
-      z-index: 10;
-    }
-    .sq1-vswitch-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .sq1-vswitch-pulse-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #00ff88;
-      box-shadow: 0 0 10px #00ff88;
-      animation: ewcPulse 1.8s infinite;
-      display: inline-block;
-    }
-    @keyframes ewcPulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.35); opacity: 0.6; }
-    }
-    .sq1-vswitch-badge {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 3px 9px;
-      border-radius: 4px;
-      background: rgba(212, 175, 55, 0.18);
-      color: #d4af37;
-      border: 1px solid rgba(212, 175, 55, 0.35);
-    }
-    .sq1-vswitch-text {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: #ffffff;
-      letter-spacing: 0.02em;
-    }
-    .sq1-vswitch-controls {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .sq1-vswitch-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #a0a0b0;
-    }
-    .sq1-vswitch-btn:hover {
-      background: rgba(255, 255, 255, 0.12);
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.25);
-    }
-    .sq1-vswitch-btn.active {
-      background: linear-gradient(135deg, #d4af37 0%, #b38728 100%);
-      color: #0c0c0e;
-      border-color: #d4af37;
-      box-shadow: 0 0 16px rgba(212, 175, 55, 0.45);
-    }
-    .sq1-vswitch-btn.active-classic {
-      background: linear-gradient(135deg, #953DDF 0%, #681EB3 100%);
-      color: #ffffff;
-      border-color: #953DDF;
-      box-shadow: 0 0 16px rgba(149, 61, 223, 0.45);
-    }
-
     /* S1VE Store Root Container (100% Fullscreen / Edge-to-Edge) */
     .ewc-shop-root {
       background: #070709;
@@ -6377,9 +6284,26 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.45s ease;
+      transition: transform 0.45s ease, opacity 0.35s ease;
     }
-    .ewc-product-card:hover .ewc-card-image-box img {
+    .ewc-card-img-back {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.45s ease, opacity 0.35s ease;
+    }
+    .ewc-product-card:hover .ewc-card-img-back {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    .ewc-product-card:hover .ewc-card-img-front.has-back {
+      opacity: 0;
+    }
+    .ewc-product-card:hover .ewc-card-image-box img:not(.has-back) {
       transform: scale(1.05);
     }
     .ewc-card-quickview-btn {
@@ -7395,25 +7319,25 @@
       transform: translateX(0);
     }
 
-    /* Slide-In Cyber Cart Drawer */
+/* ==========================================================================
+       S1VE OFFICIAL LUXURY ARMORY — CART DRAWER & CHECKOUT STYLES
+       ========================================================================== */
     .cart-drawer-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       z-index: 9991;
       opacity: 0;
       visibility: hidden;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .cart-drawer-overlay.active {
       opacity: 1;
       visibility: visible;
     }
 
-    /* ==========================================================================
-       PREMIUM CYBER-LUXURY ARMORY SHOPPING CART & IN-APP CHECKOUT STYLES
-       ========================================================================== */
     .cart-drawer {
       position: fixed;
       top: 0;
@@ -7421,9 +7345,9 @@
       width: 440px;
       max-width: 94vw;
       height: 100vh;
-      background: linear-gradient(180deg, #09020f 0%, #13031f 40%, #06010a 100%);
-      border-left: 1px solid rgba(255, 215, 0, 0.25);
-      box-shadow: -15px 0 50px rgba(0, 0, 0, 0.95), 0 0 35px rgba(149, 61, 223, 0.2);
+      background: #08080c;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: -25px 0 60px rgba(0, 0, 0, 0.95);
       z-index: 9992;
       display: flex;
       flex-direction: column;
@@ -7436,7 +7360,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, #953DDF 0%, #ED1418 50%, #FFD700 100%);
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, #d4af37 50%, rgba(212, 175, 55, 0.3) 100%);
       z-index: 10;
     }
     .cart-drawer.active {
@@ -7444,32 +7368,56 @@
     }
 
     .cart-drawer-header {
-      padding: 20px 24px;
-      border-bottom: 1px solid rgba(255, 215, 0, 0.18);
+      padding: 22px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(90deg, rgba(20, 3, 30, 0.95), rgba(28, 4, 42, 0.85));
+      background: #0d0d12;
+      flex-shrink: 0;
     }
     .cart-drawer-title {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      letter-spacing: 1.5px;
-      color: #fff;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
       display: flex;
       align-items: center;
       gap: 10px;
-      text-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
     }
     .cart-badge-pill {
-      background: linear-gradient(135deg, #FFD700, #ffae00);
-      color: #000;
-      font-family: var(--font-mono);
+      background: #ffffff;
+      color: #000000;
+      font-family: 'Roboto Condensed', sans-serif;
       font-size: 0.72rem;
       font-weight: 900;
+      letter-spacing: 0.04em;
       padding: 2px 8px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      border-radius: 4px;
+      line-height: 1.2;
+    }
+
+    .s1ve-drawer-close-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      line-height: 1;
+    }
+    .s1ve-drawer-close-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: #ffffff;
+      transform: scale(1.05);
     }
 
     .cart-drawer-items {
@@ -7479,6 +7427,18 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.3);
+    }
+    .cart-drawer-items::-webkit-scrollbar {
+      width: 6px;
+    }
+    .cart-drawer-items::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .cart-drawer-items::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
     }
 
     .cart-empty-view {
@@ -7488,35 +7448,35 @@
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
-      color: var(--text-muted);
+      color: #88889a;
     }
     .cart-empty-icon {
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 16px;
       opacity: 0.6;
-      filter: drop-shadow(0 0 12px rgba(149, 61, 223, 0.4));
     }
 
     .cart-item-row {
       display: flex;
       gap: 14px;
-      background: linear-gradient(135deg, rgba(25, 4, 38, 0.75) 0%, rgba(12, 1, 18, 0.85) 100%);
-      border: 1px solid rgba(149, 61, 223, 0.35);
-      border-radius: 10px;
-      padding: 12px;
+      background: #0e0e14;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 14px;
       position: relative;
-      transition: all 0.25s ease;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .cart-item-row:hover {
-      border-color: rgba(255, 215, 0, 0.45);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.1);
+      border-color: rgba(212, 175, 55, 0.4);
+      background: #12121a;
+      transform: translateY(-1px);
     }
     .cart-item-thumb {
-      width: 72px;
-      height: 72px;
-      background: radial-gradient(circle, rgba(149, 61, 223, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      border-radius: 8px;
+      width: 76px;
+      height: 76px;
+      background: #14141c;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -7533,49 +7493,66 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      min-width: 0;
+      padding-right: 20px;
     }
     .cart-item-name {
-      font-family: var(--font-condensed);
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 4px;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cart-item-quote {
+      font-size: 0.72rem;
+      font-style: italic;
+      color: #d4af37;
+      opacity: 0.9;
+      margin: 1px 0 6px 0;
+      letter-spacing: 0.3px;
     }
     .cart-item-meta {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-muted);
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #8c8c9e;
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
     .cart-item-price-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 6px;
+      margin-top: 8px;
     }
     .cart-item-price {
-      font-family: var(--font-mono);
-      font-size: 1rem;
-      font-weight: 800;
-      color: #FFD700;
-      text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      color: #ffffff;
     }
     .cart-qty-controls {
       display: flex;
       align-items: center;
       gap: 6px;
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 215, 0, 0.25);
-      border-radius: 6px;
+      background: #14141c;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
       padding: 2px 8px;
     }
     .cart-qty-btn {
       background: none;
       border: none;
-      color: #fff;
+      color: #ffffff;
       font-size: 0.95rem;
       font-weight: bold;
       cursor: pointer;
@@ -7584,69 +7561,101 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: color 0.2s;
+      transition: color 0.15s;
     }
     .cart-qty-btn:hover {
-      color: #FFD700;
+      color: #d4af37;
     }
     .cart-qty-val {
       font-family: var(--font-mono);
       font-size: 0.82rem;
       font-weight: 800;
-      color: #fff;
+      color: #ffffff;
       min-width: 18px;
       text-align: center;
     }
     .cart-item-del {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 12px;
+      right: 12px;
       background: none;
       border: none;
-      color: var(--text-muted);
+      color: #666677;
       cursor: pointer;
       font-size: 0.85rem;
       transition: color 0.2s;
     }
     .cart-item-del:hover {
-      color: #ED1418;
+      color: #ff3344;
     }
 
     .cart-drawer-footer {
       padding: 20px 24px;
-      border-top: 1px solid rgba(255, 215, 0, 0.2);
-      background: linear-gradient(180deg, rgba(14, 2, 22, 0.95) 0%, #08010e 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: #0d0d12;
+      flex-shrink: 0;
     }
     .cart-totals-row {
       display: flex;
       justify-content: space-between;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      color: var(--text-muted);
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #8c8c9e;
       margin-bottom: 8px;
     }
     .cart-grand-total {
       display: flex;
       justify-content: space-between;
-      font-family: var(--font-mono);
+      font-family: 'Roboto Condensed', sans-serif;
       font-size: 1.3rem;
       font-weight: 900;
-      color: #fff;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       margin-bottom: 16px;
     }
     .cart-grand-total span.val {
-      color: #FFD700;
-      text-shadow: 0 0 14px rgba(255, 215, 0, 0.5);
+      color: #d4af37;
     }
 
-    /* In-App Checkout Modal — Luxury Cyber Obsidian */
+    .s1ve-cart-checkout-btn {
+      background: #ffffff;
+      color: #000000;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      padding: 15px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.12);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .s1ve-cart-checkout-btn:hover {
+      background: #e6e6e6;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(255, 255, 255, 0.22);
+    }
+
+    /* ==========================================================================
+       IN-APP S1VE CHECKOUT MODAL — OBSIDIAN LUXURY STYLING
+       ========================================================================== */
     .checkout-modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(4, 1, 8, 0.92);
+      background: rgba(4, 4, 6, 0.92);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       z-index: 9995;
       opacity: 0;
       visibility: hidden;
@@ -7654,7 +7663,7 @@
       align-items: center;
       justify-content: center;
       padding: clamp(10px, 3vw, 24px);
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       overflow-y: auto;
       overscroll-behavior: contain;
     }
@@ -7666,10 +7675,10 @@
     .checkout-card {
       width: 100%;
       max-width: 880px;
-      background: linear-gradient(145deg, #0e0116 0%, #190326 50%, #08000f 100%);
-      border: 1px solid rgba(255, 215, 0, 0.3);
-      border-radius: 16px;
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 40px rgba(149, 61, 223, 0.25), inset 0 1px 0 rgba(255, 215, 0, 0.3);
+      background: #08080c;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.04);
       overflow: hidden;
       margin: auto;
       display: flex;
@@ -7684,31 +7693,48 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #953DDF 0%, #ED1418 50%, #FFD700 100%);
+      height: 2px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, #d4af37 50%, rgba(212, 175, 55, 0.3) 100%);
       z-index: 10;
     }
     .checkout-header {
       padding: 18px 24px;
-      background: linear-gradient(90deg, rgba(25, 4, 38, 0.9) 0%, rgba(15, 2, 24, 0.95) 100%);
-      border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+      background: #0d0d12;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-shrink: 0;
     }
+    .checkout-header .checkout-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .checkout-header .checkout-title-wrap span.icon {
+      font-size: 1.25rem;
+    }
+    .checkout-header .checkout-title-wrap span.text {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
     .checkout-body {
-      padding: 24px;
+      padding: clamp(16px, 2.5vw, 24px);
       overflow-y: auto !important;
       flex: 1 1 auto;
       min-height: 0;
       max-height: calc(90vh - 80px);
       -webkit-overflow-scrolling: touch;
       overscroll-behavior: contain;
+      background: #08080c;
     }
     .checkout-body::-webkit-scrollbar,
     .checkout-modal-overlay::-webkit-scrollbar {
-      width: 8px;
+      width: 7px;
     }
     .checkout-body::-webkit-scrollbar-track,
     .checkout-modal-overlay::-webkit-scrollbar-track {
@@ -7717,11 +7743,11 @@
     }
     .checkout-body::-webkit-scrollbar-thumb,
     .checkout-modal-overlay::-webkit-scrollbar-thumb {
-      background: rgba(255, 215, 0, 0.4);
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 4px;
     }
     .checkout-body::-webkit-scrollbar-thumb:hover {
-      background: #FFD700;
+      background: #d4af37;
     }
     .checkout-grid-layout {
       display: grid;
@@ -7734,63 +7760,109 @@
       }
     }
 
-    .payment-option-card {
-      background: linear-gradient(135deg, rgba(22, 3, 33, 0.75) 0%, rgba(12, 1, 19, 0.85) 100%);
-      border: 1px solid rgba(149, 61, 223, 0.35);
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      transition: all 0.25s ease;
+    .checkout-section-title {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #d4af37;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 8px;
     }
-    .payment-option-card:hover {
-      border-color: rgba(255, 215, 0, 0.6);
-      background: rgba(255, 215, 0, 0.04);
-      box-shadow: 0 4px 18px rgba(255, 215, 0, 0.15);
+
+    .checkout-card .admin-form-group {
+      margin-bottom: 14px;
     }
-    .payment-option-card.selected {
-      border: 1px solid #FFD700;
-      background: linear-gradient(135deg, rgba(38, 6, 56, 0.9) 0%, rgba(20, 2, 30, 0.95) 100%);
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.25), inset 0 0 15px rgba(149, 61, 223, 0.3);
+    .checkout-card .admin-form-group label {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #9da0b5;
+      margin-bottom: 6px;
+      display: block;
     }
 
     .checkout-card .admin-input,
     .checkout-card .admin-textarea,
     .checkout-card select.admin-input {
-      background: rgba(10, 1, 16, 0.85) !important;
-      border: 1px solid rgba(149, 61, 223, 0.35) !important;
-      border-radius: 8px !important;
-      color: #fff !important;
-      transition: all 0.2s ease;
+      background: #111116 !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      border-radius: 6px !important;
+      color: #ffffff !important;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-size: 0.88rem !important;
+      padding: 10px 14px !important;
+      transition: all 0.2s ease !important;
+      width: 100%;
+      box-sizing: border-box;
     }
     .checkout-card .admin-input:focus,
     .checkout-card .admin-textarea:focus,
     .checkout-card select.admin-input:focus {
-      border-color: #FFD700 !important;
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.35), inset 0 0 6px rgba(149, 61, 223, 0.2) !important;
+      border-color: #d4af37 !important;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.16) !important;
       outline: none !important;
+    }
+
+    /* Payment Option Cards */
+    .payment-option-card {
+      background: #0e0e14;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .payment-option-card:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+      background: #12121b;
+      transform: translateY(-1px);
+    }
+    .payment-option-card.selected {
+      border: 1px solid #d4af37 !important;
+      background: #13131e !important;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.12) !important;
+    }
+    .payment-option-card input[type="radio"] {
+      accent-color: #d4af37;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+    }
+
+    #card-details-block,
+    #bank-details-block {
+      background: #07070a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 14px;
+      margin-top: 12px;
     }
 
     .qr-payment-box {
       text-align: center;
-      padding: 18px;
-      background: rgba(10, 1, 16, 0.85);
-      border: 1px dashed rgba(255, 215, 0, 0.45);
-      border-radius: 10px;
-      margin: 14px 0;
-      box-shadow: 0 0 20px rgba(149, 61, 223, 0.15);
+      padding: 20px 16px;
+      background: #07070a;
+      border: 1px dashed rgba(212, 175, 55, 0.4);
+      border-radius: 8px;
+      margin: 12px 0 0 0;
     }
     .qr-image-display {
-      width: 175px;
-      height: 175px;
-      margin: 0 auto 10px;
-      background: #fff;
-      padding: 10px;
-      border-radius: 10px;
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 12px;
+      background: #ffffff;
+      padding: 8px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.35);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
     .qr-image-display img {
       width: 100%;
@@ -7798,17 +7870,43 @@
       object-fit: contain;
     }
 
+    .checkout-submit-btn {
+      background: #ffffff !important;
+      color: #000000 !important;
+      font-family: 'Roboto Condensed', sans-serif !important;
+      font-weight: 900 !important;
+      font-size: 1rem !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      border: none !important;
+      border-radius: 6px !important;
+      width: 100% !important;
+      padding: 16px 24px !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+    }
+    .checkout-submit-btn:hover {
+      background: #e6e6e6 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.25) !important;
+    }
+
     .receipt-box {
-      background: linear-gradient(135deg, rgba(16, 2, 24, 0.9) 0%, rgba(8, 1, 12, 0.95) 100%);
-      border: 1px solid rgba(255, 215, 0, 0.4);
-      border-radius: 12px;
+      background: #0e0e14;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
       padding: 22px;
       margin: 16px 0;
       font-family: var(--font-mono);
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 215, 0, 0.2);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8);
     }
-  
-    /* =========================================================================
+
+      /* =========================================================================
        21. ORDER TRACKER & WORLDWIDE CARD PAYMENT STYLES
        ========================================================================= */
     #track-order-modal {
@@ -10938,22 +11036,7 @@
        08. SQUAD ONE OFFICIAL STORE & MERCHANDISE
        ========================================================================= -->
   <section class="store-section" id="store">
-    <!-- Switcher bar: centered at top of store section -->
-    <div class="sq1-shop-version-switch-bar">
-      <div class="sq1-vswitch-info">
-        <span class="sq1-vswitch-pulse-dot"></span>
-        <span class="sq1-vswitch-badge">S1VE OFFICIAL</span>
-        <span class="sq1-vswitch-text">S1VE Luxury Streetwear & Official Armory Experience</span>
-      </div>
-      <div class="sq1-vswitch-controls">
-        <button type="button" class="sq1-vswitch-btn active" id="vswitch-btn-ewc" onclick="setShopTestVersion('ewc')">
-          ★ S1VE STORE (PREVIEW)
-        </button>
-        <button type="button" class="sq1-vswitch-btn" id="vswitch-btn-classic" onclick="setShopTestVersion('classic')">
-          ⟲ CLASSIC ARMORY
-        </button>
-      </div>
-    </div>
+
 
     <!-- =========================================================================
          S1VE LUXURY STORE EXPERIENCE (100% Fullscreen / Edge-to-Edge)
@@ -12038,7 +12121,7 @@
         <span>TACTICAL INVENTORY</span>
         <span class="cart-badge-pill" id="drawer-cart-badge">0</span>
       </div>
-      <button type="button" class="cyber-btn cyber-btn-outline" onclick="closeCartDrawer()" style="padding: 6px 12px; font-size: 0.72rem;">✕ CLOSE</button>
+      <button type="button" class="s1ve-drawer-close-btn" onclick="closeCartDrawer()" aria-label="Close Shopping Bag">✕</button>
     </div>
 
     <!-- Items List -->
@@ -12060,11 +12143,11 @@
         <span>TOTAL PAYABLE</span>
         <span class="val" id="cart-total-text">₹0</span>
       </div>
-      <button type="button" class="cyber-btn cyber-btn-crimson" onclick="openCheckoutModal()" style="width: 100%; padding: 14px; font-size: 0.95rem; justify-content: center;" data-sound="click">
+      <button type="button" class="s1ve-cart-checkout-btn" onclick="openCheckoutModal()" data-sound="click">
         PROCEED TO CHECKOUT ↵
       </button>
-      <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dark); text-align: center; margin-top: 10px; letter-spacing: 0.5px;">
-        🔒 256-BIT SECURE ENCRYPTION · SQUAD ONE DIRECT
+      <div style="font-family: 'Roboto Condensed', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #666677; text-align: center; margin-top: 12px;">
+        🔒 256-BIT SECURE ENCRYPTION · S1VE OFFICIAL ARMORY
       </div>
     </div>
   </div>
@@ -12160,11 +12243,11 @@
   <div class="checkout-modal-overlay" id="checkout-modal" role="dialog" aria-modal="true" aria-label="Store Checkout" data-lenis-prevent="true">
     <div class="checkout-card" data-lenis-prevent="true">
       <div class="checkout-header">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <span style="font-size: 1.25rem;">🛡️</span>
-          <span style="font-family: var(--font-display); font-size: 1.15rem; color: #fff; letter-spacing: 1px;">SQUAD ONE SECURE CHECKOUT</span>
+        <div class="checkout-title-wrap">
+          <span class="icon">🛡️</span>
+          <span class="text">SQUAD ONE SECURE CHECKOUT</span>
         </div>
-        <button type="button" class="cyber-btn cyber-btn-outline" onclick="closeCheckoutModal()" style="font-size: 0.72rem; padding: 6px 12px;">✕ CLOSE</button>
+        <button type="button" class="s1ve-drawer-close-btn" onclick="closeCheckoutModal()" aria-label="Close Checkout">✕</button>
       </div>
 
       <div class="checkout-body" data-lenis-prevent="true">
@@ -12174,13 +12257,11 @@
             <div class="checkout-grid-layout">
               <!-- Left Column: Delivery Details -->
               <div>
-                <h4 style="font-family: var(--font-condensed); font-size: 1.1rem; color: #FFD700; margin-bottom: 14px; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,215,0,0.2); padding-bottom: 6px;">
-                  1. RECIPIENT & DELIVERY DETAILS
-                </h4>
+                <h4 class="checkout-section-title">1. RECIPIENT & DELIVERY DETAILS</h4>
 
                 <div class="admin-form-group">
                   <label>Country / Region *</label>
-                  <select id="chk-country" class="admin-input" onchange="handleCountryChange()" style="cursor: pointer; background: rgba(18,2,22,0.95); color: #fff; font-weight: 600;">
+                  <select id="chk-country" class="admin-input" onchange="handleCountryChange()" style="cursor: pointer; background: #111116; color: #ffffff; font-weight: 600;">
                     <option value="IN" selected>🇮🇳 India (Domestic Delivery · ₹99 / Free over ₹1,499)</option>
                     <option value="US">🇺🇸 United States (Express Worldwide)</option>
                     <option value="GB">🇬🇧 United Kingdom (Express Worldwide)</option>
@@ -12234,18 +12315,16 @@
 
               <!-- Right Column: Order Summary & Payment -->
               <div>
-                <h4 style="font-family: var(--font-condensed); font-size: 1.1rem; color: #FFD700; margin-bottom: 14px; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,215,0,0.2); padding-bottom: 6px;">
-                  2. ORDER SUMMARY & PAYMENT METHOD
-                </h4>
+                <h4 class="checkout-section-title">2. ORDER SUMMARY & PAYMENT METHOD</h4>
 
                 <!-- Mini summary pill -->
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(149,61,223,0.25); border-radius: 8px; padding: 12px; margin-bottom: 16px;">
+                <div style="background: #0e0e14; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px; margin-bottom: 16px;">
                   <div id="checkout-mini-summary-items" style="max-height: 120px; overflow-y: auto; margin-bottom: 8px; font-family: var(--font-mono); font-size: 0.76rem;">
                     <!-- Injected mini items -->
                   </div>
-                  <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-weight: 800; font-size: 1.1rem; color: #FFD700; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
-                    <span>AMOUNT DUE:</span>
-                    <span id="checkout-due-amount">₹0</span>
+                  <div style="display: flex; justify-content: space-between; font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: 1.15rem; letter-spacing: 0.04em; color: #ffffff; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
+                    <span>TOTAL AMOUNT DUE:</span>
+                    <span id="checkout-due-amount" style="color: #d4af37;">₹0</span>
                   </div>
                   <div id="checkout-due-usd-row" style="display: none; justify-content: flex-end; font-family: var(--font-mono); font-size: 0.76rem; color: #00ff88; margin-top: 3px;">
                     <span id="checkout-due-usd">Approx $0.00 USD</span>
@@ -12266,7 +12345,7 @@
                           <div style="font-size: 0.72rem; color: #00ff88;">Visa · MasterCard · RuPay · American Express · 256-Bit SSL Encrypted</div>
                         </div>
                       </div>
-                      <input type="radio" name="payment_method" value="card" checked style="accent-color: #00ff88;">
+                      <input type="radio" name="payment_method" value="card" checked style="accent-color: #d4af37;">
                     </div>
 
                     <!-- Card Details Block -->
@@ -12274,7 +12353,7 @@
                       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                         <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">ENTER CARD CREDENTIALS</span>
                         <div style="display: flex; gap: 6px; font-size: 0.7rem; font-family: var(--font-mono); color: #FFD700;">
-                          <span id="card-brand-indicator">VISA / MASTERCARD / RUPAY</span>
+                          <span id="card-brand-indicator" style="color: #d4af37; font-weight: 700;">VISA / MASTERCARD / RUPAY</span>
                         </div>
                       </div>
 
@@ -12317,7 +12396,7 @@
                           <div style="font-size: 0.72rem; color: #00ff88;">Pre-locked amount · Google Pay / PhonePe / Paytm / BHIM</div>
                         </div>
                       </div>
-                      <input type="radio" name="payment_method" value="upi" style="accent-color: #00ff88;">
+                      <input type="radio" name="payment_method" value="upi" style="accent-color: #d4af37;">
                     </div>
 
                     <!-- UPI Details Block -->
@@ -12346,7 +12425,7 @@
                           <div style="font-size: 0.72rem; color: var(--text-muted);">HDFC / ICICI Business Account Direct Wire</div>
                         </div>
                       </div>
-                      <input type="radio" name="payment_method" value="bank" style="accent-color: #00ff88;">
+                      <input type="radio" name="payment_method" value="bank" style="accent-color: #d4af37;">
                     </div>
 
                     <div id="bank-details-block" style="display: none; padding: 12px; background: rgba(0,0,0,0.4); border-radius: 6px; margin-top: 10px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); line-height: 1.6;">
@@ -12362,7 +12441,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="cyber-btn cyber-btn-crimson" style="width: 100%; padding: 14px; font-size: 1rem; justify-content: center;" data-sound="click">
+                <button type="submit" class="checkout-submit-btn" data-sound="click">
                   CONFIRM & PLACE ORDER 🚀
                 </button>
               </div>
@@ -12378,7 +12457,7 @@
             </svg>
           </div>
 
-          <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; letter-spacing: 1px; margin-bottom: 4px;">ORDER CONFIRMED & RECEIVED!</h3>
+          <h3 style="font-family: 'Roboto Condensed', sans-serif; font-weight: 900; font-size: 1.6rem; color: #ffffff; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px;">ORDER CONFIRMED & RECEIVED!</h3>
           <p style="font-family: var(--font-mono); font-size: 0.8rem; color: #00ff88; margin-bottom: 20px;">
             Thank you for repping Squad One Esports. Your gear is being prepared for dispatch.
           </p>
@@ -15817,10 +15896,10 @@
         container.innerHTML = `
           <div class="cart-empty-view">
             <div class="cart-empty-icon">🎒</div>
-            <h4 style="font-family: var(--font-condensed); color: #fff; font-size: 1.15rem; margin-bottom: 6px;">YOUR INVENTORY IS EMPTY</h4>
-            <p style="font-size: 0.8rem; margin-bottom: 20px;">Browse the official Squad One store to gear up with authentic team jerseys and merch.</p>
-            <button type="button" class="cyber-btn cyber-btn-crimson" onclick="closeCartDrawer(); location.href='#store';" style="font-size: 0.78rem; padding: 10px 20px;">
-              EXPLORE PRO GEAR
+            <h4 style="font-family: 'Roboto Condensed', sans-serif; font-weight: 900; text-transform: uppercase; color: #ffffff; font-size: 1.15rem; letter-spacing: 0.06em; margin-bottom: 6px;">YOUR INVENTORY IS EMPTY</h4>
+            <p style="font-size: 0.82rem; color: #88889a; margin-bottom: 22px;">Browse the official S1VE store to gear up with authentic championship jerseys and merch.</p>
+            <button type="button" class="s1ve-cart-checkout-btn" onclick="closeCartDrawer(); location.href='#store';" style="display: inline-flex; width: auto; padding: 11px 24px; font-size: 0.85rem;">
+              EXPLORE OFFICIAL ARMORY
             </button>
           </div>
         `;
@@ -15843,10 +15922,10 @@
             </div>
             <div class="cart-item-info">
               <div class="cart-item-name">${item.title}</div>
-              <div class="cart-item-quote" style="font-size: 0.72rem; font-style: italic; color: #FFD700; opacity: 0.85; margin: 1px 0 4px 0; letter-spacing: 0.3px;">“${item.quote || 'Upgrade your Vogue'}”</div>
+              <div class="cart-item-quote" style="font-size: 0.72rem; font-style: italic; color: #d4af37; opacity: 0.9; margin: 1px 0 4px 0; letter-spacing: 0.3px;">“${item.quote || 'Upgrade your Vogue'}”</div>
               <div class="cart-item-meta">
                 <span>SIZE: <strong style="color:#fff;">${item.size}</strong></span>
-                ${item.customIGN ? `<span>IGN: <strong style="color:#FFD700;">${item.customIGN}</strong></span>` : ''}
+                ${item.customIGN ? `<span>IGN: <strong style="color:#d4af37;">${item.customIGN}</strong></span>` : ''}
               </div>
               <div class="cart-item-price-row">
                 <div class="cart-item-price">${item.currency}${itemTotal.toLocaleString()}</div>
@@ -15934,12 +16013,12 @@
           const t = item.price * item.qty;
           subtotal += t;
           return `
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px; color:var(--text-bone);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; color:#ffffff; font-family:'Roboto Condensed', sans-serif; font-size:0.85rem;">
               <div>
-                <div>${item.qty}× ${item.title} (${item.size}${item.customIGN ? ' · ' + item.customIGN : ''})</div>
-                <div style="font-size:0.68rem; font-style:italic; color:#FFD700; opacity:0.85; margin-top:1px;">“${item.quote || 'Upgrade your Vogue'}”</div>
+                <div style="font-weight:700; text-transform:uppercase;">${item.qty}× ${item.title} <span style="color:#8c8c9e; font-weight:400;">(${item.size}${item.customIGN ? ' · ' + item.customIGN : ''})</span></div>
+                <div style="font-size:0.7rem; font-style:italic; color:#d4af37; opacity:0.9; margin-top:1px;">“${item.quote || 'Upgrade your Vogue'}”</div>
               </div>
-              <span style="color:#FFD700; font-weight:700;">₹${t.toLocaleString()}</span>
+              <span style="color:#d4af37; font-weight:800; font-family:var(--font-mono); font-size:0.9rem;">₹${t.toLocaleString()}</span>
             </div>
           `;
         }).join('');
@@ -16556,14 +16635,14 @@
       const itemsListHtml = order.items.map(it => `
         <div style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.1); font-size: 0.8rem;">
           <span>${it.qty}× ${it.title} (${it.size}${it.customIGN ? ' · IGN: ' + it.customIGN : ''})</span>
-          <span style="color: #FFD700;">₹${(it.price * it.qty).toLocaleString()}</span>
+          <span style="color: #d4af37; font-weight: 700;">₹${(it.price * it.qty).toLocaleString()}</span>
         </div>
       `).join('');
 
       box.innerHTML = `
         <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,215,0,0.3); padding-bottom: 8px; margin-bottom: 12px;">
           <div>
-            <strong style="color: #FFD700; font-size: 1.05rem;">${order.orderId}</strong>
+            <strong style="color: #d4af37; font-size: 1.05rem;">${order.orderId}</strong>
             <div style="font-size: 0.72rem; color: var(--text-muted);">${order.date}</div>
           </div>
           <div style="text-align: right;">
@@ -16586,7 +16665,7 @@
 
         <div style="display: flex; justify-content: space-between; padding-top: 8px; font-weight: 800; font-size: 1.15rem; color: #fff;">
           <span>TOTAL AMOUNT:</span>
-          <span style="color: #FFD700;">₹${order.total.toLocaleString()}</span>
+          <span style="color: #d4af37; font-weight: 900;">₹${order.total.toLocaleString()}</span>
         </div>
         ${order.payment.utr !== 'CASH_ON_DELIVERY' ? `<div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; text-align: right;">UTR / REF: ${order.payment.utr}</div>` : ''}
       `;
@@ -16928,43 +17007,43 @@
     // S1VE 2026 Stage Jerseys (Clean S1VE branding, zero EWC references)
     const S1VE_OFFICIAL_JERSEYS = [
       {
-        id: 's1ve-pro-jersey-black',
-        name: 'S1VE Pro Stage Jersey - Obsidian Black',
-        title: 'S1VE Pro Stage Jersey - Obsidian Black',
+        id: 's1ve-pro-jersey-or',
+        name: 'Squad One Official Pro Jersey - Edition OR',
+        title: 'Squad One Official Pro Jersey - Edition OR',
         quote: 'Official Stage Kit · Squad One 2026',
-        badge: 'S1VE 2026 PRO',
+        badge: 'S1VE 2026 OFFICIAL',
         category: 'Jerseys',
         subcategory: 'Pro Stage Kits',
         price: 1999,
         originalPrice: 2499,
-        image: 'https://shop.esportsworldcup.com/cdn/shop/files/jersey2.avif?v=1786062210&width=1200',
+        image: 'images/new Products/jerscy.OR.Front.png',
         images: [
-          'https://shop.esportsworldcup.com/cdn/shop/files/jersey2.avif?v=1786062210&width=1200',
-          'https://shop.esportsworldcup.com/cdn/shop/files/jersey1.avif?v=1786062238&width=1200'
+          'images/new Products/jerscy.OR.Front.png',
+          'images/new Products/jerscy.OR.back.png'
         ],
-        description: 'The official 2026 S1VE Pro Stage Jersey in obsidian black. Engineered with pro-tier breathable aeromesh, moisture-wicking technology, and metallic Squad One tournament emblems.',
+        description: 'The official Squad One 2026 Pro Stage Jersey in Edition OR. Engineered with pro-tier breathable aeromesh, moisture-wicking technology, and metallic Squad One tournament emblems across front and back.',
         sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
         fit: 'Pro Athletic Fit. Model is 185cm wearing size L.',
         material: '100% moisture-wicking aerodynamic polyester mesh with laser-cut breathability panels.'
       },
       {
-        id: 's1ve-championship-jersey-gold',
-        name: 'S1VE Championship Jersey - Black & Gold',
-        title: 'S1VE Championship Jersey - Black & Gold',
+        id: 's1ve-championship-jersey-rp',
+        name: 'Squad One Championship Jersey - Edition RP',
+        title: 'Squad One Championship Jersey - Edition RP',
         quote: 'Championship Stage Kit · Squad One 2026',
         badge: 'OFFICIAL TOURNAMENT',
         category: 'Jerseys',
         subcategory: 'Pro Stage Kits',
         price: 2199,
         originalPrice: 2799,
-        image: 'https://shop.esportsworldcup.com/cdn/shop/files/jersey1.avif?v=1786062238&width=1200',
+        image: 'images/new Products/jerscy.RP.Front.png',
         images: [
-          'https://shop.esportsworldcup.com/cdn/shop/files/jersey1.avif?v=1786062238&width=1200',
-          'https://shop.esportsworldcup.com/cdn/shop/files/jersey2.avif?v=1786062210&width=1200'
+          'images/new Products/jerscy.RP.Front.png',
+          'images/new Products/jerscy.RP.back.png'
         ],
-        description: 'Official S1VE 2026 Championship Edition Jersey featuring signature angular geometric accents and championship gold detailing.',
+        description: 'Official Squad One 2026 Championship Edition Jersey in Edition RP. Featuring signature geometric angular tournament accents, ventilated breathability panels, and high-density sublimated livery across front and back.',
         sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
-        fit: 'Pro Athletic Fit. Lightweight and comfortable for extended gaming sessions.',
+        fit: 'Pro Athletic Fit. Lightweight and comfortable for extended competitive sessions.',
         material: '100% breathable microfiber polyester with sublimated high-density graphics.'
       }
     ];
@@ -17043,6 +17122,7 @@
         const origPriceFmt = formatEwcPrice(prod.originalPrice || Math.round(prod.price * 1.4));
         const badgeText = prod.badge || (prod.category === 'Apparel' ? 'HOT DROP · 280 GSM' : 'OFFICIAL S3 MERCH');
         const imgSrc = prod.image || 'images/new Products/Final_1-_White.png';
+        const backImgSrc = (prod.images && prod.images.length > 1) ? prod.images[1] : null;
 
         const sizeButtons = sizes.slice(0, 5).map(s => `
           <button type="button" class="ewc-size-btn ${s === curSize ? 'active' : ''}" onclick="selectProductSize('${prod.id}', this, '${s}')" title="Size ${s}">
@@ -17055,7 +17135,8 @@
             <div class="ewc-card-badge">${badgeText}</div>
             
             <div class="ewc-card-image-box" onclick="openEwcProductModal('${prod.id}')" title="Click to view full details">
-              <img src="${imgSrc}" alt="${prod.title || prod.name}" onerror="this.src='assets/teams/squadone.png'">
+              <img class="ewc-card-img-front ${backImgSrc ? 'has-back' : ''}" src="${imgSrc}" alt="${prod.title || prod.name}" onerror="this.src='assets/teams/squadone.png'">
+              ${backImgSrc ? `<img class="ewc-card-img-back" src="${backImgSrc}" alt="${prod.title || prod.name} Back View" onerror="this.src='assets/teams/squadone.png'">` : ''}
               <button type="button" class="ewc-card-quickview-btn">QUICK VIEW</button>
             </div>
 
@@ -17424,7 +17505,7 @@
     // Initialize EWC / S1VE Shop State on Load
     document.addEventListener('DOMContentLoaded', () => {
       // Restore saved test mode preference (default to 'ewc')
-      const savedMode = localStorage.getItem('sq1_shop_test_mode') || 'ewc';
+      const savedMode = 'ewc'; // Finalized permanent S1VE Armory Store
       setShopTestVersion(savedMode);
 
       // Restore saved currency or default to INR
