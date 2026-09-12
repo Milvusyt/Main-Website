@@ -16193,7 +16193,17 @@
             // Real-time synchronization for Admin Panel
             this.db.collection('sq1_orders').onSnapshot((snapshot) => {
               const cloudOrders = [];
-              snapshot.forEach(doc => cloudOrders.push(doc.data()));
+              snapshot.forEach(doc => {
+                const data = doc.data();
+                if (data && (data.orderId || data.receipt || data.id)) {
+                  const items = Array.isArray(data.items) ? data.items : [];
+                  const total = Number(data.total !== undefined ? data.total : (data.total_amount_inr || 0));
+                  const name = (data.customer?.name || data.customer_name || '').toLowerCase();
+                  if (items.length > 0 && total > 0 && !name.includes('anonymous customer')) {
+                    cloudOrders.push(data);
+                  }
+                }
+              });
               if (cloudOrders.length > 0) {
                 cloudOrders.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
                 try {
@@ -16694,12 +16704,32 @@
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed)) {
             return parsed.filter(o => {
-              const name = (o.customer?.name || o.customer_name || '').toLowerCase();
-              const email = (o.customer?.email || o.customer_email || '').toLowerCase();
-              const id = (o.orderId || o.receipt || o.id || '').toLowerCase();
+              if (!o) return false;
+              const name = (o.customer?.name || o.customer_name || '').toLowerCase().trim();
+              const email = (o.customer?.email || o.customer_email || '').toLowerCase().trim();
+              const phone = (o.customer?.phone || o.customer_phone || '').trim();
+              const id = (o.orderId || o.receipt || o.id || '').toLowerCase().trim();
+              if (!id) return false;
+
               if (name.includes('rohan gupta') || name.includes('admin operator') || name.includes('rahul verma') || name.includes('siddharth roy')) return false;
               if (email.includes('rohan.g@gmail.com') || email.includes('admin@squadoneesports.com')) return false;
               if (id.includes('cb8c834f') || id.includes('6cf73c23') || id.includes('50dbcd10') || id.includes('882910')) return false;
+
+              // Check items: reject empty item lists
+              let items = [];
+              if (Array.isArray(o.items)) items = o.items;
+              else if (o.items_json) {
+                try { items = JSON.parse(o.items_json); } catch(e){}
+              }
+              if (!items || items.length === 0) return false;
+
+              // Check total: reject 0 or invalid amounts
+              const total = Number(o.total !== undefined ? o.total : (o.total_amount_inr !== undefined ? o.total_amount_inr : 0));
+              if (isNaN(total) || total <= 0) return false;
+
+              // Check anonymous ghost orders
+              if ((!name || name === 'anonymous customer' || name === 'customer') && !phone) return false;
+
               return true;
             });
           }
