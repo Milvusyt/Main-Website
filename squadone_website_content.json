@@ -37,7 +37,7 @@
       "usePoster": false
     },
     "topTeams": {
-      "enabled": false,
+      "enabled": true,
       "eyebrow": "SEASON STANDINGS",
       "title": "TOP TEAMS",
       "seasonBadge": "OFFICIAL S2 CHAMPIONS",
@@ -157,7 +157,7 @@
       "usePoster": false
     },
     "card2": {
-      "enabled": false,
+      "enabled": true,
       "cName": "RAKUZAN",
       "cLogo": "assets/teams/rakuzan.png",
       "cPts": "188 PTS",
@@ -314,8 +314,8 @@
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
+        "category": "Jersey",
+        "subcategory": "Esports jerseys",
         "sku": "SQ1-APP-TEE-WHT",
         "price": 999,
         "priceINR": 999,
@@ -357,8 +357,8 @@
         "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "BESTSELLER · OVERSIZED",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
+        "category": "Jersey",
+        "subcategory": "Esports jerseys",
         "sku": "SQ1-APP-TEE-BLK",
         "price": 999,
         "priceINR": 999,
@@ -398,8 +398,8 @@
         "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "LIMITED DROP · 30% OFF",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
+        "category": "Jersey",
+        "subcategory": "Esports jerseys",
         "sku": "SQ1-APP-TEE-MRN",
         "price": 1099,
         "priceINR": 1099,
@@ -474,8 +474,15 @@
         "inStock": true,
         "hidden": false,
         "stock": 50,
-        "isLimitedEdition": true,
-        "attributes": {},
+        "isLimitedEdition": false,
+        "attributes": {
+          "fit": "Oversized",
+          "fabric": "280 GSM Heavy Combed Cotton",
+          "color": [
+            "Neon Vice"
+          ],
+          "is_customizable": true
+        },
         "checkoutUrl": "https://store.squadone.gg/checkout",
         "short_description": "",
         "shortDescription": "",
