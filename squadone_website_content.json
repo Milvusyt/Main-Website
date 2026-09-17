@@ -37,7 +37,7 @@
       "usePoster": false
     },
     "topTeams": {
-      "enabled": true,
+      "enabled": false,
       "eyebrow": "SEASON STANDINGS",
       "title": "TOP TEAMS",
       "seasonBadge": "OFFICIAL S2 CHAMPIONS",
@@ -157,7 +157,7 @@
       "usePoster": false
     },
     "card2": {
-      "enabled": true,
+      "enabled": false,
       "cName": "RAKUZAN",
       "cLogo": "assets/teams/rakuzan.png",
       "cPts": "188 PTS",
