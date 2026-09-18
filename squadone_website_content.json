@@ -324,7 +324,9 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts"
       },
       {
         "id": "s1ve-sq1-oversized-black",
@@ -345,7 +347,9 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts"
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
@@ -366,7 +370,9 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts"
       },
       {
         "id": "s1ve-custom-1788868261046",
@@ -386,7 +392,9 @@
         ],
         "allowCustomIGN": false,
         "inStock": true,
-        "hidden": false
+        "hidden": false,
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts"
       }
     ]
   },
@@ -486,8 +494,8 @@
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Jersey",
-        "subcategory": "Esports jerseys",
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts",
         "sku": "SQ1-APP-TEE-WHT",
         "price": 999,
         "priceINR": 999,
@@ -529,8 +537,8 @@
         "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "BESTSELLER · OVERSIZED",
-        "category": "Jersey",
-        "subcategory": "Esports jerseys",
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts",
         "sku": "SQ1-APP-TEE-BLK",
         "price": 999,
         "priceINR": 999,
@@ -570,8 +578,8 @@
         "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "LIMITED DROP · 30% OFF",
-        "category": "Jersey",
-        "subcategory": "Esports jerseys",
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts",
         "sku": "SQ1-APP-TEE-MRN",
         "price": 1099,
         "priceINR": 1099,
@@ -622,8 +630,8 @@
         "title": "New S1VE × Squad One Apparel Drop GTA VI Edition",
         "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Jersey",
-        "subcategory": "Custom-name jerseys",
+        "category": "Apparel",
+        "subcategory": "Oversized T-shirts",
         "sku": "SQ1-APP-GTA6-2026",
         "price": 999,
         "priceINR": 999,
@@ -723,5 +731,220 @@
     "discordInvite": "https://discord.gg/pCk89vRPq",
     "youtubeUrl": "https://youtube.com/@SquadOneEsports",
     "serverUrl": "http://127.0.0.1:8088"
+  },
+  "storeSettings": {
+    "categories": [
+      {
+        "id": "jerseys",
+        "name": "Jerseys",
+        "icon": "jersey",
+        "badge": "🎽",
+        "active": true,
+        "is_active": true,
+        "order": 1,
+        "order_index": 1,
+        "description": "Official match jerseys, custom IGN player jerseys & pro kits",
+        "subcategories": [
+          "Official Jerseys",
+          "Custom Player Jerseys",
+          "Championship Jerseys"
+        ]
+      },
+      {
+        "id": "apparel",
+        "name": "Apparel",
+        "icon": "jersey",
+        "badge": "👕",
+        "active": true,
+        "is_active": true,
+        "order": 2,
+        "order_index": 2,
+        "description": "Oversized tees, Hoodies, Sweatshirts & Streetwear drops",
+        "subcategories": [
+          "Oversized T-Shirts",
+          "Hoodies",
+          "Streetwear Drops",
+          "Caps"
+        ]
+      },
+      {
+        "id": "gaming",
+        "name": "Gaming Accessories",
+        "icon": "controller",
+        "badge": "🎮",
+        "active": true,
+        "is_active": true,
+        "order": 3,
+        "order_index": 3,
+        "description": "Pro mousepads, Desk mats, Precision gear",
+        "subcategories": [
+          "Mousepads",
+          "Extended Mousepads",
+          "Desk Mats",
+          "Speed Mats"
+        ]
+      },
+      {
+        "id": "fragrances",
+        "name": "Fragrances",
+        "icon": "bottle",
+        "badge": "🧴",
+        "active": true,
+        "is_active": true,
+        "order": 4,
+        "order_index": 4,
+        "description": "SQ-1 Victory, Clutch, Stealth EDP & Travel Sprays",
+        "subcategories": [
+          "Eau de Parfum (EDP)",
+          "Travel Sprays",
+          "Deodorants"
+        ]
+      },
+      {
+        "id": "bags",
+        "name": "Bags",
+        "icon": "backpack",
+        "badge": "🎒",
+        "active": true,
+        "is_active": true,
+        "order": 5,
+        "order_index": 5,
+        "description": "Backpacks, Sling bags, Duffel bags & Tech pouches",
+        "subcategories": [
+          "Backpacks",
+          "Sling Bags",
+          "Tech Pouches"
+        ]
+      },
+      {
+        "id": "tech",
+        "name": "Tech",
+        "icon": "phone",
+        "badge": "📱",
+        "active": true,
+        "is_active": true,
+        "order": 6,
+        "order_index": 6,
+        "description": "Phone cases, AirPods cases, Laptop skins & Pop sockets",
+        "subcategories": [
+          "Phone Cases",
+          "AirPods Cases",
+          "Laptop Skins"
+        ]
+      },
+      {
+        "id": "lifestyle",
+        "name": "Lifestyle",
+        "icon": "tumbler",
+        "badge": "🥤",
+        "active": true,
+        "order": 7,
+        "order_index": 7,
+        "description": "Steel tumblers, Shakers, Mugs & Flasks",
+        "subcategories": [
+          "Tumblers",
+          "Shakers",
+          "Mugs"
+        ]
+      },
+      {
+        "id": "esports",
+        "name": "Esports",
+        "icon": "trophy",
+        "badge": "🏆",
+        "active": true,
+        "order": 8,
+        "order_index": 8,
+        "description": "Championship tees, MVP jerseys, Medals & Tournament flags",
+        "subcategories": [
+          "Championship Tees",
+          "Medals",
+          "Flags"
+        ]
+      },
+      {
+        "id": "decor",
+        "name": "Décor",
+        "icon": "canvas",
+        "badge": "🖼️",
+        "active": true,
+        "order": 9,
+        "order_index": 9,
+        "description": "Framed wall art, Team banners, Neon art & Wall stickers",
+        "subcategories": [
+          "Framed Art",
+          "Wall Banners",
+          "Neon Art"
+        ]
+      },
+      {
+        "id": "collectibles",
+        "name": "Collectibles",
+        "icon": "key",
+        "badge": "🔑",
+        "active": true,
+        "order": 10,
+        "order_index": 10,
+        "description": "Metal keychains, Enamel pins, Desk figures & Challenge coins",
+        "subcategories": [
+          "Enamel Pins",
+          "Keychains",
+          "Desk Figures"
+        ]
+      },
+      {
+        "id": "digital",
+        "name": "Digital",
+        "icon": "download",
+        "badge": "💻",
+        "active": true,
+        "order": 11,
+        "order_index": 11,
+        "description": "Streaming overlays, Wallpapers, Sound packs & Discord badges",
+        "subcategories": [
+          "Overlays",
+          "Wallpapers",
+          "Discord Badges"
+        ]
+      },
+      {
+        "id": "bundles",
+        "name": "Bundles",
+        "icon": "gift",
+        "badge": "🎁",
+        "active": true,
+        "order": 12,
+        "order_index": 12,
+        "description": "Starter kits, Pro gamer bundles, Fragrance gift boxes",
+        "subcategories": [
+          "Starter Kits",
+          "Pro Gamer Bundles"
+        ]
+      },
+      {
+        "id": "limited",
+        "name": "Limited Drop",
+        "icon": "flame",
+        "badge": "🔥",
+        "active": true,
+        "order": 13,
+        "order_index": 13,
+        "description": "Numbered anniversary runs, Collabs, Secret vaults",
+        "subcategories": [
+          "Anniversary Drops",
+          "Collabs"
+        ]
+      }
+    ],
+    "displayMode": "pill_bar",
+    "display_mode": "pill_bar",
+    "enableSearch": true,
+    "enable_search": true,
+    "enableSort": true,
+    "enable_sort": true,
+    "enableFilterChips": true,
+    "enable_chips": true,
+    "defaultSort": "featured",
+    "default_sort": "featured"
   }
 }
