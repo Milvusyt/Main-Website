@@ -220,92 +220,6 @@
     "desc": "",
     "products": [
       {
-        "id": "prod-1788722681111",
-        "name": "me",
-        "title": "me",
-        "quote": "Upgrade your Vogue",
-        "badge": "CUSTOM JERSEY",
-        "category": "Jersey",
-        "subcategory": "Custom jerseys",
-        "sku": "SQ1-JER-CUSTOM-01",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "salePrice": 1499,
-        "currency": "₹",
-        "image": "images/t-shirt.png",
-        "imageUrl": "images/t-shirt.png",
-        "images": [
-          "images/t-shirt.png"
-        ],
-        "description": "Custom Squad One Tournament Jersey.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 50,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Regular Fit",
-          "fabric": "Heavy Poly-Cotton",
-          "color": [
-            "Black",
-            "White"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "prod-1",
-        "name": "Squad One Pro Jersey 2026",
-        "title": "Squad One Pro Jersey 2026",
-        "quote": "Upgrade your Vogue",
-        "badge": "OFFICIAL PRO JERSEY",
-        "category": "Jersey",
-        "subcategory": "Esports jerseys",
-        "sku": "SQ1-JER-PRO-2026",
-        "price": 1499,
-        "priceINR": 1499,
-        "originalPrice": 1999,
-        "salePrice": 1999,
-        "currency": "₹",
-        "image": "images/t-shirt.png",
-        "imageUrl": "images/t-shirt.png",
-        "images": [
-          "images/t-shirt.png"
-        ],
-        "description": "Official Squad One 2026 Championship Pro Player Jersey with aerodynamic dry-fit fabric and custom IGN print.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "2XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 45,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Athletic / Slim Fit",
-          "fabric": "Pro Dry-Fit Polyester",
-          "color": [
-            "Black",
-            "Teal",
-            "Gold"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
-      },
-      {
         "id": "s1ve-sq1-oversized-white",
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
@@ -324,9 +238,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false,
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts"
+        "hidden": false
       },
       {
         "id": "s1ve-sq1-oversized-black",
@@ -347,32 +259,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false,
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts"
-      },
-      {
-        "id": "s1ve-sq1-oversized-maroon",
-        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
-        "badge": "LIMITED DROP · 30% OFF",
-        "price": 1099,
-        "originalPrice": 1599,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_Maroon_.png",
-        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts"
+        "hidden": false
       },
       {
         "id": "s1ve-custom-1788868261046",
@@ -392,9 +279,28 @@
         ],
         "allowCustomIGN": false,
         "inStock": true,
-        "hidden": false,
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts"
+        "hidden": false
+      },
+      {
+        "id": "sq1-apparel-1789720627599",
+        "title": "S1VE × SQUADONE — BLUE EDITION",
+        "quote": "Upgrade your Vogue",
+        "badge": "NEW ARRIVAL",
+        "price": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/blue_edition.jpeg",
+        "description": "",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "allowCustomIGN": false,
+        "inStock": true,
+        "hidden": false
       }
     ]
   },
@@ -403,99 +309,13 @@
     "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
     "products": [
       {
-        "id": "prod-1788722681111",
-        "name": "me",
-        "title": "me",
-        "quote": "Upgrade your Vogue",
-        "badge": "CUSTOM JERSEY",
-        "category": "Jersey",
-        "subcategory": "Custom jerseys",
-        "sku": "SQ1-JER-CUSTOM-01",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "salePrice": 1499,
-        "currency": "₹",
-        "image": "images/t-shirt.png",
-        "imageUrl": "images/t-shirt.png",
-        "images": [
-          "images/t-shirt.png"
-        ],
-        "description": "Custom Squad One Tournament Jersey.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 50,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Regular Fit",
-          "fabric": "Heavy Poly-Cotton",
-          "color": [
-            "Black",
-            "White"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
-      },
-      {
-        "id": "prod-1",
-        "name": "Squad One Pro Jersey 2026",
-        "title": "Squad One Pro Jersey 2026",
-        "quote": "Upgrade your Vogue",
-        "badge": "OFFICIAL PRO JERSEY",
-        "category": "Jersey",
-        "subcategory": "Esports jerseys",
-        "sku": "SQ1-JER-PRO-2026",
-        "price": 1499,
-        "priceINR": 1499,
-        "originalPrice": 1999,
-        "salePrice": 1999,
-        "currency": "₹",
-        "image": "images/t-shirt.png",
-        "imageUrl": "images/t-shirt.png",
-        "images": [
-          "images/t-shirt.png"
-        ],
-        "description": "Official Squad One 2026 Championship Pro Player Jersey with aerodynamic dry-fit fabric and custom IGN print.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "2XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 45,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Athletic / Slim Fit",
-          "fabric": "Pro Dry-Fit Polyester",
-          "color": [
-            "Black",
-            "Teal",
-            "Gold"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
-      },
-      {
         "id": "s1ve-sq1-oversized-white",
         "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
+        "category": "Jersey",
+        "subcategory": "Esports jerseys",
         "sku": "SQ1-APP-TEE-WHT",
         "price": 999,
         "priceINR": 999,
@@ -537,8 +357,8 @@
         "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
         "badge": "BESTSELLER · OVERSIZED",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
+        "category": "Jersey",
+        "subcategory": "Esports jerseys",
         "sku": "SQ1-APP-TEE-BLK",
         "price": 999,
         "priceINR": 999,
@@ -573,65 +393,13 @@
         "checkoutUrl": "https://store.squadone.gg/checkout"
       },
       {
-        "id": "s1ve-sq1-oversized-maroon",
-        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "quote": "Upgrade your Vogue",
-        "badge": "LIMITED DROP · 30% OFF",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
-        "sku": "SQ1-APP-TEE-MRN",
-        "price": 1099,
-        "priceINR": 1099,
-        "originalPrice": 1599,
-        "currency": "₹",
-        "image": "images/new Products/Final_1-_Maroon_.png",
-        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
-        "images": [
-          "images/new Products/Final_1-_Maroon_.png"
-        ],
-        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL",
-          "XXL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": false,
-        "stock": 50,
-        "isLimitedEdition": true,
-        "attributes": {
-          "fit": "Oversized",
-          "fabric": "280 GSM Heavy Combed Cotton",
-          "color": [
-            "Maroon Cyber"
-          ],
-          "is_customizable": true,
-          "sizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-          ]
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "salePrice": 1599,
-        "short_description": "",
-        "shortDescription": "",
-        "variants": []
-      },
-      {
         "id": "s1ve-custom-1788868261046",
         "name": "New S1VE × Squad One Apparel Drop GTA VI Edition",
         "title": "New S1VE × Squad One Apparel Drop GTA VI Edition",
         "quote": "Upgrade your Vogue",
         "badge": "HOT DROP · OVERSIZED",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
+        "category": "Jersey",
+        "subcategory": "Custom-name jerseys",
         "sku": "SQ1-APP-GTA6-2026",
         "price": 999,
         "priceINR": 999,
@@ -667,6 +435,59 @@
         "short_description": "",
         "shortDescription": "",
         "variants": []
+      },
+      {
+        "id": "sq1-apparel-1789720627599",
+        "title": "S1VE × SQUADONE — BLUE EDITION",
+        "name": "S1VE × SQUADONE — BLUE EDITION",
+        "quote": "Upgrade your Vogue",
+        "badge": "NEW ARRIVAL",
+        "category": "Apparel",
+        "subcategory": "Teee",
+        "sku": "SQ1-tee-",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "salePrice": 1499,
+        "currency": "₹",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "image": "images/new Products/blue_edition.jpeg",
+        "imageUrl": "images/new Products/blue_edition.jpeg",
+        "images": [
+          "images/new Products/blue_edition.jpeg"
+        ],
+        "short_description": "S1VE × SQUADONE — BLUE EDITION",
+        "shortDescription": "S1VE × SQUADONE — BLUE EDITION",
+        "description": "",
+        "allowCustomIGN": false,
+        "inStock": true,
+        "hidden": false,
+        "isLimitedEdition": false,
+        "stock": 50,
+        "attributes": {
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "fit": "Oversized",
+          "fabric": "280 GSM Heavy Combed Cotton",
+          "color": [
+            "Black",
+            "White",
+            "Crimson"
+          ]
+        },
+        "variants": [],
+        "checkoutUrl": "https://store.squadone.gg/checkout"
       }
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
@@ -731,220 +552,5 @@
     "discordInvite": "https://discord.gg/pCk89vRPq",
     "youtubeUrl": "https://youtube.com/@SquadOneEsports",
     "serverUrl": "http://127.0.0.1:8088"
-  },
-  "storeSettings": {
-    "categories": [
-      {
-        "id": "jerseys",
-        "name": "Jerseys",
-        "icon": "jersey",
-        "badge": "🎽",
-        "active": true,
-        "is_active": true,
-        "order": 1,
-        "order_index": 1,
-        "description": "Official match jerseys, custom IGN player jerseys & pro kits",
-        "subcategories": [
-          "Official Jerseys",
-          "Custom Player Jerseys",
-          "Championship Jerseys"
-        ]
-      },
-      {
-        "id": "apparel",
-        "name": "Apparel",
-        "icon": "jersey",
-        "badge": "👕",
-        "active": true,
-        "is_active": true,
-        "order": 2,
-        "order_index": 2,
-        "description": "Oversized tees, Hoodies, Sweatshirts & Streetwear drops",
-        "subcategories": [
-          "Oversized T-Shirts",
-          "Hoodies",
-          "Streetwear Drops",
-          "Caps"
-        ]
-      },
-      {
-        "id": "gaming",
-        "name": "Gaming Accessories",
-        "icon": "controller",
-        "badge": "🎮",
-        "active": true,
-        "is_active": true,
-        "order": 3,
-        "order_index": 3,
-        "description": "Pro mousepads, Desk mats, Precision gear",
-        "subcategories": [
-          "Mousepads",
-          "Extended Mousepads",
-          "Desk Mats",
-          "Speed Mats"
-        ]
-      },
-      {
-        "id": "fragrances",
-        "name": "Fragrances",
-        "icon": "bottle",
-        "badge": "🧴",
-        "active": true,
-        "is_active": true,
-        "order": 4,
-        "order_index": 4,
-        "description": "SQ-1 Victory, Clutch, Stealth EDP & Travel Sprays",
-        "subcategories": [
-          "Eau de Parfum (EDP)",
-          "Travel Sprays",
-          "Deodorants"
-        ]
-      },
-      {
-        "id": "bags",
-        "name": "Bags",
-        "icon": "backpack",
-        "badge": "🎒",
-        "active": true,
-        "is_active": true,
-        "order": 5,
-        "order_index": 5,
-        "description": "Backpacks, Sling bags, Duffel bags & Tech pouches",
-        "subcategories": [
-          "Backpacks",
-          "Sling Bags",
-          "Tech Pouches"
-        ]
-      },
-      {
-        "id": "tech",
-        "name": "Tech",
-        "icon": "phone",
-        "badge": "📱",
-        "active": true,
-        "is_active": true,
-        "order": 6,
-        "order_index": 6,
-        "description": "Phone cases, AirPods cases, Laptop skins & Pop sockets",
-        "subcategories": [
-          "Phone Cases",
-          "AirPods Cases",
-          "Laptop Skins"
-        ]
-      },
-      {
-        "id": "lifestyle",
-        "name": "Lifestyle",
-        "icon": "tumbler",
-        "badge": "🥤",
-        "active": true,
-        "order": 7,
-        "order_index": 7,
-        "description": "Steel tumblers, Shakers, Mugs & Flasks",
-        "subcategories": [
-          "Tumblers",
-          "Shakers",
-          "Mugs"
-        ]
-      },
-      {
-        "id": "esports",
-        "name": "Esports",
-        "icon": "trophy",
-        "badge": "🏆",
-        "active": true,
-        "order": 8,
-        "order_index": 8,
-        "description": "Championship tees, MVP jerseys, Medals & Tournament flags",
-        "subcategories": [
-          "Championship Tees",
-          "Medals",
-          "Flags"
-        ]
-      },
-      {
-        "id": "decor",
-        "name": "Décor",
-        "icon": "canvas",
-        "badge": "🖼️",
-        "active": true,
-        "order": 9,
-        "order_index": 9,
-        "description": "Framed wall art, Team banners, Neon art & Wall stickers",
-        "subcategories": [
-          "Framed Art",
-          "Wall Banners",
-          "Neon Art"
-        ]
-      },
-      {
-        "id": "collectibles",
-        "name": "Collectibles",
-        "icon": "key",
-        "badge": "🔑",
-        "active": true,
-        "order": 10,
-        "order_index": 10,
-        "description": "Metal keychains, Enamel pins, Desk figures & Challenge coins",
-        "subcategories": [
-          "Enamel Pins",
-          "Keychains",
-          "Desk Figures"
-        ]
-      },
-      {
-        "id": "digital",
-        "name": "Digital",
-        "icon": "download",
-        "badge": "💻",
-        "active": true,
-        "order": 11,
-        "order_index": 11,
-        "description": "Streaming overlays, Wallpapers, Sound packs & Discord badges",
-        "subcategories": [
-          "Overlays",
-          "Wallpapers",
-          "Discord Badges"
-        ]
-      },
-      {
-        "id": "bundles",
-        "name": "Bundles",
-        "icon": "gift",
-        "badge": "🎁",
-        "active": true,
-        "order": 12,
-        "order_index": 12,
-        "description": "Starter kits, Pro gamer bundles, Fragrance gift boxes",
-        "subcategories": [
-          "Starter Kits",
-          "Pro Gamer Bundles"
-        ]
-      },
-      {
-        "id": "limited",
-        "name": "Limited Drop",
-        "icon": "flame",
-        "badge": "🔥",
-        "active": true,
-        "order": 13,
-        "order_index": 13,
-        "description": "Numbered anniversary runs, Collabs, Secret vaults",
-        "subcategories": [
-          "Anniversary Drops",
-          "Collabs"
-        ]
-      }
-    ],
-    "displayMode": "pill_bar",
-    "display_mode": "pill_bar",
-    "enableSearch": true,
-    "enable_search": true,
-    "enableSort": true,
-    "enable_sort": true,
-    "enableFilterChips": true,
-    "enable_chips": true,
-    "defaultSort": "featured",
-    "default_sort": "featured"
   }
 }
