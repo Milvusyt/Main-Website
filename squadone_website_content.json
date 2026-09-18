@@ -5,7 +5,7 @@
     "tournaments": true,
     "broadcast": true,
     "news": true,
-    "store": true,
+    "store": false,
     "journey": true
   },
   "broadcast": {
@@ -214,7 +214,7 @@
     }
   ],
   "store": {
-    "enabled": true,
+    "enabled": false,
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
     "title": "S1VE BY SQUADONE",
     "desc": "",
@@ -259,7 +259,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true
+        "hidden": false
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
@@ -280,7 +280,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true
+        "hidden": false
       },
       {
         "id": "s1ve-custom-1788868261046",
@@ -379,7 +379,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true,
+        "hidden": false,
         "stock": 35,
         "isLimitedEdition": false,
         "attributes": {
@@ -420,7 +420,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true,
+        "hidden": false,
         "stock": 50,
         "isLimitedEdition": true,
         "attributes": {
@@ -491,7 +491,7 @@
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
     "title": "S1VE BY SQUADONE",
-    "enabled": true
+    "enabled": false
   },
   "tournaments": [
     {
