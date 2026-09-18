@@ -11860,6 +11860,7 @@
       </p>
 
       <div class="broadcast-stage-card" data-sound="hover">
+        <div id="broadcast-platform-switcher" style="display:none; gap:10px; margin-bottom:16px; flex-wrap:wrap; padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,0.08);"></div>
         <div class="broadcast-header-row">
           <div style="display: flex; align-items: center; gap: 12px;">
             <span class="season-badge-live"
@@ -15985,10 +15986,19 @@
         poster.classList.add('playing');
       }
       if (iframe) {
-        const vId = (window._sq1ActiveConfig && window._sq1ActiveConfig.broadcast && window._sq1ActiveConfig.broadcast.videoId)
-          ? window._sq1ActiveConfig.broadcast.videoId
-          : 'N1nB6-ZzIVQ';
-        iframe.src = `https://www.youtube.com/embed/${vId}?autoplay=1&rel=0`;
+        const streams = window._sq1ActiveStreams || [];
+        const currentIdx = window._sq1CurrentStreamIdx || 0;
+        const currentStream = streams[currentIdx];
+
+        if (currentStream && currentStream.embedUrl) {
+          const delim = currentStream.embedUrl.includes('?') ? '&' : '?';
+          iframe.src = currentStream.embedUrl + delim + 'autoplay=1';
+        } else {
+          const vId = (currentStream && currentStream.videoId) ||
+            (window._sq1ActiveConfig && window._sq1ActiveConfig.broadcast && window._sq1ActiveConfig.broadcast.videoId) ||
+            'N1nB6-ZzIVQ';
+          iframe.src = `https://www.youtube.com/embed/${vId}?autoplay=1&rel=0`;
+        }
       }
     };
 
@@ -16030,9 +16040,11 @@
         },
         card3: {
           enabled: true,
-          p1: "TBA", t1: "TEAM TBA", k1: "—",
-          p2: "TBA", t2: "TEAM TBA", k2: "—",
-          p3: "TBA", t3: "TEAM TBA", k3: "—",
+          usePoster: false,
+          poster: "",
+          p1: "TBA", t1: "TEAM TBA", k1: "—", a1: "",
+          p2: "TBA", t2: "TEAM TBA", k2: "—", a2: "",
+          p3: "TBA", t3: "TEAM TBA", k3: "—", a3: "",
           badge: "LEADERBOARD · ANNOUNCED MONTHLY"
         },
         card4: {
@@ -16053,7 +16065,24 @@
         youtubeUrl: "https://www.youtube.com/live/N1nB6-ZzIVQ?si=vpo7edeohAJmaucc",
         videoId: "N1nB6-ZzIVQ",
         infoTitle: "SOUTH ASIA CROSS-BAY SCRIMS · OFFICIAL LIVE STREAM",
-        infoDesc: "Official Squad One live broadcast stream with real-time observer feeds and player telemetry."
+        infoDesc: "Official Squad One live broadcast stream with real-time observer feeds and player telemetry.",
+        isLive: true,
+        streams: [
+          {
+            id: "stream-yt-primary",
+            platform: "youtube",
+            platformName: "📺 YouTube Live Broadcast Embed",
+            feedTitle: "SOUTH ASIA CROSS-BAY SCRIMS",
+            startTime: "BROADCAST START: 8:00 PM IST",
+            youtubeUrl: "https://www.youtube.com/live/N1nB6-ZzIVQ",
+            videoId: "N1nB6-ZzIVQ",
+            embedUrl: "https://www.youtube.com/embed/N1nB6-ZzIVQ?autoplay=0",
+            infoTitle: "SOUTH ASIA CROSS-BAY SCRIMS · OFFICIAL LIVE STREAM",
+            infoDesc: "Official Squad One live broadcast stream with real-time observer feeds and player telemetry.",
+            isLive: true,
+            isPrimary: true
+          }
+        ]
       },
       store: {
         enabled: true,
@@ -16062,11 +16091,78 @@
         desc: "",
         products: [
           {
+            "id": "prod-1788722681111",
+            "name": "me",
+            "title": "me",
+            "quote": "Upgrade your Vogue",
+            "badge": "CUSTOM JERSEY",
+            "category": "Jersey",
+            "subcategory": "Custom jerseys",
+            "sku": "SQ1-JER-CUSTOM-01",
+            "price": 999,
+            "priceINR": 999,
+            "originalPrice": 1499,
+            "salePrice": 1499,
+            "currency": "₹",
+            "image": "images/t-shirt.png",
+            "imageUrl": "images/t-shirt.png",
+            "images": [
+              "images/t-shirt.png"
+            ],
+            "description": "Custom Squad One Tournament Jersey.",
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
+            "allowCustomIGN": true,
+            "inStock": true,
+            "hidden": false,
+            "stock": 50,
+            "isLimitedEdition": false,
+            "checkoutUrl": "https://store.squadone.gg/checkout"
+          },
+          {
+            "id": "prod-1",
+            "name": "Squad One Pro Jersey 2026",
+            "title": "Squad One Pro Jersey 2026",
+            "quote": "Upgrade your Vogue",
+            "badge": "OFFICIAL PRO JERSEY",
+            "category": "Jersey",
+            "subcategory": "Esports jerseys",
+            "sku": "SQ1-JER-PRO-2026",
+            "price": 1499,
+            "priceINR": 1499,
+            "originalPrice": 1999,
+            "salePrice": 1999,
+            "currency": "₹",
+            "image": "images/t-shirt.png",
+            "imageUrl": "images/t-shirt.png",
+            "images": [
+              "images/t-shirt.png"
+            ],
+            "description": "Official Squad One 2026 Championship Pro Player Jersey with aerodynamic dry-fit fabric and custom IGN print.",
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "2XL"
+            ],
+            "allowCustomIGN": true,
+            "inStock": true,
+            "hidden": false,
+            "stock": 45,
+            "isLimitedEdition": false,
+            "checkoutUrl": "https://store.squadone.gg/jersey-2026"
+          },
+          {
             "id": "s1ve-sq1-oversized-white",
             "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
             "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
             "badge": "HOT DROP · OVERSIZED",
-            "category": "Jersey",
+            "category": "Apparel",
             "price": 999,
             "priceINR": 999,
             "originalPrice": 1499,
@@ -16096,7 +16192,7 @@
             "name": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
             "title": "S1VE × SQUAD ONE 'Blackout Edition' Oversized Tee",
             "badge": "BESTSELLER · OVERSIZED",
-            "category": "Jersey",
+            "category": "Apparel",
             "price": 999,
             "priceINR": 999,
             "originalPrice": 1499,
@@ -16126,7 +16222,7 @@
             "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
             "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
             "badge": "LIMITED DROP · 30% OFF",
-            "category": "Jersey",
+            "category": "Apparel",
             "price": 1099,
             "priceINR": 1099,
             "originalPrice": 1599,
@@ -16157,7 +16253,7 @@
             "name": "New S1VE × Squad One Apparel Drop GTA VI Edition",
             "quote": "Upgrade your Vogue",
             "badge": "HOT DROP · OVERSIZED",
-            "category": "Jersey",
+            "category": "Apparel",
             "price": 999,
             "priceINR": 999,
             "originalPrice": 1499,
@@ -16354,44 +16450,59 @@
         if (card3El && cfg.winners.card3) {
           if (slot3El) {
             const k = cfg.winners.card3;
-            slot3El.innerHTML = `
-              <div class="kills-leaderboard">
-                <div class="kills-row">
-                  <div class="kills-rank-num rank-top1">01</div>
-                  <div class="kills-player-avatar">
-                    <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--red);"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8.01 8.01 0 0 1 4.07 13H5a1 1 0 0 1 0 2h-.93A8.01 8.01 0 0 1 11 4.07V5a1 1 0 0 1 2 0v-.93A8.01 8.01 0 0 1 19.93 11H19a1 1 0 0 1 0-2h.93A8.01 8.01 0 0 1 13 16.93z"/></svg>
-                  </div>
-                  <div class="kills-player-info">
-                    <div class="kills-player-name">${k.p1 || 'TBA'}</div>
-                    <div class="kills-player-team">${k.t1 || 'TEAM TBA'}</div>
-                  </div>
-                  <div class="kills-count">${k.k1 || '—'}</div>
+            if (k.usePoster && k.poster) {
+              slot3El.innerHTML = `
+                <div class="winner-poster-wrap">
+                  <img src="${k.poster}" alt="Top Kills Winner Poster" class="winner-poster-img" onerror="this.src='assets/sa-cross-bay-scrims.png'">
                 </div>
-                <div class="kills-row">
-                  <div class="kills-rank-num rank-top2">02</div>
-                  <div class="kills-player-avatar">
-                    <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--purple-light);"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8.01 8.01 0 0 1 4.07 13H5a1 1 0 0 1 0 2h-.93A8.01 8.01 0 0 1 11 4.07V5a1 1 0 0 1 2 0v-.93A8.01 8.01 0 0 1 19.93 11H19a1 1 0 0 1 0-2h.93A8.01 8.01 0 0 1 13 16.93z"/></svg>
+              `;
+            } else {
+              const a1 = k.a1 || (k.fraggers && k.fraggers[0] && k.fraggers[0].avatar) || '';
+              const a2 = k.a2 || (k.fraggers && k.fraggers[1] && k.fraggers[1].avatar) || '';
+              const a3 = k.a3 || (k.fraggers && k.fraggers[2] && k.fraggers[2].avatar) || '';
+              const a1Html = a1 ? `<img src="${a1}" alt="${k.p1 || 'P1'}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">` : `<svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--red);"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8.01 8.01 0 0 1 4.07 13H5a1 1 0 0 1 0 2h-.93A8.01 8.01 0 0 1 11 4.07V5a1 1 0 0 1 2 0v-.93A8.01 8.01 0 0 1 19.93 11H19a1 1 0 0 1 0-2h.93A8.01 8.01 0 0 1 13 16.93z"/></svg>`;
+              const a2Html = a2 ? `<img src="${a2}" alt="${k.p2 || 'P2'}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">` : `<svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--purple-light);"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8.01 8.01 0 0 1 4.07 13H5a1 1 0 0 1 0 2h-.93A8.01 8.01 0 0 1 11 4.07V5a1 1 0 0 1 2 0v-.93A8.01 8.01 0 0 1 19.93 11H19a1 1 0 0 1 0-2h.93A8.01 8.01 0 0 1 13 16.93z"/></svg>`;
+              const a3Html = a3 ? `<img src="${a3}" alt="${k.p3 || 'P3'}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">` : `<svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--text-muted);"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8.01 8.01 0 0 1 4.07 13H5a1 1 0 0 1 0 2h-.93A8.01 8.01 0 0 1 11 4.07V5a1 1 0 0 1 2 0v-.93A8.01 8.01 0 0 1 19.93 11H19a1 1 0 0 1 0-2h.93A8.01 8.01 0 0 1 13 16.93z"/></svg>`;
+
+              slot3El.innerHTML = `
+                <div class="kills-leaderboard">
+                  <div class="kills-row">
+                    <div class="kills-rank-num rank-top1">01</div>
+                    <div class="kills-player-avatar" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                      ${a1Html}
+                    </div>
+                    <div class="kills-player-info">
+                      <div class="kills-player-name">${k.p1 || 'TBA'}</div>
+                      <div class="kills-player-team">${k.t1 || 'TEAM TBA'}</div>
+                    </div>
+                    <div class="kills-count">${k.k1 || '—'}</div>
                   </div>
-                  <div class="kills-player-info">
-                    <div class="kills-player-name">${k.p2 || 'TBA'}</div>
-                    <div class="kills-player-team">${k.t2 || 'TEAM TBA'}</div>
+                  <div class="kills-row">
+                    <div class="kills-rank-num rank-top2">02</div>
+                    <div class="kills-player-avatar" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                      ${a2Html}
+                    </div>
+                    <div class="kills-player-info">
+                      <div class="kills-player-name">${k.p2 || 'TBA'}</div>
+                      <div class="kills-player-team">${k.t2 || 'TEAM TBA'}</div>
+                    </div>
+                    <div class="kills-count">${k.k2 || '—'}</div>
                   </div>
-                  <div class="kills-count">${k.k2 || '—'}</div>
+                  <div class="kills-row">
+                    <div class="kills-rank-num rank-top3">03</div>
+                    <div class="kills-player-avatar" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                      ${a3Html}
+                    </div>
+                    <div class="kills-player-info">
+                      <div class="kills-player-name">${k.p3 || 'TBA'}</div>
+                      <div class="kills-player-team">${k.t3 || 'TEAM TBA'}</div>
+                    </div>
+                    <div class="kills-count">${k.k3 || '—'}</div>
+                  </div>
                 </div>
-                <div class="kills-row">
-                  <div class="kills-rank-num rank-top3">03</div>
-                  <div class="kills-player-avatar">
-                    <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--text-muted);"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8.01 8.01 0 0 1 4.07 13H5a1 1 0 0 1 0 2h-.93A8.01 8.01 0 0 1 11 4.07V5a1 1 0 0 1 2 0v-.93A8.01 8.01 0 0 1 19.93 11H19a1 1 0 0 1 0-2h.93A8.01 8.01 0 0 1 13 16.93z"/></svg>
-                  </div>
-                  <div class="kills-player-info">
-                    <div class="kills-player-name">${k.p3 || 'TBA'}</div>
-                    <div class="kills-player-team">${k.t3 || 'TEAM TBA'}</div>
-                  </div>
-                  <div class="kills-count">${k.k3 || '—'}</div>
-                </div>
-              </div>
-              <div class="winner-tba-badge" style="margin-top: 14px;">${k.badge || 'LEADERBOARD · ANNOUNCED MONTHLY'}</div>
-            `;
+                <div class="winner-tba-badge" style="margin-top: 14px;">${k.badge || 'LEADERBOARD · ANNOUNCED MONTHLY'}</div>
+              `;
+            }
           }
         }
 
@@ -16428,40 +16539,139 @@
       // 3. Live Broadcast Hub
       if (cfg.broadcast) {
         const b = cfg.broadcast;
-        const feedTitleEl = document.querySelector('#broadcast .broadcast-header-row span[style*="var(--font-display)"]');
-        if (feedTitleEl && b.feedTitle) feedTitleEl.textContent = b.feedTitle;
-
-        const startTimeEl = document.querySelector('#broadcast .broadcast-header-row div[style*="var(--font-mono)"]');
-        if (startTimeEl && b.startTime) startTimeEl.textContent = b.startTime;
-
-        const posterImgEl = document.querySelector('#broadcast-poster img.broadcast-poster-img');
-        if (posterImgEl && b.videoId) {
-          posterImgEl.src = `https://img.youtube.com/vi/${b.videoId}/maxresdefault.jpg`;
-          posterImgEl.onerror = function () {
-            this.src = `https://img.youtube.com/vi/${b.videoId}/hqdefault.jpg`;
-          };
+        const streams = Array.isArray(b.streams) && b.streams.length > 0 ? b.streams : [
+          {
+            id: 'stream-default-yt',
+            platform: 'youtube',
+            platformName: '📺 YouTube Live Broadcast Embed',
+            feedTitle: b.feedTitle || 'SOUTH ASIA CROSS-BAY SCRIMS',
+            startTime: b.startTime || 'BROADCAST START: 8:00 PM IST',
+            youtubeUrl: b.youtubeUrl || (b.videoId ? `https://www.youtube.com/live/${b.videoId}` : 'https://www.youtube.com/live/N1nB6-ZzIVQ'),
+            videoId: b.videoId || 'N1nB6-ZzIVQ',
+            embedUrl: b.videoId ? `https://www.youtube.com/embed/${b.videoId}?autoplay=0` : '',
+            infoTitle: b.infoTitle || 'SOUTH ASIA CROSS-BAY SCRIMS · OFFICIAL LIVE STREAM',
+            infoDesc: b.infoDesc || 'Official Squad One live broadcast stream with real-time observer feeds and player telemetry.',
+            isLive: b.isLive !== false,
+            isPrimary: true
+          }
+        ];
+        window._sq1ActiveStreams = streams;
+        if (typeof window._sq1CurrentStreamIdx !== 'number' || window._sq1CurrentStreamIdx >= streams.length) {
+          const primIdx = streams.findIndex(s => s.isPrimary);
+          window._sq1CurrentStreamIdx = primIdx >= 0 ? primIdx : 0;
         }
 
-        const iframeEl = document.getElementById('broadcast-iframe');
-        if (iframeEl && b.videoId) {
-          iframeEl.src = `https://www.youtube.com/embed/${b.videoId}?rel=0`;
+        const renderActiveStream = (idx) => {
+          window._sq1CurrentStreamIdx = idx;
+          const s = streams[idx] || streams[0];
+          if (!s) return;
+
+          const feedTitleEl = document.querySelector('#broadcast .broadcast-header-row span[style*="var(--font-display)"]');
+          if (feedTitleEl && (s.feedTitle || b.feedTitle)) feedTitleEl.textContent = s.feedTitle || b.feedTitle;
+
+          const startTimeEl = document.querySelector('#broadcast .broadcast-header-row div[style*="var(--font-mono)"]');
+          if (startTimeEl && (s.startTime || b.startTime)) startTimeEl.textContent = s.startTime || b.startTime;
+
+          const posterEl = document.getElementById('broadcast-poster');
+          const posterImgEl = document.querySelector('#broadcast-poster img.broadcast-poster-img');
+          const vId = s.videoId || b.videoId;
+          if (posterImgEl) {
+            if (vId) {
+              posterImgEl.src = `https://img.youtube.com/vi/${vId}/maxresdefault.jpg`;
+              posterImgEl.onerror = function () {
+                this.src = `https://img.youtube.com/vi/${vId}/hqdefault.jpg`;
+              };
+            } else {
+              posterImgEl.src = 'assets/sa-cross-bay-scrims.png';
+            }
+          }
+
+          const iframeEl = document.getElementById('broadcast-iframe');
+          if (iframeEl) {
+            if (posterEl && posterEl.classList.contains('playing')) {
+              if (s.embedUrl) {
+                const delim = s.embedUrl.includes('?') ? '&' : '?';
+                iframeEl.src = s.embedUrl + delim + 'autoplay=1';
+              } else if (vId) {
+                iframeEl.src = `https://www.youtube.com/embed/${vId}?autoplay=1&rel=0`;
+              }
+            } else {
+              if (s.embedUrl) {
+                iframeEl.src = s.embedUrl;
+              } else if (vId) {
+                iframeEl.src = `https://www.youtube.com/embed/${vId}?rel=0`;
+              }
+            }
+          }
+
+          const infoThumbImg = document.querySelector('#broadcast .broadcast-info-bar a[href*="youtube"] img, #broadcast .broadcast-info-bar .broadcast-info-left img');
+          if (infoThumbImg && vId) {
+            infoThumbImg.src = `https://img.youtube.com/vi/${vId}/hqdefault.jpg`;
+          }
+
+          const ytLinks = document.querySelectorAll('#broadcast a[href*="youtube"], #broadcast a[href*="twitch"], #broadcast a[href*="kick"]');
+          const targetUrl = s.youtubeUrl || s.streamUrl || b.youtubeUrl;
+          if (targetUrl) {
+            ytLinks.forEach(link => { link.href = targetUrl; });
+          }
+
+          const infoTitleEl = document.querySelector('#broadcast .broadcast-info-bar div[style*="var(--font-condensed)"]');
+          if (infoTitleEl && (s.infoTitle || b.infoTitle)) infoTitleEl.textContent = s.infoTitle || b.infoTitle;
+
+          const infoDescEl = document.querySelector('#broadcast .broadcast-info-bar div[style*="var(--text-muted)"]');
+          if (infoDescEl && (s.infoDesc || b.infoDesc)) infoDescEl.textContent = s.infoDesc || b.infoDesc;
+
+          // Update active pill styling
+          const switcher = document.getElementById('broadcast-platform-switcher');
+          if (switcher) {
+            const pills = switcher.querySelectorAll('.broadcast-stream-pill');
+            pills.forEach((p, pIdx) => {
+              if (pIdx === idx) {
+                p.style.background = 'var(--red, #ff2449)';
+                p.style.color = '#fff';
+                p.style.borderColor = 'var(--red, #ff2449)';
+                p.style.boxShadow = '0 0 12px rgba(255, 36, 73, 0.4)';
+              } else {
+                p.style.background = 'rgba(255, 255, 255, 0.05)';
+                p.style.color = 'var(--text-muted, #8b9bb4)';
+                p.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                p.style.boxShadow = 'none';
+              }
+            });
+          }
+        };
+
+        window.switchBroadcastStream = renderActiveStream;
+
+        // Render platform switcher pills if multiple streams exist
+        const switcher = document.getElementById('broadcast-platform-switcher');
+        if (switcher) {
+          if (streams.length > 1) {
+            switcher.style.display = 'flex';
+            switcher.innerHTML = streams.map((str, idx) => {
+              const platformIcons = {
+                youtube: '📺',
+                twitch: '🟣',
+                kick: '🟢',
+                custom: '📡'
+              };
+              const icon = platformIcons[str.platform] || '📺';
+              const name = str.platformName || str.title || `Stream ${idx + 1}`;
+              const liveTag = str.isLive ? '<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#00ff88;margin-left:6px;box-shadow:0 0 6px #00ff88;"></span>' : '';
+              return `
+                <button type="button" class="broadcast-stream-pill" onclick="window.switchBroadcastStream(${idx})" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:20px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;cursor:pointer;transition:all 0.2s ease;text-transform:uppercase;font-family:var(--font-condensed);border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.05);color:var(--text-muted);">
+                  <span>${icon}</span>
+                  <span>${name}</span>
+                  ${liveTag}
+                </button>
+              `;
+            }).join('');
+          } else {
+            switcher.style.display = 'none';
+          }
         }
 
-        const infoThumbImg = document.querySelector('#broadcast .broadcast-info-bar a[href*="youtube"] img');
-        if (infoThumbImg && b.videoId) {
-          infoThumbImg.src = `https://img.youtube.com/vi/${b.videoId}/hqdefault.jpg`;
-        }
-
-        const ytLinks = document.querySelectorAll('#broadcast a[href*="youtube"]');
-        if (b.youtubeUrl) {
-          ytLinks.forEach(link => { link.href = b.youtubeUrl; });
-        }
-
-        const infoTitleEl = document.querySelector('#broadcast .broadcast-info-bar div[style*="var(--font-condensed)"]');
-        if (infoTitleEl && b.infoTitle) infoTitleEl.textContent = b.infoTitle;
-
-        const infoDescEl = document.querySelector('#broadcast .broadcast-info-bar div[style*="var(--text-muted)"]');
-        if (infoDescEl && b.infoDesc) infoDescEl.textContent = b.infoDesc;
+        renderActiveStream(window._sq1CurrentStreamIdx);
       }
 
       // 4. Store & Merchandise
