@@ -10011,7 +10011,17 @@
                 </svg></div>
               <div class="dropdown-link-text">
                 <span class="dropdown-link-name">All Merchandise</span>
-                <span class="dropdown-link-sub">Full 32-Item Armory</span>
+                <span class="dropdown-link-sub">Full Armory Catalog</span>
+              </div>
+            </a>
+            <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Jerseys', event)">
+              <div class="dropdown-link-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+                </svg></div>
+              <div class="dropdown-link-text">
+                <span class="dropdown-link-name">Jerseys</span>
+                <span class="dropdown-link-sub">Official Match & Player Jerseys</span>
               </div>
             </a>
             <a href="#store" class="store-dropdown-link" onclick="setStoreCategoryFilter('Apparel', event)">
@@ -12472,6 +12482,11 @@
             <span class="pill-icon">✨</span>
             <span>ALL</span>
           </button>
+          <button type="button" class="store-pill-btn" data-cat="Jerseys"
+            onclick="setStoreCategoryFilter('Jerseys', event)">
+            <span class="pill-icon">🎽</span>
+            <span>Jerseys</span>
+          </button>
           <button type="button" class="store-pill-btn" data-cat="Apparel"
             onclick="setStoreCategoryFilter('Apparel', event)">
             <span class="pill-icon">👕</span>
@@ -12588,6 +12603,15 @@
                   <span class="item-name">All Merchandise</span>
                   <span class="item-badge" id="count-All">32</span>
                 </button>
+                <button type="button" class="popover-cat-item" data-cat="Jerseys"
+                  onclick="setStoreCategoryFilter('Jerseys', event)">
+                  <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24"
+                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+                    </svg></div>
+                  <span class="item-name">Jerseys</span>
+                  <span class="item-badge" id="count-Jerseys">2</span>
+                </button>
                 <button type="button" class="popover-cat-item" data-cat="Apparel"
                   onclick="setStoreCategoryFilter('Apparel', event)">
                   <div class="item-icon-wrap"><svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24"
@@ -12597,7 +12621,7 @@
                       </path>
                     </svg></div>
                   <span class="item-name">Apparel</span>
-                  <span class="item-badge" id="count-Apparel">6</span>
+                  <span class="item-badge" id="count-Apparel">4</span>
                 </button>
                 <button type="button" class="popover-cat-item" data-cat="Gaming Accessories"
                   onclick="setStoreCategoryFilter('Gaming Accessories', event)">
@@ -16518,6 +16542,8 @@
 
     // Professional SVG Vector Icon Dictionary
     const SQ1_ICONS = {
+      'Jerseys': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>`,
+      'Jersey': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>`,
       'categories': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>`,
       'All': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>`,
       'Apparel': `<svg class="sq1-cat-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>`,
@@ -16576,7 +16602,12 @@
       if (navItem) navItem.classList.remove('is-open');
 
       const allProds = getStoreProducts();
-      const count = (catName === 'All') ? allProds.length : allProds.filter(p => p.category === catName).length;
+      const count = (catName === 'All') ? allProds.length : allProds.filter(p => {
+        const pCat = (p.category || '').toLowerCase();
+        const cCat = catName.toLowerCase();
+        if (cCat === 'jerseys' || cCat === 'jersey') return pCat === 'jersey' || pCat === 'jerseys';
+        return pCat === cCat;
+      }).length;
       const svgIcon = SQ1_ICONS[catName] || SQ1_ICONS['categories'];
 
       // Update Toolbar Categories Button Label
@@ -16834,7 +16865,14 @@
 
       // 1. Category Filter
       if (window._activeStoreCategory && window._activeStoreCategory !== 'All') {
-        filtered = filtered.filter(p => p.category === window._activeStoreCategory);
+        const activeCat = window._activeStoreCategory.toLowerCase();
+        filtered = filtered.filter(p => {
+          const pCat = (p.category || '').toLowerCase();
+          if (activeCat === 'jerseys' || activeCat === 'jersey') {
+            return pCat === 'jersey' || pCat === 'jerseys';
+          }
+          return pCat === activeCat;
+        });
       }
 
       // 2. Fragrance Subfilters
