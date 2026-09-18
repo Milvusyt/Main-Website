@@ -5752,10 +5752,15 @@
       text-decoration: none;
     }
     .s1ve-bar-s1ve-logo {
-      height: 19px;
+      height: 32px;
+      max-height: 32px;
       width: auto;
       object-fit: contain;
       display: block;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .s1ve-bar-s1ve-logo:hover {
+      transform: scale(1.05);
     }
     .s1ve-text-logo {
       font-family: 'Roboto Condensed', sans-serif;
@@ -6777,6 +6782,10 @@
       .s1ve-pill-bar {
         padding: 0 14px;
         height: 44px;
+      }
+      .s1ve-bar-s1ve-logo {
+        height: 26px;
+        max-height: 26px;
       }
       .s1ve-bar-left, .s1ve-bar-right {
         gap: 10px;
@@ -11087,10 +11096,10 @@
               </div>
             </div>
 
-            <!-- Center: S1VE Bold Italic Condensed Logo -->
+            <!-- Center: S1VE Logo Image (sivemainnobackg.png) -->
             <div class="s1ve-bar-center">
               <a href="#store" class="s1ve-bar-logo-link" onclick="filterS1veCategory('All')" title="S1VE Official Store">
-                <span class="s1ve-text-logo">S1VE</span>
+                <img src="images/sivemainnobackg.png" alt="S1VE By SquadOne" class="s1ve-bar-s1ve-logo" onerror="this.src='assets/sivemainnobackg.png'">
               </a>
             </div>
 
@@ -14953,8 +14962,8 @@
     function getStoreProducts() {
       const cfg = window._sq1ActiveConfig || loadSiteConfig() || SQ1_DEFAULT_CONFIG;
       let prods = (cfg.store && Array.isArray(cfg.store.products)) ? cfg.store.products : [];
-      // Sanitize: filter out dummy or corrupted items
-      prods = prods.filter(p => p && p.id && !p.id.includes('prod-1788722681111') && !p.id.startsWith('prod-') && (p.title || p.name));
+      // Sanitize: filter out invalid items without id or title
+      prods = prods.filter(p => p && p.id && (p.title || p.name));
       if (prods.length === 0) {
         prods = SQ1_DEFAULT_CONFIG.store.products;
         // Purge legacy mock products

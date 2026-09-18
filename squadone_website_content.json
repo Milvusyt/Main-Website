@@ -325,6 +325,92 @@
     "desc": "",
     "products": [
       {
+        "id": "prod-1788722681111",
+        "name": "me",
+        "title": "me",
+        "quote": "Upgrade your Vogue",
+        "badge": "CUSTOM JERSEY",
+        "category": "Jersey",
+        "subcategory": "Custom jerseys",
+        "sku": "SQ1-JER-CUSTOM-01",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "salePrice": 1499,
+        "currency": "₹",
+        "image": "images/t-shirt.png",
+        "imageUrl": "images/t-shirt.png",
+        "images": [
+          "images/t-shirt.png"
+        ],
+        "description": "Custom Squad One Tournament Jersey.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 50,
+        "isLimitedEdition": false,
+        "attributes": {
+          "fit": "Regular Fit",
+          "fabric": "Heavy Poly-Cotton",
+          "color": [
+            "Black",
+            "White"
+          ],
+          "is_customizable": true
+        },
+        "checkoutUrl": "https://store.squadone.gg/checkout"
+      },
+      {
+        "id": "prod-1",
+        "name": "Squad One Pro Jersey 2026",
+        "title": "Squad One Pro Jersey 2026",
+        "quote": "Upgrade your Vogue",
+        "badge": "OFFICIAL PRO JERSEY",
+        "category": "Jersey",
+        "subcategory": "Esports jerseys",
+        "sku": "SQ1-JER-PRO-2026",
+        "price": 1499,
+        "priceINR": 1499,
+        "originalPrice": 1999,
+        "salePrice": 1999,
+        "currency": "₹",
+        "image": "images/t-shirt.png",
+        "imageUrl": "images/t-shirt.png",
+        "images": [
+          "images/t-shirt.png"
+        ],
+        "description": "Official Squad One 2026 Championship Pro Player Jersey with aerodynamic dry-fit fabric and custom IGN print.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 45,
+        "isLimitedEdition": false,
+        "attributes": {
+          "fit": "Athletic / Slim Fit",
+          "fabric": "Pro Dry-Fit Polyester",
+          "color": [
+            "Black",
+            "Teal",
+            "Gold"
+          ],
+          "is_customizable": true
+        },
+        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
+      },
+      {
         "id": "s1ve-sq1-oversized-white",
         "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
         "title": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
@@ -450,6 +536,92 @@
     "vaultLocked": false,
     "dropAlert": "LIMITED EDITION SQUAD ONE PRO JERSEY — DROP INCOMING",
     "products": [
+      {
+        "id": "prod-1788722681111",
+        "name": "me",
+        "title": "me",
+        "quote": "Upgrade your Vogue",
+        "badge": "CUSTOM JERSEY",
+        "category": "Jersey",
+        "subcategory": "Custom jerseys",
+        "sku": "SQ1-JER-CUSTOM-01",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "salePrice": 1499,
+        "currency": "₹",
+        "image": "images/t-shirt.png",
+        "imageUrl": "images/t-shirt.png",
+        "images": [
+          "images/t-shirt.png"
+        ],
+        "description": "Custom Squad One Tournament Jersey.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 50,
+        "isLimitedEdition": false,
+        "attributes": {
+          "fit": "Regular Fit",
+          "fabric": "Heavy Poly-Cotton",
+          "color": [
+            "Black",
+            "White"
+          ],
+          "is_customizable": true
+        },
+        "checkoutUrl": "https://store.squadone.gg/checkout"
+      },
+      {
+        "id": "prod-1",
+        "name": "Squad One Pro Jersey 2026",
+        "title": "Squad One Pro Jersey 2026",
+        "quote": "Upgrade your Vogue",
+        "badge": "OFFICIAL PRO JERSEY",
+        "category": "Jersey",
+        "subcategory": "Esports jerseys",
+        "sku": "SQ1-JER-PRO-2026",
+        "price": 1499,
+        "priceINR": 1499,
+        "originalPrice": 1999,
+        "salePrice": 1999,
+        "currency": "₹",
+        "image": "images/t-shirt.png",
+        "imageUrl": "images/t-shirt.png",
+        "images": [
+          "images/t-shirt.png"
+        ],
+        "description": "Official Squad One 2026 Championship Pro Player Jersey with aerodynamic dry-fit fabric and custom IGN print.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": false,
+        "stock": 45,
+        "isLimitedEdition": false,
+        "attributes": {
+          "fit": "Athletic / Slim Fit",
+          "fabric": "Pro Dry-Fit Polyester",
+          "color": [
+            "Black",
+            "Teal",
+            "Gold"
+          ],
+          "is_customizable": true
+        },
+        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
+      },
       {
         "id": "s1ve-sq1-oversized-white",
         "name": "S1VE × SQUAD ONE 'White Edition' Oversized Tee",
