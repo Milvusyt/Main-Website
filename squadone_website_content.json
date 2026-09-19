@@ -413,6 +413,35 @@
         "hidden": true
       },
       {
+        "id": "prod-1788722681111",
+        "name": "me",
+        "title": "me",
+        "badge": "CUSTOM JERSEY",
+        "category": "Jersey",
+        "subcategory": "Custom jerseys",
+        "sku": "SQ1-JER-CUSTOM-01",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/t-shirt.png",
+        "imageUrl": "images/t-shirt.png",
+        "images": [
+          "images/t-shirt.png"
+        ],
+        "quote": "Upgrade your Vogue",
+        "description": "Custom Squad One Tournament Jersey.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": true
+      },
+      {
         "id": "prod-1",
         "name": "Squad One Pro Jersey 2026",
         "title": "Squad One Pro Jersey 2026",
@@ -437,35 +466,6 @@
           "L",
           "XL",
           "2XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": true
-      },
-      {
-        "id": "prod-1788722681111",
-        "name": "me",
-        "title": "me",
-        "badge": "CUSTOM JERSEY",
-        "category": "Jersey",
-        "subcategory": "Custom jerseys",
-        "sku": "SQ1-JER-CUSTOM-01",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "currency": "₹",
-        "image": "images/t-shirt.png",
-        "imageUrl": "images/t-shirt.png",
-        "images": [
-          "images/t-shirt.png"
-        ],
-        "quote": "Upgrade your Vogue",
-        "description": "Custom Squad One Tournament Jersey.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL"
         ],
         "allowCustomIGN": true,
         "inStock": true,
@@ -708,6 +708,48 @@
         "checkoutUrl": "https://store.squadone.gg/checkout"
       },
       {
+        "id": "prod-1788722681111",
+        "name": "me",
+        "title": "me",
+        "quote": "Upgrade your Vogue",
+        "badge": "CUSTOM JERSEY",
+        "category": "Jersey",
+        "subcategory": "Custom jerseys",
+        "sku": "SQ1-JER-CUSTOM-01",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "salePrice": 1499,
+        "currency": "₹",
+        "image": "images/t-shirt.png",
+        "imageUrl": "images/t-shirt.png",
+        "images": [
+          "images/t-shirt.png"
+        ],
+        "description": "Custom Squad One Tournament Jersey.",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "allowCustomIGN": true,
+        "inStock": true,
+        "hidden": true,
+        "stock": 50,
+        "isLimitedEdition": false,
+        "attributes": {
+          "fit": "Regular Fit",
+          "fabric": "Heavy Poly-Cotton",
+          "color": [
+            "Black",
+            "White"
+          ],
+          "is_customizable": true
+        },
+        "checkoutUrl": "https://store.squadone.gg/checkout"
+      },
+      {
         "id": "prod-1",
         "name": "Squad One Pro Jersey 2026",
         "title": "Squad One Pro Jersey 2026",
@@ -750,48 +792,6 @@
           "is_customizable": true
         },
         "checkoutUrl": "https://store.squadone.gg/jersey-2026"
-      },
-      {
-        "id": "prod-1788722681111",
-        "name": "me",
-        "title": "me",
-        "quote": "Upgrade your Vogue",
-        "badge": "CUSTOM JERSEY",
-        "category": "Jersey",
-        "subcategory": "Custom jerseys",
-        "sku": "SQ1-JER-CUSTOM-01",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "salePrice": 1499,
-        "currency": "₹",
-        "image": "images/t-shirt.png",
-        "imageUrl": "images/t-shirt.png",
-        "images": [
-          "images/t-shirt.png"
-        ],
-        "description": "Custom Squad One Tournament Jersey.",
-        "sizes": [
-          "S",
-          "M",
-          "L",
-          "XL"
-        ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": true,
-        "stock": 50,
-        "isLimitedEdition": false,
-        "attributes": {
-          "fit": "Regular Fit",
-          "fabric": "Heavy Poly-Cotton",
-          "color": [
-            "Black",
-            "White"
-          ],
-          "is_customizable": true
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
       }
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
