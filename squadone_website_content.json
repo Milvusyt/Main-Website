@@ -320,7 +320,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": true
       },
       {
         "id": "s1ve-custom-1788868261046",
@@ -383,32 +383,31 @@
         "hidden": true
       },
       {
-        "id": "s1ve-sq1-oversized-maroon",
-        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "badge": "LIMITED DROP · 30% OFF",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
-        "sku": "SQ1-APP-TEE-MRN",
-        "price": 1099,
-        "priceINR": 1099,
-        "originalPrice": 1599,
+        "id": "sq1-jersey-1789904374327",
+        "name": "kk",
+        "title": "kk",
+        "badge": "NEW ARRIVAL",
+        "category": "Jersey",
+        "subcategory": "k",
+        "sku": "k",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
         "currency": "₹",
-        "image": "images/new Products/Final_1-_Maroon_.png",
-        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
+        "image": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "imageUrl": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
         "images": [
-          "images/new Products/Final_1-_Maroon_.png"
+          "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png"
         ],
         "quote": "Upgrade your Vogue",
-        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
+        "description": "",
         "sizes": [
           "S",
           "M",
           "L",
-          "XL",
-          "XXL"
+          "XL"
         ],
-        "allowCustomIGN": true,
+        "allowCustomIGN": false,
         "inStock": true,
         "hidden": true
       },
@@ -472,31 +471,32 @@
         "hidden": true
       },
       {
-        "id": "sq1-jersey-1789904374327",
-        "name": "kk",
-        "title": "kk",
-        "badge": "NEW ARRIVAL",
-        "category": "Jersey",
-        "subcategory": "k",
-        "sku": "k",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
+        "id": "s1ve-sq1-oversized-maroon",
+        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "badge": "LIMITED DROP · 30% OFF",
+        "category": "Apparel",
+        "subcategory": "Streetwear & Tees",
+        "sku": "SQ1-APP-TEE-MRN",
+        "price": 1099,
+        "priceINR": 1099,
+        "originalPrice": 1599,
         "currency": "₹",
-        "image": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
-        "imageUrl": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "image": "images/new Products/Final_1-_Maroon_.png",
+        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
         "images": [
-          "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png"
+          "images/new Products/Final_1-_Maroon_.png"
         ],
         "quote": "Upgrade your Vogue",
-        "description": "",
+        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
         "sizes": [
           "S",
           "M",
           "L",
-          "XL"
+          "XL",
+          "XXL"
         ],
-        "allowCustomIGN": false,
+        "allowCustomIGN": true,
         "inStock": true,
         "hidden": true
       }
@@ -589,7 +589,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false,
+        "hidden": true,
         "stock": 35,
         "isLimitedEdition": false,
         "attributes": {
@@ -725,58 +725,43 @@
         "checkoutUrl": "https://store.squadone.gg/checkout"
       },
       {
-        "id": "s1ve-sq1-oversized-maroon",
-        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
-        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "id": "sq1-jersey-1789904374327",
+        "title": "kk",
+        "name": "kk",
         "quote": "Upgrade your Vogue",
-        "badge": "LIMITED DROP · 30% OFF",
-        "category": "Apparel",
-        "subcategory": "Oversized T-shirts",
-        "sku": "SQ1-APP-TEE-MRN",
-        "price": 1099,
-        "priceINR": 1099,
-        "originalPrice": 1599,
+        "badge": "NEW ARRIVAL",
+        "category": "Jersey",
+        "subcategory": "k",
+        "sku": "k",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "salePrice": 1499,
         "currency": "₹",
-        "image": "images/new Products/Final_1-_Maroon_.png",
-        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
-        "images": [
-          "images/new Products/Final_1-_Maroon_.png"
-        ],
-        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
         "sizes": [
           "S",
           "M",
           "L",
-          "XL",
-          "XXL"
+          "XL"
         ],
-        "allowCustomIGN": true,
-        "inStock": true,
-        "hidden": true,
-        "stock": 50,
-        "isLimitedEdition": true,
-        "attributes": {
-          "fit": "Oversized",
-          "fabric": "280 GSM Heavy Combed Cotton",
-          "color": [
-            "Maroon Cyber"
-          ],
-          "is_customizable": true,
-          "sizes": [
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-          ]
-        },
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "salePrice": 1599,
+        "image": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "imageUrl": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "images": [
+          "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png"
+        ],
         "short_description": "",
         "shortDescription": "",
+        "description": "",
+        "allowCustomIGN": false,
         "isComingSoon": true,
         "comingSoon": true,
-        "variants": []
+        "inStock": true,
+        "hidden": true,
+        "isLimitedEdition": false,
+        "stock": 50,
+        "attributes": {},
+        "variants": [],
+        "checkoutUrl": "https://store.squadone.gg/checkout"
       },
       {
         "id": "prod-1",
@@ -820,9 +805,7 @@
           ],
           "is_customizable": true
         },
-        "checkoutUrl": "https://store.squadone.gg/jersey-2026",
-        "isComingSoon": false,
-        "comingSoon": false
+        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
       },
       {
         "id": "prod-1788722681111",
@@ -864,47 +847,47 @@
           ],
           "is_customizable": true
         },
-        "checkoutUrl": "https://store.squadone.gg/checkout",
-        "isComingSoon": false,
-        "comingSoon": false
+        "checkoutUrl": "https://store.squadone.gg/checkout"
       },
       {
-        "id": "sq1-jersey-1789904374327",
-        "title": "kk",
-        "name": "kk",
+        "id": "s1ve-sq1-oversized-maroon",
+        "name": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
+        "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
         "quote": "Upgrade your Vogue",
-        "badge": "NEW ARRIVAL",
-        "category": "Jersey",
-        "subcategory": "k",
-        "sku": "k",
-        "price": 999,
-        "priceINR": 999,
-        "originalPrice": 1499,
-        "salePrice": 1499,
+        "badge": "LIMITED DROP · 30% OFF",
+        "category": "Apparel",
+        "subcategory": "Streetwear & Tees",
+        "sku": "SQ1-APP-TEE-MRN",
+        "price": 1099,
+        "priceINR": 1099,
+        "originalPrice": 1599,
         "currency": "₹",
+        "image": "images/new Products/Final_1-_Maroon_.png",
+        "imageUrl": "images/new Products/Final_1-_Maroon_.png",
+        "images": [
+          "images/new Products/Final_1-_Maroon_.png"
+        ],
+        "description": "Deep crimson/maroon heavyweight 280 GSM cotton tournament edition. Distinctive luxury esports silhouette.",
         "sizes": [
           "S",
           "M",
           "L",
-          "XL"
+          "XL",
+          "XXL"
         ],
-        "image": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
-        "imageUrl": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
-        "images": [
-          "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png"
-        ],
-        "short_description": "",
-        "shortDescription": "",
-        "description": "",
-        "allowCustomIGN": false,
-        "isComingSoon": true,
-        "comingSoon": true,
+        "allowCustomIGN": true,
         "inStock": true,
         "hidden": true,
-        "isLimitedEdition": false,
-        "stock": 50,
-        "attributes": {},
-        "variants": [],
+        "stock": 20,
+        "isLimitedEdition": true,
+        "attributes": {
+          "fit": "Oversized",
+          "fabric": "280 GSM Heavy Combed Cotton",
+          "color": [
+            "Maroon Cyber"
+          ],
+          "is_customizable": true
+        },
         "checkoutUrl": "https://store.squadone.gg/checkout"
       }
     ],
