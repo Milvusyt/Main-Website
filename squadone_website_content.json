@@ -410,7 +410,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true
+        "hidden": false
       },
       {
         "id": "prod-1",
@@ -723,7 +723,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true,
+        "hidden": false,
         "stock": 50,
         "isLimitedEdition": true,
         "attributes": {
