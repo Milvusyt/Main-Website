@@ -470,6 +470,35 @@
         "allowCustomIGN": true,
         "inStock": true,
         "hidden": false
+      },
+      {
+        "id": "sq1-jersey-1789904374327",
+        "name": "kk",
+        "title": "kk",
+        "badge": "NEW ARRIVAL",
+        "category": "Jersey",
+        "subcategory": "k",
+        "sku": "k",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "currency": "₹",
+        "image": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "imageUrl": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "images": [
+          "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png"
+        ],
+        "quote": "Upgrade your Vogue",
+        "description": "",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "allowCustomIGN": false,
+        "inStock": true,
+        "hidden": false
       }
     ]
   },
@@ -835,6 +864,45 @@
           ],
           "is_customizable": true
         },
+        "checkoutUrl": "https://store.squadone.gg/checkout"
+      },
+      {
+        "id": "sq1-jersey-1789904374327",
+        "title": "kk",
+        "name": "kk",
+        "quote": "Upgrade your Vogue",
+        "badge": "NEW ARRIVAL",
+        "category": "Jersey",
+        "subcategory": "k",
+        "sku": "k",
+        "price": 999,
+        "priceINR": 999,
+        "originalPrice": 1499,
+        "salePrice": 1499,
+        "currency": "₹",
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "image": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "imageUrl": "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png",
+        "images": [
+          "images/new Products/ChatGPT_Image_Aug_23__2026__01_28_30_AM.png"
+        ],
+        "short_description": "",
+        "shortDescription": "",
+        "description": "",
+        "allowCustomIGN": false,
+        "isComingSoon": true,
+        "comingSoon": true,
+        "inStock": true,
+        "hidden": false,
+        "isLimitedEdition": false,
+        "stock": 50,
+        "attributes": {},
+        "variants": [],
         "checkoutUrl": "https://store.squadone.gg/checkout"
       }
     ],
