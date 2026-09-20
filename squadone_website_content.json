@@ -864,7 +864,9 @@
           ],
           "is_customizable": true
         },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "isComingSoon": false,
+        "comingSoon": false
       },
       {
         "id": "sq1-jersey-1789904374327",
