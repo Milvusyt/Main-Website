@@ -5,7 +5,7 @@
     "tournaments": true,
     "broadcast": true,
     "news": true,
-    "store": true,
+    "store": false,
     "journey": true
   },
   "broadcast": {
@@ -257,7 +257,7 @@
     }
   ],
   "store": {
-    "enabled": true,
+    "enabled": false,
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
     "title": "S1VE BY SQUADONE",
     "desc": "",
@@ -842,7 +842,7 @@
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
     "title": "S1VE BY SQUADONE",
-    "enabled": true
+    "enabled": false
   },
   "tournaments": [
     {
