@@ -380,7 +380,7 @@
         ],
         "allowCustomIGN": false,
         "inStock": true,
-        "hidden": false
+        "hidden": true
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
@@ -469,7 +469,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false
+        "hidden": true
       },
       {
         "id": "sq1-jersey-1789904374327",
@@ -498,7 +498,7 @@
         ],
         "allowCustomIGN": false,
         "inStock": true,
-        "hidden": false
+        "hidden": true
       }
     ]
   },
@@ -702,7 +702,7 @@
         "isComingSoon": true,
         "comingSoon": true,
         "inStock": true,
-        "hidden": false,
+        "hidden": true,
         "stock": 50,
         "isLimitedEdition": false,
         "attributes": {
@@ -852,7 +852,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": false,
+        "hidden": true,
         "stock": 50,
         "isLimitedEdition": false,
         "attributes": {
@@ -898,7 +898,7 @@
         "isComingSoon": true,
         "comingSoon": true,
         "inStock": true,
-        "hidden": false,
+        "hidden": true,
         "isLimitedEdition": false,
         "stock": 50,
         "attributes": {},
