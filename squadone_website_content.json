@@ -5,7 +5,7 @@
     "tournaments": true,
     "broadcast": true,
     "news": true,
-    "store": true,
+    "store": false,
     "journey": true
   },
   "broadcast": {
@@ -257,7 +257,7 @@
     }
   ],
   "store": {
-    "enabled": true,
+    "enabled": false,
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
     "title": "S1VE BY SQUADONE",
     "desc": "",
@@ -380,7 +380,7 @@
         ],
         "allowCustomIGN": false,
         "inStock": true,
-        "hidden": true
+        "hidden": false
       },
       {
         "id": "sq1-jersey-1789904374327",
@@ -702,7 +702,7 @@
         "isComingSoon": true,
         "comingSoon": true,
         "inStock": true,
-        "hidden": true,
+        "hidden": false,
         "stock": 50,
         "isLimitedEdition": false,
         "attributes": {
@@ -899,7 +899,7 @@
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
     "title": "S1VE BY SQUADONE",
-    "enabled": true,
+    "enabled": false,
     "desc": ""
   },
   "tournaments": [
