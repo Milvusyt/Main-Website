@@ -320,7 +320,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true
+        "hidden": false
       },
       {
         "id": "s1ve-custom-1788868261046",
@@ -476,7 +476,7 @@
         "title": "S1VE × SQUAD ONE 'Maroon Cyber Edition' Oversized Tee",
         "badge": "LIMITED DROP · 30% OFF",
         "category": "Apparel",
-        "subcategory": "Streetwear & Tees",
+        "subcategory": "Oversized T-shirts",
         "sku": "SQ1-APP-TEE-MRN",
         "price": 1099,
         "priceINR": 1099,
@@ -589,7 +589,7 @@
         ],
         "allowCustomIGN": true,
         "inStock": true,
-        "hidden": true,
+        "hidden": false,
         "stock": 35,
         "isLimitedEdition": false,
         "attributes": {
@@ -805,7 +805,9 @@
           ],
           "is_customizable": true
         },
-        "checkoutUrl": "https://store.squadone.gg/jersey-2026"
+        "checkoutUrl": "https://store.squadone.gg/jersey-2026",
+        "isComingSoon": false,
+        "comingSoon": false
       },
       {
         "id": "prod-1788722681111",
@@ -847,7 +849,9 @@
           ],
           "is_customizable": true
         },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "isComingSoon": false,
+        "comingSoon": false
       },
       {
         "id": "s1ve-sq1-oversized-maroon",
@@ -856,7 +860,7 @@
         "quote": "Upgrade your Vogue",
         "badge": "LIMITED DROP · 30% OFF",
         "category": "Apparel",
-        "subcategory": "Streetwear & Tees",
+        "subcategory": "Oversized T-shirts",
         "sku": "SQ1-APP-TEE-MRN",
         "price": 1099,
         "priceINR": 1099,
@@ -878,7 +882,7 @@
         "allowCustomIGN": true,
         "inStock": true,
         "hidden": true,
-        "stock": 20,
+        "stock": 50,
         "isLimitedEdition": true,
         "attributes": {
           "fit": "Oversized",
@@ -888,7 +892,9 @@
           ],
           "is_customizable": true
         },
-        "checkoutUrl": "https://store.squadone.gg/checkout"
+        "checkoutUrl": "https://store.squadone.gg/checkout",
+        "isComingSoon": false,
+        "comingSoon": false
       }
     ],
     "eyebrow": "OFFICIAL STREETWEAR & APPAREL",
